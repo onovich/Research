@@ -98,7 +98,7 @@ foreach ($relativePath in $candidatePaths) {
   $fullPath = Join-Path $repoRoot $relativePath
   $extension = [System.IO.Path]::GetExtension($fullPath).ToLowerInvariant()
   if ($relativePath -eq ".gitignore" -or $extension -in $textExtensions) {
-    $textFiles.Add((Get-Item -LiteralPath $fullPath))
+    $textFiles.Add((Get-Item -LiteralPath $fullPath -Force))
   }
 }
 
