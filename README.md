@@ -2,9 +2,9 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Evidence-backed Go/No-Go research for independent creators and small teams. Research turns current data into practical conclusions, then publishes them as polished, bilingual web reports with low reading pressure.
+Research helps independent creators and small teams investigate questions with current evidence. It turns sources and data into clear findings, comparisons, and explanations, then publishes them as polished bilingual web reports with low reading pressure. When useful, the same process can also support a concrete decision.
 
-The first topic cluster covers indie-game funding, distribution, and crowdfunding economics.
+It covers exploratory questions, industry or platform overviews, pattern and mechanism analysis, and Go/No-Go evaluation. The first topic cluster focuses on crowdfunding economics and indie-game crowdfunding fit.
 
 [Browse the research library](https://research.onovich.com/) · [Use the AI workflow](https://research.onovich.com/tools/research-to-html/)
 
@@ -21,7 +21,7 @@ These pages share an evidence base but not detailed sections. The first supports
 
 Open this repository in Codex or another Agent Skills-compatible assistant, then ask:
 
-> Use `$research-to-html` to research **[your decision question]** and create a bilingual web report.
+> Use `$research-to-html` to research **[your question or topic]** and create a bilingual web report.
 
 When the report is ready:
 

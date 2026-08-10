@@ -2,9 +2,9 @@
 
 [English](README.md) · **简体中文**
 
-面向独立创作者和小团队的证据型 Go / No-Go 决策研究。Research 使用当下数据形成可行动结论，再发布为美观、低阅读压力的中英文网页版报告。
+Research 帮助独立创作者和小团队基于当下证据调查问题。它把资料与数据整理成清晰的发现、比较和解释，再发布为美观、低阅读压力的中英文网页版报告；需要时，也可以进一步支持具体决策。
 
-当前首个专题簇聚焦独立游戏融资、发行与众筹经济性。
+它可用于探索问题、梳理行业或平台、分析模式与机制，以及开展 Go / No-Go 评估。当前首个专题簇聚焦众筹经济性与独立游戏众筹适配。
 
 [浏览研究目录](https://research.onovich.com/index.zh-CN.html) · [使用 AI 工作流](https://research.onovich.com/tools/research-to-html/index.zh-CN.html)
 
@@ -21,7 +21,7 @@
 
 用 Codex 或其他兼容 Agent Skills 的助手打开仓库，然后输入：
 
-> 使用 `$research-to-html` 调研**「你的决策问题」**，并生成中英文网页版报告。
+> 使用 `$research-to-html` 调研**「你的问题或主题」**，并生成中英文网页版报告。
 
 报告完成后输入：
 
