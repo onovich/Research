@@ -29,3 +29,7 @@ When the report is ready, send:
 > Use `$research-to-github-pages` to publish this report.
 
 With another Agent Skills-compatible assistant, install or open the linked `SKILL.md` files as required by that assistant.
+
+## License
+
+Code, skills, scripts, and templates use the [MIT License](LICENSE). Original report text and original visuals use [CC BY 4.0](CONTENT-LICENSE.md). Third-party material keeps its original rights.

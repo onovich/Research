@@ -29,3 +29,7 @@ Research 帮助你使用 AI 完成行业调研：基于数据和证据形成结�
 > 使用 `$research-to-github-pages` 发布这份报告。
 
 如果使用其他兼容 Agent Skills 的助手，请按该助手的规则安装或打开链接中的 `SKILL.md`。
+
+## 许可证
+
+代码、Skill、脚本和模板使用 [MIT 许可证](LICENSE)。原创报告文字与原创图表使用 [CC BY 4.0](CONTENT-LICENSE.md)。第三方素材仍遵循其原有权利规则。
