@@ -368,6 +368,27 @@ foreach ($pair in $localePairs) {
   if (@(Compare-Object $enLinks $zhLinks).Count -gt 0) { Add-ValidationError "$($pair.En) and $($pair.Zh): external content-link sets differ" }
 }
 
+# Report ownership guard: the pillar owns economics and channel validation;
+# the companion exclusively owns game taxonomy, filters, cases, and the fit card.
+$pillarRelativePaths = @(
+  "crowdfunding-and-indie-games-research/index.html",
+  "crowdfunding-and-indie-games-research/index.zh-CN.html"
+)
+$companionRelativePaths = @(
+  "indie-game-crowdfunding-genres-and-gameplay/index.html",
+  "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html"
+)
+foreach ($relative in $pillarRelativePaths) {
+  $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
+  if ($html -match 'data-game-filter|id="decision-tool"') { Add-ValidationError "${relative}: pillar must not duplicate the companion game filter or scorecard" }
+  if ($html -notmatch 'indie-game-crowdfunding-genres-and-gameplay') { Add-ValidationError "${relative}: pillar must link to the companion game report" }
+}
+foreach ($relative in $companionRelativePaths) {
+  $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
+  if ($html -notmatch 'data-game-filter' -or $html -notmatch 'id="decision-tool"') { Add-ValidationError "${relative}: companion must retain the game filter and fit card" }
+  if ($html -notmatch 'crowdfunding-and-indie-games-research') { Add-ValidationError "${relative}: companion must link back to the pillar report" }
+}
+
 $sitemapPath = Join-Path $publicSourceRoot "sitemap.xml"
 if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
   try {
@@ -494,5 +515,5 @@ if ($errors.Count -gt 0) {
 }
 
 Write-Host "Research site validation passed." -ForegroundColor Green
-Write-Host "Checked privacy patterns, $($indexableHtmlEntries.Count) indexable pages, bilingual pairs, SEO metadata, sitemap parity, JavaScript syntax, and the exact Pages allowlist artifact."
+Write-Host "Checked privacy patterns, $($indexableHtmlEntries.Count) indexable pages, bilingual pairs, report ownership, SEO metadata, sitemap parity, JavaScript syntax, and the exact Pages allowlist artifact."
 if ($CheckHistory) { Write-Host "Git history path and noreply-email checks also passed." }

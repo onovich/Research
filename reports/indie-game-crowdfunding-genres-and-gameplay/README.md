@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 
-> Page role: companion deep dive. It extends the [crowdfunding economics pillar report](../crowdfunding-and-indie-games-research/README.md) with a focused taxonomy of indie-game genres, gameplay structures, examples, and campaign-fit signals. It is not a test or duplicate report.
+> Page role: companion deep dive and the canonical home for game-specific detail. It extends the [crowdfunding economics pillar report](../crowdfunding-and-indie-games-research/README.md) with current market snapshots, a genre/gameplay taxonomy, released cases, failure modes, platform routes, and the 10-point fit card. The pillar intentionally does not repeat those sections.
 >
 > Research cutoff: 2026-08-10 (China Standard Time)<br>
 > Geography: international reward crowdfunding, primarily Kickstarter and BackerKit, plus China’s Modian<br>

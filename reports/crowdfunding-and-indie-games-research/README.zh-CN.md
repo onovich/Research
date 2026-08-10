@@ -18,10 +18,8 @@
    - 边际交付成本低、受众高度聚焦的数字内容和独立游戏。
 3. **最容易出现“高流水、低利润或亏损”的，是复杂硬件和重履约商品。** 首次团队做电子硬件、跨国认证、重/大/易碎品、多规格 SKU、免费全球包邮或大量实体档位，最危险。高筹资额反而会放大库存、售后和现金流风险。
 4. **国内渠道需要分开看：** 摩点偏游戏、动漫、桌游、潮玩和文化创意；淘宝“造点新货”更像综合新品首发/预售；小米有品众筹偏精选科技与生活方式商品。旧京东众筹入口在本次调查中未能核验出可靠的现行开放项目目录，不应继续用历史数据代表“当前主流渠道”。
-5. **独立电子游戏今天仍适合众筹，但只对一部分项目成立。** 2024 年 Kickstarter 上成功电子游戏项目为 441 个、合计 2,600 万美元，分别同比增长 9% 和 28%；但同年 Kickstarter Games 大类 83% 的认缴额来自桌游，电子游戏仍是有效的小市场，不是平台的绝对主流。[Kickstarter 官方 2024 Games 总结](https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/)
-6. **众筹对独立游戏最强的价值，是把已有兴趣转成资金、超级用户和一次营销事件；它不擅长凭空制造受众。** 更稳妥的组合是：先有 Steam Coming Soon 页面和高质量 Demo，再用众筹活动转化核心粉丝，并把所有活动流量继续沉淀到 Steam 愿望单。
-7. **适配度最高的游戏：** 经典类型的精神续作、复古 JRPG/CRPG、动作平台与 Metroidvania、Cozy/农场/生活模拟、视觉小说/角色叙事，以及被大厂忽略但受众明确的生存恐怖、反重力竞速等细分玩法。共同点不是“复古”，而是 **5 秒能认出类型、短视频能看懂循环、Demo 能证明手感、受众有明确参照物**。
-8. **不建议新团队用众筹启动 MMO、持续在线开放世界或只有概念图的宏大项目。** 众筹成功只证明有人愿意预付，不证明团队能完成技术、内容、服务器和长期运营。
+5. **独立电子游戏今天仍适合众筹，但不是默认选项。** 众筹最强的价值是把已有兴趣转成资金、超级用户和一次营销事件；它不擅长凭空制造受众。
+6. **本报告只判断渠道经济性。** 游戏市场快照、类型、玩法、发行案例、失败模式、国内外平台路径和 10 分适配卡统一由[独立游戏配套报告](../indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md)维护，不在本页重复。
 
 ---
 
@@ -170,94 +168,22 @@ Kickstarter 的履约指南提醒，国际制造项目从众筹到交付现实�
 
 ---
 
-## 4. 独立游戏：今天还适合众筹吗？
+## 4. 独立游戏：只判断渠道，不重复品类
 
-### 结论：适合，但应当满足条件
+当前一手证据能证明电子游戏众筹仍然活跃，但不能证明陌生项目会被平台自然发现、顺利交付或盈利。本报告只回答渠道经济性：
 
-Kickstarter 的官方数据表明电子游戏众筹并未消失：2024 年成功电子游戏项目筹得 2,600 万美元、同比增长 28%，成功项目 441 个、同比增长 9%；2026 年第一季度又成为 13 年来电子游戏最强的第一季度，有 4 个项目超过 50 万美元、2 个超过 100 万美元。[2024 官方总结](https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/) · [2026 官方更新](https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/)
-
-但这不代表“把游戏放上去就能获得流量”。Kickstarter 自己也把创作者网络传播列为获得新支持者的重要途径；平台曝光是加速器，不是受众替代品。[Kickstarter 项目发现说明](https://help.kickstarter.com/hc/en-us/articles/115005138953-Where-can-I-find-my-project-on-Kickstarter)
-
-### 对资金回报的优势与限制
-
-| 维度 | 众筹的优势 | 众筹的限制 |
+| 问题 | 众筹能做到什么 | 不能证明什么 |
 |---|---|---|
-| 资金 | 发售前收到现金；验证付费意愿；可融资一个明确里程碑 | 5% 平台费 + 支付费；推广和运营成本；金额通常不足以覆盖大型项目全部开发 |
-| 定价 | 可用数字豪华档、原声、设定集、测试资格提高客单 | 过多低价档和实体奖励会蚕食贡献毛利 |
-| 需求验证 | 支持者是真实付费信号，比点赞更强 | 样本偏超级粉丝，不等于大众市场销量 |
-| 独立性 | 可少让渡或不让渡股权/发行权 | 换来公开承诺、更新时间和社区压力；延期会损害信用 |
+| 资金 | 预售权益，为一个边界清楚、可交付的里程碑融资 | 一次活动足以覆盖整款大型游戏 |
+| 需求 | 提供比点赞或关注更强的真实付费信号 | 超级粉丝样本能代表大众销量 |
+| 宣发 | 围绕上线、冲线和更新制造连续事件 | 没有受众的项目会获得自然发现 |
+| 独立性 | 减少股权或发行权让渡 | 可以免除公开承诺、客服与更新压力 |
 
-正确定位通常是：**为一段明确、可交付的开发工作融资**，例如新增章节、完成内容、配音/本地化、主机移植或从 vertical slice 走到完整版本；不应拿几十万美元承诺一个需要数千万美元和多年运营的 MMO。
-
-### 对宣发的优势与限制
-
-众筹的真正宣发价值有四个：
-
-1. 把上线、冲线、解锁和更新做成连续新闻事件；
-2. 获得一批愿意转发、试玩、反馈和创作内容的核心用户；
-3. 用支持人数和认缴额向媒体、平台、发行商证明需求；
-4. 成功后继续通过项目更新、邮件和社区触达用户。
-
-它的代价是：活动页面、档位、日更、客服、直播、社区管理会占用开发团队数周；失败活动也会公开暴露需求不足。
-
-因此更推荐这条组合链路：
-
-```text
-可玩的核心循环
-  → Steam Coming Soon 页面
-  → Demo / 内容创作者试玩 / 社区与邮件名单
-  → 用真实转化和获客成本做 Go / No-Go
-  → Kickstarter（海外）或摩点（国内文创受众）
-  → 所有活动流量继续导向 Steam 愿望单
-  → 在质量成熟时参加一次 Steam Next Fest
-```
-
-Steam 官方也建议尽早公开 Coming Soon 页面来建立受众和愿望单；本报告据此把它放在众筹活动之前。[Steam Coming Soon 官方文档](https://partner.steamgames.com/doc/store/coming_soon?language=english)
-
-Steam 官方说明：愿望单会在发售、退出抢先体验和达到特定折扣时通知用户；多数情况下，愿望单本身并不是可见性算法的直接因素，Popular Upcoming 等场景例外。[愿望单说明](https://partner.steamgames.com/doc/marketing/wishlist?language=english) · [可见性说明](https://partner.steamgames.com/doc/marketing/visibility?language=english)
-
-Steam Next Fest 每年举行多次，要求公开商店页和可玩 Demo，目标是让未来游戏接触玩家并获取反馈；每个项目只能参加一次，过早用掉机会并不划算。[Steam Next Fest 官方文档](https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english)
-
-2026 年 Kickstarter 还与 Crytivo 做了覆盖 400 多款众筹游戏的 Steam “Backed by Backers”活动，说明“众筹形成故事与核心社群，Steam 承接可玩体验和愿望单”正在成为明确组合；合作方所称“可产生数万愿望单”属于其经验陈述，不是全体项目保证。[Kickstarter 官方活动页](https://updates.kickstarter.com/backed-by-backers-a-steam-festival-powered-by-kickstarter/)
+只有在已有可信 Demo、可触达受众，并且活动金额能实质改变交付时，才值得继续验证众筹。具体的[七类玩法模式、已发行案例、高风险反例、国内外路径和 10 分适配卡](../indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md)统一放在配套报告中。
 
 ---
 
-## 5. 哪些独立游戏类型和玩法更容易众筹成功
-
-下表中的“成功”优先指筹资成功；只有已正式发售的项目才能再加上履约成功。未发售项目即使筹得很多，也不能当成完整商业成功。
-
-| 类型 | 典型玩法 | 为什么适合众筹 | 代表项目与结果 |
-|---|---|---|---|
-| **名制作人/经典 IP 系谱的精神续作** | 复古回合制 JRPG、组队、角色收集、基地建设；经典 Metroidvania | 玩家知道“大厂不再做什么”，人物信用和旧作受众降低解释成本 | [Bloodstained](https://www.kickstarter.com/projects/iga/bloodstained-ritual-of-the-night) 约 554.6 万美元；[Eiyuden Chronicle](https://www.kickstarter.com/projects/rabbitandbearstudios/eiyuden-chronicle-hundred-heroes) 约 4.816 亿日元，均已发售 |
-| **复古动作平台 / Metroidvania / 俯视角动作冒险** | 横版探索、能力解锁、精确战斗、Boss；或 Zelda-like 地牢/道具探索 | GIF 和短视频可立即显示手感与美术；经典参照物清楚 | [Hollow Knight](https://www.kickstarter.com/projects/11662585/hollow-knight) A$57,138，已发售；[Shovel Knight](https://www.kickstarter.com/projects/yachtclubgames/shovel-knight) $311,502，已发售；[Mina the Hollower](https://www.kickstarter.com/projects/yachtclubgames/mina-the-hollower) $1,239,584，已有成熟工作室信用 |
-| **复古 JRPG / 角色驱动 RPG** | 回合制、时机输入、队伍构筑、地图探索、长叙事 | 怀旧受众明确；角色、音乐和世界观适合更新与高档位 | [Sea of Stars](https://www.kickstarter.com/projects/sabotagestudio/sea-of-stars) CA$1,628,126、25,589 人，已有上一作《The Messenger》，后正式发售 |
-| **Cozy / 农场 / 生活模拟** | 种田、养殖、采集、建造、关系/恋爱、城镇成长 | 角色和世界可持续展示；社区投票与扩展目标自然；受众愿意长期关注 | [Coral Island](https://www.kickstarter.com/projects/coralisland/coral-island-reimagining-the-farm-sim-game) $1,639,369、36,374 人，已发售；[My Time at Evershine](https://www.kickstarter.com/projects/mtae/my-time-at-evershine-the-next-my-time-tale) $2,901,842、33,933 人，但截至截点仍待未来交付 |
-| **一眼能说清的系统型玩法** | 回合制地牢 + 压力管理；高速度反重力竞速；短篇经典生存恐怖 | 差异点可用一句话和 Demo 证明；目标人群虽小但需求强 | [Darkest Dungeon](https://www.kickstarter.com/projects/1460250988/darkest-dungeon-by-red-hook-studios) $313,337，已发售；[Aero GPX](https://www.kickstarter.com/projects/aaronmac64/aero-gpx) $118,189；[Hollowbody](https://www.kickstarter.com/projects/headwaregames/hollowbody/) £27,949，后正式发售 |
-| **叙事 RPG、视觉小说、恋爱与身份社群题材** | 分支叙事、角色关系、多结局；也可叠加轻战斗或养成 | 数字交付、目标额可较低；角色和社群认同形成高密度小众 | [Undertale](https://www.kickstarter.com/projects/1002143342/undertale) $51,124、2,398 人，活动已有 Demo，后正式发售；众多小型视觉小说以几百名核心支持者成立 |
-| **已有作品/创作者社群的续作、重制或扩展** | 玩法不固定，关键是可验证的旧作受众与团队履约记录 | 最强变量往往是“谁在做”和“谁已经等着买”，不是标签本身 | 2026 年 [AdventureQuest Worlds: Infinity](https://www.backerkit.com/projects/artix/adventurequest-worlds-infinity) 依托长期 MMO 社群获得约 214.9 万美元；Chibig 的 Zelda-like/Cozy RPG [《Bel's Fanfare》](https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/) 则建立在多次成功众筹经验上 |
-
-### 这些项目真正共有的东西
-
-- **先有可识别受众：** 上一作、名制作人、旧类型空缺、稳定内容账号、Discord/邮件名单或强社群题材；
-- **先有可证明产品：** Demo、vertical slice、真实玩法录像，而不是只靠概念 CG；
-- **卖点可以压缩：** 玩家在 5 秒内知道“像什么、哪里不同、我为什么现在支持”；
-- **预算可被一个活动影响：** 认缴额能完成一段真实工作，而不是总预算里的装饰性小数；
-- **数字奖励为主：** 游戏、原声、数字画册、测试资格、鸣谢；实体奖励少而清晰；
-- **团队持续沟通：** 发起前几个月积累受众，活动后按固定节奏更新。
-
-### 不适配或高风险玩法/项目形态
-
-- 新团队直接做 MMO、持续在线开放世界、程序生成宇宙、全物理破坏世界；
-- 通用题材 + 通用玩法，没有一句话钩子，只有“我们热爱游戏”；
-- 无 Demo、无真实玩法、只有概念图和功能清单；
-- 同时承诺多个主机平台、联机、配音、多语言和大量扩展目标；
-- 实体典藏版、服装、手办、不同地区版本占据过多档位；
-- 目标金额只够做宣传片，却承诺交付整个大型游戏；
-- 把筹资成功当成产品成功。`Chronicles of Elyria` 获得约 136 万美元，但截至本次核验未找到正式发售记录，是“高认缴不等于完成”的典型提醒。[项目最后公开更新](https://www.kickstarter.com/projects/soulboundstudios/chronicles-of-elyria-epic-story-mmorpg-with-aging/posts/3707035)
-
----
-
-## 6. 平台选择建议
+## 5. 平台选择建议
 
 ### 如果卖的是实体商品
 
@@ -276,28 +202,7 @@ Steam Next Fest 每年举行多次，要求公开商店页和可玩 Demo，目�
 
 ---
 
-## 7. 一个独立游戏是否应该众筹：10 分决策卡
-
-| 指标 | 0 分 | 1 分 | 2 分 |
-|---|---|---|---|
-| 受众证据 | 几乎没有 | 有关注/愿望单但弱 | 有上一作、稳定社群、名单或可复现增长 |
-| 产品证据 | 只有概念 | 有录像/粗糙原型 | 有可公开、高质量的核心 Demo |
-| 定位清晰度 | “给所有玩家” | 类型清楚但差异弱 | 5 秒讲清类型、差异和受众 |
-| 预算与范围 | 活动金额无力改变交付 | 能覆盖小里程碑 | 能覆盖明确里程碑并含费用、税和缓冲 |
-| 奖励与履约 | 实体多、SKU 复杂 | 数字为主、少量可控实体 | — |
-| 运营能力 | 无人负责双语、社区、客服 | 有负责人和固定更新机制 | — |
-
-总分解释：
-
-- **8–10 分：** 可以进入预热和单元经济验证；
-- **6–7 分：** 不要急着上线，先补 Demo、名单、定价或预算；
-- **0–5 分：** 先走 Steam Demo、内容创作者试玩、节展和社区建设，众筹大概率只是公开验证“受众还没准备好”。
-
-这不是平台成功率预测，而是内部 Go/No-Go 工具。
-
----
-
-## 8. 90 天验证方案
+## 6. 90 天验证方案
 
 ### 第 1–15 天：定义项目和经济边界
 
@@ -342,7 +247,7 @@ Steam Next Fest 每年举行多次，要求公开商店页和可玩 Demo，目�
 
 ---
 
-## 9. 最终回答
+## 7. 最终回答
 
 ### 什么商品能在众筹网站上赚到钱？
 
@@ -352,9 +257,9 @@ Steam Next Fest 每年举行多次，要求公开商店页和可玩 Demo，目�
 
 **适合，但不是默认选项。** 对已有受众、清晰类型钩子、可玩 Demo、现实预算和数字奖励结构的项目，众筹仍可同时带来资金、市场验证、核心社群和宣传事件。对从零受众、无 Demo、宏大范围的项目，Steam 页面、Demo、Next Fest、内容创作者试玩和社群建设通常应该排在众筹之前。
 
-### 哪些独立游戏最容易成立？
+### 类型与玩法怎么判断？
 
-不是某一个万能品类，而是以下组合最强：经典类型/精神续作带来的明确受众；动作平台/Metroidvania 的强视觉与手感展示；JRPG/CRPG 的怀旧与角色世界；Cozy/生活模拟的长期社区；视觉小说和身份社群的高密度小众；以及大厂忽略、但一句话能说清的细分玩法。它们共同依赖 **受众证据、Demo、定位和可交付范围**，而不只是题材。
+本报告不再重复列举品类与案例。请直接使用[独立游戏配套报告](../indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md)中的七类模式、实时平台样本、已发行案例和 10 分适配卡。
 
 ---
 

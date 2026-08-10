@@ -20,11 +20,11 @@ _site/                      Generated Pages artifact; never edited by hand
 
 | Public route | Role | Primary search intent |
 |---|---|---|
-| `/crowdfunding-and-indie-games-research/` | Pillar report | Crowdfunding economics, product fit, and indie-game Go/No-Go |
-| `/indie-game-crowdfunding-genres-and-gameplay/` | Companion deep dive | Indie-game genres, gameplay patterns, audience proof, and platform differences |
+| `/crowdfunding-and-indie-games-research/` | Pillar report | Crowdfunding economics, product/platform fit, indie-game channel value, and the 90-day validation plan |
+| `/indie-game-crowdfunding-genres-and-gameplay/` | Companion deep dive | Current game-platform snapshots, genre/gameplay patterns, released cases, failure modes, platform routes, and the fit card |
 | `/tools/research-to-html/` | Main Skill product page | Turn an evidence-backed decision question into a bilingual HTML report |
 
-The two reports are not test duplicates. The focused report was added later as a supporting SEO page. It reuses the same research foundation but adds focused platform samples and a seven-pattern model. Keep both pages, make their roles explicit, and link them in both directions. Do not create near-identical pages for keyword variants.
+The two reports are not test duplicates. They reuse one evidence foundation, but detailed ownership is exclusive: the pillar owns economics and channel validation; the companion owns the game taxonomy, cases, risks, routes, filter, and scorecard. Keep both pages and reciprocal links, but do not copy those detailed sections back into the pillar or create near-identical pages for keyword variants.
 
 The Skill strategy has a settled answer: keep one public product page for the main `research-to-html` promise. Present `research-to-github-pages` as the optional publishing step on that page and in the README. Do not create a second near-duplicate Skill page unless real search or support data shows a distinct task that the main page cannot answer.
 

@@ -12,8 +12,9 @@
 
 1. **The strongest product pattern is an existing audience + visible differentiation + enough order value and contribution margin + light fulfillment or a mature supply chain.** Creator/IP publishing and collectibles, tabletop/TTRPG/cards, small fan goods, and high-ticket design tools from experienced teams fit best.
 2. **Independent games still fit crowdfunding, but crowdfunding is not the default launch path.** It can convert existing interest into funding, core users, and a marketing event; it rarely creates an audience from nothing.
-3. **The best-fitting games are immediately legible and demonstrable.** Spiritual successors, action platformers/Metroidvanias, retro JRPGs, cozy/life sims, visual novels, and sharply defined underserved systems work when a real audience and a credible demo already exist.
-4. **High pledges are not proof of profit or delivery.** Manufacturing, acquisition, refund, tax, freight, support, warranty, and labor are usually missing from public campaign totals.
+3. **High pledges are not proof of profit or delivery.** Manufacturing, acquisition, refund, tax, freight, support, warranty, and labor are usually missing from public campaign totals.
+
+Game genres, mechanics, released cases, failure patterns, and the game-specific scorecard are maintained only in the [indie-game companion report](../indie-game-crowdfunding-genres-and-gameplay/README.md), so this pillar report can stay focused on channel economics.
 
 ## 1. Questions and method
 
@@ -21,8 +22,7 @@ This study asks:
 
 - Which product structures can plausibly make money on major Chinese and international crowdfunding platforms?
 - Does crowdfunding still offer a funding or marketing advantage to independent video games?
-- For which game types and mechanics does that advantage hold?
-- What evidence should determine a team's Go / No-Go decision?
+- What evidence should determine whether a team validates the channel or delays it?
 
 Primary evidence includes platform statistics, fee and eligibility documentation, direct campaign pages, fulfillment guidance, and Steamworks documentation. Platform marketing claims are treated as self-reported. Live rankings are cutoff snapshots rather than annual market-share estimates.
 
@@ -104,82 +104,20 @@ Sources: [Gamefound eligibility](https://help.gamefound.com/article/210-who-can-
 
 At the cutoff, Modian showed 26 active game campaigns and 49 active tabletop campaigns. The leading Taobao 造点新货 IP figure showed about CNY 32.128 million and 75,014 backers. These are point-in-time figures. [Modian FAQ](https://login.modian.com/about/index/4?id=17) · [Game ranking](https://zhongchou.modian.com/games/top_money/going) · [Tabletop ranking](https://zhongchou.modian.com/tablegames/top_money/going) · [Taobao 造点新货](https://izhongchou.taobao.com/)
 
-## 5. Indie-game crowdfunding today
+## 5. Indie games: the channel decision
 
-Kickstarter reported 441 successful video-game projects in 2024, the highest annual count in its first 15 years. Successful projects raised $26 million, up 28% year over year. Video games still remain the smaller part of Games: 83% of Games-category pledges went to tabletop. [Official 2024 summary](https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/)
+Current platform evidence establishes that video-game crowdfunding remains active; it does not establish that a new project will be discovered, delivered, or profitable. The economic decision is narrower:
 
-Kickstarter later described Q1 2026 as the strongest first quarter for video games in 13 years, with four projects above $500,000 and two above $1 million. This establishes that the channel remains active; it does not establish organic discovery for an unknown project. [Official 2026 update](https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/)
+| Question | What crowdfunding can do | What it cannot prove |
+|---|---|---|
+| Funding | Pre-sell access and finance one bounded, deliverable milestone | That the campaign can fund an entire large game |
+| Demand | Produce a stronger willingness-to-pay signal than likes or follows | Broad-market demand beyond the most committed supporters |
+| Marketing | Create launch, closing, and update events around an existing audience | Organic discovery for a project with no audience |
+| Independence | Avoid or reduce equity and publishing-right dilution | Freedom from public commitments, support, and update pressure |
 
-### Advantages
+Use crowdfunding only after a credible demo, a reachable audience, and a budget in which the campaign materially changes delivery. The companion report owns the detailed [genre and gameplay patterns, released cases, failure modes, platform routes, and ten-point game-fit card](../indie-game-crowdfunding-genres-and-gameplay/README.md).
 
-- cash before release for a clear, deliverable milestone;
-- direct evidence of willingness to pay;
-- core users who share, playtest, and provide feedback;
-- a sequence of launch, closing, and update events;
-- backer evidence that can support media or publisher conversations.
-
-### Costs
-
-- platform/payment fees and promotion;
-- public commitments, support, and community pressure;
-- several weeks of campaign operations taken from development;
-- permanent public funding and update history.
-
-### Recommended sequence
-
-1. playable core loop;
-2. Steam Coming Soon page;
-3. demo, creator playtests, community, and owned email list;
-4. Go / No-Go using real conversion and acquisition cost;
-5. Kickstarter internationally or Modian for a Chinese cultural-product audience;
-6. route campaign attention to Steam wishlists and use Next Fest when quality is ready.
-
-Steam recommends publishing a [Coming Soon page](https://partner.steamgames.com/doc/store/coming_soon?language=english) early. Wishlists notify users at launch and selected events but are not usually a direct visibility-algorithm factor. [Wishlist documentation](https://partner.steamgames.com/doc/marketing/wishlist?language=english) · [Visibility documentation](https://partner.steamgames.com/doc/marketing/visibility?language=english)
-
-Each title can join Steam Next Fest only once and needs a public store page plus playable demo, so timing matters. [Next Fest documentation](https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english)
-
-## 6. Game types and mechanics
-
-| Type | Typical mechanics | Why it fits | Representative outcome |
-|---|---|---|---|
-| Named creator / spiritual successor | Retro JRPG parties and base building; classic Metroidvania | Prior audience and creator reputation lower explanation cost | [Bloodstained](https://www.kickstarter.com/projects/iga/bloodstained-ritual-of-the-night) about $5.55M; [Eiyuden Chronicle](https://www.kickstarter.com/projects/rabbitandbearstudios/eiyuden-chronicle-hundred-heroes) about JP¥481.6M; both released |
-| Retro action platformer / Metroidvania | Exploration, ability gates, precise combat, bosses | Feel and art read quickly in GIFs and video | [Hollow Knight](https://www.kickstarter.com/projects/11662585/hollow-knight), [Shovel Knight](https://www.kickstarter.com/projects/yachtclubgames/shovel-knight), [Mina the Hollower](https://www.kickstarter.com/projects/yachtclubgames/mina-the-hollower) |
-| Retro or character-driven RPG | Turn-based combat, party construction, exploration, long narrative | Clear nostalgia; characters, music, and world support ongoing updates | [Sea of Stars](https://www.kickstarter.com/projects/sabotagestudio/sea-of-stars) CA$1.63M from 25,589 backers; later released |
-| Cozy / farming / life sim | Farming, gathering, building, relationships, town growth | Characters and world provide continuous reveal material | [Coral Island](https://www.kickstarter.com/projects/coralisland/coral-island-reimagining-the-farm-sim-game) $1.64M and released; [My Time at Evershine](https://www.kickstarter.com/projects/mtae/my-time-at-evershine-the-next-my-time-tale) $2.90M and pending |
-| One-sentence systemic hook | Stress-management dungeon crawl, antigravity racing, concise survival horror | Difference is provable in a sentence and demo | [Darkest Dungeon](https://www.kickstarter.com/projects/1460250988/darkest-dungeon-by-red-hook-studios), [Aero GPX](https://www.kickstarter.com/projects/aaronmac64/aero-gpx), [Hollowbody](https://www.kickstarter.com/projects/headwaregames/hollowbody/) |
-| Narrative RPG / visual novel / identity community | Branches, relationships, endings, light progression | Digital delivery and dense niche identity | [Undertale](https://www.kickstarter.com/projects/1002143342/undertale) $51,124 from 2,398 backers with a demo; later released |
-| Existing-work sequel or remake | Mechanics vary; prior audience and delivery record matter | Who is building it and who is already waiting can be decisive | [AdventureQuest Worlds: Infinity](https://www.backerkit.com/projects/artix/adventurequest-worlds-infinity) about $2.15M; [Bel's Fanfare](https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/) built on repeated campaign history |
-
-Shared conditions matter more than labels: a reachable audience, public demo or vertical slice, a five-second pitch, a campaign-sized milestone, digital-first rewards, and a team able to communicate consistently.
-
-### High-risk fit
-
-- a new team attempting an MMO, persistent open world, or procedural universe;
-- no demo, only concept art and a feature list;
-- simultaneous promises for several consoles, multiplayer, voice acting, localization, and many stretch goals;
-- physical collector rewards dominating the operation;
-- a goal that buys only a trailer while promising an entire large game.
-
-[Chronicles of Elyria](https://www.kickstarter.com/projects/soulboundstudios/chronicles-of-elyria-epic-story-mmorpg-with-aging/posts/3707035) raised about $1.36 million, but no commercial release record was found at the cutoff. High pledges did not equal completion.
-
-## 7. Ten-point Go / No-Go card
-
-| Signal | 0 | 1 | 2 |
-|---|---|---|---|
-| Audience evidence | Almost none | Followers/wishlists but weak signal | Prior title, stable community, owned list, or repeatable growth |
-| Product evidence | Concept only | Video or rough prototype | Public, high-quality core demo |
-| Positioning | For “all players” | Clear genre, weak distinction | Genre, distinction, and audience are clear in five seconds |
-| Budget and scope | Campaign cannot change delivery | Covers one small milestone | Defined milestone plus fees, tax, and buffer |
-| Rewards and fulfillment | Many physical rewards and complex SKUs | Digital-first with few controllable physical rewards | — |
-| Operating capacity | No owner for localization, community, and support | Clear owner and fixed update cadence | — |
-
-- **8–10:** proceed to pre-launch and unit-economics validation.
-- **6–7:** fix the demo, reachable list, pricing, or budget before launching.
-- **0–5:** build a Steam demo, creator playtests, festival presence, and community first.
-
-This is an internal decision tool, not a platform success-rate prediction.
-
-## 8. Ninety-day validation plan
+## 6. Ninety-day validation plan
 
 ### Days 1–15: define the product and economics
 

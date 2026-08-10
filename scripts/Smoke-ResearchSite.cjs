@@ -136,35 +136,31 @@ async function run() {
       await session.context.close();
     }
 
-    async function testReportTools(locale, relativePath, expected) {
+    async function testPillarReportTools(locale, relativePath, expected) {
       const session = await open({ locale, width: 375, relativePath });
       await session.page.click('[data-reading-mode="full"]');
       await session.page.click('#theme-button');
-      await session.page.click('[data-game-filter="action"]');
-      for (const select of await session.page.locator('[data-score]').all()) {
-        const values = await select.locator('option').evaluateAll(options => options.map(option => option.value).filter(Boolean));
-        await select.selectOption(values[values.length - 1]);
-      }
       const state = await session.page.evaluate(() => ({
         reading: document.documentElement.dataset.reading,
         theme: document.documentElement.dataset.theme,
         themeLabel: document.querySelector('#theme-button').getAttribute('aria-label'),
-        filter: document.querySelector('#game-filter-status').textContent,
-        score: document.querySelector('#decision-score').textContent,
-        heading: document.querySelector('#decision-heading').textContent,
-        cost: document.querySelector('#cost-total').textContent
+        cost: document.querySelector('#cost-total').textContent,
+        filterCount: document.querySelectorAll('[data-game-filter]').length,
+        hasScorecard: Boolean(document.querySelector('#decision-tool')),
+        hasCompanionLink: Boolean(document.querySelector('a[href*="indie-game-crowdfunding-genres-and-gameplay"]'))
       }));
-      assert(state.reading === 'full', `${locale}: reading control failed`);
-      assert(state.theme === 'dim' && expected.theme.test(state.themeLabel), `${locale}: theme control is not localized: ${JSON.stringify(state)}`);
-      assert(expected.filter.test(state.filter), `${locale}: filter output is not localized: ${state.filter}`);
-      assert(state.score === '10/10' && expected.heading.test(state.heading), `${locale}: scorecard failed: ${JSON.stringify(state)}`);
+      assert(state.reading === 'full', `${locale}: pillar reading control failed`);
+      assert(state.theme === 'dim' && expected.theme.test(state.themeLabel), `${locale}: pillar theme control is not localized: ${JSON.stringify(state)}`);
+      assert(state.cost === '96%', `${locale}: pillar cost calculator failed: ${JSON.stringify(state)}`);
+      assert(state.filterCount === 0 && state.hasScorecard === false, `${locale}: pillar must not duplicate the companion filter or scorecard: ${JSON.stringify(state)}`);
+      assert(state.hasCompanionLink, `${locale}: pillar is missing the companion-report link`);
       assert(session.errors.length === 0, `${locale}: ${session.errors.join(' | ')}`);
-      console.log(`tools: ${locale} ${JSON.stringify(state)}`);
+      console.log(`pillar tools: ${locale} ${JSON.stringify(state)}`);
       await session.context.close();
     }
 
-    await testReportTools('en-US', 'crowdfunding-and-indie-games-research/index.html', { filter: /^Showing /, heading: /Ready/, theme: /light mode/ });
-    await testReportTools('zh-CN', 'crowdfunding-and-indie-games-research/index.zh-CN.html', { filter: /筛选后显示/, heading: /可以进入/, theme: /日间模式/ });
+    await testPillarReportTools('en-US', 'crowdfunding-and-indie-games-research/index.html', { theme: /light mode/ });
+    await testPillarReportTools('zh-CN', 'crowdfunding-and-indie-games-research/index.zh-CN.html', { theme: /日间模式/ });
 
     async function testFocusedReportTools(locale, relativePath, expected) {
       const session = await open({ locale, width: 375, relativePath });

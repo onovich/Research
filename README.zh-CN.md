@@ -11,11 +11,11 @@
 ## 研究报告
 
 - [众筹商品与独立游戏](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html) · [English](https://research.onovich.com/crowdfunding-and-indie-games-research/)
-  总报告：解释商品盈利结构、平台适配，以及一款独立游戏是否已适合众筹。
+  总报告：解释商品盈利结构、平台适配、独立游戏的渠道判断，以及 90 天验证方案。
 - [哪些独立游戏类型与玩法更适合众筹？](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
-  配套深挖：对照当下平台样本、七类受众与玩法模式、失败反例和十分制决策卡。
+  游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、平台路径和十分制适配卡。
 
-两份页面共用部分证据，但解决的问题不同：第一份负责整体众筹决策，第二份专门回答游戏类型与玩法是否适配。
+两份页面共用证据底座，但不再重复详细章节：第一份负责整体众筹与渠道决策，第二份是游戏类型与玩法适配的唯一完整入口。
 
 ## 用 AI 创建报告
 

@@ -11,11 +11,11 @@ The first topic cluster covers indie-game funding, distribution, and crowdfundin
 ## Reports
 
 - [Crowdfunding products and indie games](https://research.onovich.com/crowdfunding-and-indie-games-research/) · [中文](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html)
-  The pillar report: product profit structures, platform fit, and whether an indie game is ready to crowdfund.
+  The pillar report: product profit structures, platform fit, the indie-game channel decision, and a 90-day validation plan.
 - [Which indie game genres fit crowdfunding?](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
-  A companion deep dive: current platform samples, seven audience/gameplay patterns, counterexamples, and a ten-point decision card.
+  The game-specific deep dive: current platform samples, seven audience/gameplay patterns, released cases, failure modes, platform routes, and the ten-point fit card.
 
-These pages share evidence, but answer different questions. The first supports the overall crowdfunding decision; the second focuses on game genre and gameplay fit.
+These pages share an evidence base but not detailed sections. The first supports the overall crowdfunding and channel decision; the second is the single detailed home for game genre and gameplay fit.
 
 ## Use it with AI
 

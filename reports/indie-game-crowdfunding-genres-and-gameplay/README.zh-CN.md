@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文** · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 
-> 页面角色：配套深挖报告。它承接[众筹经济性总报告](../crowdfunding-and-indie-games-research/README.zh-CN.md)，集中整理独立游戏的类型、玩法、案例与众筹适配信号；不是测试页，也不是重复报告。
+> 页面角色：配套深挖报告，也是游戏专项细节的唯一完整入口。它承接[众筹经济性总报告](../crowdfunding-and-indie-games-research/README.zh-CN.md)，集中整理当前市场快照、类型与玩法、已发售案例、失败模式、平台路径和 10 分适配卡；总报告不再重复这些章节。
 >
 > 调研截止：2026-08-10（中国标准时间）<br>
 > 地域：以 Kickstarter、BackerKit 为主的国际回报型众筹，以及中国摩点<br>
