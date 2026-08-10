@@ -1,4 +1,6 @@
-# [Research topic]
+# [Short research title]
+
+**Subtitle:** [State the evidence-bounded central finding in one sentence.]
 
 **English** · [简体中文 template](README.zh-CN.md)
 

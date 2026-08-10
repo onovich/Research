@@ -2,7 +2,7 @@
 
 **English** · [简体中文](visual-system.zh-CN.md)
 
-Version 1.3.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
+Version 1.4.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
 
 ## Design position
 
@@ -64,7 +64,7 @@ The spacing rhythm is based on 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Major sec
 
 ## Component language
 
-- **Thesis hero:** one evidence-bounded central finding.
+- **Thesis hero:** a concise topic title, then one evidence-bounded central finding in `.report-subtitle`; scope and audience remain in `.hero-lead`.
 - **Ledger:** observable indicator → cost or constraint → decision result.
 - **Answer stack:** decision question paired with a direct answer.
 - **Evidence strip:** two to four numbers that change the decision.

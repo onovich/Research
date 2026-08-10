@@ -5,7 +5,7 @@
 Choose a stable public English slug. Copy the Markdown templates to `reports/<report-slug>/` and the HTML templates to `site/<report-slug>/`.
 
 1. Complete and review the two Markdown evidence sources under `reports/<report-slug>/`.
-2. Replace bracketed content in both public pages under `site/<report-slug>/`.
+2. Replace bracketed content in both public pages under `site/<report-slug>/`; keep the title short and put the central finding in the subtitle field.
 3. Keep conclusions, figures, caveats, sources, and interactive thresholds aligned across languages.
 4. Replace every `example.invalid` URL, add the production share image and JSON-LD, switch `noindex,nofollow` to the approved index/follow directive, and update absolute canonical, reciprocal `hreflang`, counterpart links, contents, and section IDs.
 5. Keep the imports of `../assets/i18n.js`, `../assets/research.css`, and `../assets/research.js`.

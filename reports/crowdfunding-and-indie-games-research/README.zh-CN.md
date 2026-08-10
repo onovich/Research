@@ -1,4 +1,6 @@
-# 众筹商品与独立游戏专项调查
+# 众筹商品与独立游戏
+
+**副标题：** 利润取决于扣除费用与履约后还剩多少；独立游戏则要先有可被众筹放大的证据。
 
 [English](README.md) · **简体中文** · [English HTML](../../site/crowdfunding-and-indie-games-research/index.html) · [中文 HTML](../../site/crowdfunding-and-indie-games-research/index.zh-CN.html)
 

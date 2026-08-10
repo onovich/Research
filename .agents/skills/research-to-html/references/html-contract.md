@@ -39,7 +39,8 @@ If the repository has no separated public source tree, colocating the Markdown a
 
 ## Search and public-surface contract
 
-- Use a unique, query-descriptive title, meta description, and visible `h1` for each page.
+- Use a unique, concise, query-descriptive title, meta description, and visible `h1` for each page.
+- On report pages, put the evidence-bounded central finding in a visible `.report-subtitle` directly after the `h1`, and mirror it in Article `alternativeHeadline` structured data.
 - Add an absolute HTTPS canonical, `index,follow` directive, favicon, Open Graph fields, Twitter Card fields, and valid JSON-LD using a public organization or intentional author identity.
 - Keep the title and `h1` natural. Do not repeat keywords or claim outcomes the evidence does not establish.
 - Publish an XML sitemap containing exactly the canonical public locale URLs and their reciprocal alternates.
@@ -49,7 +50,7 @@ If the repository has no separated public source tree, colocating the Markdown a
 
 ## Information hierarchy
 
-1. Open with a specific central finding.
+1. Open with a concise topic title followed by a specific central finding as the subtitle.
 2. Keep the brief layer sufficient for a decision: conclusion, decisive evidence, main caveat, and next action.
 3. Put detailed tables, cases, method, and full sources in the full layer.
 4. Give the judgment before supporting detail in every section.

@@ -1,4 +1,4 @@
-/*! Research Visual System v1.3.0
+/*! Research Visual System v1.4.0
  * Skin entry point: edit the semantic tokens in :root and html[data-theme="dim"].
  * Components and responsive behavior below consume those tokens.
  */
@@ -408,9 +408,19 @@
       letter-spacing: -0.045em;
     }
 
+    .report-subtitle {
+      max-width: 42rem;
+      margin: 1.15rem 0 0;
+      color: var(--ink);
+      font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+      font-weight: 650;
+      line-height: 1.55;
+      text-wrap: balance;
+    }
+
     .hero-lead {
       max-width: 40rem;
-      margin: 1.75rem 0 0;
+      margin: 1.35rem 0 0;
       color: var(--ink-soft);
       font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.8;

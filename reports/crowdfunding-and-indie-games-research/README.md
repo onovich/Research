@@ -1,4 +1,6 @@
-# Profitable crowdfunding products and indie games
+# Crowdfunding products and indie games
+
+**Subtitle:** Profit depends on what remains after fees and delivery; games benefit when crowdfunding amplifies proof that already exists.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/crowdfunding-and-indie-games-research/index.html) · [中文 HTML](../../site/crowdfunding-and-indie-games-research/index.zh-CN.html)
 

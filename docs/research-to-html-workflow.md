@@ -2,7 +2,7 @@
 
 **English** · [简体中文](research-to-html-workflow.zh-CN.md)
 
-Version 1.3.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
+Version 1.4.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
 
 ## Output contract
 
@@ -58,7 +58,7 @@ Resolve conflicting definitions, periods, regions, and samples before choosing a
 
 Recommended order:
 
-1. title, cutoff, scope, and definitions;
+1. concise title, one-sentence subtitle, cutoff, scope, and definitions;
 2. one-page conclusion;
 3. method and limits;
 4. model, mechanism, or calculation;
@@ -100,7 +100,7 @@ The two languages must preserve the same findings, figures, caveats, source link
 
 ### Reading hierarchy
 
-1. Open with a specific central finding.
+1. Open with a concise topic title, then state the specific central finding in the subtitle.
 2. Keep conclusion, decisive evidence, main caveat, and action in the brief layer.
 3. Put comparison detail, cases, method, and complete sources in the full layer.
 4. Give the judgment before evidence in each section.

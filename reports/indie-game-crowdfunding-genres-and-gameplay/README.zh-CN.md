@@ -1,4 +1,6 @@
-# 哪些独立游戏类型与玩法更适合众筹？
+# 独立游戏众筹适配
+
+**副标题：** 品类只是线索，受众、可玩证明与可控范围才决定适配度。
 
 [English](README.md) · **简体中文** · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 

@@ -42,7 +42,7 @@ const cards = [
     mark: 'CF',
     eyebrow: 'CROWDFUNDING FIELD STUDY · 2026',
     title: 'Crowdfunding products\nand indie games',
-    note: 'Profit structure · Platform fit · Game types'
+    note: 'Net profit · Platform fit · Channel value'
   },
   {
     file: 'crowdfunding-indie-games-zh-CN.png',
@@ -50,7 +50,7 @@ const cards = [
     mark: '筹',
     eyebrow: '众筹专项调查 · 2026',
     title: '众筹商品与独立游戏',
-    note: '盈利结构 · 平台适配 · 成功玩法'
+    note: '净利润 · 平台适配 · 渠道价值'
   },
   {
     file: 'indie-game-crowdfunding-fit-en.png',
@@ -58,7 +58,7 @@ const cards = [
     mark: 'IG',
     index: 'RESEARCH / 02',
     eyebrow: 'INDIE GAME CROWDFUNDING · 2026',
-    title: 'Which indie games\nfit crowdfunding?',
+    title: 'Indie game\ncrowdfunding fit',
     note: 'Audience · Playable proof · Bounded scope'
   },
   {
@@ -67,7 +67,7 @@ const cards = [
     mark: '游',
     index: '专题 / 02',
     eyebrow: '独立游戏众筹适配 · 2026',
-    title: '哪些独立游戏\n更适合众筹？',
+    title: '独立游戏\n众筹适配',
     note: '受众 · 可玩证明 · 有边界的范围'
   },
   {

@@ -1,4 +1,6 @@
-# Which indie game genres and gameplay structures fit crowdfunding?
+# Indie game crowdfunding fit
+
+**Subtitle:** Genre helps, but audience, playable proof, and bounded scope decide the fit.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 

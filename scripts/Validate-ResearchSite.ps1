@@ -10,7 +10,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $scriptDir))
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 $errors = New-Object System.Collections.Generic.List[string]
-$expectedSystemVersion = "1.3.0"
+$expectedSystemVersion = "1.4.0"
 
 function Add-ValidationError {
   param([string]$Message)
@@ -378,6 +378,15 @@ $companionRelativePaths = @(
   "indie-game-crowdfunding-genres-and-gameplay/index.html",
   "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html"
 )
+foreach ($relative in @($pillarRelativePaths + $companionRelativePaths)) {
+  $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
+  if (([regex]::Matches($html, '(?i)class="[^"]*\breport-subtitle\b[^"]*"')).Count -ne 1) {
+    Add-ValidationError "${relative}: report pages must have exactly one visible report-subtitle"
+  }
+  if ($html -notmatch '"alternativeHeadline"\s*:') {
+    Add-ValidationError "${relative}: report Article JSON-LD must include alternativeHeadline"
+  }
+}
 foreach ($relative in $pillarRelativePaths) {
   $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
   if ($html -match 'data-game-filter|id="decision-tool"') { Add-ValidationError "${relative}: pillar must not duplicate the companion game filter or scorecard" }

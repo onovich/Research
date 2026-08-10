@@ -7,7 +7,7 @@
 ## 使用顺序
 
 1. 先完成并审校 `reports/<report-slug>/` 中的两份 Markdown 调研稿；
-2. 同步改写 `site/<report-slug>/` 中的 `index.html` 与 `index.zh-CN.html`；
+2. 同步改写 `site/<report-slug>/` 中的 `index.html` 与 `index.zh-CN.html`；标题保持简洁，中心判断放进副标题字段；
 3. 保持两种语言的结论、数字、限制、来源和交互阈值一致；
 4. 替换全部 `example.invalid` URL，补齐正式分享图与 JSON-LD，把 `noindex,nofollow` 改为通过审核的 index/follow 指令，并更新绝对 canonical、互指 hreflang、对应语言链接、目录和章节 id；
 5. 保持对 ../assets/i18n.js、../assets/research.css 和 ../assets/research.js 的引用；
