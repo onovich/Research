@@ -1,0 +1,788 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-system-version="1.0.0" data-theme="light" data-reading="brief" data-font="standard">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="国内外众筹商品盈利结构与独立游戏众筹适配性专项调查，调查截点为 2026 年 8 月 10 日。">
+  <meta name="color-scheme" content="light dark">
+  <title>众筹商品与独立游戏专项调查</title>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <link rel="stylesheet" href="../assets/research.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="返回报告开头">
+        <span class="brand-mark" aria-hidden="true">筹</span>
+        <span>众筹专项调查</span>
+      </a>
+      <div class="header-tools" aria-label="阅读设置">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="打开目录">目</button>
+        <div class="control-group" aria-label="阅读深度">
+          <span class="control-label">阅读深度</span>
+          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">速读</button>
+          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">完整</button>
+        </div>
+        <div class="control-group font-controls" aria-label="字号">
+          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">标准字</button>
+          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">大字</button>
+        </div>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到夜读模式" title="切换夜读模式">夜</button>
+      </div>
+    </div>
+  </header>
+
+  <noscript><div class="noscript">JavaScript 已关闭：完整报告仍可阅读，但成本计算器、筛选和阅读设置不可用。</div></noscript>
+
+  <div class="layout" id="top">
+    <aside class="side-nav" id="side-nav" aria-label="报告目录">
+      <button class="nav-close" id="nav-close" type="button">关闭目录</button>
+      <p class="side-nav-title">阅读路径</p>
+      <nav>
+        <ol>
+          <li><a href="#overview" aria-current="true"><span>01</span>先看结论</a></li>
+          <li><a href="#profit"><span>02</span>怎么算赚钱</a></li>
+          <li><a href="#products"><span>03</span>什么商品合适</a></li>
+          <li><a href="#platforms"><span>04</span>平台怎么选</a></li>
+          <li><a href="#games"><span>05</span>独立游戏判断</a></li>
+          <li><a href="#decision"><span>06</span>10 分决策卡</a></li>
+          <li><a href="#roadmap"><span>07</span>90 天验证</a></li>
+          <li><a href="#sources"><span>08</span>来源与限制</a></li>
+        </ol>
+      </nav>
+      <p class="nav-note">调查截点<br><strong>2026-08-10</strong><br>回报型与新品预售型众筹</p>
+    </aside>
+    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="关闭目录"></button>
+
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">Crowdfunding field notes · 2026</p>
+          <h1 id="page-title">先别看筹了多少。先看最后剩多少。</h1>
+          <p class="hero-lead">一份关于国内外众筹商品盈利结构，以及独立游戏是否仍值得众筹的专项调查。结论先行，证据按需展开。</p>
+
+          <dl class="hero-ledger" aria-label="筹资额和净利润的区别">
+            <div class="ledger-row">
+              <dt>公开页面能看到</dt>
+              <dd>认缴额 / 支持人数</dd>
+            </div>
+            <div class="ledger-row">
+              <dt>中间必须扣除</dt>
+              <dd>费用 / 开发 / 履约</dd>
+            </div>
+            <div class="ledger-row unknown">
+              <dt>公开页面通常看不到</dt>
+              <dd>最终净利润 ≠ 筹资额</dd>
+            </div>
+          </dl>
+
+          <div class="hero-actions">
+            <a class="button-link" href="#overview">先用 8 分钟看结论</a>
+            <a class="button-link secondary" href="#decision">判断我的游戏是否适合</a>
+          </div>
+          <p class="reading-state" id="reading-state">当前为速读模式：保留判断与行动，隐藏补充证据。可在页首切换完整报告。</p>
+        </header>
+
+        <section class="section" id="overview" aria-labelledby="overview-title">
+          <div class="section-head">
+            <span class="section-number">01</span>
+            <div>
+              <h2 id="overview-title">先看结论</h2>
+              <p class="section-intro">众筹不是一种自动赚钱的渠道。它更像一台放大器：把已有需求、产品差异与履约能力一起放大，也把错误预算一起放大。</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>什么商品更容易赚钱？</h3>
+              <p><strong>已有受众、差异明显、客单与贡献毛利足够、履约轻或供应链成熟</strong>的商品。IP/作者型收藏与出版、桌游/TRPG/卡牌、轻小粉丝商品，以及成熟团队的高客单设计工具最匹配。</p>
+            </article>
+            <article class="answer">
+              <h3>独立游戏还适合众筹吗？</h3>
+              <p><strong>适合，但不是默认选项。</strong>它最擅长把已有兴趣转成资金、超级用户和一次营销事件；不擅长凭空制造受众。</p>
+            </article>
+            <article class="answer">
+              <h3>哪类独立游戏更成立？</h3>
+              <p><strong>5 秒能认出类型、短视频能看懂循环、Demo 能证明手感、玩家有明确参照物</strong>的项目：精神续作、动作平台/Metroidvania、复古 JRPG、Cozy/生活模拟、视觉小说与被大厂忽略的经典细分玩法。</p>
+            </article>
+          </div>
+
+          <div class="evidence-strip" aria-label="Kickstarter 2024 电子游戏核心数据">
+            <div class="evidence-point">
+              <span class="evidence-value">441</span>
+              <span class="evidence-label">2024 年成功电子游戏项目，平台 15 年最高数量</span>
+            </div>
+            <div class="evidence-point">
+              <span class="evidence-value">$26M</span>
+              <span class="evidence-label">成功电子游戏项目认缴额，同比增长 28%</span>
+            </div>
+            <div class="evidence-point">
+              <span class="evidence-value">83%</span>
+              <span class="evidence-label">Games 大类认缴流向桌游，电子游戏仍是小市场</span>
+            </div>
+          </div>
+
+          <div class="callout warning">
+            <span class="callout-title">最容易误判的地方</span>
+            <p>榜单上的智能硬件、机器人、3D 打印设备和复杂桌游大盒可能筹得很多，但平台通常不公开制造、广告、退款、税、国际运输、售后与团队人力，因此不能据此判断净利润。</p>
+          </div>
+
+          <div class="mode-notice brief-only">
+            <span>速读模式省略了平台实时榜单与大部分案例细节。</span>
+            <button type="button" data-switch-full>展开完整证据</button>
+          </div>
+        </section>
+
+        <section class="section" id="profit" aria-labelledby="profit-title">
+          <div class="section-head">
+            <span class="section-number">02</span>
+            <div>
+              <h2 id="profit-title">怎么算“真的赚钱”</h2>
+              <p class="section-intro">把“达到目标”“按时交付”“商业盈利”拆开。公开页面通常只证明第一层。</p>
+            </div>
+          </div>
+
+          <dl class="definition-table">
+            <div class="definition-row">
+              <dt>筹资成功</dt>
+              <dd>达到平台设定目标；也可能只是目标定得低。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>履约成功</dt>
+              <dd>奖励在可接受的时间和质量范围内交付。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>商业盈利</dt>
+              <dd>收入覆盖直接成本、固定成本、税、售后与团队时间后仍有利润。</dd>
+            </div>
+          </dl>
+
+          <div class="calculator" id="calculator" data-net-calculator data-currency="CNY" aria-labelledby="calculator-title">
+            <div class="calculator-head">
+              <div>
+                <h3 id="calculator-title">认缴额拆解器</h3>
+                <p>输入假设，观察公开流水最后可能留下多少。结果仅用于压力测试。</p>
+              </div>
+              <div class="calculator-total">
+                <label for="pledge-total">有效认缴额（元）</label>
+                <input id="pledge-total" type="number" min="0" step="10000" value="1000000" inputmode="numeric">
+              </div>
+            </div>
+            <div class="cost-controls">
+              <div class="cost-row">
+                <label for="cost-fees">平台与支付</label>
+                <input id="cost-fees" data-cost type="range" min="0" max="25" value="9">
+                <output for="cost-fees">9%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-product">生产 / 授权 / 开发</label>
+                <input id="cost-product" data-cost type="range" min="0" max="70" value="28">
+                <output for="cost-product">28%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-fulfillment">包装与履约</label>
+                <input id="cost-fulfillment" data-cost type="range" min="0" max="50" value="14">
+                <output for="cost-fulfillment">14%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-marketing">广告与活动运营</label>
+                <input id="cost-marketing" data-cost type="range" min="0" max="40" value="12">
+                <output for="cost-marketing">12%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-risk">税、退款、客服、质保</label>
+                <input id="cost-risk" data-cost type="range" min="0" max="35" value="8">
+                <output for="cost-risk">8%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-labor">团队人力</label>
+                <input id="cost-labor" data-cost type="range" min="0" max="50" value="15">
+                <output for="cost-labor">15%</output>
+              </div>
+              <div class="cost-row">
+                <label for="cost-buffer">延期与汇率缓冲</label>
+                <input id="cost-buffer" data-cost type="range" min="0" max="30" value="10">
+                <output for="cost-buffer">10%</output>
+              </div>
+            </div>
+            <div class="calculator-result" aria-live="polite">
+              <div class="result-cell">
+                <small>总成本假设</small>
+                <output id="cost-total">96%</output>
+              </div>
+              <div class="result-cell">
+                <small>预计可留资金</small>
+                <output id="net-amount">¥40,000</output>
+              </div>
+              <div class="result-cell">
+                <small>压力判断</small>
+                <strong id="net-status" data-state="thin">缓冲很薄</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula detail-layer" role="region" aria-label="众筹净贡献计算公式">预计净贡献 = 有效认缴额
+           - 平台费与支付费
+           - 退款、拒付与坏账
+           - 生产 / 授权 / 开发成本
+           - 包装、仓储、干线、关税、末端配送
+           - 广告、代理与素材
+           - 税费、客服、补发、质保
+           - 团队人力
+           - 延误与汇率风险准备金
+
+单笔贡献毛利 = 每单净收入 - 每单可变成本
+保本支持者数 = 固定投入 / 单笔贡献毛利</div>
+
+          <div class="detail-layer">
+            <p>Kickstarter 官方要求目标金额覆盖研发、生产、包装、运送、人力、费用和税，并建议保留误差缓冲；成功项目另收 5% 平台费，支付处理通常约 3%–5%。<a href="https://help.kickstarter.com/hc/en-us/articles/360035551894-Using-Project-Budget-to-calculate-your-project-s-funding-goal">预算说明</a> · <a href="https://help.kickstarter.com/hc/en-us/articles/115005028634-What-are-the-fees">费率说明</a></p>
+            <p>Kickstarter 刊发、Jellop 撰写的一篇实务文章给出的常见规划值是：制造成本约占 20%–33%，广告管理约 15%，平台/支付/认缴服务约 10%，奖励定价约为增量生产成本的 3–5 倍。它不是全平台审计数据，只适合作为压力测试起点。<a href="https://updates.kickstarter.com/beyond-ads-what-creators-ask-us-most-about-running-a-successful-kickstarter/">查看实务口径</a></p>
+          </div>
+        </section>
+
+        <section class="section" id="products" aria-labelledby="products-title">
+          <div class="section-head">
+            <span class="section-number">03</span>
+            <div>
+              <h2 id="products-title">什么商品更适合众筹</h2>
+              <p class="section-intro">真正强势的不是孤立品类，而是几种经济结构：有现成受众、能提高客单、边际交付轻，或已经具备成熟供应链。</p>
+            </div>
+          </div>
+
+          <div class="rank-list">
+            <article class="rank-item">
+              <span class="grade" aria-label="A 级">A</span>
+              <div>
+                <h3>已有受众的轻小型 IP / 作者型商品</h3>
+                <p>设定集、漫画/小说特别版、艺术书、毛绒、徽章、亚克力、卡牌与授权小型收藏品。情感与收藏动机降低同质化比价；小、轻、低售后时跨境履约可控。</p>
+              </div>
+            </article>
+            <article class="rank-item">
+              <span class="grade" aria-label="A 减到 B 加级">A−</span>
+              <div>
+                <h3>桌游、TRPG、卡牌</h3>
+                <p>规则、世界观、组件和收藏性适合长页面解释；基础盒、豪华盒、扩展与加购可提高客单。风险集中在开模、大盒重量、语言版本和增项失控。</p>
+              </div>
+            </article>
+            <article class="rank-item">
+              <span class="grade caution" aria-label="A 减到 B 级">B+</span>
+              <div>
+                <h3>高客单、强演示、成熟供应链的设计/创客工具</h3>
+                <p>高客单允许承担获客成本，视频能迅速展示价值。但必须已有成熟样机、认证路径、量产伙伴和售后预算；首次团队做复杂机电产品时应降为高风险。</p>
+              </div>
+            </article>
+            <article class="rank-item">
+              <span class="grade caution" aria-label="B 级">B</span>
+              <div>
+                <h3>明确细分需求的设计生活品与数字内容</h3>
+                <p>场景清楚、差异可感知、供应链成熟时可成立。数字奖励的边际复制成本低，但游戏和内容开发成本仍然真实存在。</p>
+              </div>
+            </article>
+            <article class="rank-item">
+              <span class="grade risk" aria-label="C 级">C</span>
+              <div>
+                <h3>首次团队的复杂硬件与重履约商品</h3>
+                <p>多认证、多模具、固件、App、云服务、全球售后、重/大/易碎、多 SKU、免费国际包邮，都会让高流水快速变成库存、售后和现金流风险。</p>
+              </div>
+            </article>
+          </div>
+
+          <details class="detail-layer">
+            <summary>展开：每一类商品的赚钱前提</summary>
+            <div class="details-body">
+              <p><strong>IP/作者型商品：</strong>授权清晰；SKU 数量受控；包装与跨境邮资提前询价；避免低客单商品免费全球包邮。</p>
+              <p><strong>桌游/TRPG/卡牌：</strong>Kickstarter 2024 年发起 6,646 个桌游项目，成功 5,314 个，成功率约 80%，成功项目认缴约 2.2 亿美元。但“最适合众筹”不等于“最轻松赚钱”。</p>
+              <p><strong>设计/创客工具：</strong>解决的问题应能被视频立即展示，预售资金用于首批量产，而不是先研究“到底能不能做”。</p>
+              <p><strong>普通生活品：</strong>若可以被电商直接比价，必须有足够的可感知差异、客单价和渠道防御，否则只是把库存风险提前。</p>
+            </div>
+          </details>
+
+          <div class="callout danger">
+            <span class="callout-title">高流水不等于低风险</span>
+            <p>国际制造项目从众筹到交付现实中常需约 12 个月，不少达到 15 个月。出口、海运、清关、仓库和末端派送是不同成本层，排期还需要缓冲。<a href="https://updates.kickstarter.com/from-funded-to-delivered-a-creators-guide-to-fulfillment/">Kickstarter 履约指南</a></p>
+          </div>
+
+          <div class="detail-layer">
+            <h3>高额项目真正证明了什么</h3>
+            <p>它们证明的是成熟团队、既有社区和可验证样机，而不是“硬件天然赚钱”。</p>
+            <ul>
+              <li><a href="https://updates.kickstarter.com/eufymakes-breaks-the-all-time-funding-record/">EufyMake E1</a> 获得约 4,676 万美元、17,822 名支持者，是极端高流水案例，公开数据仍不能证明净利润。</li>
+              <li><a href="https://updates.kickstarter.com/peak-design-raises-13m-with-their-biggest-kickstarter-ever/">Peak Design</a> 一次活动约 1,300 万美元、超过 23,000 人；这已经是品牌第 14 次活动。</li>
+              <li><a href="https://updates.kickstarter.com/case-study-whats-at-the-center-of-snapmakers-multi-million-dollar-success/">Snapmaker</a> 多次活动累计超过 2,000 万美元；代表性项目上线前经历多年研发、测试机与外部测评。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="platforms" aria-labelledby="platforms-title">
+          <div class="section-head">
+            <span class="section-number">04</span>
+            <div>
+              <h2 id="platforms-title">平台怎么选</h2>
+              <p class="section-intro">国内外平台不是同一种渠道。先按商品形态与受众选生态，再比较费率。</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>海外综合创意</h3>
+              <p><strong>Kickstarter</strong> 仍是综合首选；设计、出版、成熟科技与独立游戏都有明确生态，但需要创作者自带首批受众。</p>
+            </article>
+            <article class="answer">
+              <h3>海外桌游 / TTRPG</h3>
+              <p>重点比较 <strong>Kickstarter、Gamefound、BackerKit</strong>。Gamefound 偏桌游垂直；BackerKit 更适合已有邮件名单和后续认缴运营。</p>
+            </article>
+            <article class="answer">
+              <h3>国内文创与游戏</h3>
+              <p><strong>摩点</strong>更自然；淘宝“造点新货”偏综合新品首发/预售，小米有品众筹偏精选科技与生活方式商品。</p>
+            </article>
+          </div>
+
+          <div class="detail-layer">
+            <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 ↔</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="国外众筹平台对照表">
+              <table>
+                <caption>国外主流平台：定位、费用与适配品类</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">平台</th>
+                    <th scope="col">当前定位与费用</th>
+                    <th scope="col">更匹配的商品</th>
+                    <th scope="col">本次判断</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Kickstarter</th>
+                    <td>综合创意；全有或全无；成功后 5% 平台费，支付约 3%–5%</td>
+                    <td>桌游、出版、漫画、设计品、成熟科技产品、独立游戏</td>
+                    <td>综合首选；有平台发现能力，仍需自带首批受众</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gamefound</th>
+                    <td>桌游生态；5% 平台费，另有支付交易费用</td>
+                    <td>桌游、TRPG、模型、游戏外设、漫画/书、geek 周边</td>
+                    <td>桌游垂直首选之一；官方准入范围不含电子游戏</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">BackerKit</th>
+                    <td>众筹 + 邮件营销 + pledge manager；美国费率 5% 加 2.9% + $0.30/笔</td>
+                    <td>复购创作者、TTRPG、出版、毛绒/徽章、已有名单的项目</td>
+                    <td>自有社群强时很合适；平台自报数据不能与电子游戏专项统计直接横比</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Indiegogo</th>
+                    <td>2025 年被 Gamefound 收购并升级；固定目标、可 Late Pledge；5% 加支付费</td>
+                    <td>科技新品、接近量产的产品、后续预售</td>
+                    <td>接近交付的新品仍有用途；不作为电子独立游戏首选</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 ↔</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="国内众筹平台对照表">
+              <table>
+                <caption>国内平台：2026-08-10 核验结果</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">平台</th>
+                    <th scope="col">当前定位</th>
+                    <th scope="col">更匹配的商品</th>
+                    <th scope="col">注意事项</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">摩点</th>
+                    <td>游戏、动漫、影视、文学等文创众筹</td>
+                    <td>ACG、游戏周边、叙事游戏、桌游、TRPG、卡牌、潮玩、出版</td>
+                    <td>优惠期暂免 6% 服务费，收 1% 支付费；邮费由发起人承担；分阶段放款</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">淘宝「造点新货」</th>
+                    <td>综合新品首发/预售，横跨科技、设计、动漫、游戏、食品</td>
+                    <td>IP 手办/周边、生活科技、设计小物、新消费食品</td>
+                    <td>更接近淘宝生态新品首发；页面流水不能证明生产商利润</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">小米有品众筹</th>
+                    <td>精选科技与生活方式新品</td>
+                    <td>经筛选的科技、家居、生活方式产品</td>
+                    <td>不是人人可发布的开放众筹；公开利润数据有限</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">京东旧众筹</th>
+                    <td>旧入口重定向或报错；未核验到可靠现行项目目录</td>
+                    <td>暂不列入当前选址清单</td>
+                    <td>不要用 2022 年前后的历史排名代表 2026 现状</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>国内实时榜单快照</h3>
+            <dl class="snapshot">
+              <div>
+                <dt>摩点游戏众筹中</dt>
+                <dd>26 个项目</dd>
+              </div>
+              <div>
+                <dt>摩点桌游众筹中</dt>
+                <dd>49 个项目</dd>
+              </div>
+              <div>
+                <dt>淘宝头部 IP 手办</dt>
+                <dd>约 3,212.8 万元</dd>
+              </div>
+            </dl>
+            <p>摩点游戏页头部包括游戏周边、像素 RPG、女性向养成、塔防经营、轻百合 RPG、视觉小说和文字冒险；桌游页头部包括叙事 TRPG、对战卡牌、克苏鲁合作桌游、海外爆款引进、IP、4X 和 DBG。淘宝“造点新货”当时的头部是《哪吒之魔童闹海》官方手办，显示 75,014 名支持者。数字会变化，只代表调查截点。</p>
+            <p><a href="https://login.modian.com/about/index/4?id=17">摩点官方 FAQ</a> · <a href="https://zhongchou.modian.com/games/top_money/going">摩点游戏实时榜</a> · <a href="https://zhongchou.modian.com/tablegames/top_money/going">摩点桌游实时榜</a> · <a href="https://izhongchou.taobao.com/">淘宝造点新货</a> · <a href="https://m.app.mi.com/details?id=com.xiaomi.youpin">小米有品官方应用页</a></p>
+          </div>
+
+          <div class="mode-notice brief-only">
+            <span>平台费率、国内实时榜单与选址细节已折叠。</span>
+            <button type="button" data-switch-full>查看平台完整对照</button>
+          </div>
+        </section>
+
+        <section class="section" id="games" aria-labelledby="games-title">
+          <div class="section-head">
+            <span class="section-number">05</span>
+            <div>
+              <h2 id="games-title">独立游戏今天还适合众筹吗？</h2>
+              <p class="section-intro">适合，但适用面已经收窄。它更像“已有兴趣的变现与验证”，不是从零获得曝光的万能入口。</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="callout-title">推荐的组合路径</span>
+            <p>先做可玩的核心循环和 Steam Coming Soon 页面，以 Demo、创作者试玩和社群建立真实兴趣，再用众筹把这批兴趣转成资金与超级用户。</p>
+          </div>
+
+          <p class="detail-layer">Kickstarter 官方数据表明电子游戏众筹并未消失：2024 年成功项目筹得 2,600 万美元、同比增长 28%，成功项目 441 个、同比增长 9%；2026 年第一季度又成为 13 年来电子游戏最强的第一季度，有 4 个项目超过 50 万美元、2 个超过 100 万美元。<a href="https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/">2024 官方总结</a> · <a href="https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/">2026 官方更新</a></p>
+
+          <div class="flow" aria-label="独立游戏众筹推荐路径">
+            <div class="flow-step"><span>01</span><p>可玩的核心循环</p></div>
+            <div class="flow-step"><span>02</span><p>Steam Coming Soon 页面</p></div>
+            <div class="flow-step"><span>03</span><p>Demo、内容创作者试玩、社区与邮件名单</p></div>
+            <div class="flow-step"><span>04</span><p>用真实转化和获客成本做 Go / No-Go</p></div>
+            <div class="flow-step"><span>05</span><p>Kickstarter（海外）或摩点（国内文创受众）</p></div>
+            <div class="flow-step"><span>06</span><p>众筹流量继续导向 Steam 愿望单，在质量成熟时参加 Next Fest</p></div>
+          </div>
+
+          <div class="definition-table">
+            <div class="definition-row">
+              <dt>资金优势</dt>
+              <dd>发售前收到现金；验证真实付费意愿；为一个明确、可交付的里程碑融资。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>宣发优势</dt>
+              <dd>把上线、冲线与更新做成连续事件；获得愿意转发、试玩和反馈的核心用户；用支持人数向媒体与发行商证明需求。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>主要代价</dt>
+              <dd>平台与支付费、推广成本、公开承诺、客服和社区压力；活动运营会占用开发团队数周。</dd>
+            </div>
+          </div>
+
+          <h3>成功类型与玩法</h3>
+          <p>用筛选器只看你关心的玩法。这里的“成功”优先指筹资成功；只有已经发售的项目才能再算履约成功。</p>
+
+          <div class="filter-bar" aria-label="筛选游戏类型">
+            <button class="filter-button" type="button" data-game-filter="all" aria-pressed="true">全部</button>
+            <button class="filter-button" type="button" data-game-filter="legacy" aria-pressed="false">精神续作</button>
+            <button class="filter-button" type="button" data-game-filter="action" aria-pressed="false">动作与探索</button>
+            <button class="filter-button" type="button" data-game-filter="rpg" aria-pressed="false">RPG</button>
+            <button class="filter-button" type="button" data-game-filter="cozy" aria-pressed="false">Cozy 模拟</button>
+            <button class="filter-button" type="button" data-game-filter="narrative" aria-pressed="false">叙事社群</button>
+          </div>
+          <p class="filter-status" id="game-filter-status" aria-live="polite">当前显示全部 7 类。</p>
+
+          <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 ↔</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="独立游戏成功类型和玩法案例">
+            <table id="game-table">
+              <caption>类型、典型玩法、适配原因与代表项目</caption>
+              <thead>
+                <tr>
+                  <th scope="col">类型</th>
+                  <th scope="col">典型玩法</th>
+                  <th scope="col">为什么适合众筹</th>
+                  <th scope="col">代表项目</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-game-type="legacy rpg">
+                  <th scope="row">名制作人 / 经典系谱精神续作</th>
+                  <td>复古回合制 JRPG、组队、角色收集、基地建设；经典 Metroidvania</td>
+                  <td>玩家知道“大厂不再做什么”；制作人信用和旧作受众降低解释成本</td>
+                  <td><a href="https://www.kickstarter.com/projects/iga/bloodstained-ritual-of-the-night">Bloodstained</a> 约 $5.55M；<a href="https://www.kickstarter.com/projects/rabbitandbearstudios/eiyuden-chronicle-hundred-heroes">Eiyuden Chronicle</a> 约 ¥481.6M，均已发售</td>
+                </tr>
+                <tr data-game-type="action legacy">
+                  <th scope="row">复古动作平台 / Metroidvania</th>
+                  <td>横版探索、能力解锁、精确战斗、Boss；或 Zelda-like 地牢与道具探索</td>
+                  <td>GIF 和短视频立即展示手感与美术；经典参照物清楚</td>
+                  <td><a href="https://www.kickstarter.com/projects/11662585/hollow-knight">Hollow Knight</a> A$57,138；<a href="https://www.kickstarter.com/projects/yachtclubgames/shovel-knight">Shovel Knight</a> $311,502；<a href="https://www.kickstarter.com/projects/yachtclubgames/mina-the-hollower">Mina the Hollower</a> $1.24M</td>
+                </tr>
+                <tr data-game-type="rpg legacy">
+                  <th scope="row">复古 JRPG / 角色驱动 RPG</th>
+                  <td>回合制、时机输入、队伍构筑、地图探索、长叙事</td>
+                  <td>怀旧受众明确；角色、音乐和世界观适合持续更新和高档位</td>
+                  <td><a href="https://www.kickstarter.com/projects/sabotagestudio/sea-of-stars">Sea of Stars</a> CA$1.63M、25,589 人，已有上一作受众，后正式发售</td>
+                </tr>
+                <tr data-game-type="cozy rpg">
+                  <th scope="row">Cozy / 农场 / 生活模拟</th>
+                  <td>种田、养殖、采集、建造、关系/恋爱、城镇成长</td>
+                  <td>角色和世界可持续展示；社区投票与扩展目标自然</td>
+                  <td><a href="https://www.kickstarter.com/projects/coralisland/coral-island-reimagining-the-farm-sim-game">Coral Island</a> $1.64M，已发售；<a href="https://www.kickstarter.com/projects/mtae/my-time-at-evershine-the-next-my-time-tale">My Time at Evershine</a> $2.90M，仍待交付</td>
+                </tr>
+                <tr data-game-type="action rpg">
+                  <th scope="row">一句话能说清的系统型玩法</th>
+                  <td>地牢 + 压力管理；反重力竞速；短篇经典生存恐怖</td>
+                  <td>差异点可用一句话和 Demo 证明；受众虽小但需求强</td>
+                  <td><a href="https://www.kickstarter.com/projects/1460250988/darkest-dungeon-by-red-hook-studios">Darkest Dungeon</a> $313,337；<a href="https://www.kickstarter.com/projects/aaronmac64/aero-gpx">Aero GPX</a> $118,189；<a href="https://www.kickstarter.com/projects/headwaregames/hollowbody/">Hollowbody</a> £27,949</td>
+                </tr>
+                <tr data-game-type="narrative rpg">
+                  <th scope="row">叙事 RPG / 视觉小说 / 身份社群</th>
+                  <td>分支叙事、角色关系、多结局；也可叠加轻战斗或养成</td>
+                  <td>数字交付、目标额可较低；角色与社群认同形成高密度小众</td>
+                  <td><a href="https://www.kickstarter.com/projects/1002143342/undertale">Undertale</a> $51,124、2,398 人，活动已有 Demo，后正式发售</td>
+                </tr>
+                <tr data-game-type="narrative legacy">
+                  <th scope="row">已有作品 / 创作者社群的续作或重制</th>
+                  <td>玩法不固定，关键是可验证的旧作受众与履约记录</td>
+                  <td>最强变量往往是“谁在做”和“谁已经等着买”</td>
+                  <td><a href="https://www.backerkit.com/projects/artix/adventurequest-worlds-infinity">AdventureQuest Worlds: Infinity</a> 约 $2.15M；<a href="https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/">Bel's Fanfare</a> 建立在 Chibig 多次成功活动之上</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="detail-layer">
+            <h3>共同前提，不只是品类</h3>
+            <ul>
+              <li><strong>先有可识别受众：</strong>上一作、名制作人、旧类型空缺、稳定内容账号、Discord/邮件名单或强社群题材。</li>
+              <li><strong>先有可证明产品：</strong>Demo、vertical slice、真实玩法录像，而不是概念 CG。</li>
+              <li><strong>卖点可以压缩：</strong>玩家在 5 秒内知道像什么、哪里不同、为什么现在支持。</li>
+              <li><strong>预算能被活动影响：</strong>认缴额可以完成一段真实工作，而不是总预算里的装饰性小数。</li>
+              <li><strong>数字奖励为主：</strong>游戏、原声、数字画册、测试资格、鸣谢；实体奖励少而清晰。</li>
+            </ul>
+          </div>
+
+          <div class="callout danger">
+            <span class="callout-title">不适配或高风险</span>
+            <p>新团队直接做 MMO、持续在线开放世界、程序生成宇宙；无 Demo、只有概念图与功能清单；同时承诺多个主机平台、联机、配音、多语言和大量扩展目标；目标额只够宣传片，却承诺交付整个大型游戏。</p>
+          </div>
+
+          <div class="detail-layer">
+            <p><a href="https://www.kickstarter.com/projects/soulboundstudios/chronicles-of-elyria-epic-story-mmorpg-with-aging/posts/3707035">Chronicles of Elyria</a> 获得约 136 万美元，但截至本次核验未找到正式发售记录，是“高认缴不等于完成”的典型提醒。</p>
+            <p>Steam 官方建议尽早公开 <a href="https://partner.steamgames.com/doc/store/coming_soon?language=english">Coming Soon 页面</a>；愿望单会在发售、退出抢先体验和达到特定折扣时通知用户，但多数情况下并不是可见性算法的直接因素。<a href="https://partner.steamgames.com/doc/marketing/wishlist?language=english">愿望单说明</a> · <a href="https://partner.steamgames.com/doc/marketing/visibility?language=english">可见性说明</a></p>
+            <p>Steam Next Fest 要求公开商店页与可玩 Demo，每个项目只能参加一次，过早用掉机会并不划算。<a href="https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english">Next Fest 文档</a></p>
+          </div>
+        </section>
+
+        <section class="section" id="decision" aria-labelledby="decision-title">
+          <div class="section-head">
+            <span class="section-number">06</span>
+            <div>
+              <h2 id="decision-title">我的游戏该不该众筹？</h2>
+              <p class="section-intro">六项判断，总分 10 分。这不是成功率预测，而是一张内部 Go / No-Go 决策卡。</p>
+            </div>
+          </div>
+
+          <form class="decision-tool" id="decision-tool">
+            <div class="decision-row">
+              <label for="score-audience">受众证据</label>
+              <select id="score-audience" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 几乎没有</option>
+                <option value="1">1 · 有关注/愿望单，但信号较弱</option>
+                <option value="2">2 · 有上一作、稳定社群、名单或可复现增长</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-product">产品证据</label>
+              <select id="score-product" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 只有概念</option>
+                <option value="1">1 · 有录像或粗糙原型</option>
+                <option value="2">2 · 有可公开、高质量的核心 Demo</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-position">定位清晰度</label>
+              <select id="score-position" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 面向“所有玩家”</option>
+                <option value="1">1 · 类型清楚，但差异较弱</option>
+                <option value="2">2 · 5 秒讲清类型、差异和受众</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-budget">预算与范围</label>
+              <select id="score-budget" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 活动金额无力改变交付</option>
+                <option value="1">1 · 能覆盖一个小里程碑</option>
+                <option value="2">2 · 覆盖明确里程碑，并含费用、税与缓冲</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-reward">奖励与履约</label>
+              <select id="score-reward" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 实体多、SKU 复杂</option>
+                <option value="1">1 · 数字为主，只有少量可控实体</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-operation">运营能力</label>
+              <select id="score-operation" data-score>
+                <option value="" selected>请选择当前状态</option>
+                <option value="0">0 · 无人负责双语、社区和客服</option>
+                <option value="1">1 · 有负责人和固定更新机制</option>
+              </select>
+            </div>
+            <div class="decision-result" aria-live="polite">
+              <output class="score" id="decision-score">—/10</output>
+              <div>
+                <h3 id="decision-heading">完成六项选择后给出判断</h3>
+                <p id="decision-copy">系统不会保存你的选择。</p>
+              </div>
+            </div>
+          </form>
+
+          <div class="definition-table">
+            <div class="definition-row">
+              <dt>8–10 分</dt>
+              <dd>可以进入预热与单元经济验证。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>6–7 分</dt>
+              <dd>先补 Demo、名单、定价或预算，不要急着上线。</dd>
+            </div>
+            <div class="definition-row">
+              <dt>0–5 分</dt>
+              <dd>先走 Steam Demo、内容创作者试玩、节展和社区建设。</dd>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="roadmap" aria-labelledby="roadmap-title">
+          <div class="section-head">
+            <span class="section-number">07</span>
+            <div>
+              <h2 id="roadmap-title">90 天验证方案</h2>
+              <p class="section-intro">先证明玩法和付费意愿，再做活动页包装。每一阶段都有一个可停止的判断点。</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <time>第 1–15 天</time>
+              <h3>定义项目与经济边界</h3>
+              <ul>
+                <li>写出目标玩家、参照游戏和核心差异的一句话定位。</li>
+                <li>明确众筹资金只负责哪个里程碑。</li>
+                <li>按目的国询价物流和税，为每个奖励档建成本表。</li>
+                <li>建立基础、悲观、延迟三套预算。</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <time>第 16–45 天</time>
+              <h3>证明玩法，不先包装活动页</h3>
+              <ul>
+                <li>完成 10–20 分钟、体现最终品质方向的 Demo。</li>
+                <li>公开 Steam Coming Soon 页面。</li>
+                <li>用短视频、试玩和小规模创作者合作测试卖点。</li>
+                <li>记录渠道级获客成本。</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <time>第 31–60 天</time>
+              <h3>建立可触达的首批人群</h3>
+              <ul>
+                <li>建立邮件名单与 Discord/社群，不只积累平台关注。</li>
+                <li>每周固定发布开发更新、玩法片段或角色内容。</li>
+                <li>记录 Demo 完成率、流失点与最常被提到的卖点。</li>
+                <li>测试数字档位和少量实体档位的价格意愿。</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <time>第 61–75 天</time>
+              <h3>用自己的数据做压力测试</h3>
+              <ul>
+                <li>测试名单用户“愿意在第一天付多少”，而不是只问喜不喜欢。</li>
+                <li>把转化率、获客成本和单笔贡献毛利带回保本公式。</li>
+                <li>悲观情景不能覆盖费用、税、延期与售后时，削减奖励或推迟。</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <time>第 76–90 天</time>
+              <h3>Go / No-Go</h3>
+              <ul>
+                <li>Demo 足以代表核心体验。</li>
+                <li>首日可触达的人群已经表达真实付费意愿。</li>
+                <li>目标金额覆盖完整成本与明确里程碑。</li>
+                <li>每个档位在悲观情景下仍有正贡献。</li>
+                <li>有人持续负责社区、客服和更新。</li>
+                <li>众筹页与 Steam 愿望单互相导流，Next Fest 时机已规划。</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="callout">
+            <span class="callout-title">停止条件也是进展</span>
+            <p>任何关键项不成立，推迟众筹通常比“先上线试试”更便宜。活动页面会永久留下筹资与更新记录，失败或失联都会影响下一次信用。</p>
+          </div>
+        </section>
+
+        <section class="section detail-layer" id="sources" aria-labelledby="sources-title">
+          <div class="section-head">
+            <span class="section-number">08</span>
+            <div>
+              <h2 id="sources-title">来源与研究限制</h2>
+              <p class="section-intro">优先使用平台官方统计、帮助文档、项目页和 Steamworks 文档；平台营销材料已按自报口径处理。</p>
+            </div>
+          </div>
+
+          <ul class="sources">
+            <li><span class="source-type">Kickstarter</span><a href="https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/">2024 Games 官方数据</a></li>
+            <li><span class="source-type">Kickstarter</span><a href="https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/">2026 电子游戏季度更新</a></li>
+            <li><span class="source-type">Kickstarter</span><a href="https://updates.kickstarter.com/a-year-in-review-2025-kickstarter-highlights/">2025 平台年度回顾</a></li>
+            <li><span class="source-type">Kickstarter</span><a href="https://help.kickstarter.com/hc/en-us/articles/115005028634-What-are-the-fees">费用说明</a></li>
+            <li><span class="source-type">Kickstarter</span><a href="https://updates.kickstarter.com/from-funded-to-delivered-a-creators-guide-to-fulfillment/">履约指南</a></li>
+            <li><span class="source-type">Gamefound</span><a href="https://help.gamefound.com/article/210-who-can-run-a-campaign">项目准入范围</a></li>
+            <li><span class="source-type">Gamefound</span><a href="https://help.gamefound.com/article/284-fees-for-projects-funded-on-gamefound">费用说明</a></li>
+            <li><span class="source-type">BackerKit</span><a href="https://www.backerkit.com/pricing">定价</a></li>
+            <li><span class="source-type">BackerKit</span><a href="https://www.backerkit.com/c/collections/video-games/projects">电子游戏集合</a></li>
+            <li><span class="source-type">Indiegogo</span><a href="https://support.indiegogo.com/hc/en-us/articles/39600950083988-Indiegogo-s-Acquisition-by-Gamefound-Platform-Upgrade-FAQs">2025 平台升级说明</a></li>
+            <li><span class="source-type">Steamworks</span><a href="https://partner.steamgames.com/doc/marketing/wishlist?language=english">愿望单说明</a></li>
+            <li><span class="source-type">Steamworks</span><a href="https://partner.steamgames.com/doc/marketing/visibility?language=english">可见性说明</a></li>
+            <li><span class="source-type">Steamworks</span><a href="https://partner.steamgames.com/doc/store/coming_soon?language=english">Coming Soon 文档</a></li>
+            <li><span class="source-type">Steamworks</span><a href="https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english">Next Fest 文档</a></li>
+            <li><span class="source-type">摩点</span><a href="https://login.modian.com/about/index/4?id=17">官方 FAQ</a></li>
+            <li><span class="source-type">摩点</span><a href="https://zhongchou.modian.com/games/top_money/going">游戏实时榜</a></li>
+            <li><span class="source-type">摩点</span><a href="https://zhongchou.modian.com/tablegames/top_money/going">桌游实时榜</a></li>
+            <li><span class="source-type">淘宝</span><a href="https://izhongchou.taobao.com/">造点新货</a></li>
+            <li><span class="source-type">小米</span><a href="https://m.app.mi.com/details?id=com.xiaomi.youpin">小米有品官方应用页</a></li>
+          </ul>
+
+          <div class="callout warning">
+            <span class="callout-title">研究限制</span>
+            <p>平台没有公开项目级净利润数据库；部分材料来自平台自有营销内容。实时榜单会变化，所有当前项目数量和金额仅代表 2026-08-10 截点，不宜外推为全年市场份额。</p>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>众筹商品与独立游戏专项调查 · 调查截点 2026-08-10 · 原始 Markdown 报告保留在同一目录。</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <script src="../assets/research.js"></script>
+</body>
+</html>
