@@ -25,14 +25,15 @@ Research requirements
 
 Required outputs
 - A reviewable Markdown research source containing scope, method, findings, evidence, limitations, decision criteria, actions, and direct sources.
-- index.html as the English canonical report.
+- index.html as the English `x-default` report with its own canonical URL.
 - index.zh-CN.html as the Simplified-Chinese equivalent.
 - A top language switch on both pages.
-- Browser or system locale detection on the canonical entry; use English when no supported locale is detected.
-- Persist an explicit locale choice across reports when local storage is available.
+- Crawlable manual locale links on both pages; do not auto-redirect indexable URLs from browser or system language.
+- Persist an explicit locale choice when local storage is available without changing crawler-visible URL stability.
 - Shared CSS and shared behavior; do not duplicate the visual system into each report.
 - A brief layer containing the decision, key evidence, main caveat, and action; a full layer containing methods, comparison detail, cases, and sources.
 - Update the repository catalog and concise English/Chinese project documentation when applicable.
+- A reader-facing method/transparency path, correction path, useful noindex 404 page, favicon, social share image, and XML sitemap when publishing a standalone site.
 
 HTML quality contract
 - Lead with a specific, evidence-bounded finding rather than a generic report title.
@@ -41,10 +42,14 @@ HTML quality contract
 - Use interactions only when they lower comprehension cost.
 - Support 320–1440px layouts, keyboard use, reduced motion, dim mode, print, and deep links.
 - Keep citations near the claims they support and preserve research caveats in both languages.
+- Add a unique title and description, absolute HTTPS canonical, reciprocal absolute hreflang for en / zh-CN / x-default, index/follow directive, Open Graph, Twitter Card, and valid JSON-LD to every indexable page.
+- Use an organization-level public byline unless a personal author identity is intentionally required.
 
 Validation and handoff
 - Run the repository's validation script when present.
 - Check both locale pages for parity, local asset paths, duplicate IDs, broken anchors, console errors, responsive overflow, and interactive outputs.
+- Build the Pages artifact from an explicit reader-facing allowlist and verify repository docs, notebooks, skills, scripts, templates, hidden files, and local configuration are absent.
+- Scan tracked content, the generated artifact, and reachable history when sanitizing an existing public repository for credentials, emails, account identifiers, local paths, private URLs, and operational files.
 - Review the exact diff and include only task-scoped files.
 - Report the research cutoff, output files, locale behavior, validation results, evidence gaps, and publication state.
 ```

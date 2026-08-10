@@ -2,7 +2,7 @@
 
 **English** · [简体中文](research-to-html-workflow.zh-CN.md)
 
-Version 1.1.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
+Version 1.2.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
 
 ## Output contract
 
@@ -91,7 +91,7 @@ Both pages import shared assets:
 <script src="../assets/research.js"></script>
 ```
 
-English is canonical and the unsupported-language fallback. Both pages provide a top EN / 中 switch. The canonical page reads stored preference, then browser language; an explicit choice persists across reports.
+English is the `x-default` and unsupported-language fallback. Both pages provide a crawlable top EN / 中 switch. Each locale has a stable self-canonical URL; pages do not auto-redirect from stored preference or browser language. An explicit choice may persist for controls without changing URL stability.
 
 The two languages must preserve the same findings, figures, caveats, source links, calculator thresholds, and decision logic. Translation may improve natural phrasing but may not change evidential strength.
 
@@ -127,14 +127,16 @@ Use interactions only when they lower comprehension cost: reading depth, text si
 
 Validate 320, 375, 768, 1024, and 1440px. Page-level horizontal scrolling is not allowed; wide tables may scroll inside labelled, focusable containers.
 
-Check reading preferences, locale routing, deep links, filters, calculators, scorecards, dim mode, reduced motion, console output, and print expansion.
+Check reading preferences, manual locale links, deep links, filters, calculators, scorecards, dim mode, reduced motion, console output, and print expansion.
 
 ## 7. Publish
 
 1. Update the root report catalog and both project README languages.
 2. Run `scripts/Validate-ResearchSite.ps1`.
-3. Inspect the exact diff and stage only study-related files.
-4. Commit clearly and push without force.
+3. Build the Pages artifact from an explicit reader-facing allowlist and confirm that notebooks, docs, skills, scripts, templates, hidden files, and local configuration are absent.
+4. Verify unique titles and descriptions, absolute canonical and reciprocal `hreflang`, social metadata, JSON-LD, sitemap parity, a useful noindex 404 page, and visible method/correction paths.
+5. Inspect the exact diff and stage only study-related files.
+6. Commit clearly and push without force unless an explicitly authorized history sanitization requires force-with-lease after a verified backup.
 
 ## Definition of done
 

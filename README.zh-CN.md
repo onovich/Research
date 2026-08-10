@@ -4,6 +4,8 @@
 
 一个面向决策的双语行业调研库。每份调查同时保留可复核的 Markdown 事实源，以及低阅读压力的英文、简体中文 HTML 报告。
 
+[打开公开研究目录](https://blog.onovich.com/Research/index.zh-CN.html) · [方法与透明度](https://blog.onovich.com/Research/about.zh-CN.html)
+
 ## 调查
 
 - [众筹商品与独立游戏专项调查](crowdfunding-and-indie-games-research/index.zh-CN.html) · [English](crowdfunding-and-indie-games-research/index.html)<br>
@@ -19,12 +21,12 @@
 
 ## 发布报告
 
-使用 [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) 验证静态站点、安装 GitHub Pages 官方 Actions workflow、监控部署，并检查线上报告路径和资源。仓库的 Pages 发布源需要设为 **GitHub Actions**。
+使用 [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) 检查脱敏与 SEO，通过 `public-site.json` 构建仅面向读者的产物，再用 Pages 官方 Actions pipeline 部署并验证公开、排除路径。Pages 发布源需要设为 **GitHub Actions**。
 
 ## 共享系统
 
 - [`assets/research.css`](assets/research.css)：视觉令牌、布局、组件、响应式与打印。
-- [`assets/i18n.js`](assets/i18n.js)：语言探测、英文兜底、偏好持久化与页面跳转。
+- [`assets/i18n.js`](assets/i18n.js)：显式语言选择、英文兜底、偏好持久化与公共界面文案。
 - [`assets/research.js`](assets/research.js)：阅读深度、字号、主题、目录与可选研究工具。
 
 修改 `assets/research.css` 的语义令牌，即可批量更换全部报告的视觉皮肤。
@@ -38,6 +40,7 @@
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/Validate-ResearchSite.ps1
+powershell -ExecutionPolicy Bypass -File scripts/Build-PublicResearchSite.ps1
 ```
 
-可选的浏览器验收脚本位于 `scripts/Smoke-ResearchSite.cjs`，需要 Playwright 与 Chrome/Chromium。
+只有 `_site/` 会被上传；研究底稿、仓库文档、skills、scripts、模板、隐藏文件和本地配置不会进入公开产物。可选浏览器验收脚本为 `scripts/Smoke-ResearchSite.cjs`，需要 Playwright 与 Chrome/Chromium。

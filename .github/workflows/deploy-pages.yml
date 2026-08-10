@@ -23,7 +23,11 @@ jobs:
 
       - name: Validate research site
         shell: pwsh
-        run: ./scripts/Validate-ResearchSite.ps1
+        run: ./scripts/Validate-ResearchSite.ps1 -CheckHistory
+
+      - name: Build public allowlist artifact
+        shell: pwsh
+        run: ./scripts/Build-PublicResearchSite.ps1
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -31,7 +35,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
 
   deploy:
     name: Deploy

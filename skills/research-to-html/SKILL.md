@@ -22,10 +22,10 @@ Read these references before acting:
 3. Browse current primary sources for unstable facts. Record direct URLs, source type, observed date, geography, caveat, and confidence.
 4. Separate observation, inference, and unknowns. Test survivor bias, self-reported platform claims, stale examples, and metrics that do not establish the claimed business result.
 5. Write the Markdown evidence source before designing the report. Keep claims, figures, limitations, and citations independently reviewable.
-6. Compose the English canonical HTML and the Simplified-Chinese counterpart from the same approved findings. Preserve numerical, causal, and uncertainty parity across languages.
+6. Compose separate English and Simplified-Chinese HTML pages from the same approved findings. Preserve numerical, causal, and uncertainty parity. Give each locale a self-canonical absolute URL and reciprocal absolute `hreflang` links.
 7. Add only interactions that reduce understanding cost: reading depth, contents, theme, larger text, focused filtering, calculators, scorecards, timelines, and print support.
 8. Update the repository catalog and concise bilingual project documentation when the report is publishable.
-9. Run the repository validation gate, JavaScript syntax checks, responsive and keyboard checks, both locales, print, deep links, and no-script fallback.
+9. Run the repository validation gate, privacy scan, SEO metadata checks, JavaScript syntax checks, responsive and keyboard checks, both locales, print, deep links, and no-script fallback. Inspect the exact public artifact, not only the source tree.
 10. Review the exact diff and publish only the intended files. Never force-push or stage unrelated workspace content.
 
 ## Non-negotiable rules
@@ -37,8 +37,11 @@ Read these references before acting:
 - Mark platform, vendor, or creator claims as self-reported when no independent audit exists.
 - Keep real personal names, credentials, account identifiers, local paths, private URLs, and organization-specific secrets out of reusable prompts and skill resources.
 - Preserve complete readable content without JavaScript.
-- Default unresolved browser locale to English; persist explicit language selection.
+- Keep English as `x-default`. Provide crawlable manual language links and persist explicit selection when useful; do not auto-redirect indexable pages from browser-language inference.
+- Give every indexable page a unique title and description, absolute canonical and reciprocal `hreflang`, Open Graph and Twitter metadata, valid JSON-LD, favicon, internal trust links, and sitemap coverage.
+- Publish Pages from an explicit reader-facing allowlist. Repository documentation, skills, scripts, templates, notebooks, hidden files, and local configuration must not enter the public artifact.
+- Use a neutral organization-level byline unless a public author identity is intentionally required. Never leak local paths or private identity through content, metadata, Git history, or deployment artifacts.
 
 ## Completion report
 
-State the research cutoff, output paths, locale behavior, translated surface area, validation commands, unresolved evidence gaps, and publication state.
+State the research cutoff, output paths, manual locale behavior, translated surface area, public artifact boundary, privacy and SEO validation commands, unresolved evidence gaps, and publication state.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Research to HTML"
-  short_description: "Turn verified research into bilingual HTML"
-  default_prompt: "Use $research-to-html to research a decision question and publish a bilingual, evidence-led HTML report."
+  short_description: "Research decisions into bilingual public HTML"
+  default_prompt: "Use $research-to-html to research a decision question and publish a bilingual, evidence-led, privacy-safe, SEO-ready HTML report."

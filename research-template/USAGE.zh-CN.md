@@ -9,10 +9,10 @@
 1. 先完成并审校新目录中的 README.md；
 2. 同步改写 index.html 与 index.zh-CN.html 中的方括号占位内容；
 3. 保持两种语言的结论、数字、限制、来源和交互阈值一致；
-4. 更新目录、章节 id、元数据、hreflang 与对应语言链接；
+4. 替换全部 `example.invalid` URL，补齐正式分享图与 JSON-LD，把 `noindex,nofollow` 改为通过审核的 index/follow 指令，并更新绝对 canonical、互指 hreflang、对应语言链接、目录和章节 id；
 5. 保持对 ../assets/i18n.js、../assets/research.css 和 ../assets/research.js 的引用；
 6. 只有报告独有的复杂交互才新增 report.js；
-7. 更新根目录的中英文 README 与中英文调查目录；
+7. 把准确的读者文件加入 `public-site.json`，再更新根目录的中英文 README、中英文调查目录与 `sitemap.xml`；
 8. 运行验证脚本。
 
 ## 不要做

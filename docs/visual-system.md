@@ -2,7 +2,7 @@
 
 **English** · [简体中文](visual-system.zh-CN.md)
 
-Version 1.1.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
+Version 1.2.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
 
 ## Design position
 
@@ -20,7 +20,7 @@ The signature device is a ledger that places public indicators, necessary deduct
 ## Shared assets
 
 - `assets/research.css`: tokens, typography, layout, components, responsive rules, and print;
-- `assets/i18n.js`: locale detection, English fallback, stored choice, and counterpart routing;
+- `assets/i18n.js`: explicit locale choice, English fallback, preference persistence, and localized common strings;
 - `assets/research.js`: reading depth, text size, theme, mobile contents, progress, deep links, print, and optional tools;
 - `research-template/`: matched English and Simplified-Chinese page skeletons.
 
@@ -87,7 +87,7 @@ Avoid uniform card grids. Judgment, evidence, caveat, and action should look str
 - Print reveals the full report and opens details.
 - No-script mode keeps complete content visible.
 - EN / 中 sits in the top header on every page.
-- English is canonical and the unsupported-language fallback; explicit choice persists.
+- English is `x-default` and the unsupported-language fallback; every locale has a stable self-canonical URL, and explicit manual choice may persist without automatic redirects.
 - Both locales translate visible controls, status text, metadata, content, and interactive output.
 
 ## Accessibility floor

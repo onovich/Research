@@ -1,4 +1,4 @@
-/*! Research Locale Router v1.0.0 */
+/*! Research Locale Links v1.1.0 */
 
 (function () {
   'use strict';
@@ -80,23 +80,6 @@
     return null;
   }
 
-  function detectPreferredLanguage() {
-    var stored = normalize(safeGet(storageKey));
-    if (stored) return stored;
-
-    var candidates = [];
-    if (navigator.languages && navigator.languages.length) {
-      candidates = candidates.concat(Array.prototype.slice.call(navigator.languages));
-    }
-    candidates.push(navigator.language, navigator.userLanguage);
-
-    for (var index = 0; index < candidates.length; index += 1) {
-      var candidate = normalize(candidates[index]);
-      if (candidate) return candidate;
-    }
-    return 'en';
-  }
-
   function interpolate(template, values) {
     return String(template).replace(/\{([^}]+)\}/g, function (match, key) {
       return values && Object.prototype.hasOwnProperty.call(values, key) ? values[key] : match;
@@ -104,19 +87,10 @@
   }
 
   var current = normalize(root.getAttribute('lang')) || 'en';
-  var preferred = detectPreferredLanguage();
+  var preferred = normalize(safeGet(storageKey)) || current;
   root.lang = current;
   root.dataset.language = current;
-
-  if (root.dataset.languageAuto === 'true' && preferred !== current) {
-    var target = preferred === 'zh-CN' ? root.dataset.languageZhCn : root.dataset.languageEn;
-    if (target) {
-      var next = new URL(target, window.location.href);
-      next.hash = window.location.hash;
-      window.location.replace(next.href);
-      return;
-    }
-  }
+  root.dataset.languagePreference = preferred;
 
   root.classList.remove('no-js');
 
@@ -129,6 +103,8 @@
   function setLanguage(language) {
     var normalized = normalize(language);
     if (!normalized || supported.indexOf(normalized) === -1) return;
+    preferred = normalized;
+    root.dataset.languagePreference = normalized;
     safeSet(storageKey, normalized);
   }
 
@@ -150,6 +126,7 @@
 
   window.ResearchLocale = {
     get: function () { return current; },
+    preferred: function () { return preferred; },
     set: setLanguage,
     t: t,
     normalize: normalize

@@ -95,3 +95,6 @@ Place citations near figures and claims. Mark self-reported facts and researcher
 - Exclude credentials, personal contact data, account identifiers, private URLs, machine-specific paths, session state, and internal customer data.
 - Preserve public names only when they are evidence required by the report itself.
 - Do not carry subject-specific examples into the reusable prompt unless they teach a general failure mode.
+- Use an organization-level public byline unless a personal author identity is deliberately part of the publishing strategy.
+- Scan the current tracked tree, generated public artifact, and—when sanitizing an existing public repository—reachable Git history for personal emails, local paths, credentials, private URLs, and operational files.
+- Keep evidence notebooks and maintenance resources in the repository when useful, but publish only a reviewed reader-facing allowlist.

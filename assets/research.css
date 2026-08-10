@@ -1,4 +1,4 @@
-/*! Research Visual System v1.0.0
+/*! Research Visual System v1.2.0
  * Skin entry point: edit the semantic tokens in :root and html[data-theme="dim"].
  * Components and responsive behavior below consume those tokens.
  */
@@ -919,6 +919,98 @@
       margin-top: 1.5rem;
     }
 
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .principle-card {
+      min-width: 0;
+      padding: 1.35rem;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+    }
+
+    .principle-card p {
+      margin: 0.65rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .method-steps {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      counter-reset: method-step;
+      list-style: none;
+      gap: 0;
+    }
+
+    .method-steps li {
+      position: relative;
+      margin: 0;
+      padding: 1.15rem 0 1.15rem 3.25rem;
+      border-bottom: 1px solid var(--line);
+      counter-increment: method-step;
+    }
+
+    .method-steps li::before {
+      position: absolute;
+      top: 1.15rem;
+      left: 0;
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      place-items: center;
+      color: var(--accent-strong);
+      background: var(--accent-soft);
+      border-radius: 50%;
+      content: counter(method-step, decimal-leading-zero);
+      font-family: var(--font-data);
+      font-size: 0.68rem;
+      font-weight: 800;
+    }
+
+    .error-shell {
+      width: min(100% - 2rem, 58rem);
+      margin-inline: auto;
+      padding: clamp(4rem, 12vw, 8rem) 0;
+    }
+
+    .error-code {
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+      font-family: var(--font-data);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .error-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 2.5rem;
+      border-block: 1px solid var(--line-strong);
+    }
+
+    .error-panel {
+      min-width: 0;
+      padding: 1.75rem 0;
+    }
+
+    .error-panel + .error-panel {
+      padding-left: 1.75rem;
+      border-left: 1px solid var(--line-strong);
+    }
+
+    .error-panel h2 {
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
     details {
       margin: 1rem 0;
       border-block: 1px solid var(--line);
@@ -1256,6 +1348,22 @@
       max-width: 100%;
     }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+    }
+
+    .footer-links a {
+      color: var(--ink-soft);
+      font-weight: 800;
+    }
+
+    .footer-links a[aria-current="page"] {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
     .brief-only {
       display: block;
     }
@@ -1377,6 +1485,20 @@
 
       .layout {
         width: min(100% - 1.5rem, var(--content-width));
+      }
+
+      .principle-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .error-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .error-panel + .error-panel {
+        padding-left: 0;
+        border-top: 1px solid var(--line-strong);
+        border-left: 0;
       }
 
       .hero {

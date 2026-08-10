@@ -56,7 +56,7 @@ async function run() {
   try {
     const routingCases = [
       { locale: 'en-US', expected: 'index.html', label: 'English locale' },
-      { locale: 'zh-CN', expected: 'index.zh-CN.html', label: 'Chinese locale' },
+      { locale: 'zh-CN', expected: 'index.html', label: 'Chinese locale without auto-redirect' },
       { locale: 'fr-FR', expected: 'index.html', label: 'unsupported-locale fallback' }
     ];
     for (const test of routingCases) {
@@ -70,6 +70,8 @@ async function run() {
     const visualCases = [
       { locale: 'en-US', width: 320, relativePath: 'index.html', screenshot: 'home-en-320.png' },
       { locale: 'zh-CN', width: 320, relativePath: 'index.zh-CN.html', screenshot: 'home-zh-320.png' },
+      { locale: 'en-US', width: 768, relativePath: 'about.html', screenshot: 'about-en-768.png' },
+      { locale: 'zh-CN', width: 768, relativePath: 'about.zh-CN.html', screenshot: 'about-zh-768.png' },
       { locale: 'en-US', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-375.png' },
       { locale: 'zh-CN', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', screenshot: 'report-zh-375.png' },
       { locale: 'en-US', width: 1440, height: 1000, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-1440.png' },
@@ -90,6 +92,36 @@ async function run() {
       assert(session.errors.length === 0, `${test.screenshot}: ${session.errors.join(' | ')}`);
       await session.page.screenshot({ path: path.join(outputRoot, test.screenshot) });
       console.log(`visual: ${test.screenshot} (${metrics.language}, ${metrics.innerWidth}px)`);
+      await session.context.close();
+    }
+
+    const seoCases = [
+      { relativePath: 'index.html', canonical: 'https://blog.onovich.com/Research/' },
+      { relativePath: 'index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/index.zh-CN.html' },
+      { relativePath: 'about.html', canonical: 'https://blog.onovich.com/Research/about.html' },
+      { relativePath: 'about.zh-CN.html', canonical: 'https://blog.onovich.com/Research/about.zh-CN.html' },
+      { relativePath: 'crowdfunding-and-indie-games-research/index.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/' },
+      { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html' }
+    ];
+    for (const test of seoCases) {
+      const session = await open({ locale: 'en-US', width: 1024, relativePath: test.relativePath });
+      const seo = await session.page.evaluate(() => {
+        const jsonLd = Array.from(document.querySelectorAll('script[type="application/ld+json"]')).map(script => JSON.parse(script.textContent));
+        return {
+          canonical: document.querySelector('link[rel="canonical"]')?.href,
+          alternates: Array.from(document.querySelectorAll('link[rel="alternate"][hreflang]')).map(link => [link.hreflang, link.href]),
+          description: document.querySelector('meta[name="description"]')?.content,
+          robots: document.querySelector('meta[name="robots"]')?.content,
+          openGraph: Boolean(document.querySelector('meta[property="og:title"]') && document.querySelector('meta[property="og:image"]')),
+          twitter: document.querySelector('meta[name="twitter:card"]')?.content,
+          jsonLdCount: jsonLd.length
+        };
+      });
+      assert(seo.canonical === test.canonical, `${test.relativePath}: canonical mismatch ${seo.canonical}`);
+      assert(seo.alternates.length === 3 && seo.alternates.every(([, href]) => href.startsWith('https://')), `${test.relativePath}: hreflang links are incomplete or relative`);
+      assert(seo.description && seo.robots.includes('index') && seo.openGraph && seo.twitter === 'summary_large_image' && seo.jsonLdCount > 0, `${test.relativePath}: SEO metadata is incomplete`);
+      assert(session.errors.length === 0, `${test.relativePath}: ${session.errors.join(' | ')}`);
+      console.log(`seo: ${test.relativePath}`);
       await session.context.close();
     }
 
@@ -129,9 +161,9 @@ async function run() {
     assert(decodeURIComponent(persisted.page.url()).endsWith('index.zh-CN.html'), 'Language switch did not open the Chinese counterpart.');
     await persisted.page.goto(fileUrl('crowdfunding-and-indie-games-research/index.html'), { waitUntil: 'load' });
     await persisted.page.waitForTimeout(120);
-    assert(decodeURIComponent(persisted.page.url()).endsWith('crowdfunding-and-indie-games-research/index.zh-CN.html'), 'Stored Chinese preference did not route the next canonical report.');
+    assert(decodeURIComponent(persisted.page.url()).endsWith('crowdfunding-and-indie-games-research/index.html'), 'Stored preference must not auto-redirect an indexable report URL.');
     assert(persisted.errors.length === 0, `Locale persistence: ${persisted.errors.join(' | ')}`);
-    console.log('locale persistence: passed');
+    console.log('manual locale switching without automatic redirects: passed');
     await persisted.context.close();
 
     const noScript = await open({ locale: 'en-US', width: 320, relativePath: 'crowdfunding-and-indie-games-research/index.html', javaScriptEnabled: false });

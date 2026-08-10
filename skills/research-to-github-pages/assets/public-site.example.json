@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "output": "_site",
+  "files": [
+    "index.html",
+    "index.zh-CN.html",
+    "about.html",
+    "about.zh-CN.html",
+    "404.html",
+    "sitemap.xml",
+    "assets/research.css",
+    "assets/i18n.js",
+    "assets/research.js",
+    "assets/favicon.svg",
+    "assets/og/catalog-en.png",
+    "assets/og/catalog-zh-CN.png",
+    "example-report/index.html",
+    "example-report/index.zh-CN.html"
+  ]
+}

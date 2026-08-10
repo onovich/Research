@@ -4,6 +4,8 @@
 
 Evidence-led, bilingual industry research designed for decisions rather than source accumulation. Each study keeps a reviewable Markdown evidence source and publishes a low-reading-pressure HTML edition in English and Simplified Chinese.
 
+[Open the public research library](https://blog.onovich.com/Research/) · [Method and transparency](https://blog.onovich.com/Research/about.html)
+
 ## Reports
 
 - [Profitable crowdfunding products and indie games](crowdfunding-and-indie-games-research/index.html) · [中文](crowdfunding-and-indie-games-research/index.zh-CN.html)<br>
@@ -19,12 +21,12 @@ The reusable page pair is in [`research-template/`](research-template/USAGE.md).
 
 ## Publish reports
 
-Use [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) to validate the static site, install the official GitHub Pages Actions workflow, monitor the deployment, and verify the live report routes and assets. The repository's Pages source must be set to **GitHub Actions**.
+Use [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) to validate privacy and SEO, build a reader-only artifact from `public-site.json`, deploy it with the official Pages Actions pipeline, and verify both published and excluded paths. The Pages source must be **GitHub Actions**.
 
 ## Shared system
 
 - [`assets/research.css`](assets/research.css): visual tokens, layout, components, responsive behavior, and print.
-- [`assets/i18n.js`](assets/i18n.js): locale detection, English fallback, preference persistence, and language routing.
+- [`assets/i18n.js`](assets/i18n.js): explicit locale choice, English fallback, preference persistence, and localized interface strings.
 - [`assets/research.js`](assets/research.js): reading depth, text size, theme, navigation, and optional research tools.
 
 Edit the semantic tokens in `assets/research.css` to reskin every report at once.
@@ -38,6 +40,7 @@ Validate before publishing:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/Validate-ResearchSite.ps1
+powershell -ExecutionPolicy Bypass -File scripts/Build-PublicResearchSite.ps1
 ```
 
-The optional browser smoke is available at `scripts/Smoke-ResearchSite.cjs` and requires Playwright plus Chrome/Chromium.
+Only `_site/` is uploaded. Research notebooks, repository documentation, skills, scripts, templates, hidden files, and local configuration stay outside the public artifact. The optional browser smoke is `scripts/Smoke-ResearchSite.cjs` and requires Playwright plus Chrome/Chromium.
