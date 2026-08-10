@@ -4,13 +4,13 @@
 
 Research helps you investigate an industry with AI, draw conclusions from data and evidence, and publish them as polished, low-reading-pressure bilingual web reports.
 
-[Browse all research](https://blog.onovich.com/Research/) · [See the AI workflow](https://blog.onovich.com/Research/tools/research-to-html/)
+[Browse all research](https://research.onovich.com/) · [See the AI workflow](https://research.onovich.com/tools/research-to-html/)
 
 ## Reports
 
-- [Crowdfunding products and indie games](https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/) · [中文](https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html)
+- [Crowdfunding products and indie games](https://research.onovich.com/crowdfunding-and-indie-games-research/) · [中文](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html)
   Which products are more likely to make money, and when crowdfunding still helps an indie game.
-- [Which indie game genres fit crowdfunding?](https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
+- [Which indie game genres fit crowdfunding?](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
   Seven gameplay and audience patterns, current international and Chinese platform evidence, risks, and a ten-point decision card.
 
 ## Use it with AI

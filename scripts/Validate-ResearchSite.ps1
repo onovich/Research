@@ -37,6 +37,8 @@ $requiredFiles = @(
   ".github/workflows/deploy-pages.yml",
   "README.md",
   "README.zh-CN.md",
+  "LICENSE",
+  "CONTENT-LICENSE.md",
   "public-site.json",
   "index.html",
   "index.zh-CN.html",
@@ -44,6 +46,9 @@ $requiredFiles = @(
   "about.zh-CN.html",
   "404.html",
   "sitemap.xml",
+  "robots.txt",
+  "BingSiteAuth.xml",
+  "5c6e01f4e5208988a4704e2ba1a1f0f038271bf7ad6b71789f877317cb2fe147.txt",
   "assets/research.css",
   "assets/i18n.js",
   "assets/research.js",
@@ -281,7 +286,7 @@ foreach ($relative in $publicHtmlEntries) {
     Add-ValidationError "${relative}: missing absolute HTTPS canonical URL"
   } else {
     $canonical = $canonicalMatch.Groups[1].Value
-    if (-not $canonical.StartsWith("https://blog.onovich.com/Research/", [System.StringComparison]::Ordinal)) { Add-ValidationError "${relative}: canonical is outside the public research site" }
+    if (-not $canonical.StartsWith("https://research.onovich.com/", [System.StringComparison]::Ordinal)) { Add-ValidationError "${relative}: canonical is outside the public research site" }
     $canonicalUrls.Add($canonical)
   }
 
@@ -358,6 +363,37 @@ if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
     }
   } catch {
     Add-ValidationError "sitemap.xml is invalid: $($_.Exception.Message)"
+  }
+}
+
+$robotsPath = Join-Path $repoRoot "robots.txt"
+if (Test-Path -LiteralPath $robotsPath -PathType Leaf) {
+  $robots = Read-TextFile $robotsPath
+  if ($robots -notmatch '(?im)^User-agent:\s*\*$' -or $robots -notmatch '(?im)^Allow:\s*/$') {
+    Add-ValidationError "robots.txt must allow public crawling"
+  }
+  if ($robots -notmatch '(?im)^Sitemap:\s*https://research\.onovich\.com/sitemap\.xml$') {
+    Add-ValidationError "robots.txt must declare the canonical research sitemap"
+  }
+}
+
+$indexNowKey = "5c6e01f4e5208988a4704e2ba1a1f0f038271bf7ad6b71789f877317cb2fe147"
+$indexNowPath = Join-Path $repoRoot "$indexNowKey.txt"
+if (Test-Path -LiteralPath $indexNowPath -PathType Leaf) {
+  if ((Read-TextFile $indexNowPath).Trim() -ne $indexNowKey) {
+    Add-ValidationError "IndexNow key file content must match its filename"
+  }
+}
+
+$bingVerificationPath = Join-Path $repoRoot "BingSiteAuth.xml"
+if (Test-Path -LiteralPath $bingVerificationPath -PathType Leaf) {
+  try {
+    [xml]$bingVerification = Read-TextFile $bingVerificationPath
+    if ([string]::IsNullOrWhiteSpace([string]$bingVerification.users.user)) {
+      Add-ValidationError "BingSiteAuth.xml is missing its verification user value"
+    }
+  } catch {
+    Add-ValidationError "BingSiteAuth.xml is invalid: $($_.Exception.Message)"
   }
 }
 

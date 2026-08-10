@@ -102,16 +102,16 @@ async function run() {
     }
 
     const seoCases = [
-      { relativePath: 'index.html', canonical: 'https://blog.onovich.com/Research/' },
-      { relativePath: 'index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/index.zh-CN.html' },
-      { relativePath: 'about.html', canonical: 'https://blog.onovich.com/Research/about.html' },
-      { relativePath: 'about.zh-CN.html', canonical: 'https://blog.onovich.com/Research/about.zh-CN.html' },
-      { relativePath: 'crowdfunding-and-indie-games-research/index.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/' },
-      { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html' },
-      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', canonical: 'https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/' },
-      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html' },
-      { relativePath: 'tools/research-to-html/index.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/' },
-      { relativePath: 'tools/research-to-html/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html' }
+      { relativePath: 'index.html', canonical: 'https://research.onovich.com/' },
+      { relativePath: 'index.zh-CN.html', canonical: 'https://research.onovich.com/index.zh-CN.html' },
+      { relativePath: 'about.html', canonical: 'https://research.onovich.com/about.html' },
+      { relativePath: 'about.zh-CN.html', canonical: 'https://research.onovich.com/about.zh-CN.html' },
+      { relativePath: 'crowdfunding-and-indie-games-research/index.html', canonical: 'https://research.onovich.com/crowdfunding-and-indie-games-research/' },
+      { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html' },
+      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', canonical: 'https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/' },
+      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', canonical: 'https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html' },
+      { relativePath: 'tools/research-to-html/index.html', canonical: 'https://research.onovich.com/tools/research-to-html/' },
+      { relativePath: 'tools/research-to-html/index.zh-CN.html', canonical: 'https://research.onovich.com/tools/research-to-html/index.zh-CN.html' }
     ];
     for (const test of seoCases) {
       const session = await open({ locale: 'en-US', width: 1024, relativePath: test.relativePath });
