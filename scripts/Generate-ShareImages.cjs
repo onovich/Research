@@ -53,6 +53,24 @@ const cards = [
     note: '盈利结构 · 平台适配 · 成功玩法'
   },
   {
+    file: 'indie-game-crowdfunding-fit-en.png',
+    lang: 'en',
+    mark: 'IG',
+    index: 'RESEARCH / 02',
+    eyebrow: 'INDIE GAME CROWDFUNDING · 2026',
+    title: 'Which indie games\nfit crowdfunding?',
+    note: 'Audience · Playable proof · Bounded scope'
+  },
+  {
+    file: 'indie-game-crowdfunding-fit-zh-CN.png',
+    lang: 'zh-CN',
+    mark: '游',
+    index: '专题 / 02',
+    eyebrow: '独立游戏众筹适配 · 2026',
+    title: '哪些独立游戏\n更适合众筹？',
+    note: '受众 · 可玩证明 · 有边界的范围'
+  },
+  {
     file: 'research-to-html-en.png',
     lang: 'en',
     mark: 'R→H',

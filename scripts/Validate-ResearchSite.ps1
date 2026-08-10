@@ -52,12 +52,18 @@ $requiredFiles = @(
   "assets/og/research-library-zh-CN.png",
   "assets/og/crowdfunding-indie-games-en.png",
   "assets/og/crowdfunding-indie-games-zh-CN.png",
+  "assets/og/indie-game-crowdfunding-fit-en.png",
+  "assets/og/indie-game-crowdfunding-fit-zh-CN.png",
   "assets/og/research-to-html-en.png",
   "assets/og/research-to-html-zh-CN.png",
   "crowdfunding-and-indie-games-research/README.md",
   "crowdfunding-and-indie-games-research/README.zh-CN.md",
   "crowdfunding-and-indie-games-research/index.html",
   "crowdfunding-and-indie-games-research/index.zh-CN.html",
+  "indie-game-crowdfunding-genres-and-gameplay/README.md",
+  "indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md",
+  "indie-game-crowdfunding-genres-and-gameplay/index.html",
+  "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html",
   "tools/research-to-html/index.html",
   "tools/research-to-html/index.zh-CN.html",
   "docs/research-to-html-workflow.md",
@@ -75,6 +81,7 @@ $requiredFiles = @(
   "scripts/Smoke-ResearchSite.cjs",
   ".agents/skills/research-to-html/SKILL.md",
   ".agents/skills/research-to-html/agents/openai.yaml",
+  ".agents/skills/research-to-html/evals/trigger-cases.json",
   ".agents/skills/research-to-html/references/master-prompt.md",
   ".agents/skills/research-to-html/references/research-protocol.md",
   ".agents/skills/research-to-html/references/html-contract.md",
@@ -142,6 +149,40 @@ foreach ($file in $textFiles) {
     } elseif (Test-Regex $text $rule.Pattern) {
       Add-ValidationError "${relative}: contains a possible $($rule.Label)"
     }
+  }
+}
+
+$triggerEvalPath = Join-Path $repoRoot ".agents/skills/research-to-html/evals/trigger-cases.json"
+if (Test-Path -LiteralPath $triggerEvalPath -PathType Leaf) {
+  try {
+    $triggerEval = Read-TextFile $triggerEvalPath | ConvertFrom-Json
+    $triggerCases = @($triggerEval.cases)
+    if ($triggerEval.schema_version -ne 1 -or $triggerEval.skill -ne "research-to-html") {
+      Add-ValidationError "research-to-html trigger corpus has an unsupported schema or skill name."
+    }
+    if ($triggerCases.Count -ne 20) {
+      Add-ValidationError "research-to-html trigger corpus must contain exactly 20 cases."
+    }
+    $triggerIds = @($triggerCases | ForEach-Object { [string]$_.id })
+    foreach ($duplicate in ($triggerIds | Group-Object | Where-Object { $_.Count -gt 1 })) {
+      Add-ValidationError "Duplicate research-to-html trigger case id: $($duplicate.Name)"
+    }
+    $triggerCount = @($triggerCases | Where-Object { $_.expected -eq "trigger" }).Count
+    $noTriggerCount = @($triggerCases | Where-Object { $_.expected -eq "no_trigger" }).Count
+    if ($triggerCount -ne 10 -or $noTriggerCount -ne 10) {
+      Add-ValidationError "research-to-html trigger corpus must contain 10 trigger and 10 no_trigger cases."
+    }
+    foreach ($case in $triggerCases) {
+      if ([string]::IsNullOrWhiteSpace([string]$case.id) -or
+          [string]::IsNullOrWhiteSpace([string]$case.prompt) -or
+          [string]::IsNullOrWhiteSpace([string]$case.rationale) -or
+          $case.expected -notin @("trigger", "no_trigger")) {
+        Add-ValidationError "research-to-html trigger corpus contains an incomplete or invalid case."
+        break
+      }
+    }
+  } catch {
+    Add-ValidationError "research-to-html trigger corpus is invalid JSON: $($_.Exception.Message)"
   }
 }
 
@@ -280,6 +321,7 @@ $localePairs = @(
   @{ En = "index.html"; Zh = "index.zh-CN.html" },
   @{ En = "about.html"; Zh = "about.zh-CN.html" },
   @{ En = "crowdfunding-and-indie-games-research/index.html"; Zh = "crowdfunding-and-indie-games-research/index.zh-CN.html" },
+  @{ En = "indie-game-crowdfunding-genres-and-gameplay/index.html"; Zh = "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html" },
   @{ En = "tools/research-to-html/index.html"; Zh = "tools/research-to-html/index.zh-CN.html" }
 )
 
@@ -319,7 +361,7 @@ if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
   }
 }
 
-foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png")) {
+foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/indie-game-crowdfunding-fit-en.png", "assets/og/indie-game-crowdfunding-fit-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png")) {
   $path = Join-Path $repoRoot $relative
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
   $bytes = [System.IO.File]::ReadAllBytes($path)

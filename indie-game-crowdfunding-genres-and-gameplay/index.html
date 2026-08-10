@@ -1,0 +1,643 @@
+<!doctype html>
+<html class="no-js" lang="en" data-system-version="1.3.0" data-language-en="index.html" data-language-zh-cn="index.zh-CN.html" data-theme="light" data-reading="brief" data-font="standard">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Which indie game genres and gameplay structures fit crowdfunding? Current evidence from Kickstarter, BackerKit, Modian, campaigns, and Steam releases.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Research">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#006e60">
+  <title>Best Indie Game Genres for Crowdfunding · Research</title>
+  <link rel="canonical" href="https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/">
+  <link rel="alternate" hreflang="en" href="https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/">
+  <link rel="alternate" hreflang="zh-CN" href="https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html">
+  <link rel="alternate" hreflang="x-default" href="https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Research">
+  <meta property="og:title" content="Which Indie Game Genres Work Best for Crowdfunding?">
+  <meta property="og:description" content="Seven game patterns fit crowdfunding—but audience, playable proof, and bounded scope matter more than the genre label.">
+  <meta property="og:url" content="https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:image" content="https://blog.onovich.com/Research/assets/og/indie-game-crowdfunding-fit-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Which indie game genres and gameplay structures fit crowdfunding">
+  <meta property="article:published_time" content="2026-08-10">
+  <meta property="article:modified_time" content="2026-08-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Which Indie Game Genres Work Best for Crowdfunding?">
+  <meta name="twitter:description" content="A current, evidence-bounded guide to indie-game crowdfunding fit across international platforms and China.">
+  <meta name="twitter:image" content="https://blog.onovich.com/Research/assets/og/indie-game-crowdfunding-fit-en.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/#article",
+    "headline": "Which Indie Game Genres and Gameplay Structures Fit Crowdfunding?",
+    "description": "A current field study of the indie game genres, gameplay structures, audience signals, and campaign designs that fit reward crowdfunding.",
+    "url": "https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/",
+    "mainEntityOfPage": "https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/",
+    "image": "https://blog.onovich.com/Research/assets/og/indie-game-crowdfunding-fit-en.png",
+    "datePublished": "2026-08-10",
+    "dateModified": "2026-08-10",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "name": "Research",
+      "url": "https://blog.onovich.com/Research/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Research",
+      "url": "https://blog.onovich.com/Research/"
+    },
+    "about": ["Independent video games", "Crowdfunding", "Kickstarter", "BackerKit", "Modian", "Game design"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Research",
+        "item": "https://blog.onovich.com/Research/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Indie game crowdfunding fit",
+        "item": "https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/"
+      }
+    ]
+  }
+  </script>
+  <script src="../assets/i18n.js"></script>
+  <link rel="stylesheet" href="../assets/research.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Back to the report start">
+        <span class="brand-mark" aria-hidden="true">IG</span>
+        <span>Indie game fit</span>
+      </a>
+      <div class="header-tools" aria-label="Reading settings">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="Open contents">☰</button>
+        <div class="control-group language-switcher" aria-label="Language">
+          <a class="language-link" href="./" data-file-href="index.html" data-language-option="en" lang="en" hreflang="en" aria-current="page">EN</a>
+          <a class="language-link" href="index.zh-CN.html" data-language-option="zh-CN" lang="zh-CN" hreflang="zh-CN" aria-current="false">中</a>
+        </div>
+        <div class="control-group" aria-label="Reading depth">
+          <span class="control-label">Depth</span>
+          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">Brief</button>
+          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">Full</button>
+        </div>
+        <div class="control-group font-controls" aria-label="Text size">
+          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">Standard</button>
+          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">Large</button>
+        </div>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="Switch to dim mode" title="Switch to dim mode">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <noscript><div class="noscript">JavaScript is off. The full report remains readable, but filters, the scorecard, and reading preferences are unavailable.</div></noscript>
+
+  <div class="layout" id="top">
+    <aside class="side-nav" id="side-nav" aria-label="Report contents">
+      <button class="nav-close" id="nav-close" type="button">Close contents</button>
+      <p class="side-nav-title">Reading path</p>
+      <nav>
+        <ol>
+          <li><a href="#overview" aria-current="true"><span>01</span>Answer</a></li>
+          <li><a href="#snapshots"><span>02</span>Market evidence</a></li>
+          <li><a href="#patterns"><span>03</span>Seven patterns</a></li>
+          <li><a href="#cases"><span>04</span>Released cases</a></li>
+          <li><a href="#risks"><span>05</span>High-risk fit</a></li>
+          <li><a href="#decision"><span>06</span>10-point card</a></li>
+          <li><a href="#route"><span>07</span>Platform route</a></li>
+          <li><a href="#sources"><span>08</span>Sources</a></li>
+        </ol>
+      </nav>
+      <p class="nav-note">Research cutoff<br><strong>2026-08-10</strong><br>International reward crowdfunding + Modian</p>
+    </aside>
+    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="Close contents"></button>
+
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">Indie game field study · 2026</p>
+          <h1 id="page-title">Crowdfunding favors games people can understand, play, and already want—not a magic genre.</h1>
+          <p class="hero-lead">A decision guide for small game teams, based on current platform data, live Kickstarter-adjacent and Modian samples, direct campaigns, and verified Steam releases.</p>
+
+          <dl class="hero-ledger" aria-label="The evidence chain for crowdfunding fit">
+            <div class="ledger-row">
+              <dt>Someone is already waiting</dt>
+              <dd>Audience / lineage / niche</dd>
+            </div>
+            <div class="ledger-row">
+              <dt>The core promise is visible</dt>
+              <dd>Five-second pitch + demo</dd>
+            </div>
+            <div class="ledger-row unknown">
+              <dt>The ask stays bounded</dt>
+              <dd>One milestone ≠ whole dream</dd>
+            </div>
+          </dl>
+
+          <div class="hero-actions">
+            <a class="button-link" href="#overview">Read the answer</a>
+            <a class="button-link secondary" href="#decision">Score my game</a>
+          </div>
+          <p class="reading-state" id="reading-state"
+             data-brief-message="Brief mode: the decision, patterns, and actions stay visible while sample detail is condensed."
+             data-full-message="Full mode: snapshots, case detail, evidence labels, and sources are visible.">Brief mode: the decision, patterns, and actions stay visible while sample detail is condensed.</p>
+        </header>
+
+        <section class="section" id="overview" aria-labelledby="overview-title">
+          <div class="section-head">
+            <span class="section-number">01</span>
+            <div>
+              <h2 id="overview-title">The answer in three decisions</h2>
+              <p class="section-intro">Genre is a useful proxy for how easily a project can show audience, feel, and scope. It is not a substitute for those proofs.</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>Is indie-game crowdfunding still active?</h3>
+              <p><strong>Yes.</strong> Kickstarter reported 441 successful video-game campaigns and $26 million pledged to successful campaigns in 2024. Activity exists; automatic discovery for an unknown project is not established.</p>
+            </article>
+            <article class="answer">
+              <h3>Which games fit better?</h3>
+              <p><strong>Lineage-led, instantly demonstrable, underserved classic, cozy, identity-led narrative, and one-sentence-system games.</strong> Each can lower explanation cost—but only with a reachable audience and playable proof.</p>
+            </article>
+            <article class="answer">
+              <h3>Does the platform change the product?</h3>
+              <p><strong>Yes.</strong> International campaigns often sell a future playable milestone. Modian’s high-money game ranking is frequently an existing work plus merchandise, a special edition, localization, or a preorder.</p>
+            </article>
+          </div>
+
+          <div class="evidence-strip" aria-label="Decision-changing evidence">
+            <div class="evidence-point">
+              <span class="evidence-value">441</span>
+              <span class="evidence-label">Successful Kickstarter video-game campaigns in 2024</span>
+            </div>
+            <div class="evidence-point">
+              <span class="evidence-value">10 / 15</span>
+              <span class="evidence-label">True game projects at or above displayed goals on BackerKit’s first current page</span>
+            </div>
+            <div class="evidence-point">
+              <span class="evidence-value">9 / 12</span>
+              <span class="evidence-label">Top Modian successful titles manually classified as editions, merchandise, benefits, localization, or preorder</span>
+            </div>
+          </div>
+
+          <div class="callout warning">
+            <span class="callout-title">Do not read these as success rates</span>
+            <p><a href="https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/">Kickstarter’s annual data</a> has no genre denominator. The BackerKit and <a href="https://zhongchou.modian.com/games/top_money/success">Modian ranking</a> figures are cutoff snapshots with mixed selection rules. None reveals project-level net profit.</p>
+          </div>
+
+          <div class="mode-notice brief-only">
+            <span>Brief mode keeps the decision path and hides most sample detail.</span>
+            <button type="button" data-switch-full>Expand the evidence</button>
+          </div>
+        </section>
+
+        <section class="section detail-layer" id="snapshots" aria-labelledby="snapshots-title">
+          <div class="section-head">
+            <span class="section-number">02</span>
+            <div>
+              <h2 id="snapshots-title">What the market evidence actually says</h2>
+              <p class="section-intro">Three sources answer different questions. Keeping their denominators separate prevents a polished ranking from becoming a false probability.</p>
+            </div>
+          </div>
+
+          <p class="scroll-hint" aria-hidden="true">Scroll sideways to view the full table ↔</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Platform evidence comparison">
+            <table>
+              <caption>Platform-level and live-list evidence observed at the 2026-08-10 cutoff</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Source</th>
+                  <th scope="col">Observation</th>
+                  <th scope="col">Decision value</th>
+                  <th scope="col">Boundary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Kickstarter annual statistics</th>
+                  <td>441 successful video-game campaigns raised $26M in 2024; volume rose 28% year over year. Kickstarter later called Q1 2026 the strongest first quarter in 13 years.</td>
+                  <td>The channel remains active and can support both many small campaigns and a few large ones.</td>
+                  <td>Platform self-report; no genre, cold-start, delivery, or profit denominator.</td>
+                </tr>
+                <tr>
+                  <th scope="row">BackerKit current collection</th>
+                  <td>16 first-page entries; one off-category book excluded. Of 15 game-related projects, 10 were at or above displayed goals and 5 below.</td>
+                  <td>Current visible projects repeatedly use sequels, existing series, narrow niches, retro constraints, or a compressed hook.</td>
+                  <td>Curated, mixed active/fulfilled status, and not a platform success rate.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Modian game rankings</th>
+                  <td>26 active projects; 625 successful projects. Of the first 12 successful titles by money, 9 were manually classified as editions, merchandise, benefits, localization, or preorder.</td>
+                  <td>For China, separate “fund a new game” from “monetize an existing game/IP through an offer.”</td>
+                  <td>Title-based researcher classification; gross pledges do not establish margin or delivery.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>BackerKit: a useful current sample, not a clean dataset</h3>
+          <p>The current <a href="https://www.backerkit.com/c/categories/video-games/projects">video-game collection</a> included a sequel to 868-HACK, a cozy fox-café RPG, an existing superhero-card series, an interactive musical platformer, a retro arcade-puzzler sequel, and a Game Boy roguelike among projects at or above their displayed goals. The same page contained under-goal horror, action-drama, card-RPG, and merchandise-heavy projects. A label alone did not carry weak proof or a weak offer.</p>
+          <p>The <a href="https://www.backerkit.com/c/categories/video-games/projects?sort_by=most_funded">most-funded</a> and <a href="https://www.backerkit.com/c/categories/video-games/projects?sort_by=most_backers">most-backed</a> views are discovery lists. Their lifecycle states and category hygiene are not consistent enough for causal ranking.</p>
+
+          <h3>Modian: the offer can matter more than the development pitch</h3>
+          <p>In the <a href="https://zhongchou.modian.com/games/top_money/going">ongoing game ranking</a>, female-oriented simulation or narrative projects, pixel RPGs, light-yuri and BL narrative games, a school mystery text adventure, realistic fishing, and explicit game merchandise were prominent among the first 12 titles. In the successful ranking, collector boxes, game merchandise, special benefits, localization, and preorders dominated the first 12 by money.</p>
+
+          <div class="callout">
+            <span class="callout-title">Crowdfunding and Steam can be complementary</span>
+            <p>Kickstarter and Crytivo’s <a href="https://updates.kickstarter.com/backed-by-backers-a-steam-festival-powered-by-kickstarter/">Backed by Backers</a> festival featured more than 400 previously or currently crowdfunded games on Steam. That establishes an operational bridge, not proof that crowdfunding caused discovery.</p>
+          </div>
+        </section>
+
+        <section class="section" id="patterns" aria-labelledby="patterns-title">
+          <div class="section-head">
+            <span class="section-number">03</span>
+            <div>
+              <h2 id="patterns-title">Seven patterns that reduce crowdfunding friction</h2>
+              <p class="section-intro">Filter by mechanism. The strongest pattern is not a genre name; it is a chain from audience memory to playable proof and bounded delivery.</p>
+            </div>
+          </div>
+
+          <div class="filter-bar" aria-label="Filter game patterns">
+            <button class="filter-button" type="button" data-game-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-game-filter="legacy" aria-pressed="false">Lineage</button>
+            <button class="filter-button" type="button" data-game-filter="action" aria-pressed="false">Playable feel</button>
+            <button class="filter-button" type="button" data-game-filter="rpg" aria-pressed="false">RPG</button>
+            <button class="filter-button" type="button" data-game-filter="cozy" aria-pressed="false">Cozy</button>
+            <button class="filter-button" type="button" data-game-filter="narrative" aria-pressed="false">Narrative</button>
+            <button class="filter-button" type="button" data-game-filter="offer" aria-pressed="false">Existing IP offer</button>
+          </div>
+          <p class="filter-status" id="game-filter-status" aria-live="polite">Showing all 7 types.</p>
+
+          <p class="scroll-hint" aria-hidden="true">Scroll sideways to view the full table ↔</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Crowdfunding-fit game patterns">
+            <table id="game-table">
+              <caption>Gameplay pattern, fit mechanism, required proof, and main failure mode</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pattern</th>
+                  <th scope="col">Typical play</th>
+                  <th scope="col">Why it can fit</th>
+                  <th scope="col">Proof and trap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-game-type="legacy rpg">
+                  <th scope="row">Lineage and creator memory</th>
+                  <td>Sequel, remake, spiritual successor; classic JRPG or Metroidvania</td>
+                  <td>People already know what they miss and who is making it.</td>
+                  <td>Show prior shipped work and community signal. Do not let nostalgia hide oversized scope.</td>
+                </tr>
+                <tr data-game-type="action legacy">
+                  <th scope="row">Immediate playable feel</th>
+                  <td>Action platforming, Metroidvania, arcade racing, concise survival horror</td>
+                  <td>Movement, impact, controls, and art read in seconds.</td>
+                  <td>Show representative unedited play. A cinematic trailer cannot prove controls.</td>
+                </tr>
+                <tr data-game-type="rpg legacy">
+                  <th scope="row">Underserved classic systems</th>
+                  <td>Turn-based JRPG/CRPG, party building, dungeon crawling</td>
+                  <td>A specific classic audience already shares a reference vocabulary.</td>
+                  <td>Prove combat, progression, and content velocity. A tiny slice cannot validate a 40-hour RPG.</td>
+                </tr>
+                <tr data-game-type="cozy rpg">
+                  <th scope="row">World-and-character cadence</th>
+                  <td>Farming, life, cozy, town, and management simulation</td>
+                  <td>Characters, locations, seasons, and systems sustain campaign updates.</td>
+                  <td>Show one complete loop and the content pipeline. Avoid uncontrolled cast and platform promises.</td>
+                </tr>
+                <tr data-game-type="narrative rpg">
+                  <th scope="row">Identity-led narrative</th>
+                  <td>Visual novel, romance, queer or culturally specific narrative RPG</td>
+                  <td>A dense niche can value representation and direct creator access.</td>
+                  <td>Prove writing, art consistency, branches, and localization. Identity does not replace quality.</td>
+                </tr>
+                <tr data-game-type="action narrative rpg">
+                  <th scope="row">One-sentence system</th>
+                  <td>Stress dungeon crawler, pacifist bullet-hell RPG, antigravity racing</td>
+                  <td>The difference is easy to repeat and can be made true in a demo.</td>
+                  <td>Show mechanical depth and a reachable audience—not just a clever sentence.</td>
+                </tr>
+                <tr data-game-type="offer legacy">
+                  <th scope="row">Existing game plus offer</th>
+                  <td>Merchandise, collector edition, localization, soundtrack, preorder</td>
+                  <td>The audience and delivery object already exist; especially visible on Modian.</td>
+                  <td>Prove rights, quotes, SKU control, and fulfillment. Gross sales are not margin.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="definition-table">
+            <div class="definition-row">
+              <dt>Audience memory</dt>
+              <dd>A prior work, named creator, neglected classic, stable community, or identity-centered niche gives the campaign someone real to reach.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Five-second legibility</dt>
+              <dd>A viewer can repeat who it is for, what it resembles, and what changes after one sentence or a short clip.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Playable proof</dt>
+              <dd>A public demo or representative build makes the central promise testable.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Bounded ask</dt>
+              <dd>The goal finances a defined milestone and a manageable reward plan—not an undefined fraction of an enormous game.</dd>
+            </div>
+          </div>
+        </section>
+
+        <section class="section detail-layer" id="cases" aria-labelledby="cases-title">
+          <div class="section-head">
+            <span class="section-number">04</span>
+            <div>
+              <h2 id="cases-title">Released cases explain mechanisms, not odds</h2>
+              <p class="section-intro">Each selected case links a public campaign to a current release record. They are survivors, so they can illustrate fit but cannot supply a success probability.</p>
+            </div>
+          </div>
+
+          <p class="scroll-hint" aria-hidden="true">Scroll sideways to view the full table ↔</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Representative funded and released indie games">
+            <table>
+              <caption>Selected campaign mechanisms with separate funding and release evidence</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Mechanism</th>
+                  <th scope="col">Campaign</th>
+                  <th scope="col">Release record</th>
+                  <th scope="col">Bounded interpretation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Creator + classic lineage</th>
+                  <td><a href="https://www.kickstarter.com/projects/iga/bloodstained-ritual-of-the-night">Bloodstained</a>, about $5.55M</td>
+                  <td><a href="https://store.steampowered.com/app/692850/Bloodstained">Steam release</a></td>
+                  <td>Creator memory and an explicit Metroidvania promise lowered explanation cost.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Small demonstrable action core</th>
+                  <td><a href="https://www.kickstarter.com/projects/11662585/hollow-knight">Hollow Knight</a>, A$57,138</td>
+                  <td><a href="https://store.steampowered.com/app/367520/Hollow_Knight/">Steam release</a></td>
+                  <td>A comparatively small campaign can support a sharply shown core; the amount is not a reusable budget.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Retro party RPG</th>
+                  <td><a href="https://www.kickstarter.com/projects/rabbitandbearstudios/eiyuden-chronicle-hundred-heroes">Eiyuden Chronicle</a>, about JP¥481.6M</td>
+                  <td><a href="https://store.steampowered.com/app/1658280/Eiyuden_Chronicle_Hundred_Heroes/">Steam release</a></td>
+                  <td>Creator lineage, party collection, and world building reinforced the same classic audience.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Cozy/life simulation</th>
+                  <td><a href="https://www.kickstarter.com/projects/coralisland/coral-island-reimagining-the-farm-sim-game">Coral Island</a>, about $1.64M</td>
+                  <td><a href="https://store.steampowered.com/app/1158160/Coral_Island/">Steam release</a></td>
+                  <td>A legible farm loop and reveal-friendly cast supported a continuing campaign narrative.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Identity + one-sentence mechanic</th>
+                  <td><a href="https://www.kickstarter.com/projects/1002143342/undertale">Undertale</a>, $51,124 from 2,398 backers with a demo</td>
+                  <td><a href="https://store.steampowered.com/app/391540/Undertale/">Steam release</a></td>
+                  <td>“An RPG where nobody has to die” joined a repeatable pitch to playable proof.</td>
+                </tr>
+                <tr>
+                  <th scope="row">One-sentence system</th>
+                  <td><a href="https://www.kickstarter.com/projects/1460250988/darkest-dungeon-by-red-hook-studios">Darkest Dungeon</a>, $313,337</td>
+                  <td><a href="https://store.steampowered.com/app/262060/Darkest_Dungeon/">Steam release</a></td>
+                  <td>Stress management gave a familiar dungeon crawler an easy-to-demonstrate distinction.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section" id="risks" aria-labelledby="risks-title">
+          <div class="section-head">
+            <span class="section-number">05</span>
+            <div>
+              <h2 id="risks-title">What can fund and still be a bad fit</h2>
+              <p class="section-intro">Funding measures willingness to pledge under a campaign promise. It does not prove the team can execute every dependency that promise creates.</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>Infrastructure-first scope</h3>
+              <p>MMOs, persistent open worlds, procedural universes, and service games ask backers to trust networking, operations, moderation, security, and long-term content that a short demo cannot prove.</p>
+            </article>
+            <article class="answer">
+              <h3>Concept instead of product evidence</h3>
+              <p>Concept art and feature lists explain ambition, not control feel, pacing, production velocity, or technical feasibility.</p>
+            </article>
+            <article class="answer">
+              <h3>Promise multiplication</h3>
+              <p>Console ports, multiplayer, voice acting, many languages, physical rewards, and stretch goals multiply dependencies faster than public totals reveal.</p>
+            </article>
+          </div>
+
+          <div class="callout danger">
+            <span class="callout-title">High pledges do not equal completion</span>
+            <p><a href="https://www.kickstarter.com/projects/soulboundstudios/chronicles-of-elyria-epic-story-mmorpg-with-aging/posts/3707035">Chronicles of Elyria</a> raised about $1.36M, while no commercial release was verified at the cutoff. The funding event was real; delivery was not established.</p>
+          </div>
+
+          <div class="detail-layer">
+            <p>Kickstarter’s hosted <a href="https://updates.kickstarter.com/10-things-every-creator-should-know-before-launching-a-kickstarter-campaign/">creator guidance</a> recommends building an audience outside the platform, showing enough product, studying both successful and unsuccessful comparables, and having an MVP.</p>
+            <p>Kickstarter defines itself as all-or-nothing reward crowdfunding rather than a store and says a pledge supports a creative process, not a guaranteed product. <a href="https://help.kickstarter.com/hc/en-us/articles/115004996453-What-is-Kickstarter">How Kickstarter works</a></p>
+          </div>
+        </section>
+
+        <section class="section" id="decision" aria-labelledby="decision-title">
+          <div class="section-head">
+            <span class="section-number">06</span>
+            <div>
+              <h2 id="decision-title">Does this game fit crowdfunding now?</h2>
+              <p class="section-intro">Six evidence checks, ten points. Score what exists today, not what the team plans to create after funding.</p>
+            </div>
+          </div>
+
+          <form class="decision-tool" id="decision-tool">
+            <div class="decision-row">
+              <label for="score-audience">Audience memory</label>
+              <select id="score-audience" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · No reachable audience</option>
+                <option value="1">1 · Followers or wishlists without conversion evidence</option>
+                <option value="2">2 · Prior title, owned list, stable community, or repeatable growth</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-position">Five-second comprehension</label>
+              <select id="score-position" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · Generic genre or feature list</option>
+                <option value="1">1 · Clear genre, weak difference</option>
+                <option value="2">2 · Audience, reference, and difference fit one sentence</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-product">Playable proof</label>
+              <select id="score-product" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · Concept only</option>
+                <option value="1">1 · Video or rough prototype</option>
+                <option value="2">2 · Public representative demo with observed players</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-budget">Bounded milestone</label>
+              <select id="score-budget" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · Goal cannot materially change delivery</option>
+                <option value="1">1 · Milestone exists, but scope or budget is soft</option>
+                <option value="2">2 · Defined milestone plus fees, tax, delay, and support buffer</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-reward">Reward delivery</label>
+              <select id="score-reward" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · Many SKUs or uncertain rights/production</option>
+                <option value="1">1 · Digital-first or one controlled physical offer</option>
+              </select>
+            </div>
+            <div class="decision-row">
+              <label for="score-operation">Campaign ownership</label>
+              <select id="score-operation" data-score>
+                <option value="" selected>Select the current state</option>
+                <option value="0">0 · No owner or communication cadence</option>
+                <option value="1">1 · Named owner, support plan, and update cadence</option>
+              </select>
+            </div>
+            <div class="decision-result" aria-live="polite">
+              <output class="score" id="decision-score">—/10</output>
+              <div>
+                <h3 id="decision-heading">Complete all six choices for a decision</h3>
+                <p id="decision-copy">Your selections are not saved.</p>
+              </div>
+            </div>
+          </form>
+
+          <div class="definition-table">
+            <div class="definition-row">
+              <dt>8–10 points</dt>
+              <dd>Proceed to pre-launch conversion and budget validation.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>6–7 points</dt>
+              <dd>Repair the weakest evidence before announcing a launch date.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>0–5 points</dt>
+              <dd>Use a Steam page, demo, playtests, creators, and festivals to build proof first.</dd>
+            </div>
+          </div>
+          <p class="fine-print">This card is a decision aid, not a platform success-probability model.</p>
+        </section>
+
+        <section class="section" id="route" aria-labelledby="route-title">
+          <div class="section-head">
+            <span class="section-number">07</span>
+            <div>
+              <h2 id="route-title">Choose the route after the evidence</h2>
+              <p class="section-intro">International and Chinese campaigns can use the same game, but they may be selling a different milestone or offer.</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>International: finance one playable milestone</h3>
+              <p>Lead with the demo and reachable audience. Use Kickstarter or BackerKit to convert that proof into funding, backers, and a marketing event, then route attention back to Steam.</p>
+            </article>
+            <article class="answer">
+              <h3>China / Modian: define the offer first</h3>
+              <p>Separate a new-game campaign from a preorder, localization benefit, special edition, or existing-IP collectible. Their cost, rights, fulfillment, and audience logic are different.</p>
+            </article>
+          </div>
+
+          <div class="flow" aria-label="Evidence-first international crowdfunding sequence">
+            <div class="flow-step"><span>01</span><p>One-sentence position</p></div>
+            <div class="flow-step"><span>02</span><p>Representative playable demo</p></div>
+            <div class="flow-step"><span>03</span><p>Steam page + reachable audience</p></div>
+            <div class="flow-step"><span>04</span><p>Conversion and budget test</p></div>
+            <div class="flow-step"><span>05</span><p>Bounded campaign milestone</p></div>
+            <div class="flow-step"><span>06</span><p>Route back to Steam and delivery</p></div>
+          </div>
+
+          <div class="detail-layer">
+            <p>Steam recommends publishing a credible <a href="https://partner.steamgames.com/doc/store/coming_soon?language=english">Coming Soon page</a> when the game is ready for public discussion. Its <a href="https://partner.steamgames.com/doc/store/application/demos?language=english">demo documentation</a> describes a playable portion that shows the core mechanics and links back to the full game.</p>
+            <p>Wishlists can influence where a game appears and trigger selected notifications, but visibility is contextual and personalized. <a href="https://partner.steamgames.com/doc/marketing/wishlist?language=english">Wishlist documentation</a></p>
+            <p>Each game can participate in Steam Next Fest only once and needs a public store page plus playable demo. Valve says there is no universal right timing. <a href="https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english">Next Fest documentation</a></p>
+          </div>
+        </section>
+
+        <section class="section detail-layer" id="sources" aria-labelledby="sources-title">
+          <div class="section-head">
+            <span class="section-number">08</span>
+            <div>
+              <h2 id="sources-title">Sources, method, and limits</h2>
+              <p class="section-intro">Primary platform records and direct release pages lead. Observations, inferences, and unknowns remain separate.</p>
+            </div>
+          </div>
+
+          <dl class="definition-table">
+            <div class="definition-row">
+              <dt>Observation</dt>
+              <dd>Kickstarter reported continued activity; BackerKit showed current project patterns; Modian rankings showed a different offer structure; Steam pages verified selected releases.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Inference</dt>
+              <dd>Audience memory, five-second legibility, playable proof, and a bounded ask explain fit more consistently than a genre label alone.</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Unknown</dt>
+              <dd>Public evidence does not establish project-level net profit, a genre-by-genre success rate, or the causal effect of crowdfunding on discovery.</dd>
+            </div>
+          </dl>
+
+          <ul class="sources">
+            <li><span class="source-type">Official data</span><a href="https://updates.kickstarter.com/video-games-are-leveling-up-on-kickstarter/">Kickstarter: Video Games Are Leveling Up, May 2026</a></li>
+            <li><span class="source-type">Live collection</span><a href="https://www.backerkit.com/c/categories/video-games/projects">BackerKit: current video-game projects</a></li>
+            <li><span class="source-type">Live ranking</span><a href="https://zhongchou.modian.com/games/top_money/going">Modian: ongoing game projects by money</a></li>
+            <li><span class="source-type">Live ranking</span><a href="https://zhongchou.modian.com/games/top_money/success">Modian: successful game projects by money</a></li>
+            <li><span class="source-type">Official rules</span><a href="https://partner.steamgames.com/doc/store/application/demos?language=english">Steamworks: demos</a></li>
+            <li><span class="source-type">Official rules</span><a href="https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english">Steamworks: Next Fest</a></li>
+          </ul>
+
+          <div class="callout warning">
+            <span class="callout-title">Research limit</span>
+            <p>Live lists change. Platform marketing is self-reported unless independently audited. Selected released cases are survivor examples. Amounts are gross pledges, not profit. All live counts and classifications describe the 2026-08-10 cutoff.</p>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>Indie game crowdfunding fit · Cutoff 2026-08-10 · Visual System 1.3.0</p>
+          <p><a href="../">Browse all research</a> · <a href="../crowdfunding-and-indie-games-research/">Read the broader crowdfunding report</a> · <a href="../about.html">About the method</a></p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <script src="../assets/research.js"></script>
+</body>
+</html>

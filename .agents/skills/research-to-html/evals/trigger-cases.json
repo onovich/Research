@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "skill": "research-to-html",
+  "purpose": "Model-agnostic trigger corpus for distinguishing evidence-led research-to-report requests from adjacent writing, design, translation, and deployment tasks.",
+  "cases": [
+    {
+      "id": "trigger-en-industry-decision",
+      "expected": "trigger",
+      "prompt": "Research whether independent repair shops should add electric-vehicle battery diagnostics, then publish an evidence-backed English and Chinese web report for a go or no-go decision.",
+      "rationale": "Requests current industry research, a decision, bilingual output, and a web report."
+    },
+    {
+      "id": "trigger-en-platform-comparison",
+      "expected": "trigger",
+      "prompt": "Compare the current business models, fees, and seller fit of the major creator-commerce platforms. Keep a source ledger and turn the findings into a low-reading-pressure HTML report.",
+      "rationale": "Combines current platform comparison, traceable evidence, and an HTML artifact."
+    },
+    {
+      "id": "trigger-en-technical-ecosystem",
+      "expected": "trigger",
+      "prompt": "Investigate the current open-source vector database ecosystem for a small product team. Separate facts, inference, and unknowns, and create a bilingual static research site.",
+      "rationale": "Requests technical ecosystem research with evidence boundaries and bilingual static publication."
+    },
+    {
+      "id": "trigger-en-business-model",
+      "expected": "trigger",
+      "prompt": "Study whether a subscription or one-time license is more viable for a niche desktop tool. Use primary sources and transparent calculations, then deliver reviewable Markdown and an interactive HTML report.",
+      "rationale": "Requests business-model research, calculations, Markdown evidence, and interactive HTML."
+    },
+    {
+      "id": "trigger-en-update-report",
+      "expected": "trigger",
+      "prompt": "Refresh this existing market report with current official sources, preserve the evidence notebook, update both language pages, and keep the same accessible visual system.",
+      "rationale": "Requests a current evidence refresh and maintenance of a bilingual research-report artifact."
+    },
+    {
+      "id": "trigger-zh-industry-map",
+      "expected": "trigger",
+      "prompt": "调研当前宠物智能硬件市场的主要品类、价格带和商业风险，形成可复核证据稿，并输出低阅读压力的中英双语网页报告。",
+      "rationale": "要求行业调研、证据稿和双语网页报告。"
+    },
+    {
+      "id": "trigger-zh-platform-rules",
+      "expected": "trigger",
+      "prompt": "比较国内外主流线上课程平台当前的抽成、准入和受众差异，基于一手资料给出选择建议，并生成交互式 HTML 专题报告。",
+      "rationale": "要求当前平台规则比较、决策建议与交互式 HTML。"
+    },
+    {
+      "id": "trigger-zh-creator-economy",
+      "expected": "trigger",
+      "prompt": "调查小型创作者做付费社群是否值得，区分观察、推断和未知，整理来源账本，并发布中英文静态报告。",
+      "rationale": "要求决策型调研、证据边界、来源账本与双语发布。"
+    },
+    {
+      "id": "trigger-zh-supply-chain",
+      "expected": "trigger",
+      "prompt": "研究小团队进入桌面制造设备行业的供应链与售后风险，给出 Go/No-Go 判断，把 Markdown 调研稿转成可访问的双语网页。",
+      "rationale": "要求行业风险研究、决策判断、Markdown 与可访问双语网页。"
+    },
+    {
+      "id": "trigger-zh-existing-site",
+      "expected": "trigger",
+      "prompt": "把现有行业调研补齐最新证据和反例，保持中英文结论一致，并按项目视觉系统重做成易读的网页版报告。",
+      "rationale": "要求更新研究证据并重建双语网页报告。"
+    },
+    {
+      "id": "no-trigger-en-landing-page",
+      "expected": "no_trigger",
+      "prompt": "Build a polished landing page from the copy and brand colors I already supplied.",
+      "rationale": "This is frontend design from supplied content, not evidence-led research."
+    },
+    {
+      "id": "no-trigger-en-translation-only",
+      "expected": "no_trigger",
+      "prompt": "Translate this finished English HTML page into Simplified Chinese and add a language switcher.",
+      "rationale": "This is translation and web internationalization without a research phase."
+    },
+    {
+      "id": "no-trigger-en-deploy-only",
+      "expected": "no_trigger",
+      "prompt": "The static report is finished. Configure GitHub Pages and publish it.",
+      "rationale": "This is deployment-only work for the publishing skill."
+    },
+    {
+      "id": "no-trigger-en-single-fact",
+      "expected": "no_trigger",
+      "prompt": "What is the current transaction fee charged by this platform? Give me the source.",
+      "rationale": "A single factual lookup does not require a full evidence notebook and report site."
+    },
+    {
+      "id": "no-trigger-en-pdf-summary",
+      "expected": "no_trigger",
+      "prompt": "Summarize the attached annual report in five bullets. Do not browse the web.",
+      "rationale": "This is supplied-document summarization with no web research or HTML report."
+    },
+    {
+      "id": "no-trigger-zh-dashboard",
+      "expected": "no_trigger",
+      "prompt": "用我提供的 CSV 做一个销量仪表盘，不需要补充外部资料。",
+      "rationale": "这是已有数据的可视化，不是外部证据驱动的行业调研。"
+    },
+    {
+      "id": "no-trigger-zh-css-redesign",
+      "expected": "no_trigger",
+      "prompt": "只调整当前报告的 CSS，让排版更清爽，内容和数据不要改。",
+      "rationale": "这是纯视觉改造，不包含研究与证据更新。"
+    },
+    {
+      "id": "no-trigger-zh-readme",
+      "expected": "no_trigger",
+      "prompt": "给这个开源项目写一份简洁、面向新手的 README。",
+      "rationale": "这是项目文档写作，不是调研到 HTML 的完整流程。"
+    },
+    {
+      "id": "no-trigger-zh-marketing-copy",
+      "expected": "no_trigger",
+      "prompt": "根据这些卖点写一篇有感染力的品牌宣传文章，不要加入来源或研究限制。",
+      "rationale": "这是营销文案，并明确排除了证据链。"
+    },
+    {
+      "id": "no-trigger-zh-link-list",
+      "expected": "no_trigger",
+      "prompt": "帮我搜集十个相关网站并按主题列出链接，不需要形成报告。",
+      "rationale": "这是链接收集任务，未要求证据综合或报告产物。"
+    }
+  ]
+}

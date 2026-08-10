@@ -10,6 +10,8 @@ Research 帮助你使用 AI 完成行业调研：基于数据和证据形成结�
 
 - [众筹商品与独立游戏](https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html) · [English](https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/)
   了解哪些众筹商品更可能赚钱，以及众筹在什么情况下仍能帮助独立游戏。
+- [哪些独立游戏类型与玩法更适合众筹？](https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/)
+  对照七类玩法与受众模式、国内外平台当下证据、高风险反例，并用十分制决策卡判断项目是否已经适合众筹。
 
 ## 使用 AI
 

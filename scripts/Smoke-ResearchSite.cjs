@@ -78,6 +78,9 @@ async function run() {
       { locale: 'en-US', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-375.png' },
       { locale: 'zh-CN', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', screenshot: 'report-zh-375.png' },
       { locale: 'en-US', width: 1440, height: 1000, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-1440.png' },
+      { locale: 'en-US', width: 375, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-375.png' },
+      { locale: 'zh-CN', width: 375, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', screenshot: 'game-fit-zh-375.png' },
+      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-1440.png' },
       { locale: 'en-US', width: 768, relativePath: 'research-template/index.html', screenshot: 'template-en-768.png' }
     ];
     for (const test of visualCases) {
@@ -105,6 +108,8 @@ async function run() {
       { relativePath: 'about.zh-CN.html', canonical: 'https://blog.onovich.com/Research/about.zh-CN.html' },
       { relativePath: 'crowdfunding-and-indie-games-research/index.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/' },
       { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html' },
+      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', canonical: 'https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/' },
+      { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html' },
       { relativePath: 'tools/research-to-html/index.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/' },
       { relativePath: 'tools/research-to-html/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html' }
     ];
@@ -159,6 +164,35 @@ async function run() {
 
     await testReportTools('en-US', 'crowdfunding-and-indie-games-research/index.html', { filter: /^Showing /, heading: /Ready/, theme: /light mode/ });
     await testReportTools('zh-CN', 'crowdfunding-and-indie-games-research/index.zh-CN.html', { filter: /筛选后显示/, heading: /可以进入/, theme: /日间模式/ });
+
+    async function testFocusedReportTools(locale, relativePath, expected) {
+      const session = await open({ locale, width: 375, relativePath });
+      await session.page.click('[data-reading-mode="full"]');
+      await session.page.click('#theme-button');
+      await session.page.click('[data-game-filter="action"]');
+      for (const select of await session.page.locator('[data-score]').all()) {
+        const values = await select.locator('option').evaluateAll(options => options.map(option => option.value).filter(Boolean));
+        await select.selectOption(values[values.length - 1]);
+      }
+      const state = await session.page.evaluate(() => ({
+        reading: document.documentElement.dataset.reading,
+        theme: document.documentElement.dataset.theme,
+        themeLabel: document.querySelector('#theme-button').getAttribute('aria-label'),
+        filter: document.querySelector('#game-filter-status').textContent,
+        score: document.querySelector('#decision-score').textContent,
+        heading: document.querySelector('#decision-heading').textContent
+      }));
+      assert(state.reading === 'full', `${locale}: focused-report reading control failed`);
+      assert(state.theme === 'dim' && expected.theme.test(state.themeLabel), `${locale}: focused-report theme control failed: ${JSON.stringify(state)}`);
+      assert(expected.filter.test(state.filter), `${locale}: focused-report filter output is not localized: ${state.filter}`);
+      assert(state.score === '10/10' && expected.heading.test(state.heading), `${locale}: focused-report scorecard failed: ${JSON.stringify(state)}`);
+      assert(session.errors.length === 0, `${locale}: ${session.errors.join(' | ')}`);
+      console.log(`focused tools: ${locale} ${JSON.stringify(state)}`);
+      await session.context.close();
+    }
+
+    await testFocusedReportTools('en-US', 'indie-game-crowdfunding-genres-and-gameplay/index.html', { filter: /^Showing /, heading: /Ready/, theme: /light mode/ });
+    await testFocusedReportTools('zh-CN', 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', { filter: /筛选后显示/, heading: /可以进入/, theme: /日间模式/ });
 
     const persisted = await open({ locale: 'en-US', width: 768, relativePath: 'index.html' });
     await persisted.page.click('[data-language-option="zh-CN"]');
