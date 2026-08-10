@@ -1,2 +1,45 @@
+# Generated output
 _site/
 .git-history-backups/
+
+# Local agent and editor state
+.codex/
+.agents/
+.vscode/
+.idea/
+node_modules/
+
+# Credentials, sessions, and environment files
+.env
+.env.*
+!.env.example
+**/auth.json
+**/session_index.jsonl
+**/cap_sid
+**/credentials*.json
+**/secrets*.json
+.npmrc
+.pypirc
+.netrc
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+
+# Local backups, system exports, and archives
+*backup*/
+*.zip
+*.zip.*
+*.7z
+*.rar
+*.bak
+*.old
+*.reg
+
+# Local runtime state
+*.log
+*.sqlite
+*.sqlite3
