@@ -17,6 +17,10 @@ Use [`$research-to-html`](skills/research-to-html/SKILL.md) to move from a decis
 
 The reusable page pair is in [`research-template/`](research-template/USAGE.md).
 
+## Publish reports
+
+Use [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) to validate the static site, install the official GitHub Pages Actions workflow, monitor the deployment, and verify the live report routes and assets. The repository's Pages source must be set to **GitHub Actions**.
+
 ## Shared system
 
 - [`assets/research.css`](assets/research.css): visual tokens, layout, components, responsive behavior, and print.

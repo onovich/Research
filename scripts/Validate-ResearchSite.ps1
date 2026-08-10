@@ -19,6 +19,7 @@ function Get-RelativeDisplayPath {
 }
 
 $requiredFiles = @(
+  ".github/workflows/deploy-pages.yml",
   "README.md",
   "README.zh-CN.md",
   "index.html",
@@ -45,6 +46,9 @@ $requiredFiles = @(
   "skills/research-to-html/references/master-prompt.md",
   "skills/research-to-html/references/research-protocol.md",
   "skills/research-to-html/references/html-contract.md",
+  "skills/research-to-github-pages/SKILL.md",
+  "skills/research-to-github-pages/agents/openai.yaml",
+  "skills/research-to-github-pages/assets/deploy-pages.yml",
   "scripts/Smoke-ResearchSite.cjs"
 )
 
@@ -66,6 +70,8 @@ $validationRoots = @(
   "research-template",
   "crowdfunding-and-indie-games-research",
   "skills/research-to-html",
+  "skills/research-to-github-pages",
+  ".github/workflows/deploy-pages.yml",
   "scripts/Validate-ResearchSite.ps1",
   ".codex/project-git-workflow.json"
 )
@@ -77,7 +83,7 @@ foreach ($relativeRoot in $validationRoots) {
   $item = Get-Item -LiteralPath $fullRoot
   if ($item.PSIsContainer) {
     Get-ChildItem -LiteralPath $item.FullName -Recurse -File |
-      Where-Object { $_.Extension -in @(".html", ".css", ".js", ".cjs", ".md", ".json", ".ps1", ".yaml") } |
+      Where-Object { $_.Extension -in @(".html", ".css", ".js", ".cjs", ".md", ".json", ".ps1", ".yaml", ".yml") } |
       ForEach-Object { $textFiles.Add($_) }
   } else {
     $textFiles.Add($item)

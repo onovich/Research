@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research to GitHub Pages"
+  short_description: "Validate and publish research sites to GitHub Pages"
+  default_prompt: "Use $research-to-github-pages to validate this research site, deploy it with GitHub Actions, and verify the live Pages URLs."

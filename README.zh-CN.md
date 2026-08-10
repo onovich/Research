@@ -17,6 +17,10 @@
 
 可复制的双语页面位于 [`research-template/`](research-template/USAGE.zh-CN.md)。
 
+## 发布报告
+
+使用 [`$research-to-github-pages`](skills/research-to-github-pages/SKILL.md) 验证静态站点、安装 GitHub Pages 官方 Actions workflow、监控部署，并检查线上报告路径和资源。仓库的 Pages 发布源需要设为 **GitHub Actions**。
+
 ## 共享系统
 
 - [`assets/research.css`](assets/research.css)：视觉令牌、布局、组件、响应式与打印。
