@@ -20,10 +20,10 @@
 
 ## 2. 共享资产
 
-- assets/research.css：颜色、字体、布局、组件、响应式、打印；
-- assets/i18n.js：显式语言选择、英文兜底、偏好持久化与公共界面文案；
-- assets/research.js：阅读模式、字号、主题、移动目录、进度、深链接、打印与可选工具；
-- research-template/index.html 与 index.zh-CN.html：中英文标准语义结构与组件示例。
+- `site/assets/research.css`：颜色、字体、布局、组件、响应式、打印；
+- `site/assets/i18n.js`：显式语言选择、英文兜底、偏好持久化与公共界面文案；
+- `site/assets/research.js`：阅读模式、字号、主题、移动目录、进度、深链接、打印与可选工具；
+- `templates/research-report/index.html` 与 `index.zh-CN.html`：中英文标准语义结构与组件示例。
 
 每份报告只引用共享资产。报告专属 JavaScript 可以单独放在自身目录，但不要复制公共 CSS。
 
@@ -47,7 +47,7 @@
 
 ### 批量换皮
 
-只修改 assets/research.css 顶部两组令牌：
+只修改 `site/assets/research.css` 顶部两组令牌：
 
 ~~~css
 :root {

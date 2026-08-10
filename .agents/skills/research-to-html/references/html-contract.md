@@ -2,11 +2,14 @@
 
 ## Deliverables
 
-For each report, prefer this structure:
+When the repository separates review sources from its public site, prefer this structure:
 
 ```text
-<report-slug>/
-├─ README.md              # reviewable research source
+reports/<report-slug>/
+├─ README.md              # reviewable English research source
+└─ README.zh-CN.md        # reviewable Simplified-Chinese source
+
+site/<report-slug>/
 ├─ index.html             # English canonical report
 ├─ index.zh-CN.html       # Simplified-Chinese report
 └─ report.js              # optional, report-specific behavior only
@@ -15,13 +18,13 @@ For each report, prefer this structure:
 At repository level, reuse shared assets when available:
 
 ```text
-assets/
+site/assets/
 ├─ research.css           # tokens, layout, components, responsive, print
 ├─ i18n.js                # explicit locale choice, persistence, common strings
 └─ research.js            # reading shell and optional research tools
 ```
 
-Do not copy shared CSS into report directories.
+If the repository has no separated public source tree, colocating the Markdown and HTML under one report slug is an acceptable fallback. Follow the repository's established build boundary. Do not copy shared CSS into report directories.
 
 ## Locale contract
 

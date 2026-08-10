@@ -1,0 +1,40 @@
+# 仓库架构
+
+[English](repository-architecture.md)
+
+## 分层
+
+```text
+site/                       公开网站源码；目录与线上 URL 一致
+reports/<public-slug>/      可复核的 Markdown 调研稿
+templates/research-report/  可复用的中英文报告模板
+.agents/skills/             AI 调研与发布工作流
+scripts/                    验证、构建、浏览器检查与分享图工具
+docs/                       维护说明
+_site/                      自动生成的 Pages 产物；不要手工编辑
+```
+
+`public-site.json` 是公开边界：从 `site/` 中按白名单复制到 `_site/`。调研稿、文档、Skill、模板和脚本不会进入网站产物。
+
+## 页面职责
+
+| 公开地址 | 职责 | 主要搜索意图 |
+|---|---|---|
+| `/crowdfunding-and-indie-games-research/` | 总报告 | 众筹经济性、商品适配与独立游戏 Go / No-Go |
+| `/indie-game-crowdfunding-genres-and-gameplay/` | 配套深挖 | 独立游戏类型、玩法模式、受众证明与平台差异 |
+| `/tools/research-to-html/` | 主 Skill 产品页 | 把有证据的决策问题转成双语 HTML 报告 |
+
+两份报告不是测试产生的重复页。专题页是后来增加的 SEO 支撑内容：它复用原始研究底座，但补充了聚焦的平台样本和七类模式。保留两页，明确各自职责并双向互链；不要为了近义关键词继续复制页面。
+
+Skill 网页已有明确结论：只保留一个面向 `research-to-html` 主承诺的公开产品页。`research-to-github-pages` 作为可选发布步骤，放在主产品页和 README 中即可。除非真实搜索或支持数据表明存在主页面无法回答的独立任务，否则不再建立第二个近似 Skill 页面。
+
+## 新增报告
+
+1. 中英文 Markdown 调研稿放入 `reports/<public-slug>/`。
+2. 中英文公开页面放入 `site/<public-slug>/`。
+3. 复用 `site/assets/`，不要在报告目录复制视觉系统。
+4. `public-site.json` 只加入读者页面和分享图。
+5. 更新目录页、站点地图、双向链接与中英文验证配对。
+6. 发布前运行验证、构建和浏览器烟测。
+
+不要再向仓库根目录添加公开 HTML 文件。

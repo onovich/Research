@@ -1,7 +1,9 @@
 # 众筹商品与独立游戏专项调查
 
-[English](README.md) · **简体中文** · [English HTML](index.html) · [中文 HTML](index.zh-CN.html)
+[English](README.md) · **简体中文** · [English HTML](../../site/crowdfunding-and-indie-games-research/index.html) · [中文 HTML](../../site/crowdfunding-and-indie-games-research/index.zh-CN.html)
 
+> 页面角色：总报告。先比较不同商品的众筹经济性，再把独立游戏放进更完整的决策框架；[独立游戏配套报告](../indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md)会继续深挖游戏类型与玩法结构。
+>
 > 调查截点：2026-08-10（中国标准时间）<br>
 > 范围：回报型众筹与新品预售型众筹；不讨论股权、借贷、公益众筹。<br>
 > 口径：公开页面通常只能证明“认缴/筹资流水”，不能证明净利润。本文会把筹资成功、交付成功和真正赚钱分开。

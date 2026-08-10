@@ -19,10 +19,10 @@ The signature device is a ledger that places public indicators, necessary deduct
 
 ## Shared assets
 
-- `assets/research.css`: tokens, typography, layout, components, responsive rules, and print;
-- `assets/i18n.js`: explicit locale choice, English fallback, preference persistence, and localized common strings;
-- `assets/research.js`: reading depth, text size, theme, mobile contents, progress, deep links, print, and optional tools;
-- `research-template/`: matched English and Simplified-Chinese page skeletons.
+- `site/assets/research.css`: tokens, typography, layout, components, responsive rules, and print;
+- `site/assets/i18n.js`: explicit locale choice, English fallback, preference persistence, and localized common strings;
+- `site/assets/research.js`: reading depth, text size, theme, mobile contents, progress, deep links, print, and optional tools;
+- `templates/research-report/`: matched English and Simplified-Chinese page skeletons.
 
 Reports import these assets. Do not copy the public CSS into individual report directories.
 

@@ -1,7 +1,9 @@
 # Which indie game genres and gameplay structures fit crowdfunding?
 
-**English** · [简体中文](README.zh-CN.md) · [English HTML](index.html) · [中文 HTML](index.zh-CN.html)
+**English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 
+> Page role: companion deep dive. It extends the [crowdfunding economics pillar report](../crowdfunding-and-indie-games-research/README.md) with a focused taxonomy of indie-game genres, gameplay structures, examples, and campaign-fit signals. It is not a test or duplicate report.
+>
 > Research cutoff: 2026-08-10 (China Standard Time)<br>
 > Geography: international reward crowdfunding, primarily Kickstarter and BackerKit, plus China’s Modian<br>
 > Decision: whether a small independent game team should use crowdfunding, and which product properties improve the fit<br>

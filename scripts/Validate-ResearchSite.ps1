@@ -40,47 +40,49 @@ $requiredFiles = @(
   "LICENSE",
   "CONTENT-LICENSE.md",
   "public-site.json",
-  "index.html",
-  "index.zh-CN.html",
-  "about.html",
-  "about.zh-CN.html",
-  "404.html",
-  "sitemap.xml",
-  "robots.txt",
-  "BingSiteAuth.xml",
-  "5c6e01f4e5208988a4704e2ba1a1f0f038271bf7ad6b71789f877317cb2fe147.txt",
-  "assets/research.css",
-  "assets/i18n.js",
-  "assets/research.js",
-  "assets/favicon.svg",
-  "assets/og/research-library-en.png",
-  "assets/og/research-library-zh-CN.png",
-  "assets/og/crowdfunding-indie-games-en.png",
-  "assets/og/crowdfunding-indie-games-zh-CN.png",
-  "assets/og/indie-game-crowdfunding-fit-en.png",
-  "assets/og/indie-game-crowdfunding-fit-zh-CN.png",
-  "assets/og/research-to-html-en.png",
-  "assets/og/research-to-html-zh-CN.png",
-  "crowdfunding-and-indie-games-research/README.md",
-  "crowdfunding-and-indie-games-research/README.zh-CN.md",
-  "crowdfunding-and-indie-games-research/index.html",
-  "crowdfunding-and-indie-games-research/index.zh-CN.html",
-  "indie-game-crowdfunding-genres-and-gameplay/README.md",
-  "indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md",
-  "indie-game-crowdfunding-genres-and-gameplay/index.html",
-  "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html",
-  "tools/research-to-html/index.html",
-  "tools/research-to-html/index.zh-CN.html",
+  "site/index.html",
+  "site/index.zh-CN.html",
+  "site/about.html",
+  "site/about.zh-CN.html",
+  "site/404.html",
+  "site/sitemap.xml",
+  "site/robots.txt",
+  "site/BingSiteAuth.xml",
+  "site/5c6e01f4e5208988a4704e2ba1a1f0f038271bf7ad6b71789f877317cb2fe147.txt",
+  "site/assets/research.css",
+  "site/assets/i18n.js",
+  "site/assets/research.js",
+  "site/assets/favicon.svg",
+  "site/assets/og/research-library-en.png",
+  "site/assets/og/research-library-zh-CN.png",
+  "site/assets/og/crowdfunding-indie-games-en.png",
+  "site/assets/og/crowdfunding-indie-games-zh-CN.png",
+  "site/assets/og/indie-game-crowdfunding-fit-en.png",
+  "site/assets/og/indie-game-crowdfunding-fit-zh-CN.png",
+  "site/assets/og/research-to-html-en.png",
+  "site/assets/og/research-to-html-zh-CN.png",
+  "reports/crowdfunding-and-indie-games-research/README.md",
+  "reports/crowdfunding-and-indie-games-research/README.zh-CN.md",
+  "site/crowdfunding-and-indie-games-research/index.html",
+  "site/crowdfunding-and-indie-games-research/index.zh-CN.html",
+  "reports/indie-game-crowdfunding-genres-and-gameplay/README.md",
+  "reports/indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md",
+  "site/indie-game-crowdfunding-genres-and-gameplay/index.html",
+  "site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html",
+  "site/tools/research-to-html/index.html",
+  "site/tools/research-to-html/index.zh-CN.html",
   "docs/research-to-html-workflow.md",
   "docs/research-to-html-workflow.zh-CN.md",
+  "docs/repository-architecture.md",
+  "docs/repository-architecture.zh-CN.md",
   "docs/visual-system.md",
   "docs/visual-system.zh-CN.md",
-  "research-template/README.md",
-  "research-template/README.zh-CN.md",
-  "research-template/USAGE.md",
-  "research-template/USAGE.zh-CN.md",
-  "research-template/index.html",
-  "research-template/index.zh-CN.html",
+  "templates/research-report/README.md",
+  "templates/research-report/README.zh-CN.md",
+  "templates/research-report/USAGE.md",
+  "templates/research-report/USAGE.zh-CN.md",
+  "templates/research-report/index.html",
+  "templates/research-report/index.zh-CN.html",
   "scripts/Build-PublicResearchSite.ps1",
   "scripts/Generate-ShareImages.cjs",
   "scripts/Smoke-ResearchSite.cjs",
@@ -194,10 +196,20 @@ if (Test-Path -LiteralPath $triggerEvalPath -PathType Leaf) {
 $manifestPath = Join-Path $repoRoot "public-site.json"
 $manifest = $null
 $publicEntries = @()
+$publicSourceRoot = $repoRoot
+$publicSourceSetting = "."
 if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
   try {
     $manifest = Read-TextFile $manifestPath | ConvertFrom-Json
     $publicEntries = @($manifest.files | ForEach-Object { ([string]$_).Replace("\", "/").TrimStart("/") })
+    if ($manifest.PSObject.Properties.Name -contains "source" -and -not [string]::IsNullOrWhiteSpace([string]$manifest.source)) {
+      $publicSourceSetting = [string]$manifest.source
+    }
+    $publicSourceRoot = if ([System.IO.Path]::IsPathRooted($publicSourceSetting)) {
+      [System.IO.Path]::GetFullPath($publicSourceSetting)
+    } else {
+      [System.IO.Path]::GetFullPath((Join-Path $repoRoot $publicSourceSetting))
+    }
   } catch {
     Add-ValidationError "public-site.json is not valid JSON: $($_.Exception.Message)"
   }
@@ -205,14 +217,22 @@ if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
 
 $forbiddenPublicPatterns = @(
   '(^|/)\.',
-  '^(?:docs|skills|scripts|research-template)/',
+  '^(?:docs|skills|scripts|templates|reports)/',
   '(^|/)README(?:\.[^/]+)?\.md$',
   '^public-site\.json$'
 )
 
 if ($manifest) {
-  if ($manifest.version -ne 1 -or [string]::IsNullOrWhiteSpace([string]$manifest.output)) {
-    Add-ValidationError "public-site.json must declare version 1 and an output directory."
+  if ($manifest.version -notin @(1, 2) -or [string]::IsNullOrWhiteSpace([string]$manifest.output)) {
+    Add-ValidationError "public-site.json must declare a supported version and an output directory."
+  }
+  if ($manifest.version -eq 2 -and [string]::IsNullOrWhiteSpace([string]$manifest.source)) {
+    Add-ValidationError "public-site.json version 2 must declare a public source directory."
+  }
+  $repoPrefix = $repoRoot.TrimEnd([System.IO.Path]::DirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar
+  if (($publicSourceRoot -ne $repoRoot -and -not $publicSourceRoot.StartsWith($repoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) -or
+      -not (Test-Path -LiteralPath $publicSourceRoot -PathType Container)) {
+    Add-ValidationError "public-site.json source must be an existing directory inside the repository."
   }
   $duplicates = $publicEntries | Group-Object | Where-Object { $_.Count -gt 1 }
   foreach ($duplicate in $duplicates) { Add-ValidationError "Duplicate public manifest entry: $($duplicate.Name)" }
@@ -222,7 +242,7 @@ if ($manifest) {
       Add-ValidationError "Unsafe public manifest entry: $entry"
       continue
     }
-    if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $entry) -PathType Leaf)) {
+    if (-not (Test-Path -LiteralPath (Join-Path $publicSourceRoot $entry) -PathType Leaf)) {
       Add-ValidationError "Public manifest entry does not exist: $entry"
     }
     foreach ($pattern in $forbiddenPublicPatterns) {
@@ -236,7 +256,7 @@ $indexableHtmlEntries = @($publicHtmlEntries | Where-Object { $_ -ne "404.html" 
 $canonicalUrls = New-Object System.Collections.Generic.List[string]
 
 foreach ($relative in $publicHtmlEntries) {
-  $fullPath = Join-Path $repoRoot $relative
+  $fullPath = Join-Path $publicSourceRoot $relative
   if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) { continue }
   $html = Read-TextFile $fullPath
 
@@ -331,8 +351,8 @@ $localePairs = @(
 )
 
 foreach ($pair in $localePairs) {
-  $enPath = Join-Path $repoRoot $pair.En
-  $zhPath = Join-Path $repoRoot $pair.Zh
+  $enPath = Join-Path $publicSourceRoot $pair.En
+  $zhPath = Join-Path $publicSourceRoot $pair.Zh
   if (-not (Test-Path -LiteralPath $enPath) -or -not (Test-Path -LiteralPath $zhPath)) { continue }
   $enHtml = Read-TextFile $enPath
   $zhHtml = Read-TextFile $zhPath
@@ -348,7 +368,7 @@ foreach ($pair in $localePairs) {
   if (@(Compare-Object $enLinks $zhLinks).Count -gt 0) { Add-ValidationError "$($pair.En) and $($pair.Zh): external content-link sets differ" }
 }
 
-$sitemapPath = Join-Path $repoRoot "sitemap.xml"
+$sitemapPath = Join-Path $publicSourceRoot "sitemap.xml"
 if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
   try {
     [xml]$sitemap = Read-TextFile $sitemapPath
@@ -366,7 +386,7 @@ if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
   }
 }
 
-$robotsPath = Join-Path $repoRoot "robots.txt"
+$robotsPath = Join-Path $publicSourceRoot "robots.txt"
 if (Test-Path -LiteralPath $robotsPath -PathType Leaf) {
   $robots = Read-TextFile $robotsPath
   if ($robots -notmatch '(?im)^User-agent:\s*\*$' -or $robots -notmatch '(?im)^Allow:\s*/$') {
@@ -378,14 +398,14 @@ if (Test-Path -LiteralPath $robotsPath -PathType Leaf) {
 }
 
 $indexNowKey = "5c6e01f4e5208988a4704e2ba1a1f0f038271bf7ad6b71789f877317cb2fe147"
-$indexNowPath = Join-Path $repoRoot "$indexNowKey.txt"
+$indexNowPath = Join-Path $publicSourceRoot "$indexNowKey.txt"
 if (Test-Path -LiteralPath $indexNowPath -PathType Leaf) {
   if ((Read-TextFile $indexNowPath).Trim() -ne $indexNowKey) {
     Add-ValidationError "IndexNow key file content must match its filename"
   }
 }
 
-$bingVerificationPath = Join-Path $repoRoot "BingSiteAuth.xml"
+$bingVerificationPath = Join-Path $publicSourceRoot "BingSiteAuth.xml"
 if (Test-Path -LiteralPath $bingVerificationPath -PathType Leaf) {
   try {
     [xml]$bingVerification = Read-TextFile $bingVerificationPath
@@ -398,7 +418,7 @@ if (Test-Path -LiteralPath $bingVerificationPath -PathType Leaf) {
 }
 
 foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/indie-game-crowdfunding-fit-en.png", "assets/og/indie-game-crowdfunding-fit-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png")) {
-  $path = Join-Path $repoRoot $relative
+  $path = Join-Path $publicSourceRoot $relative
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
   $bytes = [System.IO.File]::ReadAllBytes($path)
   if ($bytes.Length -lt 24 -or $bytes[0] -ne 137 -or $bytes[1] -ne 80 -or $bytes[2] -ne 78 -or $bytes[3] -ne 71) {
@@ -428,7 +448,7 @@ $node = Get-Command node -ErrorAction SilentlyContinue
 if (-not $node) {
   Add-ValidationError "Node.js is required to syntax-check JavaScript."
 } else {
-  foreach ($relative in @("assets/i18n.js", "assets/research.js", "scripts/Generate-ShareImages.cjs", "scripts/Smoke-ResearchSite.cjs")) {
+  foreach ($relative in @("site/assets/i18n.js", "site/assets/research.js", "scripts/Generate-ShareImages.cjs", "scripts/Smoke-ResearchSite.cjs")) {
     $path = Join-Path $repoRoot $relative
     if (-not (Test-Path -LiteralPath $path)) { continue }
     & $node.Source --check $path

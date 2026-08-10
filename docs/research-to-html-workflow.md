@@ -73,17 +73,20 @@ Keep one judgment per paragraph, place direct citations near claims, mark self-r
 
 ## 5. Compose bilingual HTML
 
-Copy `research-template/` and use a stable English slug:
+Copy the page skeleton from `templates/research-report/` and use a stable public English slug:
 
 ```text
-<report-slug>/
+reports/<report-slug>/
 ├─ README.md
+└─ README.zh-CN.md
+
+site/<report-slug>/
 ├─ index.html
 ├─ index.zh-CN.html
 └─ report.js        # optional; report-specific behavior only
 ```
 
-Both pages import shared assets:
+Both public pages import shared assets from `site/assets/`:
 
 ```html
 <script src="../assets/i18n.js"></script>

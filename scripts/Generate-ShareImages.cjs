@@ -5,7 +5,7 @@ const path = require('path');
 const { chromium } = require('playwright');
 
 const repoRoot = path.resolve(__dirname, '..');
-const outputRoot = path.join(repoRoot, 'assets', 'og');
+const outputRoot = path.join(repoRoot, 'site', 'assets', 'og');
 
 function resolveChrome() {
   const candidates = [

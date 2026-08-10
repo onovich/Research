@@ -2,34 +2,44 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Research helps you investigate an industry with AI, draw conclusions from data and evidence, and publish them as polished, low-reading-pressure bilingual web reports.
+Evidence-backed Go/No-Go research for independent creators and small teams. Research turns current data into practical conclusions, then publishes them as polished, bilingual web reports with low reading pressure.
 
-[Browse all research](https://research.onovich.com/) · [See the AI workflow](https://research.onovich.com/tools/research-to-html/)
+The first topic cluster covers indie-game funding, distribution, and crowdfunding economics.
+
+[Browse the research library](https://research.onovich.com/) · [Use the AI workflow](https://research.onovich.com/tools/research-to-html/)
 
 ## Reports
 
 - [Crowdfunding products and indie games](https://research.onovich.com/crowdfunding-and-indie-games-research/) · [中文](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html)
-  Which products are more likely to make money, and when crowdfunding still helps an indie game.
+  The pillar report: product profit structures, platform fit, and whether an indie game is ready to crowdfund.
 - [Which indie game genres fit crowdfunding?](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
-  Seven gameplay and audience patterns, current international and Chinese platform evidence, risks, and a ten-point decision card.
+  A companion deep dive: current platform samples, seven audience/gameplay patterns, counterexamples, and a ten-point decision card.
+
+These pages share evidence, but answer different questions. The first supports the overall crowdfunding decision; the second focuses on game genre and gameplay fit.
 
 ## Use it with AI
 
-Clone or download this repository and open it in Codex. The repository skills are discovered automatically:
+Open this repository in Codex or another Agent Skills-compatible assistant, then ask:
 
-- [`$research-to-html`](.agents/skills/research-to-html/SKILL.md): research an industry question and create the English and Chinese web report.
-- [`$research-to-github-pages`](.agents/skills/research-to-github-pages/SKILL.md): check and publish a finished report to GitHub Pages.
+> Use `$research-to-html` to research **[your decision question]** and create a bilingual web report.
 
-To create a report, send your AI:
+When the report is ready:
 
-> Use `$research-to-html` to research **[your industry question]** and create a bilingual web report.
+> Use `$research-to-github-pages` to validate and publish it.
 
-When the report is ready, send:
+The main entry is [`research-to-html`](.agents/skills/research-to-html/SKILL.md). [`research-to-github-pages`](.agents/skills/research-to-github-pages/SKILL.md) is the optional publishing step. If your assistant does not discover repository skills automatically, open the linked `SKILL.md` directly.
 
-> Use `$research-to-github-pages` to publish this report.
+## Repository map
 
-With another Agent Skills-compatible assistant, install or open the linked `SKILL.md` files as required by that assistant.
+- `site/` — the only source tree copied into the public Pages artifact
+- `reports/` — reviewable Markdown research sources; never deployed
+- `templates/` — reusable report starters; never deployed
+- `.agents/skills/` — the AI research and publishing workflows
+- `scripts/` — privacy, SEO, build, and browser checks
+- `docs/` — workflow, architecture, and visual-system documentation
+
+See [repository architecture](docs/repository-architecture.md) for the source/public boundary and page roles.
 
 ## License
 
-Code, skills, scripts, and templates use the [MIT License](LICENSE). Original report text and original visuals use [CC BY 4.0](CONTENT-LICENSE.md). Third-party material keeps its original rights.
+Code, skills, scripts, and templates use the [MIT License](LICENSE). Original report text and visuals use [CC BY 4.0](CONTENT-LICENSE.md). Third-party material keeps its original rights.

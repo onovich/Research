@@ -1,7 +1,9 @@
 # Profitable crowdfunding products and indie games
 
-**English** · [简体中文](README.zh-CN.md) · [English HTML](index.html) · [中文 HTML](index.zh-CN.html)
+**English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/crowdfunding-and-indie-games-research/index.html) · [中文 HTML](../../site/crowdfunding-and-indie-games-research/index.zh-CN.html)
 
+> Page role: pillar report. It evaluates crowdfunding economics across product categories, then places independent games inside that wider decision framework. The [indie-game companion report](../indie-game-crowdfunding-genres-and-gameplay/README.md) goes deeper on game genres and gameplay structures.
+>
 > Research cutoff: 2026-08-10 (China Standard Time)<br>
 > Scope: reward crowdfunding and product-launch preorders; equity, lending, and donation crowdfunding are excluded.<br>
 > Definition: a public campaign page normally establishes pledged volume, not net profit. Funding, fulfillment, and commercial profit are treated separately.

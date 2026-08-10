@@ -7,6 +7,8 @@ const { pathToFileURL } = require('url');
 const { chromium } = require('playwright');
 
 const repoRoot = path.resolve(__dirname, '..');
+const manifest = JSON.parse(fs.readFileSync(path.join(repoRoot, 'public-site.json'), 'utf8'));
+const publicRoot = path.resolve(repoRoot, manifest.source || '.');
 const outputRoot = process.env.RESEARCH_SMOKE_DIR || fs.mkdtempSync(path.join(os.tmpdir(), 'research-site-smoke-'));
 
 function resolveChrome() {
@@ -22,7 +24,7 @@ function resolveChrome() {
 }
 
 function fileUrl(relativePath) {
-  return pathToFileURL(path.join(repoRoot, relativePath)).href;
+  return pathToFileURL(path.join(publicRoot, relativePath)).href;
 }
 
 function assert(condition, message) {
@@ -80,8 +82,7 @@ async function run() {
       { locale: 'en-US', width: 1440, height: 1000, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-1440.png' },
       { locale: 'en-US', width: 375, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-375.png' },
       { locale: 'zh-CN', width: 375, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', screenshot: 'game-fit-zh-375.png' },
-      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-1440.png' },
-      { locale: 'en-US', width: 768, relativePath: 'research-template/index.html', screenshot: 'template-en-768.png' }
+      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-1440.png' }
     ];
     for (const test of visualCases) {
       const session = await open(test);

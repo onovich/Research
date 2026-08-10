@@ -116,17 +116,20 @@ Markdown 完成并审校前，不进入 HTML 设计阶段。
 
 ## 6. 阶段五：从 Markdown 编排为 HTML
 
-从 research-template/ 复制页面骨架。每个报告目录保持：
+从 `templates/research-report/` 复制页面骨架，并使用稳定的公开英文 slug：
 
 ~~~text
-<research-slug>/
+reports/<research-slug>/
 ├─ README.md
+└─ README.zh-CN.md
+
+site/<research-slug>/
 ├─ index.html
 ├─ index.zh-CN.html
 └─ report.js        # 仅在需要报告专属交互时添加
 ~~~
 
-index.html 必须引用公共资产：
+公开页面必须引用 `site/assets/` 中的公共资产：
 
 ~~~html
 <link rel="stylesheet" href="../assets/research.css">
@@ -217,7 +220,7 @@ index.html 必须引用公共资产：
 发布前：
 
 1. 更新根 README.md 的调查目录；
-2. 更新根 index.html 的页面入口；
+2. 更新 `site/index.html` 与 `site/index.zh-CN.html` 的页面入口；
 3. 运行 scripts/Validate-ResearchSite.ps1；
 4. 从明确白名单构建 Pages 公开产物，确认底稿、docs、skills、scripts、模板、隐藏文件和本地配置均未进入；
 5. 验证唯一标题与描述、绝对 canonical 与互指 hreflang、社交元数据、JSON-LD、站点地图、可用的 noindex 404 页，以及可见的方法和纠错入口；

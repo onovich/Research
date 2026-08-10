@@ -15,8 +15,20 @@ if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
 }
 
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
-if ($manifest.version -ne 1 -or -not $manifest.files -or $manifest.files.Count -eq 0) {
+if ($manifest.version -notin @(1, 2) -or -not $manifest.files -or $manifest.files.Count -eq 0) {
   throw "public-site.json is missing a supported version or a non-empty files list."
+}
+
+$sourceSetting = if ($manifest.PSObject.Properties.Name -contains "source" -and -not [string]::IsNullOrWhiteSpace([string]$manifest.source)) {
+  [string]$manifest.source
+} else {
+  "."
+}
+
+$sourceRoot = if ([System.IO.Path]::IsPathRooted($sourceSetting)) {
+  [System.IO.Path]::GetFullPath($sourceSetting)
+} else {
+  [System.IO.Path]::GetFullPath((Join-Path $repoRoot $sourceSetting))
 }
 
 if ([string]::IsNullOrWhiteSpace($OutputPath)) {
@@ -33,6 +45,17 @@ $repoPrefix = $repoRoot.TrimEnd([System.IO.Path]::DirectorySeparatorChar) + [Sys
 if ($outputRoot -eq $repoRoot -or -not $outputRoot.StartsWith($repoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
   throw "Refusing to build outside the repository or into its root: $outputRoot"
 }
+if ($sourceRoot -ne $repoRoot -and -not $sourceRoot.StartsWith($repoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+  throw "Public source directory must stay inside the repository: $sourceRoot"
+}
+if (-not (Test-Path -LiteralPath $sourceRoot -PathType Container)) {
+  throw "Missing public source directory: $sourceSetting"
+}
+if ($outputRoot -eq $sourceRoot) {
+  throw "Public source and output directories must be different: $outputRoot"
+}
+
+$sourcePrefix = $sourceRoot.TrimEnd([System.IO.Path]::DirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar
 
 $seen = New-Object System.Collections.Generic.HashSet[string]([System.StringComparer]::OrdinalIgnoreCase)
 $resolvedFiles = New-Object System.Collections.Generic.List[object]
@@ -46,9 +69,9 @@ foreach ($entryValue in $manifest.files) {
     throw "Duplicate public manifest entry: $entry"
   }
 
-  $source = [System.IO.Path]::GetFullPath((Join-Path $repoRoot $entry))
-  if (-not $source.StartsWith($repoPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
-    throw "Public manifest entry escapes the repository: $entry"
+  $source = [System.IO.Path]::GetFullPath((Join-Path $sourceRoot $entry))
+  if (-not $source.StartsWith($sourcePrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Public manifest entry escapes the source directory: $entry"
   }
   if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
     throw "Missing public file: $entry"
@@ -73,4 +96,4 @@ foreach ($file in $resolvedFiles) {
 
 [System.IO.File]::WriteAllText((Join-Path $outputRoot ".nojekyll"), "", [System.Text.UTF8Encoding]::new($false))
 
-Write-Host "Built public research site from $($resolvedFiles.Count) allowlisted files: $outputRoot" -ForegroundColor Green
+Write-Host "Built public research site from $($resolvedFiles.Count) allowlisted files in ${sourceSetting}: $outputRoot" -ForegroundColor Green

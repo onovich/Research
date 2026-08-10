@@ -1,7 +1,9 @@
 # 哪些独立游戏类型与玩法更适合众筹？
 
-[English](README.md) · **简体中文** · [English HTML](index.html) · [中文 HTML](index.zh-CN.html)
+[English](README.md) · **简体中文** · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 
+> 页面角色：配套深挖报告。它承接[众筹经济性总报告](../crowdfunding-and-indie-games-research/README.zh-CN.md)，集中整理独立游戏的类型、玩法、案例与众筹适配信号；不是测试页，也不是重复报告。
+>
 > 调研截止：2026-08-10（中国标准时间）<br>
 > 地域：以 Kickstarter、BackerKit 为主的国际回报型众筹，以及中国摩点<br>
 > 决策：小型独立游戏团队是否应使用众筹，以及哪些产品特征能提高适配度<br>
