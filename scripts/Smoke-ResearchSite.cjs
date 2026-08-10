@@ -72,6 +72,9 @@ async function run() {
       { locale: 'zh-CN', width: 320, relativePath: 'index.zh-CN.html', screenshot: 'home-zh-320.png' },
       { locale: 'en-US', width: 768, relativePath: 'about.html', screenshot: 'about-en-768.png' },
       { locale: 'zh-CN', width: 768, relativePath: 'about.zh-CN.html', screenshot: 'about-zh-768.png' },
+      { locale: 'en-US', width: 320, relativePath: 'tools/research-to-html/index.html', screenshot: 'skill-en-320.png' },
+      { locale: 'zh-CN', width: 320, relativePath: 'tools/research-to-html/index.zh-CN.html', screenshot: 'skill-zh-320.png' },
+      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'tools/research-to-html/index.html', screenshot: 'skill-en-1440.png' },
       { locale: 'en-US', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-375.png' },
       { locale: 'zh-CN', width: 375, relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', screenshot: 'report-zh-375.png' },
       { locale: 'en-US', width: 1440, height: 1000, relativePath: 'crowdfunding-and-indie-games-research/index.html', screenshot: 'report-en-1440.png' },
@@ -101,7 +104,9 @@ async function run() {
       { relativePath: 'about.html', canonical: 'https://blog.onovich.com/Research/about.html' },
       { relativePath: 'about.zh-CN.html', canonical: 'https://blog.onovich.com/Research/about.zh-CN.html' },
       { relativePath: 'crowdfunding-and-indie-games-research/index.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/' },
-      { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html' }
+      { relativePath: 'crowdfunding-and-indie-games-research/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/crowdfunding-and-indie-games-research/index.zh-CN.html' },
+      { relativePath: 'tools/research-to-html/index.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/' },
+      { relativePath: 'tools/research-to-html/index.zh-CN.html', canonical: 'https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html' }
     ];
     for (const test of seoCases) {
       const session = await open({ locale: 'en-US', width: 1024, relativePath: test.relativePath });

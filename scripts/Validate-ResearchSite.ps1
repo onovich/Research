@@ -10,6 +10,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $scriptDir))
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 $errors = New-Object System.Collections.Generic.List[string]
+$expectedSystemVersion = "1.3.0"
 
 function Add-ValidationError {
   param([string]$Message)
@@ -51,10 +52,14 @@ $requiredFiles = @(
   "assets/og/research-library-zh-CN.png",
   "assets/og/crowdfunding-indie-games-en.png",
   "assets/og/crowdfunding-indie-games-zh-CN.png",
+  "assets/og/research-to-html-en.png",
+  "assets/og/research-to-html-zh-CN.png",
   "crowdfunding-and-indie-games-research/README.md",
   "crowdfunding-and-indie-games-research/README.zh-CN.md",
   "crowdfunding-and-indie-games-research/index.html",
   "crowdfunding-and-indie-games-research/index.zh-CN.html",
+  "tools/research-to-html/index.html",
+  "tools/research-to-html/index.zh-CN.html",
   "docs/research-to-html-workflow.md",
   "docs/research-to-html-workflow.zh-CN.md",
   "docs/visual-system.md",
@@ -68,16 +73,16 @@ $requiredFiles = @(
   "scripts/Build-PublicResearchSite.ps1",
   "scripts/Generate-ShareImages.cjs",
   "scripts/Smoke-ResearchSite.cjs",
-  "skills/research-to-html/SKILL.md",
-  "skills/research-to-html/agents/openai.yaml",
-  "skills/research-to-html/references/master-prompt.md",
-  "skills/research-to-html/references/research-protocol.md",
-  "skills/research-to-html/references/html-contract.md",
-  "skills/research-to-github-pages/SKILL.md",
-  "skills/research-to-github-pages/agents/openai.yaml",
-  "skills/research-to-github-pages/assets/deploy-pages.yml",
-  "skills/research-to-github-pages/assets/Build-PublicResearchSite.ps1",
-  "skills/research-to-github-pages/assets/public-site.example.json"
+  ".agents/skills/research-to-html/SKILL.md",
+  ".agents/skills/research-to-html/agents/openai.yaml",
+  ".agents/skills/research-to-html/references/master-prompt.md",
+  ".agents/skills/research-to-html/references/research-protocol.md",
+  ".agents/skills/research-to-html/references/html-contract.md",
+  ".agents/skills/research-to-github-pages/SKILL.md",
+  ".agents/skills/research-to-github-pages/agents/openai.yaml",
+  ".agents/skills/research-to-github-pages/assets/deploy-pages.yml",
+  ".agents/skills/research-to-github-pages/assets/Build-PublicResearchSite.ps1",
+  ".agents/skills/research-to-github-pages/assets/public-site.example.json"
 )
 
 foreach ($relativePath in $requiredFiles) {
@@ -191,6 +196,7 @@ foreach ($relative in $publicHtmlEntries) {
 
   if ($html -notmatch '(?i)<!doctype html>') { Add-ValidationError "${relative}: missing HTML5 doctype" }
   if ($html -notmatch '(?i)<html[^>]+lang="[^"]+"') { Add-ValidationError "${relative}: missing html lang" }
+  if ($html -notmatch ('(?i)<html[^>]+data-system-version="{0}"' -f [regex]::Escape($expectedSystemVersion))) { Add-ValidationError "${relative}: expected Visual System $expectedSystemVersion" }
   if (([regex]::Matches($html, '(?i)<h1\b')).Count -ne 1) { Add-ValidationError "${relative}: expected exactly one h1" }
   if (([regex]::Matches($html, '(?i)<main\b')).Count -ne 1) { Add-ValidationError "${relative}: expected exactly one main" }
 
@@ -221,6 +227,9 @@ foreach ($relative in $publicHtmlEntries) {
   }
 
   if ($html -match '(?i)data-language-auto|window\.location\.replace') { Add-ValidationError "${relative}: automatic locale redirects are not allowed on indexable pages" }
+  if ($html -match '(?i)\shref="(?:\.\./)*index\.html"' -or $html -match '(?i)\shref="(?:\.\./)*crowdfunding-and-indie-games-research/index\.html"') {
+    Add-ValidationError "${relative}: internal links must use canonical directory URLs for default-English index pages"
+  }
   if ($html -notmatch '(?i)data-language-option="en"' -or $html -notmatch '(?i)data-language-option="zh-CN"') { Add-ValidationError "${relative}: missing explicit English/Chinese language links" }
   if ($html -notmatch '(?i)<meta\b(?=[^>]*\bname="description")(?=[^>]*\bcontent="[^"]{40,}")') { Add-ValidationError "${relative}: missing useful meta description" }
   if ($html -notmatch '(?i)<meta\b(?=[^>]*\bname="robots")(?=[^>]*\bcontent="[^"]*index[^"]*follow)') { Add-ValidationError "${relative}: missing index,follow robots directive" }
@@ -270,7 +279,8 @@ foreach ($duplicate in ($canonicalUrls | Group-Object | Where-Object { $_.Count 
 $localePairs = @(
   @{ En = "index.html"; Zh = "index.zh-CN.html" },
   @{ En = "about.html"; Zh = "about.zh-CN.html" },
-  @{ En = "crowdfunding-and-indie-games-research/index.html"; Zh = "crowdfunding-and-indie-games-research/index.zh-CN.html" }
+  @{ En = "crowdfunding-and-indie-games-research/index.html"; Zh = "crowdfunding-and-indie-games-research/index.zh-CN.html" },
+  @{ En = "tools/research-to-html/index.html"; Zh = "tools/research-to-html/index.zh-CN.html" }
 )
 
 foreach ($pair in $localePairs) {
@@ -309,7 +319,7 @@ if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
   }
 }
 
-foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png")) {
+foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png")) {
   $path = Join-Path $repoRoot $relative
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
   $bytes = [System.IO.File]::ReadAllBytes($path)

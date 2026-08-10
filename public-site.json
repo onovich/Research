@@ -16,7 +16,11 @@
     "assets/og/research-library-zh-CN.png",
     "assets/og/crowdfunding-indie-games-en.png",
     "assets/og/crowdfunding-indie-games-zh-CN.png",
+    "assets/og/research-to-html-en.png",
+    "assets/og/research-to-html-zh-CN.png",
     "crowdfunding-and-indie-games-research/index.html",
-    "crowdfunding-and-indie-games-research/index.zh-CN.html"
+    "crowdfunding-and-indie-games-research/index.zh-CN.html",
+    "tools/research-to-html/index.html",
+    "tools/research-to-html/index.zh-CN.html"
   ]
 }

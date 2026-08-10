@@ -51,6 +51,24 @@ const cards = [
     eyebrow: '众筹专项调查 · 2026',
     title: '众筹商品与独立游戏',
     note: '盈利结构 · 平台适配 · 成功玩法'
+  },
+  {
+    file: 'research-to-html-en.png',
+    lang: 'en',
+    mark: 'R→H',
+    index: 'WORKFLOW / 01',
+    eyebrow: 'EVIDENCE-BACKED AI WORKFLOW',
+    title: 'Research to HTML',
+    note: 'Industry research · Bilingual web reports'
+  },
+  {
+    file: 'research-to-html-zh-CN.png',
+    lang: 'zh-CN',
+    mark: '研→页',
+    index: '工作流 / 01',
+    eyebrow: '有证据的 AI 调研工作流',
+    title: '把行业调研变成双语网页报告',
+    note: '可复核证据 · 低阅读压力 · 隐私安全发布'
   }
 ];
 
@@ -77,7 +95,7 @@ body{position:relative;color:#18302d;background:#eaf0ef;font-family:"MiSans","Pi
 .index{color:#71827f;font-family:Consolas,monospace;font-size:17px;font-weight:700;letter-spacing:.12em}
 .copy{position:absolute;right:62px;bottom:64px;left:62px;max-width:920px}.eyebrow{margin:0 0 22px;color:#006e60;font-family:Consolas,"Microsoft YaHei",monospace;font-size:17px;font-weight:800;letter-spacing:.11em}.title{margin:0;max-width:930px;font-family:Georgia,"Songti SC","STSong",serif;font-size:67px;line-height:1.06;letter-spacing:-.035em}.note{margin:28px 0 0;color:#536966;font-size:22px;font-weight:700}.bar{position:absolute;right:0;bottom:0;left:0;height:12px;background:#006e60}
 </style></head>
-<body><div class="frame"><div class="grid"></div><div class="top"><div class="brand"><span class="mark">${escapeHtml(card.mark)}</span><span class="name">Research</span></div><span class="index">RESEARCH / 01</span></div><div class="copy"><p class="eyebrow">${escapeHtml(card.eyebrow)}</p><h1 class="title">${title}</h1><p class="note">${escapeHtml(card.note)}</p></div><div class="bar"></div></div></body></html>`;
+<body><div class="frame"><div class="grid"></div><div class="top"><div class="brand"><span class="mark">${escapeHtml(card.mark)}</span><span class="name">Research</span></div><span class="index">${escapeHtml(card.index || 'RESEARCH / 01')}</span></div><div class="copy"><p class="eyebrow">${escapeHtml(card.eyebrow)}</p><h1 class="title">${title}</h1><p class="note">${escapeHtml(card.note)}</p></div><div class="bar"></div></div></body></html>`;
 }
 
 async function run() {

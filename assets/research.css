@@ -1,4 +1,4 @@
-/*! Research Visual System v1.2.0
+/*! Research Visual System v1.3.0
  * Skin entry point: edit the semantic tokens in :root and html[data-theme="dim"].
  * Components and responsive behavior below consume those tokens.
  */
@@ -972,6 +972,34 @@
       font-family: var(--font-data);
       font-size: 0.68rem;
       font-weight: 800;
+    }
+
+    .prompt-box {
+      display: grid;
+      margin: 2rem 0 0;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--line-strong);
+      border-left: 0.3rem solid var(--accent);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      gap: 0.6rem;
+    }
+
+    .prompt-label {
+      color: var(--ink-faint);
+      font-family: var(--font-data);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .prompt-box code {
+      overflow-wrap: anywhere;
+      color: var(--ink);
+      font-family: var(--font-data);
+      font-size: 0.9rem;
+      line-height: 1.7;
     }
 
     .error-shell {

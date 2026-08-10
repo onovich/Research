@@ -2,7 +2,7 @@
 
 **English** · [简体中文](research-to-html-workflow.zh-CN.md)
 
-Version 1.2.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
+Version 1.3.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
 
 ## Output contract
 

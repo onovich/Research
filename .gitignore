@@ -4,7 +4,13 @@ _site/
 
 # Local agent and editor state
 .codex/
-.agents/
+.agents/*
+!.agents/skills/
+.agents/skills/*
+!.agents/skills/research-to-html/
+!.agents/skills/research-to-html/**
+!.agents/skills/research-to-github-pages/
+!.agents/skills/research-to-github-pages/**
 .vscode/
 .idea/
 node_modules/

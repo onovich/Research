@@ -2,7 +2,7 @@
 
 **English** · [简体中文](visual-system.zh-CN.md)
 
-Version 1.2.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
+Version 1.3.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
 
 ## Design position
 
@@ -69,6 +69,7 @@ The spacing rhythm is based on 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Major sec
 - **Answer stack:** decision question paired with a direct answer.
 - **Evidence strip:** two to four numbers that change the decision.
 - **Callout:** method, warning, risk, or stop condition, always labelled in text.
+- **Prompt box:** one short, copyable AI instruction; label it, keep it selectable, and never use it for long prose.
 - **Definition table:** exact concept or criterion mappings.
 - **Ranked list:** priority justified by analysis.
 - **Data table:** exact comparison with caption, scopes, and local mobile scroll.

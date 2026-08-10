@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-system-version="1.3.0" data-language-en="index.html" data-language-zh-cn="index.zh-CN.html" data-theme="light" data-reading="brief" data-font="standard">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research to HTML 是一个 Codex skill，把有证据、可复核的行业调研转化为美观、双语、低阅读压力的网页版报告。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Research">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#006e60">
+  <title>Research to HTML——把行业调研变成双语网页版报告</title>
+  <link rel="canonical" href="https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html">
+  <link rel="alternate" hreflang="en" href="https://blog.onovich.com/Research/tools/research-to-html/">
+  <link rel="alternate" hreflang="zh-CN" href="https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html">
+  <link rel="alternate" hreflang="x-default" href="https://blog.onovich.com/Research/tools/research-to-html/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Research">
+  <meta property="og:title" content="Research to HTML——有证据的行业调研网页版报告">
+  <meta property="og:description" content="一个可复用的 AI 工作流：从决策问题出发，生成有来源、可复核的双语网页报告。">
+  <meta property="og:url" content="https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://blog.onovich.com/Research/assets/og/research-to-html-zh-CN.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Research to HTML：把有证据的行业调研变成双语网页版报告">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research to HTML——有证据的行业调研网页版报告">
+  <meta name="twitter:description" content="一个可复用的 AI 工作流：从决策问题出发，生成有来源、可复核的双语网页报告。">
+  <meta name="twitter:image" content="https://blog.onovich.com/Research/assets/og/research-to-html-zh-CN.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://blog.onovich.com/Research/#organization",
+        "name": "Research",
+        "url": "https://blog.onovich.com/Research/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://blog.onovich.com/Research/#website",
+        "url": "https://blog.onovich.com/Research/",
+        "name": "Research",
+        "publisher": { "@id": "https://blog.onovich.com/Research/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html#page",
+        "url": "https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html",
+        "name": "Research to HTML——把行业调研变成双语网页版报告",
+        "description": "一个用 Codex 完成有证据行业调研，并发布为易阅读双语静态网页的 skill。",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@id": "https://blog.onovich.com/Research/#website" },
+        "mainEntity": { "@id": "https://blog.onovich.com/Research/tools/research-to-html/#source" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://blog.onovich.com/Research/tools/research-to-html/#source",
+        "name": "research-to-html",
+        "description": "一个遵循 Agent Skills 格式的工作流，用于有证据的行业调研和双语 HTML 报告发布。",
+        "codeRepository": "https://github.com/onovich/Research/tree/main/.agents/skills/research-to-html",
+        "programmingLanguage": "Markdown",
+        "runtimePlatform": "Codex"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "研究目录",
+            "item": "https://blog.onovich.com/Research/index.zh-CN.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Research to HTML",
+            "item": "https://blog.onovich.com/Research/tools/research-to-html/index.zh-CN.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="../../assets/i18n.js"></script>
+  <link rel="stylesheet" href="../../assets/research.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.zh-CN.html" aria-label="打开研究目录">
+        <span class="brand-mark" aria-hidden="true">研</span>
+        <span>Research</span>
+      </a>
+      <div class="header-tools" aria-label="阅读设置">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="打开目录">☰</button>
+        <div class="control-group language-switcher" aria-label="语言">
+          <a class="language-link" href="./" data-file-href="index.html" data-language-option="en" lang="en" hreflang="en" aria-current="false">EN</a>
+          <a class="language-link" href="index.zh-CN.html" data-language-option="zh-CN" lang="zh-CN" hreflang="zh-CN" aria-current="page">中</a>
+        </div>
+        <div class="control-group font-controls" aria-label="字号">
+          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">标准</button>
+          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">大字</button>
+        </div>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到暗色模式" title="切换到暗色模式">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <noscript><div class="noscript">JavaScript 已关闭，完整说明仍可阅读。</div></noscript>
+
+  <div class="layout" id="top">
+    <aside class="side-nav" id="side-nav" aria-label="页面目录">
+      <button class="nav-close" id="nav-close" type="button">关闭目录</button>
+      <p class="side-nav-title">Research to HTML</p>
+      <nav>
+        <ol>
+          <li><a href="#outcome" aria-current="true"><span>01</span>交付什么</a></li>
+          <li><a href="#workflow"><span>02</span>如何工作</a></li>
+          <li><a href="#proof"><span>03</span>查看结果</a></li>
+          <li><a href="#start"><span>04</span>开始使用</a></li>
+          <li><a href="#boundaries"><span>05</span>能力边界</a></li>
+        </ol>
+      </nav>
+      <p class="nav-note">一套可复用工作流<br><strong>先有证据，再做呈现</strong></p>
+    </aside>
+    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="关闭目录"></button>
+
+    <main id="main" tabindex="-1">
+      <article>
+        <header class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">AI 工作流 · 证据优先</p>
+          <h1 id="page-title">把一个行业问题，变成真正有人愿意读的报告。</h1>
+          <p class="hero-lead">Research to HTML 是一个仓库级 Codex skill，用于有证据的市场与行业调研。它先保留可复核的研究过程，再把确认后的结论分别制作成英文和简体中文静态网页；两种语言中的数字、判断、限制与来源保持一致。</p>
+
+          <dl class="hero-ledger" aria-label="Skill 输出摘要">
+            <div class="ledger-row">
+              <dt>主要交付</dt>
+              <dd>双语静态 HTML</dd>
+            </div>
+            <div class="ledger-row">
+              <dt>证据底稿</dt>
+              <dd>可复核 Markdown</dd>
+            </div>
+            <div class="ledger-row">
+              <dt>可选发布</dt>
+              <dd>GitHub Pages</dd>
+            </div>
+          </dl>
+
+          <div class="hero-actions">
+            <a class="button-link" href="#start">开始使用</a>
+            <a class="button-link secondary" href="../../crowdfunding-and-indie-games-research/index.zh-CN.html">查看成品报告</a>
+          </div>
+        </header>
+
+        <section class="section" id="outcome" aria-labelledby="outcome-title">
+          <div class="section-head">
+            <span class="section-number">01</span>
+            <div>
+              <h2 id="outcome-title">一份决策材料，三层质量保障。</h2>
+              <p class="section-intro">这套流程把调研、翻译和界面设计视为相互校验的连续步骤，而不是三次互不相干的内容生成。</p>
+            </div>
+          </div>
+
+          <div class="principle-grid">
+            <article class="principle-card">
+              <h3>证据可以追溯</h3>
+              <p>时效性事实指向直接来源；观察、推断、未知、日期、地域和置信度彼此区分。</p>
+            </article>
+            <article class="principle-card">
+              <h3>双语结论等价</h3>
+              <p>中英文页面共享同一组数字、因果判断、限制、交互与来源，不在翻译时悄悄弱化条件。</p>
+            </article>
+            <article class="principle-card">
+              <h3>阅读压力更低</h3>
+              <p>先给结论，再展开证据。清晰层级、阅读控件、无障碍交互、打印支持与响应式布局降低理解成本。</p>
+            </article>
+          </div>
+
+          <div class="callout">
+            <span class="callout-title">为实际判断而设计</span>
+            <p>适合市场结构、产品与平台比较、商业模式、创作者经济或技术生态等问题——尤其适合那些在 AI 对话结束后仍需继续审阅、引用和分享的结论。</p>
+          </div>
+        </section>
+
+        <section class="section" id="workflow" aria-labelledby="workflow-title">
+          <div class="section-head">
+            <span class="section-number">02</span>
+            <div>
+              <h2 id="workflow-title">从问题走到公开报告。</h2>
+              <p class="section-intro">Skill 保持固定的“证据到发布”顺序，同时根据具体领域调整分析框架。</p>
+            </div>
+          </div>
+
+          <ol class="method-steps">
+            <li><strong>定义要做的判断。</strong>明确读者、范围、地域、调研截点、操作性定义与排除项。</li>
+            <li><strong>建立证据记录。</strong>优先使用当前一手资料，记录限制，并区分已经观察到的事实与分析推断。</li>
+            <li><strong>先写清楚，再做视觉。</strong>先确认 Markdown 结论，再分别制作中文和英文阅读界面。</li>
+            <li><strong>验证公开产物。</strong>检查隐私、引用、语言等价、无障碍、响应式、元数据、JavaScript、打印以及最终准备发布的精确文件集合。</li>
+          </ol>
+        </section>
+
+        <section class="section" id="proof" aria-labelledby="proof-title">
+          <div class="section-head">
+            <span class="section-number">03</span>
+            <div>
+              <h2 id="proof-title">先检查真实交付，再决定是否采用。</h2>
+              <p class="section-intro">第一份公开报告同时检验了国内外众筹平台上的两类真实决策。</p>
+            </div>
+          </div>
+
+          <article class="catalog-card">
+            <p class="catalog-meta"><span>在线案例</span><span>53 个来源链接</span><span>中文 / English</span></p>
+            <h3><a href="../../crowdfunding-and-indie-games-research/index.zh-CN.html">众筹商品与独立游戏：盈利结构、平台适配与成功玩法</a></h3>
+            <p>查看报告如何区分“筹了多少钱”和“最后留下多少”，如何判断众筹对独立游戏的资金与宣发价值，以及如何同时公开证据和限制。</p>
+            <div class="hero-actions">
+              <a class="button-link" href="../../crowdfunding-and-indie-games-research/index.zh-CN.html">阅读案例</a>
+              <a class="button-link secondary" href="../../crowdfunding-and-indie-games-research/" data-file-href="../../crowdfunding-and-indie-games-research/index.html" lang="en" hreflang="en">Read in English</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="start" aria-labelledby="start-title">
+          <div class="section-head">
+            <span class="section-number">04</span>
+            <div>
+              <h2 id="start-title">下载、打开、提问。</h2>
+              <p class="section-intro">Skill 位于仓库标准的 agent skill 目录中，因此 Codex 打开仓库后可以自动发现它。</p>
+            </div>
+          </div>
+
+          <ol class="method-steps">
+            <li>克隆或下载 <a href="https://github.com/onovich/Research">Research 仓库</a>。</li>
+            <li>用 Codex 打开这个仓库。</li>
+            <li>发送下面的提示词，并替换方括号中的问题。</li>
+          </ol>
+
+          <div class="prompt-box" aria-label="提示词示例">
+            <span class="prompt-label">提示词</span>
+            <code>使用 $research-to-html 调研[你的行业决策问题]，并生成中英文网页版报告。</code>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button-link" href="https://github.com/onovich/Research/tree/main/.agents/skills/research-to-html">查看 Skill 源文件</a>
+          </div>
+        </section>
+
+        <section class="section" id="boundaries" aria-labelledby="boundaries-title">
+          <div class="section-head">
+            <span class="section-number">05</span>
+            <div>
+              <h2 id="boundaries-title">不知道的，不假装知道。</h2>
+              <p class="section-intro">可靠交付依赖证据质量、明确的问题和发布前复核，而不是生成文本显得多么自信。</p>
+            </div>
+          </div>
+
+          <div class="answer-stack">
+            <article class="answer">
+              <h3>收入不等于利润</h3>
+              <p>不会从众筹金额、GMV、流量、下载量或融资成功直接推断盈利。</p>
+            </article>
+            <article class="answer">
+              <h3>未知仍然是未知</h3>
+              <p>缺失的平台数据、未审计的自述、过时案例和因果不确定性必须在报告中可见。</p>
+            </article>
+            <article class="answer">
+              <h3>发布是单独一道门</h3>
+              <p>只部署明确列入读者白名单的文件；skills、脚本、笔记、模板、凭据与本地配置都留在 Pages 产物之外。</p>
+            </article>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <nav class="footer-links" aria-label="研究信息">
+            <a href="../../index.zh-CN.html">研究目录</a>
+            <a href="../../about.zh-CN.html">方法与透明度</a>
+            <a href="index.zh-CN.html" aria-current="page">Research to HTML</a>
+            <a href="https://github.com/onovich/Research">GitHub</a>
+          </nav>
+          <p>Research to HTML · 把有证据的行业调研变成双语网页版报告 · 更新于 2026-08-10</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <script src="../../assets/research.js"></script>
+</body>
+</html>

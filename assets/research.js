@@ -1,4 +1,4 @@
-/*! Research Reading Shell v1.1.0 */
+/*! Research Reading Shell v1.2.0 */
 
 (function () {
       'use strict';
@@ -16,6 +16,12 @@
         get: function () { return 'en'; },
         t: function (key) { return key; }
       };
+
+      if (window.location.protocol === 'file:') {
+        document.querySelectorAll('[data-file-href]').forEach(function (link) {
+          link.setAttribute('href', link.dataset.fileHref);
+        });
+      }
 
       function safeGet(key) {
         try {
