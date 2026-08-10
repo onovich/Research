@@ -1,201 +1,105 @@
-# Research Visual System
+# Research visual system
 
-版本：1.0.0  
-定位：低阅读压力、证据优先、适合长篇决策型调研的共享视觉系统。
+**English** · [简体中文](visual-system.zh-CN.md)
 
-## 1. 设计命题
+Version 1.1.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
 
-系统不是新闻门户、数据看板或营销落地页，而是一份可以逐层展开的“研究手册 + 成本账本”。
+## Design position
 
-它遵循四个原则：
+The system is a research handbook and working ledger, not a news portal, dashboard, or marketing landing page.
 
-1. 先给判断，再允许读者深入证据；
-2. 结构表达信息，不靠装饰制造层级；
-3. 交互服务于理解或决策；
-4. 长时间阅读优先于首屏冲击力。
+It follows four rules:
 
-标志性元素是“账本式拆解”：把公开指标、必须扣除的成本和无法直接观察的结果放在同一条阅读路径中。这个元素可以随行业变化，例如收入拆解、供应链、风险漏斗或决策路径，但它始终说明一个真实关系。
+1. give the judgment before inviting deeper evidence;
+2. use structure rather than decoration to express hierarchy;
+3. add interaction only when it helps understanding or a decision;
+4. optimize for sustained reading, not first-screen impact.
 
-## 2. 共享资产
+The signature device is a ledger that places public indicators, necessary deductions or constraints, and the result that cannot be observed directly on one path.
 
-- assets/research.css：颜色、字体、布局、组件、响应式、打印；
-- assets/research.js：阅读模式、字号、主题、移动目录、进度、深链接、打印与可选工具；
-- research-template/index.html：标准语义结构与组件示例。
+## Shared assets
 
-每份报告只引用共享资产。报告专属 JavaScript 可以单独放在自身目录，但不要复制公共 CSS。
+- `assets/research.css`: tokens, typography, layout, components, responsive rules, and print;
+- `assets/i18n.js`: locale detection, English fallback, stored choice, and counterpart routing;
+- `assets/research.js`: reading depth, text size, theme, mobile contents, progress, deep links, print, and optional tools;
+- `research-template/`: matched English and Simplified-Chinese page skeletons.
 
-## 3. 色彩令牌
+Reports import these assets. Do not copy the public CSS into individual report directories.
 
-默认主题使用冷静的雾绿色纸面，区别于常见的米黄编辑风或紫色产品 UI。
+## Color tokens
 
-| 角色 | 亮色值 | 用途 |
+The default skin uses a calm mist-green paper surface.
+
+| Role | Light value | Use |
 |---|---:|---|
-| page | #EAF0EF | 页面底色 |
-| surface | #FBFDFC | 内容表面 |
-| surface-muted | #F1F6F4 | 辅助区域 |
-| ink | #18302D | 主文字 |
-| ink-soft | #536966 | 正文次级信息 |
-| line | #C8D7D3 | 分隔线 |
-| accent | #006E60 | 交互与当前状态 |
-| amber | #805600 | 警告 |
-| danger | #8B3F42 | 风险与负值 |
+| page | `#EAF0EF` | Page background |
+| surface | `#FBFDFC` | Reading surfaces |
+| surface-muted | `#F1F6F4` | Secondary regions |
+| ink | `#18302D` | Primary text |
+| ink-soft | `#536966` | Secondary text |
+| line | `#C8D7D3` | Dividers |
+| accent | `#006E60` | Interaction and current state |
+| amber | `#805600` | Warning |
+| danger | `#8B3F42` | Risk and negative result |
 
-夜读主题在 html[data-theme="dim"] 中定义。正文、链接、按钮和风险色都必须保持 WCAG 2.1 AA 对比度。
+Dim-mode values live under `html[data-theme="dim"]`. Text, links, focus, and status colors must preserve WCAG 2.1 AA contrast.
 
-### 批量换皮
+### Batch reskinning
 
-只修改 assets/research.css 顶部两组令牌：
+Change only the semantic tokens in `:root` and `html[data-theme="dim"]`. Components consume tokens and never declare report-specific colors. Recheck light, dim, focus, and print contrast after any skin change.
 
-~~~css
-:root {
-  --page: ...;
-  --surface: ...;
-  --ink: ...;
-  --ink-soft: ...;
-  --line: ...;
-  --accent: ...;
-  --amber: ...;
-  --danger: ...;
-}
+## Type and reading measure
 
-html[data-theme="dim"] {
-  /* 同名夜读令牌 */
-}
-~~~
+- Display: Songti/STSong/Noto or Source Han Serif, then `serif`.
+- Body: MiSans/PingFang/Microsoft YaHei/Noto Sans CJK, then `sans-serif`.
+- Data: Cascadia Code/SFMono/Consolas, then `monospace`.
 
-组件只能消费语义变量，不在报告 HTML 中写颜色。换皮后必须重新检查亮色、夜读、焦点和打印对比度。
+Serif type is limited to high-level headings. Body text is about 16px with a generous line height and a reading width near 48rem. Large-text mode increases body copy without letting headings dominate.
 
-## 4. 字体系统
+## Layout
 
-| 角色 | 字体栈 | 用途 |
-|---|---|---|
-| Display | Songti SC, STSong, Noto Serif CJK SC, Source Han Serif SC, serif | h1、h2、关键叙事标题 |
-| Body | MiSans, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif | 正文、按钮、表单 |
-| Data | Cascadia Code, SFMono-Regular, Consolas, monospace | 数字、编号、截点、数据 |
+Desktop uses a 14rem sticky reading path beside one 48rem content column. Below 64rem the path becomes a drawer. Below 48rem multi-column content collapses and tables scroll locally. Below 23rem ledger rows stack.
 
-规则：
+The spacing rhythm is based on 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Major sections use space and rules rather than repeated cards or heavy shadows.
 
-- 宋体只承担低频、高层级标题，避免大段正文疲劳；
-- 正文默认约 16px，行高约 1.82；
-- 大字模式提升正文字号，不无限放大标题；
-- 正文宽度约 48rem，避免桌面端超长行；
-- 标题使用平衡换行，但超窄屏必须允许自然断行。
+## Component language
 
-## 5. 布局
+- **Thesis hero:** one evidence-bounded central finding.
+- **Ledger:** observable indicator → cost or constraint → decision result.
+- **Answer stack:** decision question paired with a direct answer.
+- **Evidence strip:** two to four numbers that change the decision.
+- **Callout:** method, warning, risk, or stop condition, always labelled in text.
+- **Definition table:** exact concept or criterion mappings.
+- **Ranked list:** priority justified by analysis.
+- **Data table:** exact comparison with caption, scopes, and local mobile scroll.
+- **Details:** supporting cases or method, never a caveat that reverses the conclusion.
+- **Flow/timeline:** only for real sequence or phases.
+- **Calculator/scorecard:** an explicit model with units, thresholds, defaults, and limits.
 
-桌面采用“侧边阅读路径 + 单列正文”：
+Avoid uniform card grids. Judgment, evidence, caveat, and action should look structurally different.
 
-~~~text
-┌──────────────┬────────────────────────────────┐
-│ sticky 目录  │ thesis / summary / evidence    │
-│ 调查截点     │ 正文宽度约 48rem               │
-│ 当前章节     │ 按章节纵向展开                  │
-└──────────────┴────────────────────────────────┘
-~~~
+## Interaction and localization
 
-- 桌面：14rem 目录、4rem 间距、48rem 正文；
-- 64rem 以下：目录变成抽屉；
-- 48rem 以下：双栏内容变为单列，表格局部滚动；
-- 23rem 以下：账本条目改为纵排。
+- Brief/full changes evidence depth, never the conclusion.
+- Standard/large text and light/dim theme persist across reports.
+- The desktop contents become a focus-managed mobile drawer.
+- Filters use `aria-pressed`; result counts use `aria-live`.
+- Print reveals the full report and opens details.
+- No-script mode keeps complete content visible.
+- EN / 中 sits in the top header on every page.
+- English is canonical and the unsupported-language fallback; explicit choice persists.
+- Both locales translate visible controls, status text, metadata, content, and interactive output.
 
-页面不使用均匀卡片网格。判断、证据、警告和行动用不同结构表达。
+## Accessibility floor
 
-## 6. 间距与边界
+Use one `h1`, one `main`, ordered headings, native controls, visible focus, text labels beyond color, labelled tables, reduced-motion support, and complete print/no-script output. Standard text contrast is at least 4.5:1.
 
-基础间距节奏以 0.25rem 为最小单位，常用值：
+## Versioning
 
-~~~text
-4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 px
-~~~
+HTML declares `data-system-version`.
 
-- 大章节使用 64–96px 纵向留白；
-- 同一判断内部使用 8–16px；
-- 卡片圆角只用于确实是独立工具的组件；
-- 长文结构主要靠分隔线与留白，不靠重阴影；
-- 阴影只用于成本计算器、移动目录等需要层级的表面。
+- Patch: visual or accessibility fix with no required report migration.
+- Minor: backward-compatible component or behavior.
+- Major: required structure changes or removed classes.
 
-## 7. 组件语言
-
-### Thesis hero
-
-用一句中心判断开场。标题必须是研究命题，不是“行业分析报告”一类容器标题。
-
-### Ledger
-
-展示可观察指标、成本或约束、最终结果之间的关系。它是系统的主要视觉签名。
-
-### Answer stack
-
-用“问题 / 判断”双列结构承载速读结论。移动端自动单列。
-
-### Evidence strip
-
-只放 2–4 个真正决定结论的数字。数字必须有口径与来源，不能为了视觉填充。
-
-### Callout
-
-- 默认：方法、推荐路径；
-- warning：易误判、口径限制；
-- danger：高风险、反例、停止条件。
-
-颜色之外必须有文字标签。
-
-### Definition table
-
-用于概念、维度或标准的一一映射，比普通卡片更适合长文扫描。
-
-### Ranked list
-
-用于有明确优先级的类型排序。等级必须来自分析，而非装饰。
-
-### Data table
-
-适合精确比较。移动端保持表格语义，在局部容器内横向滚动，并显示提示。
-
-### Details
-
-折叠补充案例或方法，不折叠会改变结论的关键限制。
-
-### Flow 和 timeline
-
-只在内容确实存在顺序或阶段时使用编号。
-
-### Calculator 和 scorecard
-
-把研究模型变成可操作判断。默认值、单位、阈值与免责声明必须明确。
-
-## 8. 交互语言
-
-- 速读 / 完整：控制证据深度，不改变结论；
-- 标准字 / 大字：提高可读性；
-- 日间 / 夜读：共享用户偏好；
-- 阅读进度：只显示位置，不制造完成压力；
-- 目录：桌面固定，移动端抽屉并管理焦点；
-- 筛选：使用按钮的 aria-pressed，结果数量通过 aria-live 更新；
-- 打印：自动切换完整模式并展开 details；
-- 无 JavaScript：完整正文仍然显示。
-
-公共偏好使用 research- 前缀写入 localStorage，因此同一站点的不同报告共享阅读习惯。
-
-## 9. 可访问性底线
-
-- 一个 h1、一个 main，标题不跳级；
-- 原生 button、a、input、select 优先；
-- 所有无可见文字的控件提供 aria-label；
-- 移动目录打开后聚焦关闭按钮，并循环焦点；
-- 焦点描边不小于 3px 等效宽度；
-- 正文对比度至少 4.5:1，大字至少 3:1；
-- prefers-reduced-motion 下取消平滑滚动和动画；
-- 状态不能只靠红、绿、黄表达；
-- 表格包含 caption 和正确的 th scope；
-- 打印与无脚本模式不能丢失完整证据。
-
-## 10. 版本与兼容
-
-HTML 根节点使用 data-system-version 标记视觉系统版本。
-
-- Patch：修复样式或无障碍问题，不要求修改报告；
-- Minor：新增向后兼容组件；
-- Major：更改必要结构或删除类名，需要迁移所有报告。
-
-修改公共 CSS 或脚本后，至少抽查根目录首页、模板和一份真实报告。
+After shared asset changes, inspect the catalog, template, and at least one real report in both languages.

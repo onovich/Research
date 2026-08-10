@@ -20,15 +20,32 @@ function Get-RelativeDisplayPath {
 
 $requiredFiles = @(
   "README.md",
+  "README.zh-CN.md",
   "index.html",
+  "index.zh-CN.html",
   "assets/research.css",
+  "assets/i18n.js",
   "assets/research.js",
   "docs/research-to-html-workflow.md",
+  "docs/research-to-html-workflow.zh-CN.md",
   "docs/visual-system.md",
+  "docs/visual-system.zh-CN.md",
   "research-template/README.md",
+  "research-template/README.zh-CN.md",
+  "research-template/USAGE.md",
+  "research-template/USAGE.zh-CN.md",
   "research-template/index.html",
+  "research-template/index.zh-CN.html",
   "crowdfunding-and-indie-games-research/README.md",
-  "crowdfunding-and-indie-games-research/index.html"
+  "crowdfunding-and-indie-games-research/README.zh-CN.md",
+  "crowdfunding-and-indie-games-research/index.html",
+  "crowdfunding-and-indie-games-research/index.zh-CN.html",
+  "skills/research-to-html/SKILL.md",
+  "skills/research-to-html/agents/openai.yaml",
+  "skills/research-to-html/references/master-prompt.md",
+  "skills/research-to-html/references/research-protocol.md",
+  "skills/research-to-html/references/html-contract.md",
+  "scripts/Smoke-ResearchSite.cjs"
 )
 
 foreach ($relativePath in $requiredFiles) {
@@ -40,13 +57,15 @@ foreach ($relativePath in $requiredFiles) {
 
 $validationRoots = @(
   "README.md",
+  "README.zh-CN.md",
   "index.html",
+  "index.zh-CN.html",
   "assets",
-  "docs/research-to-html-workflow.md",
-  "docs/visual-system.md",
+  "docs",
   "docs/codex-git-workflow.md",
   "research-template",
   "crowdfunding-and-indie-games-research",
+  "skills/research-to-html",
   "scripts/Validate-ResearchSite.ps1",
   ".codex/project-git-workflow.json"
 )
@@ -58,7 +77,7 @@ foreach ($relativeRoot in $validationRoots) {
   $item = Get-Item -LiteralPath $fullRoot
   if ($item.PSIsContainer) {
     Get-ChildItem -LiteralPath $item.FullName -Recurse -File |
-      Where-Object { $_.Extension -in @(".html", ".css", ".js", ".md", ".json", ".ps1") } |
+      Where-Object { $_.Extension -in @(".html", ".css", ".js", ".cjs", ".md", ".json", ".ps1", ".yaml") } |
       ForEach-Object { $textFiles.Add($_) }
   } else {
     $textFiles.Add($item)
@@ -72,7 +91,7 @@ foreach ($file in $textFiles) {
   }
 }
 
-$htmlFiles = @($textFiles | Where-Object { $_.Name -eq "index.html" })
+$htmlFiles = @($textFiles | Where-Object { $_.Extension -eq ".html" })
 
 foreach ($file in $htmlFiles) {
   $relative = Get-RelativeDisplayPath $file.FullName
@@ -83,6 +102,15 @@ foreach ($file in $htmlFiles) {
   }
   if ($html -notmatch "(?i)<html[^>]+lang=") {
     Add-ValidationError ("{0}: missing html lang" -f $relative)
+  }
+  if ($html -notmatch "(?i)data-language-option=""en""" -or $html -notmatch "(?i)data-language-option=""zh-CN""") {
+    Add-ValidationError ("{0}: missing top English/Chinese language options" -f $relative)
+  }
+  if ($html -notmatch "(?i)hreflang=""x-default""") {
+    Add-ValidationError ("{0}: missing x-default hreflang" -f $relative)
+  }
+  if ($html -notmatch "(?i)(?:src=""(?:\.\./)?assets/i18n\.js""|src=""assets/i18n\.js"")") {
+    Add-ValidationError ("{0}: missing shared locale router" -f $relative)
   }
   if (([regex]::Matches($html, "(?i)<h1\b")).Count -ne 1) {
     Add-ValidationError ("{0}: expected exactly one h1" -f $relative)
@@ -125,11 +153,72 @@ foreach ($file in $htmlFiles) {
   }
 }
 
+$markdownFiles = @($textFiles | Where-Object { $_.Extension -eq ".md" })
+foreach ($file in $markdownFiles) {
+  $relative = Get-RelativeDisplayPath $file.FullName
+  $markdown = [System.IO.File]::ReadAllText($file.FullName, [System.Text.UTF8Encoding]::new($false))
+  foreach ($match in [regex]::Matches($markdown, "\[[^\]]*\]\(([^)]+)\)")) {
+    $reference = $match.Groups[1].Value.Trim().Trim("<", ">")
+    if ($reference -match "^(?:https?:|mailto:|tel:|data:|#)") { continue }
+    $cleanReference = ($reference -split "[?#]", 2)[0]
+    if ([string]::IsNullOrWhiteSpace($cleanReference)) { continue }
+    $resolved = [System.IO.Path]::GetFullPath((Join-Path $file.DirectoryName $cleanReference))
+    if (-not (Test-Path -LiteralPath $resolved)) {
+      Add-ValidationError ("{0}: missing local Markdown target '{1}'" -f $relative, $reference)
+    }
+  }
+}
+
+$canonicalFiles = @($htmlFiles | Where-Object { $_.Name -eq "index.html" })
+foreach ($englishFile in $canonicalFiles) {
+  $englishRelative = Get-RelativeDisplayPath $englishFile.FullName
+  $chinesePath = Join-Path $englishFile.DirectoryName "index.zh-CN.html"
+  if (-not (Test-Path -LiteralPath $chinesePath -PathType Leaf)) {
+    Add-ValidationError ("{0}: missing Simplified-Chinese counterpart" -f $englishRelative)
+    continue
+  }
+
+  $englishHtml = [System.IO.File]::ReadAllText($englishFile.FullName, [System.Text.UTF8Encoding]::new($false))
+  $chineseHtml = [System.IO.File]::ReadAllText($chinesePath, [System.Text.UTF8Encoding]::new($false))
+  $chineseRelative = Get-RelativeDisplayPath $chinesePath
+
+  if ($englishHtml -notmatch "(?i)<html[^>]+lang=""en""") {
+    Add-ValidationError ("{0}: canonical page must use lang='en'" -f $englishRelative)
+  }
+  if ($englishHtml -notmatch "(?i)data-language-auto=""true""") {
+    Add-ValidationError ("{0}: canonical page must enable locale auto-detection" -f $englishRelative)
+  }
+  if ($chineseHtml -notmatch "(?i)<html[^>]+lang=""zh-CN""") {
+    Add-ValidationError ("{0}: Chinese counterpart must use lang='zh-CN'" -f $chineseRelative)
+  }
+
+  $englishIds = @([regex]::Matches($englishHtml, "\bid=""([^""]+)""") | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+  $chineseIds = @([regex]::Matches($chineseHtml, "\bid=""([^""]+)""") | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+  if (@(Compare-Object $englishIds $chineseIds).Count -gt 0) {
+    Add-ValidationError ("{0} and {1}: element ID sets differ" -f $englishRelative, $chineseRelative)
+  }
+
+  $englishUrls = @([regex]::Matches($englishHtml, "href=""(https?://[^""]+)""") | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+  $chineseUrls = @([regex]::Matches($chineseHtml, "href=""(https?://[^""]+)""") | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+  if (@(Compare-Object $englishUrls $chineseUrls).Count -gt 0) {
+    Add-ValidationError ("{0} and {1}: external source-link sets differ" -f $englishRelative, $chineseRelative)
+  }
+
+  $englishVersion = [regex]::Match($englishHtml, "data-system-version=""([^""]+)""").Groups[1].Value
+  $chineseVersion = [regex]::Match($chineseHtml, "data-system-version=""([^""]+)""").Groups[1].Value
+  if ([string]::IsNullOrWhiteSpace($englishVersion) -or $englishVersion -ne $chineseVersion) {
+    Add-ValidationError ("{0} and {1}: visual-system versions differ" -f $englishRelative, $chineseRelative)
+  }
+}
+
 $node = Get-Command node -ErrorAction SilentlyContinue
 if (-not $node) {
   Add-ValidationError "Node.js is required to syntax-check shared JavaScript."
 } else {
-  $jsFiles = Get-ChildItem -LiteralPath (Join-Path $repoRoot "assets") -Filter *.js -File
+  $jsFiles = @(
+    Get-ChildItem -LiteralPath (Join-Path $repoRoot "assets") -Filter *.js -File
+    Get-Item -LiteralPath (Join-Path $repoRoot "scripts/Smoke-ResearchSite.cjs")
+  )
   foreach ($file in $jsFiles) {
     & $node.Source --check $file.FullName
     if ($LASTEXITCODE -ne 0) {
@@ -147,4 +236,4 @@ if ($errors.Count -gt 0) {
 }
 
 Write-Host "Research site validation passed." -ForegroundColor Green
-Write-Host "Checked $(@($htmlFiles).Count) HTML page(s) and shared JavaScript syntax."
+Write-Host "Checked $(@($htmlFiles).Count) bilingual HTML page(s), locale pairs, and shared JavaScript syntax."

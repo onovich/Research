@@ -1,92 +1,94 @@
-# [调研主题]
+# [Research topic]
 
-> 调查截点：[YYYY-MM-DD]  
-> 范围：[地区、行业、对象与不在范围内的内容]  
-> 口径：[成功、主流、赚钱或其他关键词的操作定义]
+**English** · [简体中文 template](README.zh-CN.md)
 
-## 一页结论
+> Research cutoff: [YYYY-MM-DD]<br>
+> Scope: [geography, field, subjects, and exclusions]<br>
+> Definitions: [operational meaning of success, profit, mainstream, growth, or other ambiguous terms]
 
-1. **[结论一。]** [成立条件与最重要证据。]
-2. **[结论二。]** [成立条件与最重要证据。]
-3. **[结论三。]** [成立条件与最重要证据。]
+## One-page conclusion
 
-## 1. 问题与方法
+1. **[Finding one.]** [Conditions and decisive evidence.]
+2. **[Finding two.]** [Conditions and decisive evidence.]
+3. **[Finding three.]** [Conditions and decisive evidence.]
 
-### 决策问题
+## 1. Questions and method
 
-- [问题一]
-- [问题二]
-- [问题三]
+### Decision questions
 
-### 来源与方法
+- [Question one]
+- [Question two]
+- [Question three]
 
-[说明一手来源优先级、检索范围、冲突数据处理和研究限制。]
+### Sources and method
 
-## 2. 核心概念与口径
+[State the primary-source order, search scope, conflict treatment, and research limits.]
 
-| 概念 | 定义 | 可否公开观察 |
+## 2. Concepts and definitions
+
+| Concept | Definition | Publicly observable? |
 |---|---|---:|
-| [概念 A] | [定义] | [是/部分/否] |
-| [概念 B] | [定义] | [是/部分/否] |
+| [Concept A] | [Definition] | [Yes / partly / no] |
+| [Concept B] | [Definition] | [Yes / partly / no] |
 
-## 3. 市场、平台或竞品对照
+## 3. Market, platform, or competitor comparison
 
-| 对象 | 观察 | 含义 | 限制 |
+| Subject | Observation | Meaning | Caveat |
 |---|---|---|---|
-| [对象 A] | [事实] | [解释] | [限制] |
-| [对象 B] | [事实] | [解释] | [限制] |
+| [Subject A] | [Fact] | [Interpretation] | [Limit] |
+| [Subject B] | [Fact] | [Interpretation] | [Limit] |
 
-## 4. 机会、类型或机制
+## 4. Opportunities, patterns, or mechanisms
 
-### [机会 A]
+### [Opportunity A]
 
-[为什么成立、需要什么条件、主要风险。]
+[Why it holds, required conditions, and main risk.]
 
-### [机会 B]
+### [Opportunity B]
 
-[为什么成立、需要什么条件、主要风险。]
+[Why it holds, required conditions, and main risk.]
 
-## 5. 风险与反例
+## 5. Risks and counterexamples
 
-- [失败或延期案例]
-- [幸存者偏差]
-- [最容易混淆的口径]
-- [尚不能确认的变量]
+- [Failure or delay]
+- [Survivor bias]
+- [Metric most likely to be misread]
+- [Decision-relevant unknown]
 
-## 6. 决策标准
+## 6. Decision criteria
 
-| 指标 | 继续 | 补证据 | 停止 |
+| Signal | Continue | Gather evidence | Stop |
 |---|---|---|---|
-| [指标 A] | [标准] | [标准] | [标准] |
-| [指标 B] | [标准] | [标准] | [标准] |
+| [Signal A] | [Criterion] | [Criterion] | [Criterion] |
+| [Signal B] | [Criterion] | [Criterion] | [Criterion] |
 
-## 7. 行动计划
+## 7. Action plan
 
-### [阶段一]
+### [Phase one]
 
-- [行动]
-- [指标]
-- [停止条件]
+- [Action]
+- [Metric]
+- [Stop condition]
 
-### [阶段二]
+### [Phase two]
 
-- [行动]
-- [指标]
-- [停止条件]
+- [Action]
+- [Metric]
+- [Stop condition]
 
-## 8. 最终回答
+## 8. Final answers
 
-### [核心问题一]
+### [Core question one]
 
-[直接回答。]
+[Direct answer.]
 
-### [核心问题二]
+### [Core question two]
 
-[直接回答。]
+[Direct answer.]
 
-## 核心来源
+## Direct sources
 
-- [来源标题](https://example.com/source)
-- [来源标题](https://example.com/source-2)
+- [Source title](https://example.com/source)
+- [Source title](https://example.com/source-2)
 
-> 研究限制：[时效、样本、地区、平台自报与无法公开确认的变量。]
+> Research limits: [freshness, sample, geography, self-reported data, and variables that cannot be confirmed publicly.]

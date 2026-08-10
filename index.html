@@ -1,110 +1,117 @@
 <!doctype html>
-<html class="no-js" lang="zh-CN" data-system-version="1.0.0" data-theme="light" data-reading="brief" data-font="standard">
+<html class="no-js" lang="en" data-system-version="1.1.0" data-language-auto="true" data-language-en="index.html" data-language-zh-cn="index.zh-CN.html" data-theme="light" data-reading="brief" data-font="standard">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research：面向决策的行业调研库。">
+  <meta name="description" content="Research: an evidence-led library for decision-ready industry research.">
   <meta name="color-scheme" content="light dark">
-  <title>Research · 决策型行业调研库</title>
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <title>Research · Decision-ready industry research</title>
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="zh-CN" href="index.zh-CN.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <script src="assets/i18n.js"></script>
   <link rel="stylesheet" href="assets/research.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到正文</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#top" aria-label="返回首页开头">
-        <span class="brand-mark" aria-hidden="true">研</span>
+      <a class="brand" href="#top" aria-label="Back to the start">
+        <span class="brand-mark" aria-hidden="true">R</span>
         <span>Research</span>
       </a>
-      <div class="header-tools" aria-label="阅读设置">
-        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="打开目录">目</button>
-        <div class="control-group" aria-label="阅读深度">
-          <span class="control-label">阅读深度</span>
-          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">速读</button>
-          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">完整</button>
+      <div class="header-tools" aria-label="Reading settings">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="Open contents">☰</button>
+        <div class="control-group language-switcher" aria-label="Language">
+          <a class="language-link" href="index.html" data-language-option="en" lang="en" hreflang="en" aria-current="page">EN</a>
+          <a class="language-link" href="index.zh-CN.html" data-language-option="zh-CN" lang="zh-CN" hreflang="zh-CN" aria-current="false">中</a>
         </div>
-        <div class="control-group font-controls" aria-label="字号">
-          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">标准字</button>
-          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">大字</button>
+        <div class="control-group" aria-label="Reading depth">
+          <span class="control-label">Depth</span>
+          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">Brief</button>
+          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">Full</button>
         </div>
-        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到夜读模式" title="切换夜读模式">夜</button>
+        <div class="control-group font-controls" aria-label="Text size">
+          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">Standard</button>
+          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">Large</button>
+        </div>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="Switch to dim mode" title="Switch to dim mode">☾</button>
       </div>
     </div>
   </header>
 
-  <noscript><div class="noscript">JavaScript 已关闭：目录内容仍可阅读，主题和阅读设置不可用。</div></noscript>
+  <noscript><div class="noscript">JavaScript is off. The content remains readable, but reading preferences are unavailable.</div></noscript>
 
   <div class="layout" id="top">
-    <aside class="side-nav" id="side-nav" aria-label="首页目录">
-      <button class="nav-close" id="nav-close" type="button">关闭目录</button>
+    <aside class="side-nav" id="side-nav" aria-label="Page contents">
+      <button class="nav-close" id="nav-close" type="button">Close contents</button>
       <p class="side-nav-title">Research</p>
       <nav>
         <ol>
-          <li><a href="#reports" aria-current="true"><span>01</span>调查目录</a></li>
-          <li><a href="#workflow"><span>02</span>制作流程</a></li>
-          <li><a href="#system"><span>03</span>视觉系统</a></li>
+          <li><a href="#reports" aria-current="true"><span>01</span>Reports</a></li>
+          <li><a href="#workflow"><span>02</span>Workflow</a></li>
+          <li><a href="#system"><span>03</span>Visual system</a></li>
         </ol>
       </nav>
-      <p class="nav-note">事实源与呈现层分离<br><strong>Markdown + HTML</strong></p>
+      <p class="nav-note">Evidence and presentation stay separate<br><strong>Markdown + HTML</strong></p>
     </aside>
-    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="关闭目录"></button>
+    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="Close contents"></button>
 
     <main id="main" tabindex="-1">
       <article>
         <header class="hero" aria-labelledby="page-title">
           <p class="eyebrow">Evidence → reasoning → decision</p>
-          <h1 id="page-title">把资料，变成可以行动的判断。</h1>
-          <p class="hero-lead">这里收录可追溯、可复核、可交互的行业调查。Markdown 保存事实与引用，HTML 负责降低阅读压力。</p>
+          <h1 id="page-title">Turn research into decisions people can act on.</h1>
+          <p class="hero-lead">A library of traceable, reviewable, and interactive industry research. Markdown preserves the evidence; HTML lowers the reading burden.</p>
 
-          <dl class="hero-ledger" aria-label="Research 的制作路径">
+          <dl class="hero-ledger" aria-label="Research production model">
             <div class="ledger-row">
-              <dt>事实源</dt>
-              <dd>一手资料 / 截点 / 限制</dd>
+              <dt>Evidence</dt>
+              <dd>Primary sources / cutoff / caveats</dd>
             </div>
             <div class="ledger-row">
-              <dt>推理层</dt>
-              <dd>观察 / 解释 / 反证</dd>
+              <dt>Reasoning</dt>
+              <dd>Observation / interpretation / falsification</dd>
             </div>
             <div class="ledger-row">
-              <dt>读者得到</dt>
-              <dd>判断标准 / 下一步</dd>
+              <dt>Decision</dt>
+              <dd>Criteria / next action</dd>
             </div>
           </dl>
 
           <div class="hero-actions">
-            <a class="button-link" href="#reports">浏览调查</a>
-            <a class="button-link secondary" href="docs/research-to-html-workflow.md">查看制作规范</a>
+            <a class="button-link" href="#reports">Browse reports</a>
+            <a class="button-link secondary" href="docs/research-to-html-workflow.md">Read the workflow</a>
           </div>
           <p class="reading-state" id="reading-state"
-             data-brief-message="当前为速读模式：显示仓库入口与核心方法。"
-             data-full-message="当前为完整模式：显示补充说明与视觉系统细节。">当前为速读模式：显示仓库入口与核心方法。</p>
+             data-brief-message="Brief mode: repository entry points and the core method are visible."
+             data-full-message="Full mode: supporting notes and visual-system details are visible.">Brief mode: repository entry points and the core method are visible.</p>
         </header>
 
         <section class="section" id="reports" aria-labelledby="reports-title">
           <div class="section-head">
             <span class="section-number">01</span>
             <div>
-              <h2 id="reports-title">调查目录</h2>
-              <p class="section-intro">每份调查都有可独立阅读的 Markdown 和使用同一视觉语言的 HTML。</p>
+              <h2 id="reports-title">Reports</h2>
+              <p class="section-intro">Each study has a reviewable research source and an HTML edition built with the same visual language.</p>
             </div>
           </div>
 
           <div class="rank-list">
             <article class="rank-item">
-              <span class="grade" aria-label="第一份调查">01</span>
+              <span class="grade" aria-label="First report">01</span>
               <div>
-                <h3><a href="crowdfunding-and-indie-games-research/index.html">众筹商品与独立游戏专项调查</a></h3>
-                <p>国内外众筹商品的盈利结构、平台差异，以及独立电子游戏在资金与宣发上的适配条件。调查截点：2026-08-10。</p>
+                <h3><a href="crowdfunding-and-indie-games-research/index.html">Profitable crowdfunding products and indie games</a></h3>
+                <p>Profit structures, platform fit, and the conditions under which crowdfunding can still fund or market an independent video game. Research cutoff: 2026-08-10.</p>
               </div>
             </article>
           </div>
 
           <div class="callout">
-            <span class="callout-title">两种阅读方式</span>
-            <p><a href="crowdfunding-and-indie-games-research/README.md">Markdown 事实源</a>适合复核引用与推理；<a href="crowdfunding-and-indie-games-research/index.html">交互版 HTML</a>适合快速理解和做决策。</p>
+            <span class="callout-title">Two reading surfaces</span>
+            <p>The <a href="crowdfunding-and-indie-games-research/README.md">research notebook</a> preserves citations and reasoning; the <a href="crowdfunding-and-indie-games-research/index.html">interactive report</a> supports faster understanding and decisions.</p>
           </div>
         </section>
 
@@ -112,23 +119,26 @@
           <div class="section-head">
             <span class="section-number">02</span>
             <div>
-              <h2 id="workflow-title">统一制作流程</h2>
-              <p class="section-intro">先固定问题和证据，再编写事实源，最后进入 HTML。页面设计不能反向篡改研究结论。</p>
+              <h2 id="workflow-title">One production workflow</h2>
+              <p class="section-intro">Lock the question and evidence first, write the research source second, and only then compose the HTML. Presentation never changes the strength of a finding.</p>
             </div>
           </div>
 
-          <div class="flow" aria-label="从调研到 HTML 的流程">
-            <div class="flow-step"><span>01</span><p>定义决策问题、范围、术语与调查截点</p></div>
-            <div class="flow-step"><span>02</span><p>建立证据台账，区分一手来源、自报与推断</p></div>
-            <div class="flow-step"><span>03</span><p>完成并审校 README.md 事实源</p></div>
-            <div class="flow-step"><span>04</span><p>用共享模板编排速读层与完整层</p></div>
-            <div class="flow-step"><span>05</span><p>验证 320–1440px、键盘、打印、无脚本与链接</p></div>
-            <div class="flow-step"><span>06</span><p>更新调查目录，显式暂存并发布</p></div>
+          <div class="flow" aria-label="Workflow from research to HTML">
+            <div class="flow-step"><span>01</span><p>Define the decision, scope, terms, and research cutoff</p></div>
+            <div class="flow-step"><span>02</span><p>Build an evidence ledger and separate primary evidence, self-reporting, and inference</p></div>
+            <div class="flow-step"><span>03</span><p>Complete and review the Markdown research source</p></div>
+            <div class="flow-step"><span>04</span><p>Compose brief and full reading layers with the shared template</p></div>
+            <div class="flow-step"><span>05</span><p>Validate 320–1440px, keyboard use, print, no-script, and links</p></div>
+            <div class="flow-step"><span>06</span><p>Update the catalog, stage explicitly, and publish</p></div>
           </div>
 
           <div class="detail-layer">
-            <p>完整规范包含来源优先级、时效规则、反证清单、Markdown 章节、HTML 信息层级、交互边界和 Definition of Done。</p>
-            <a class="button-link secondary" href="docs/research-to-html-workflow.md">阅读完整流程</a>
+            <p>The full standard covers source priority, freshness, falsification, the Markdown contract, HTML hierarchy, interaction boundaries, localization, and the definition of done.</p>
+            <div class="hero-actions">
+              <a class="button-link secondary" href="docs/research-to-html-workflow.md">Read the full workflow</a>
+              <a class="button-link secondary" href="skills/research-to-html/SKILL.md">Open the research-to-html skill</a>
+            </div>
           </div>
         </section>
 
@@ -136,34 +146,34 @@
           <div class="section-head">
             <span class="section-number">03</span>
             <div>
-              <h2 id="system-title">一套视觉语言，多份调查</h2>
-              <p class="section-intro">冷静的雾绿色纸面、宋体标题、黑体正文、账本式关系与按需展开的证据层。</p>
+              <h2 id="system-title">One visual language, many fields</h2>
+              <p class="section-intro">A calm mist-green paper surface, serif display type, sans-serif body text, ledger-like relationships, and evidence that expands only when needed.</p>
             </div>
           </div>
 
           <div class="answer-stack">
             <article class="answer">
-              <h3>批量换皮</h3>
-              <p>修改 <strong>assets/research.css</strong> 顶部亮色与夜读语义令牌，所有引用它的报告会一起更新。</p>
+              <h3>Batch reskinning</h3>
+              <p>Edit the light and dim semantic tokens at the top of <strong>assets/research.css</strong>. Every report that imports it updates together.</p>
             </article>
             <article class="answer">
-              <h3>稳定结构</h3>
-              <p>Hero、answer stack、ledger、callout、table、timeline 与工具组件共用类名和无障碍行为。</p>
+              <h3>Stable structure</h3>
+              <p>Heroes, answer stacks, ledgers, callouts, tables, timelines, and reading tools share classes and accessible behavior.</p>
             </article>
             <article class="answer">
-              <h3>内容自由</h3>
-              <p>行业与结论可以完全不同；只要保持“判断—证据—限制—行动”的阅读节奏，就不会失去统一感。</p>
+              <h3>Flexible content</h3>
+              <p>Industries and conclusions may differ completely. The shared rhythm is decision → evidence → caveat → action.</p>
             </article>
           </div>
 
           <div class="hero-actions">
-            <a class="button-link secondary" href="docs/visual-system.md">阅读视觉规范</a>
-            <a class="button-link secondary" href="research-template/index.html">预览页面模板</a>
+            <a class="button-link secondary" href="docs/visual-system.md">Read the visual standard</a>
+            <a class="button-link secondary" href="research-template/index.html">Preview the report template</a>
           </div>
         </section>
 
         <footer class="footer">
-          <p>Research · 决策型行业调研库 · Visual System 1.0.0</p>
+          <p>Research · Decision-ready industry research · Visual System 1.1.0</p>
         </footer>
       </article>
     </main>

@@ -1,229 +1,141 @@
-# 从调研到 HTML 的制作规范
+# Research-to-HTML workflow
 
-版本：1.0.0  
-适用范围：行业、产品、市场、平台、商业模式与技术生态等决策型调查。
+**English** · [简体中文](research-to-html-workflow.zh-CN.md)
 
-## 1. 目标
+Version 1.1.0 · For decision-oriented research across industries, products, markets, platforms, business models, and technical ecosystems.
 
-这套流程产出两个互相约束的成果：
+## Output contract
 
-1. README.md 是研究事实源，保存问题、证据、推理、限制和引用；
-2. index.html 是阅读与决策界面，负责分层、导航、交互和传播。
+Every study has two coupled layers:
 
-HTML 可以重排信息，但不得改变结论强度、删去关键限制或制造未经研究支持的新数字。
+1. `README.md` is the evidence source: question, scope, findings, reasoning, limits, and direct citations.
+2. `index.html` and `index.zh-CN.html` are the English and Simplified-Chinese reading interfaces.
 
-## 2. 阶段一：定义问题
+HTML may reorganize information. It may not strengthen a finding, hide a decision-changing caveat, alter a number, or invent evidence.
 
-研究开始前先写清：
+## 1. Define the decision
 
-- 决策者是谁；
-- 最终需要做什么决定；
-- 地区、语言、行业和时间边界；
-- “成功”“主流”“赚钱”“增长”等词的可操作定义；
-- 调查截点与预计失效速度；
-- 明确不在范围内的主题。
+Before browsing, record:
 
-把大问题改写成 3–7 个可回答的问题。每个问题必须能落到证据、判断或行动，而不是只形成资料堆积。
+- the decision and intended reader role;
+- geography, language, category, and time boundary;
+- operational definitions for words such as success, profit, growth, or mainstream;
+- the research cutoff and likely shelf life;
+- explicit exclusions.
 
-### 必备口径
+Rewrite the topic into three to seven answerable questions. For commercial outcomes, separate public scale, process success, fulfillment, and actual business results.
 
-当研究涉及商业结果时，至少区分：
+## 2. Build an evidence ledger
 
-- 公开规模：筹资额、GMV、下载量、用户数；
-- 过程成功：达到目标、交付、上线、增长；
-- 商业结果：毛利、净利、留存、复购、现金流；
-- 无法从公开资料确认的部分。
+Prefer sources in this order:
 
-## 3. 阶段二：建立证据台账
+1. law, regulators, government, filings, audited reports, official statistics;
+2. platform rules, help centers, pricing, product documentation, and direct project pages;
+3. first-party creator, developer, or company postmortems;
+4. reputable research institutions and documented datasets;
+5. high-quality reporting and secondary synthesis;
+6. community discussion and search snippets only as leads.
 
-优先级从高到低：
+For each decision-changing claim, capture the direct source, source type, observed date, geography, caveat, and confidence.
 
-1. 法规、政府、交易所、公司财报、官方统计；
-2. 平台帮助中心、规则、费用、项目页和产品文档；
-3. 创作者、开发者或公司的一手复盘；
-4. 高质量研究机构和行业数据库；
-5. 媒体与二手汇总；
-6. 搜索摘要、社区讨论和无法核验的转载。
+Recheck fees, policies, rankings, prices, availability, and platform state during the active study. Label live lists as cutoff snapshots. If current evidence cannot be verified, say so instead of substituting stale material.
 
-每条关键证据记录以下字段：
+## 3. Analyze and falsify
 
-| 字段 | 要求 |
-|---|---|
-| Claim | 它具体支持什么判断 |
-| Source | 直接页面，不链接搜索结果 |
-| Source type | 官方统计、平台自报、项目页、第三方研究等 |
-| Observed at | 访问或统计截点 |
-| Geography | 数据适用地区 |
-| Caveat | 样本偏差、营销口径、无法验证的成本等 |
-| Confidence | 高、中、低及原因 |
+Write observation before inference:
 
-### 时效规则
+```text
+Observation: what the source directly establishes.
+Inference: what that evidence reasonably suggests.
+Limit: what remains unknown or cannot be generalized.
+```
 
-- 费率、政策、榜单、价格、产品状态和平台入口必须在当前调查中重新核验；
-- 实时榜单一律写成“截点快照”；
-- 历史案例要同时写明当前交付或运营状态；
-- 找不到当前一手来源时，明确写“未能核验”，不要拿旧数据顶替。
+Test every core finding for causality errors, revenue presented as profit, platform-wide data applied to a niche, survivor bias, self-reported marketing treated as audit, and historical winners whose present delivery state is ignored.
 
-## 4. 阶段三：分析与反证
+Resolve conflicting definitions, periods, regions, and samples before choosing an interpretation.
 
-先写观察，再写推断：
+## 4. Write the Markdown source
 
-~~~text
-观察：官方页面显示 441 个项目成功。
-推断：该渠道仍然有效，但不能由此推断任意新项目都能获得流量。
-限制：平台未公开所有项目的净利润与完整获客成本。
-~~~
+Recommended order:
 
-每个核心结论至少检查：
+1. title, cutoff, scope, and definitions;
+2. one-page conclusion;
+3. method and limits;
+4. model, mechanism, or calculation;
+5. platform, market, or competitor comparison;
+6. ranked opportunities or patterns;
+7. risks and counterexamples;
+8. decision criteria;
+9. executable next steps;
+10. direct sources.
 
-- 是否把相关性写成因果；
-- 是否把流水写成利润；
-- 是否把平台整体数据套到子品类；
-- 是否忽略失败、延期或未交付案例；
-- 是否因为少数头部项目产生幸存者偏差；
-- 是否把平台营销材料当成独立审计。
+Keep one judgment per paragraph, place direct citations near claims, mark self-reports and inference, and avoid long quotations. Do not begin HTML composition before this source is reviewed.
 
-遇到冲突数据时，不求简单平均。先检查定义、时间、地区、样本和统计口径，再说明为何采用某一口径。
+## 5. Compose bilingual HTML
 
-## 5. 阶段四：编写 Markdown 事实源
+Copy `research-template/` and use a stable English slug:
 
-每份 README.md 建议使用以下结构：
-
-1. 标题、调查截点、范围和口径；
-2. 一页结论；
-3. 方法与研究限制；
-4. 核心概念或计算模型；
-5. 平台、市场或竞品对照；
-6. 类型、机制或机会排序；
-7. 风险与反例；
-8. 决策标准；
-9. 可执行计划；
-10. 核心来源。
-
-### 写作规则
-
-- 结论先于过程；
-- 每段只承担一个判断；
-- 数字附近放直接来源；
-- 明确标注平台自报和研究者推断；
-- 表格用于精确映射，不把所有段落都塞进表格；
-- 不大段复制原文；
-- 不用“显然”“必然”“稳赢”等超出证据的词。
-
-Markdown 完成并审校前，不进入 HTML 设计阶段。
-
-## 6. 阶段五：从 Markdown 编排为 HTML
-
-从 research-template/ 复制页面骨架。每个报告目录保持：
-
-~~~text
-<research-slug>/
+```text
+<report-slug>/
 ├─ README.md
 ├─ index.html
-└─ report.js        # 仅在需要报告专属交互时添加
-~~~
+├─ index.zh-CN.html
+└─ report.js        # optional; report-specific behavior only
+```
 
-index.html 必须引用公共资产：
+Both pages import shared assets:
 
-~~~html
+```html
+<script src="../assets/i18n.js"></script>
 <link rel="stylesheet" href="../assets/research.css">
 <script src="../assets/research.js"></script>
-~~~
+```
 
-### 信息层级
+English is canonical and the unsupported-language fallback. Both pages provide a top EN / 中 switch. The canonical page reads stored preference, then browser language; an explicit choice persists across reports.
 
-1. Hero 用一句可验证的中心判断开场，不写泛泛标题；
-2. 速读层保留结论、关键数字、主要风险和行动；
-3. 完整层补充平台表、案例、方法和来源；
-4. 每一节先给判断，再给证据；
-5. 长表格、来源和补充案例允许按需展开；
-6. 页面末尾保留调查截点和研究限制。
+The two languages must preserve the same findings, figures, caveats, source links, calculator thresholds, and decision logic. Translation may improve natural phrasing but may not change evidential strength.
 
-### 允许的交互
+### Reading hierarchy
 
-只有在显著降低理解成本时才添加：
+1. Open with a specific central finding.
+2. Keep conclusion, decisive evidence, main caveat, and action in the brief layer.
+3. Put comparison detail, cases, method, and complete sources in the full layer.
+4. Give the judgment before evidence in each section.
+5. Keep the research cutoff and limits visible.
 
-- 阅读深度切换；
-- 大字和夜读；
-- 章节目录与阅读进度；
-- 数据筛选；
-- 成本或情景计算器；
-- 决策评分卡；
-- 时间线与流程；
-- 打印版。
+Use interactions only when they lower comprehension cost: reading depth, text size, dim mode, contents, filters, calculators, decision cards, real sequences, and print support.
 
-动效不能承载必要信息；减少动画偏好必须得到尊重。
+## 6. Engineering acceptance
 
-### 禁止事项
+### Content
 
-- 把完整 CSS 复制进每个 HTML；
-- 使用无法离线工作的外部 UI 框架或字体作为必要依赖；
-- 为视觉效果增加没有来源的新数字；
-- 用颜色作为唯一状态信号；
-- 用大量相同卡片代替真实的信息层级；
-- 默认隐藏研究限制；
-- 跳过 h1、h2、h3 标题级别。
+- HTML and Markdown agree on conclusions, figures, cutoff, and limits.
+- English and Chinese pages have claim and interaction parity.
+- External links point to direct sources.
+- Unfulfilled projects are not presented as complete commercial successes.
 
-## 7. 阶段六：视觉与工程验收
+### Structure and accessibility
 
-### 内容
+- one `h1` and one `main`;
+- ordered headings and labelled controls;
+- keyboard-operable navigation and visible focus;
+- table captions and correct header scope;
+- color is never the only state signal;
+- full content remains readable without JavaScript.
 
-- HTML 与 README 的结论、数字、截点和限制一致；
-- 所有外部链接指向直接来源；
-- 速读模式没有隐藏会反转结论的条件；
-- 未交付项目没有被写成完整商业成功。
+### Responsive and functional
 
-### 结构与无障碍
+Validate 320, 375, 768, 1024, and 1440px. Page-level horizontal scrolling is not allowed; wide tables may scroll inside labelled, focusable containers.
 
-- 页面只有一个 h1 和一个 main；
-- 表单控件都有 label；
-- 图像都有有意义的 alt，装饰图像使用空 alt；
-- 所有按钮和导航均可用键盘操作；
-- 焦点清晰可见；
-- 标准正文对比度不低于 4.5:1；
-- 不依赖颜色单独表达风险或状态；
-- 关闭 JavaScript 后仍能阅读完整正文。
+Check reading preferences, locale routing, deep links, filters, calculators, scorecards, dim mode, reduced motion, console output, and print expansion.
 
-### 响应式
+## 7. Publish
 
-至少验证：
+1. Update the root report catalog and both project README languages.
+2. Run `scripts/Validate-ResearchSite.ps1`.
+3. Inspect the exact diff and stage only study-related files.
+4. Commit clearly and push without force.
 
-- 320px：无页面级横向滚动，触控目标可用；
-- 768px：目录转为抽屉，正文行宽稳定；
-- 1024px：布局没有尴尬空洞；
-- 1440px：正文不被拉宽，侧栏不抢阅读注意。
+## Definition of done
 
-宽表格可以局部横向滚动，但必须有可见提示和可聚焦容器。
-
-### 功能
-
-- 控制台无异常；
-- 阅读模式、主题和字号可切换；
-- 深链接能正确显示被隐藏的完整层；
-- 计算器、筛选和评分卡输出正确；
-- 打印时显示完整正文与展开内容；
-- 共享资源路径在本地文件和 GitHub Pages 上均有效。
-
-## 8. 阶段七：发布
-
-发布前：
-
-1. 更新根 README.md 的调查目录；
-2. 更新根 index.html 的页面入口；
-3. 运行 scripts/Validate-ResearchSite.ps1；
-4. 查看 git diff，只暂存本次研究相关文件；
-5. 使用简洁提交信息；
-6. 推送到远端，不使用 force push。
-
-## 9. Definition of Done
-
-一份调查只有同时满足以下条件才算完成：
-
-- Markdown 事实源可独立阅读；
-- HTML 在无外部依赖时可打开；
-- 结论、证据、限制和行动完整；
-- 共享 CSS 和脚本没有被复制；
-- 320–1440px 视觉检查通过；
-- 键盘、打印、无脚本退化通过；
-- 仓库目录与验证脚本通过；
-- 根目录调查索引已更新。
+A report is complete only when the research source stands alone, both HTML languages preserve the evidence, shared assets are reused, the responsive and accessibility checks pass, no-script and print remain complete, the catalog is updated, and repository validation succeeds.

@@ -1,4 +1,4 @@
-/*! Research Reading Shell v1.0.0 */
+/*! Research Reading Shell v1.1.0 */
 
 (function () {
       'use strict';
@@ -12,6 +12,10 @@
       var navClose = document.getElementById('nav-close');
       var navBackdrop = document.getElementById('nav-backdrop');
       var themeButton = document.getElementById('theme-button');
+      var locale = window.ResearchLocale || {
+        get: function () { return 'en'; },
+        t: function (key) { return key; }
+      };
 
       function safeGet(key) {
         try {
@@ -40,8 +44,8 @@
         setPressed('.reading-button', 'readingMode', mode);
         if (readingState) {
           readingState.textContent = mode === 'full'
-            ? readingState.dataset.fullMessage || '当前为完整模式：显示补充证据、案例细节与全部来源。'
-            : readingState.dataset.briefMessage || '当前为速读模式：保留判断与行动，隐藏补充证据。可在页首切换完整报告。';
+            ? readingState.dataset.fullMessage || locale.t('reading.full')
+            : readingState.dataset.briefMessage || locale.t('reading.brief');
         }
         if (shouldStore) safeSet('research-reading-mode', mode);
         updateProgress();
@@ -58,9 +62,9 @@
         var isDim = mode === 'dim';
         if (themeButton) {
           themeButton.setAttribute('aria-pressed', String(isDim));
-          themeButton.setAttribute('aria-label', isDim ? '切换到日间模式' : '切换到夜读模式');
-          themeButton.setAttribute('title', isDim ? '切换日间模式' : '切换夜读模式');
-          themeButton.textContent = isDim ? '日' : '夜';
+          themeButton.setAttribute('aria-label', isDim ? locale.t('theme.toLight') : locale.t('theme.toDim'));
+          themeButton.setAttribute('title', isDim ? locale.t('theme.toLight') : locale.t('theme.toDim'));
+          themeButton.textContent = isDim ? locale.t('theme.light') : locale.t('theme.dim');
         }
         if (shouldStore) safeSet('research-theme', mode);
       }
@@ -95,7 +99,7 @@
         if (!menuButton || !sideNav || !navClose) return;
         body.classList.add('nav-open');
         menuButton.setAttribute('aria-expanded', 'true');
-        menuButton.setAttribute('aria-label', '关闭目录');
+        menuButton.setAttribute('aria-label', locale.t('menu.close'));
         navClose.focus();
       }
 
@@ -103,7 +107,7 @@
         if (!menuButton) return;
         body.classList.remove('nav-open');
         menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', '打开目录');
+        menuButton.setAttribute('aria-label', locale.t('menu.open'));
         if (restoreFocus) menuButton.focus();
       }
 
@@ -189,7 +193,7 @@
       var netStatus = document.getElementById('net-status');
       var calculatorRoot = document.querySelector('[data-net-calculator]');
       var currencyCode = calculatorRoot ? calculatorRoot.dataset.currency || 'CNY' : 'CNY';
-      var currency = new Intl.NumberFormat('zh-CN', {
+      var currency = new Intl.NumberFormat(locale.get() === 'zh-CN' ? 'zh-CN' : 'en-US', {
         style: 'currency',
         currency: currencyCode,
         maximumFractionDigits: 0
@@ -209,13 +213,13 @@
         costTotal.textContent = totalRate + '%';
         netAmount.textContent = currency.format(retained);
         if (totalRate <= 85) {
-          netStatus.textContent = '尚有调整空间';
+          netStatus.textContent = locale.t('calculator.healthy');
           netStatus.dataset.state = 'healthy';
         } else if (totalRate <= 100) {
-          netStatus.textContent = '缓冲很薄';
+          netStatus.textContent = locale.t('calculator.thin');
           netStatus.dataset.state = 'thin';
         } else {
-          netStatus.textContent = '预计出现亏损';
+          netStatus.textContent = locale.t('calculator.loss');
           netStatus.dataset.state = 'loss';
         }
       }
@@ -243,8 +247,8 @@
           });
           if (gameFilterStatus) {
             gameFilterStatus.textContent = filter === 'all'
-              ? '当前显示全部 ' + visibleCount + ' 类。'
-              : '筛选后显示 ' + visibleCount + ' 类玩法。';
+              ? locale.t('filter.all', { count: visibleCount })
+              : locale.t('filter.filtered', { count: visibleCount });
           }
         });
       });
@@ -262,20 +266,20 @@
         }, 0);
         if (answered.length < scoreSelects.length) {
           decisionScore.textContent = score + '/10';
-          decisionHeading.textContent = '还需完成 ' + (scoreSelects.length - answered.length) + ' 项选择';
-          decisionCopy.textContent = '当前得分只统计已经选择的项目。';
+          decisionHeading.textContent = locale.t('decision.remaining', { count: scoreSelects.length - answered.length });
+          decisionCopy.textContent = locale.t('decision.partial');
           return;
         }
         decisionScore.textContent = score + '/10';
         if (score >= 8) {
-          decisionHeading.textContent = '可以进入预热与经济验证';
-          decisionCopy.textContent = '下一步不是立即上线，而是验证首日付费意愿、获客成本和每个档位的贡献毛利。';
+          decisionHeading.textContent = locale.t('decision.readyTitle');
+          decisionCopy.textContent = locale.t('decision.readyCopy');
         } else if (score >= 6) {
-          decisionHeading.textContent = '先补关键证据，再决定';
-          decisionCopy.textContent = '优先补 Demo、受众名单、定位或预算中得分较低的项目。';
+          decisionHeading.textContent = locale.t('decision.repairTitle');
+          decisionCopy.textContent = locale.t('decision.repairCopy');
         } else {
-          decisionHeading.textContent = '现在不适合直接众筹';
-          decisionCopy.textContent = '先做 Steam Demo、创作者试玩、节展与社区建设，避免公开验证“受众还没准备好”。';
+          decisionHeading.textContent = locale.t('decision.stopTitle');
+          decisionCopy.textContent = locale.t('decision.stopCopy');
         }
       }
 

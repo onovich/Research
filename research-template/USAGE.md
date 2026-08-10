@@ -1,22 +1,18 @@
-# 模板使用说明
+# Using the report template
 
-复制整个 research-template/ 到仓库根目录，并把目录重命名为稳定的英文 slug。
+**English** · [简体中文](USAGE.zh-CN.md)
 
-## 使用顺序
+Copy `research-template/` to the repository root and rename the directory with a stable English slug.
 
-1. 先完成新目录中的 README.md；
-2. 改写 index.html 中的方括号占位内容；
-3. 更新目录、章节 id 与链接；
-4. 保持对 ../assets/research.css 和 ../assets/research.js 的引用；
-5. 只有报告独有的复杂交互才新增 report.js；
-6. 更新根 README.md 与 index.html；
-7. 运行验证脚本。
+1. Complete and review the new `README.md` evidence source.
+2. Replace bracketed content in both `index.html` and `index.zh-CN.html`.
+3. Keep conclusions, figures, caveats, sources, and interactive thresholds aligned across languages.
+4. Update the contents, section IDs, metadata, `hreflang`, and counterpart links.
+5. Keep the imports of `../assets/i18n.js`, `../assets/research.css`, and `../assets/research.js`.
+6. Add `report.js` only for genuinely report-specific behavior.
+7. Update both root README languages and both catalog pages.
+8. Run the repository validation script.
 
-## 不要做
+Do not copy shared CSS into a report, change public component classes for one-page skinning, add facts unsupported by the research source, or hide a caveat that could change the decision.
 
-- 不要把 assets/research.css 复制到报告目录；
-- 不要修改公共类名来完成单页换肤；
-- 不要在 HTML 中加入 README.md 没有依据的新事实；
-- 不要隐藏会改变结论的限制条件。
-
-共享 CSS 已包含计算器、筛选器、评分卡、流程、时间线、表格与折叠内容。只有当它们能帮助理解或决策时才使用。
+The shared system already supports calculators, filters, scorecards, flows, timelines, tables, and details. Use them only when they reduce comprehension cost.

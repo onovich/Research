@@ -1,109 +1,118 @@
 <!doctype html>
-<html class="no-js" lang="zh-CN" data-system-version="1.0.0" data-theme="light" data-reading="brief" data-font="standard">
+<html class="no-js" lang="en" data-system-version="1.1.0" data-language-auto="true" data-language-en="index.html" data-language-zh-cn="index.zh-CN.html" data-theme="light" data-reading="brief" data-font="standard">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[调研主题]">
+  <meta name="description" content="[Research topic]">
   <meta name="color-scheme" content="light dark">
-  <title>[调研主题] · Research</title>
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <title>[Research topic] · Research</title>
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="zh-CN" href="index.zh-CN.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <script src="../assets/i18n.js"></script>
   <link rel="stylesheet" href="../assets/research.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到正文</a>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#top" aria-label="返回报告开头">
-        <span class="brand-mark" aria-hidden="true">研</span>
-        <span>[调研简称]</span>
+      <a class="brand" href="#top" aria-label="Back to the report start">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>[Short title]</span>
       </a>
-      <div class="header-tools" aria-label="阅读设置">
-        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="打开目录">目</button>
-        <div class="control-group" aria-label="阅读深度">
-          <span class="control-label">阅读深度</span>
-          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">速读</button>
-          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">完整</button>
+      <div class="header-tools" aria-label="Reading settings">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="Open contents">☰</button>
+        <div class="control-group language-switcher" aria-label="Language">
+          <a class="language-link" href="index.html" data-language-option="en" lang="en" hreflang="en" aria-current="page">EN</a>
+          <a class="language-link" href="index.zh-CN.html" data-language-option="zh-CN" lang="zh-CN" hreflang="zh-CN" aria-current="false">中</a>
         </div>
-        <div class="control-group font-controls" aria-label="字号">
-          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">标准字</button>
-          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">大字</button>
+        <div class="control-group" aria-label="Reading depth">
+          <span class="control-label">Depth</span>
+          <button class="tool-button reading-button" type="button" data-reading-mode="brief" aria-pressed="true">Brief</button>
+          <button class="tool-button reading-button" type="button" data-reading-mode="full" aria-pressed="false">Full</button>
         </div>
-        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到夜读模式" title="切换夜读模式">夜</button>
+        <div class="control-group font-controls" aria-label="Text size">
+          <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">Standard</button>
+          <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">Large</button>
+        </div>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="Switch to dim mode" title="Switch to dim mode">☾</button>
       </div>
     </div>
   </header>
 
-  <noscript><div class="noscript">JavaScript 已关闭：完整报告仍可阅读，但阅读设置不可用。</div></noscript>
+  <noscript><div class="noscript">JavaScript is off. The full report remains readable, but reading preferences are unavailable.</div></noscript>
 
   <div class="layout" id="top">
-    <aside class="side-nav" id="side-nav" aria-label="报告目录">
-      <button class="nav-close" id="nav-close" type="button">关闭目录</button>
-      <p class="side-nav-title">阅读路径</p>
+    <aside class="side-nav" id="side-nav" aria-label="Report contents">
+      <button class="nav-close" id="nav-close" type="button">Close contents</button>
+      <p class="side-nav-title">Reading path</p>
       <nav>
         <ol>
-          <li><a href="#overview" aria-current="true"><span>01</span>先看结论</a></li>
-          <li><a href="#evidence"><span>02</span>关键证据</a></li>
-          <li><a href="#analysis"><span>03</span>分析与限制</a></li>
-          <li><a href="#actions"><span>04</span>行动建议</a></li>
-          <li><a href="#sources"><span>05</span>来源</a></li>
+          <li><a href="#overview" aria-current="true"><span>01</span>Conclusion</a></li>
+          <li><a href="#evidence"><span>02</span>Evidence</a></li>
+          <li><a href="#analysis"><span>03</span>Analysis</a></li>
+          <li><a href="#actions"><span>04</span>Actions</a></li>
+          <li><a href="#sources"><span>05</span>Sources</a></li>
         </ol>
       </nav>
-      <p class="nav-note">调查截点<br><strong>[YYYY-MM-DD]</strong><br>[调查范围]</p>
+      <p class="nav-note">Research cutoff<br><strong>[YYYY-MM-DD]</strong><br>[Scope]</p>
     </aside>
-    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="关闭目录"></button>
+    <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="Close contents"></button>
 
     <main id="main" tabindex="-1">
       <article>
         <header class="hero" aria-labelledby="page-title">
           <p class="eyebrow">Research field notes · [year]</p>
-          <h1 id="page-title">[用一句中心判断作为标题。]</h1>
-          <p class="hero-lead">[用 1–2 句话说明调研回答什么问题、适用于谁。]</p>
+          <h1 id="page-title">[State the central finding in one sentence.]</h1>
+          <p class="hero-lead">[In one or two sentences, explain the decision this research supports and who it serves.]</p>
 
-          <dl class="hero-ledger" aria-label="[关键关系]">
+          <dl class="hero-ledger" aria-label="[Key relationship]">
             <div class="ledger-row">
-              <dt>[观察层]</dt>
-              <dd>[可直接确认的事实]</dd>
+              <dt>[Observation]</dt>
+              <dd>[Directly verifiable fact]</dd>
             </div>
             <div class="ledger-row">
-              <dt>[约束层]</dt>
-              <dd>[成本 / 风险 / 前提]</dd>
+              <dt>[Constraint]</dt>
+              <dd>[Cost / risk / prerequisite]</dd>
             </div>
             <div class="ledger-row unknown">
-              <dt>[决策层]</dt>
-              <dd>[最终不能被混淆的判断]</dd>
+              <dt>[Decision]</dt>
+              <dd>[The distinction that must not be blurred]</dd>
             </div>
           </dl>
 
           <div class="hero-actions">
-            <a class="button-link" href="#overview">先看结论</a>
-            <a class="button-link secondary" href="#actions">直接看行动</a>
+            <a class="button-link" href="#overview">Read the conclusion</a>
+            <a class="button-link secondary" href="#actions">Go to actions</a>
           </div>
-          <p class="reading-state" id="reading-state">当前为速读模式：保留判断与行动，隐藏补充证据。</p>
+          <p class="reading-state" id="reading-state"
+             data-brief-message="Brief mode: decisions and actions stay visible while supporting evidence is condensed."
+             data-full-message="Full mode: supporting evidence, case details, and sources are visible.">Brief mode: decisions and actions stay visible while supporting evidence is condensed.</p>
         </header>
 
         <section class="section" id="overview" aria-labelledby="overview-title">
           <div class="section-head">
             <span class="section-number">01</span>
             <div>
-              <h2 id="overview-title">先看结论</h2>
-              <p class="section-intro">[用一个段落概括最重要的判断和成立条件。]</p>
+              <h2 id="overview-title">Conclusion first</h2>
+              <p class="section-intro">[Summarize the most important finding and its conditions in one paragraph.]</p>
             </div>
           </div>
 
           <div class="answer-stack">
             <article class="answer">
-              <h3>[核心问题一]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[Decision question one]</h3>
+              <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
             <article class="answer">
-              <h3>[核心问题二]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[Decision question two]</h3>
+              <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
             <article class="answer">
-              <h3>[核心问题三]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[Decision question three]</h3>
+              <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
           </div>
         </section>
@@ -112,51 +121,51 @@
           <div class="section-head">
             <span class="section-number">02</span>
             <div>
-              <h2 id="evidence-title">关键证据</h2>
-              <p class="section-intro">只保留真正改变判断的数字、规则和案例。</p>
+              <h2 id="evidence-title">Decision-changing evidence</h2>
+              <p class="section-intro">Keep only the numbers, rules, and cases that materially change the decision.</p>
             </div>
           </div>
 
-          <div class="evidence-strip" aria-label="关键数据">
+          <div class="evidence-strip" aria-label="Key evidence">
             <div class="evidence-point">
               <span class="evidence-value">[01]</span>
-              <span class="evidence-label">[数字口径与时间]</span>
+              <span class="evidence-label">[Metric definition and date]</span>
             </div>
             <div class="evidence-point">
               <span class="evidence-value">[02]</span>
-              <span class="evidence-label">[数字口径与时间]</span>
+              <span class="evidence-label">[Metric definition and date]</span>
             </div>
             <div class="evidence-point">
               <span class="evidence-value">[03]</span>
-              <span class="evidence-label">[数字口径与时间]</span>
+              <span class="evidence-label">[Metric definition and date]</span>
             </div>
           </div>
 
           <div class="detail-layer">
-            <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 ↔</p>
-            <div class="table-wrap" tabindex="0" role="region" aria-label="[对照表名称]">
+            <p class="scroll-hint" aria-hidden="true">Scroll sideways to view the full table ↔</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="[Comparison table name]">
               <table>
-                <caption>[表格的范围、截点和用途]</caption>
+                <caption>[Scope, cutoff, and purpose of the table]</caption>
                 <thead>
                   <tr>
-                    <th scope="col">对象</th>
-                    <th scope="col">观察</th>
-                    <th scope="col">含义</th>
-                    <th scope="col">限制</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Observation</th>
+                    <th scope="col">Meaning</th>
+                    <th scope="col">Caveat</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">[对象 A]</th>
-                    <td>[事实]</td>
-                    <td>[解释]</td>
-                    <td>[限制]</td>
+                    <th scope="row">[Subject A]</th>
+                    <td>[Fact]</td>
+                    <td>[Interpretation]</td>
+                    <td>[Limit]</td>
                   </tr>
                   <tr>
-                    <th scope="row">[对象 B]</th>
-                    <td>[事实]</td>
-                    <td>[解释]</td>
-                    <td>[限制]</td>
+                    <th scope="row">[Subject B]</th>
+                    <td>[Fact]</td>
+                    <td>[Interpretation]</td>
+                    <td>[Limit]</td>
                   </tr>
                 </tbody>
               </table>
@@ -168,29 +177,29 @@
           <div class="section-head">
             <span class="section-number">03</span>
             <div>
-              <h2 id="analysis-title">分析与限制</h2>
-              <p class="section-intro">明确区分观察、推断与尚不能确认的部分。</p>
+              <h2 id="analysis-title">Analysis and limits</h2>
+              <p class="section-intro">Separate direct observation, inference, and what public evidence cannot establish.</p>
             </div>
           </div>
 
           <dl class="definition-table">
             <div class="definition-row">
-              <dt>观察</dt>
-              <dd>[一手来源可以直接证明什么。]</dd>
+              <dt>Observation</dt>
+              <dd>[What a primary source establishes directly.]</dd>
             </div>
             <div class="definition-row">
-              <dt>推断</dt>
-              <dd>[基于证据作出的解释及其边界。]</dd>
+              <dt>Inference</dt>
+              <dd>[The interpretation supported by the evidence and its boundary.]</dd>
             </div>
             <div class="definition-row">
-              <dt>未知</dt>
-              <dd>[公开资料无法确认的关键变量。]</dd>
+              <dt>Unknown</dt>
+              <dd>[A decision-relevant variable that public material cannot confirm.]</dd>
             </div>
           </dl>
 
           <div class="callout warning">
-            <span class="callout-title">最容易误判的地方</span>
-            <p>[写出一个会导致错误决策的口径、幸存者偏差或因果误读。]</p>
+            <span class="callout-title">Most likely misread</span>
+            <p>[Name the metric error, survivor bias, or causal leap most likely to produce a bad decision.]</p>
           </div>
         </section>
 
@@ -198,28 +207,28 @@
           <div class="section-head">
             <span class="section-number">04</span>
             <div>
-              <h2 id="actions-title">行动建议</h2>
-              <p class="section-intro">把结论转成可验证、可停止、带时间边界的下一步。</p>
+              <h2 id="actions-title">Recommended actions</h2>
+              <p class="section-intro">Turn the conclusion into testable, time-bounded steps with explicit stop conditions.</p>
             </div>
           </div>
 
           <div class="timeline">
             <article class="timeline-item">
-              <time>[阶段一]</time>
-              <h3>[先验证什么]</h3>
+              <time>[Phase one]</time>
+              <h3>[What to validate first]</h3>
               <ul>
-                <li>[行动]</li>
-                <li>[指标]</li>
-                <li>[停止条件]</li>
+                <li>[Action]</li>
+                <li>[Metric]</li>
+                <li>[Stop condition]</li>
               </ul>
             </article>
             <article class="timeline-item">
-              <time>[阶段二]</time>
-              <h3>[再验证什么]</h3>
+              <time>[Phase two]</time>
+              <h3>[What to validate next]</h3>
               <ul>
-                <li>[行动]</li>
-                <li>[指标]</li>
-                <li>[停止条件]</li>
+                <li>[Action]</li>
+                <li>[Metric]</li>
+                <li>[Stop condition]</li>
               </ul>
             </article>
           </div>
@@ -229,24 +238,24 @@
           <div class="section-head">
             <span class="section-number">05</span>
             <div>
-              <h2 id="sources-title">来源与研究限制</h2>
-              <p class="section-intro">优先列直接支持核心判断的一手来源。</p>
+              <h2 id="sources-title">Sources and research limits</h2>
+              <p class="section-intro">Lead with primary sources that directly support the core decisions.</p>
             </div>
           </div>
 
           <ul class="sources">
-            <li><span class="source-type">Primary</span><a href="https://example.com/source">[来源标题]</a></li>
-            <li><span class="source-type">Official</span><a href="https://example.com/source-2">[来源标题]</a></li>
+            <li><span class="source-type">Primary</span><a href="https://example.com/source">[Source title]</a></li>
+            <li><span class="source-type">Official</span><a href="https://example.com/source-2">[Source title]</a></li>
           </ul>
 
           <div class="callout warning">
-            <span class="callout-title">研究限制</span>
-            <p>[样本、时效、地区、平台自报或无法确认的变量。]</p>
+            <span class="callout-title">Research limits</span>
+            <p>[Sample, freshness, geography, self-reported data, or variables that remain unknown.]</p>
           </div>
         </section>
 
         <footer class="footer">
-          <p>[调研主题] · 调查截点 [YYYY-MM-DD] · Visual System 1.0.0</p>
+          <p>[Research topic] · Cutoff [YYYY-MM-DD] · Visual System 1.1.0</p>
         </footer>
       </article>
     </main>
