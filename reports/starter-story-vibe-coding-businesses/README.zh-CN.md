@@ -1,6 +1,6 @@
 # Starter Story 线上项目研究
 
-**副标题：** 40 个公开数据页中的 349 个去重项目，页面月收入中位数为 3 万美元；但成功案例筛选、利润信息缺失和失败项目分母缺位，使这些数字不能被解释为创业成功率。
+**副标题：** 从 349 个公开项目中，看哪些线上生意收入更高，哪些更适合小团队用 AI 完成。
 
 [English](README.md) · **简体中文** · [English HTML](../../site/starter-story-vibe-coding-businesses/index.html) · [中文 HTML](../../site/starter-story-vibe-coding-businesses/index.zh-CN.html)
 

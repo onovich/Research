@@ -140,7 +140,7 @@ Read [industry-report-writing.md](industry-report-writing.md) before drafting or
 - Do not refer to an earlier report, sample, parser, request, conversation, or editorial process unless change over time is the research question.
 - Convert narrow-versus-broad sample comparisons into a current sensitivity, robustness, or coverage test that defines both scopes.
 - Put revision history in Git, a changelog, or an update note outside the analytical narrative.
-- Use neutral institutional language. Replace promotional or casual claims with a measured observation, denominator, bounded interpretation, and limit.
+- Use plain professional language for an informed general reader. Keep analytical precision without turning headings and summaries into academic abstracts or compliance notices.
 - Do not call a case review, founder interview, or page check an audit unless it meets a formal audit standard.
 
 ### Reader and recommendation boundary
@@ -155,7 +155,7 @@ Read [industry-report-writing.md](industry-report-writing.md) before drafting or
 
 Use a Markdown structure that can stand alone:
 
-1. concise topic title and an evidence-bounded central finding as subtitle;
+1. concise topic title and a natural one-sentence subtitle explaining what the report helps a general reader understand;
 2. a short research-context block: background, specific answer sought, and main source groups;
 3. cutoff, scope, operational definitions, and method;
 4. one-page conclusion;

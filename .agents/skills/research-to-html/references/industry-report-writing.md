@@ -39,17 +39,25 @@ When an earlier and a broader sample must be compared, define both scopes in the
 Use this order near the top:
 
 1. concise topic title;
-2. evidence-bounded central finding as the subtitle;
+2. a plain-language subtitle that tells readers what the report helps them understand, optionally using one anchor number;
 3. research background and purpose;
 4. question, scope, cutoff, exclusions, and principal data sources;
 5. three to six key findings;
 6. main evidence limitation.
 
-The subtitle should state the answer and its boundary, not merely list how many pages were read. A first-time reader should be able to understand the central conclusion from the title, subtitle, and context block.
+The subtitle is orientation, not a miniature abstract or limitation section. Give it one job and one natural sentence. It may state the main finding or the question and scope, but it must sound like something written for a person rather than a database field. Put denominators, methods, and caveats in the context and evidence-boundary blocks unless one is essential to prevent a false impression.
+
+## General-reader test
+
+- Write for an interested non-specialist who has not seen the brief, repository, or prior edition.
+- Prefer everyday words and short sentences. Keep terms such as denominator, sensitivity test, and confidence interval in the sections that explain them.
+- Let the title and subtitle answer “why should I read this?” before they answer “how was every claim qualified?”
+- Do not stack a result, sample description, three caveats, and a methodological disclaimer into one sentence.
+- Read the title, subtitle, and lead aloud. If they sound like metadata, an academic abstract, or a compliance notice, rewrite them.
 
 ## Analytical register
 
-Use a measured institutional register:
+Use a plain professional register:
 
 - prefer “the data show,” “the sample contains,” “the estimate is sensitive to,” “the evidence does not establish,” and their direct Chinese equivalents;
 - use “case review” or “案例核查” unless the evidence was actually audited;
@@ -60,7 +68,7 @@ Use a measured institutional register:
 
 Avoid:
 
-- conversational or promotional claims such as “make money,” “easy to build,” “obviously,” “this proves,” “the real answer,” or “code is not the whole business”;
+- slang, empty promotion, or overclaiming such as “obviously,” “this proves,” or “guaranteed.” Familiar phrases such as “赚钱” or “make money” are acceptable when they match the reader's question, but the body must define whether the evidence measures revenue, profit, or another outcome;
 - moral framing, generic advice, rhetorical questions, metaphors, jokes, and adversarial verbs;
 - process narration, self-congratulation, and commentary on how much more work the current edition contains;
 - “audit” for founder interviews, page reviews, or researcher checks that are not formal audits.

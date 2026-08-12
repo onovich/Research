@@ -41,14 +41,14 @@ Required outputs
 - A reader-facing method/transparency path, correction path, useful noindex 404 page, favicon, social share image, and XML sitemap when publishing a standalone site.
 
 HTML quality contract
-- Lead with a specific, evidence-bounded finding rather than a generic report title.
+- Lead with a concise topic title and a plain one-sentence subtitle that tells a first-time general reader what the report helps them understand. Do not compress the full abstract, methodology, and caveat list into the hero.
 - Use semantic HTML, one h1, one main, ordered heading levels, labels for controls, table captions and scopes, visible focus, and text labels in addition to color.
 - Keep the complete report readable without JavaScript.
 - Use interactions only when they lower comprehension cost.
 - Support 320–1440px layouts, keyboard use, reduced motion, dim mode, print, and deep links.
 - Keep citations near the claims they support and preserve research caveats in both languages.
 - Write findings in a plain data-insight cadence: result first; number, baseline, period, and denominator next; bounded interpretation after that; material limitation last. Use this as a structural tone benchmark only and do not copy another publication's wording.
-- Use a measured institutional report register. Prefer neutral analytical verbs, finding-led headings, and precise labels such as displayed, self-reported, recalculated, estimated, audited, and verified. Use “case review” rather than “audit” unless a formal audit occurred.
+- Use a plain professional register for an informed general reader. Prefer familiar words and natural sentences in titles, summaries, and headings; reserve technical language for the method and evidence layers. Use precise evidence labels such as displayed, self-reported, recalculated, estimated, audited, and verified. Use “case review” rather than “audit” unless a formal audit occurred.
 - Remove release-note and backward-reference language such as “previous version,” “original sample,” “expanded,” “now covers,” and “corrected parser,” together with equivalent Chinese phrases. When two scopes matter, define both in the current edition and present the comparison as a sensitivity, robustness, or coverage test.
 - Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
 - Treat the intended audience as a reader, not as the presumed builder or operator of a project. Never add validation plans, project briefs, implementation roadmaps, action scorecards, recommended build sequences, or generic next steps to the research report.

@@ -1,6 +1,6 @@
 # Starter Story online business study
 
-**Subtitle:** Across 40 public data pages, 349 deduplicated projects had a displayed monthly-revenue median of $30K; selected success cases, sparse profit data, and a missing denominator for failed attempts prevent these figures from estimating startup success rates.
+**Subtitle:** We examined 349 public projects to see which online businesses report higher revenue and which are more practical for small teams using AI.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/starter-story-vibe-coding-businesses/index.html) · [中文 HTML](../../site/starter-story-vibe-coding-businesses/index.zh-CN.html)
 

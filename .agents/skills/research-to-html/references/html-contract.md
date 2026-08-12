@@ -40,7 +40,7 @@ If the repository has no separated public source tree, colocating the Markdown a
 ## Search and public-surface contract
 
 - Use a unique, concise, query-descriptive title, meta description, and visible `h1` for each page.
-- On report pages, put the evidence-bounded central finding in a visible `.report-subtitle` directly after the `h1`, and mirror it in Article `alternativeHeadline` structured data.
+- On report pages, put a plain-language, reader-oriented `.report-subtitle` directly after the `h1`, and mirror it in Article `alternativeHeadline` structured data. The subtitle may state the finding or the question and scope; it must not read like a compressed abstract or disclaimer stack.
 - Add an absolute HTTPS canonical, `index,follow` directive, favicon, Open Graph fields, Twitter Card fields, and valid JSON-LD using a public organization or intentional author identity.
 - Keep the title and `h1` natural. Do not repeat keywords or claim outcomes the evidence does not establish.
 - Publish an XML sitemap containing exactly the canonical public locale URLs and their reciprocal alternates.
@@ -50,7 +50,7 @@ If the repository has no separated public source tree, colocating the Markdown a
 
 ## Information hierarchy
 
-1. Open with a concise topic title followed by a specific central finding as the subtitle.
+1. Open with a concise topic title followed by one natural sentence explaining what the report helps a general reader understand.
 2. Before the conclusion, show a compact research-context block with three plainly labeled items: background, the specific answer sought, and the main source groups.
 3. Keep the brief layer sufficient for understanding: conclusion, decisive evidence, main caveat, and material unknowns.
 4. Put detailed tables, cases, method, and full sources in the full layer.
@@ -59,7 +59,7 @@ If the repository has no separated public source tree, colocating the Markdown a
 
 Every locale page must be a standalone current edition. Do not use the hero, headings, section intros, captions, callouts, or metadata to narrate an earlier version, expanded collection, corrected parser, or what the reader supposedly saw before. If two sample scopes are analytically relevant, define both on the page and label the comparison as a sensitivity, robustness, or coverage test.
 
-Use an institutional report register in visible prose and metadata. Prefer finding-led headings and neutral evidence verbs. Avoid conversational questions whose answers are already known, promotional claims, rhetorical devices, release-note language, and “audit” unless a formal audit occurred.
+Use a plain professional register in visible prose and metadata. Prefer familiar words, finding-led headings, and neutral evidence verbs. Do not confuse professional tone with bureaucratic compression. Avoid empty promotion, rhetorical devices, release-note language, and “audit” unless a formal audit occurred.
 
 Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
 
@@ -112,7 +112,7 @@ Check at minimum:
 - matching key figures, dates, sources, and interactive thresholds;
 - matching numerators, denominators, formulas, units, comparison periods, and derived results;
 - first-read independence: no conclusion or comparison depends on a prior version, conversation, or undocumented sample;
-- institutional register: no casual, promotional, adversarial, or release-note language in either locale;
+- general-reader register: title, subtitle, lead, and headings sound natural when read aloud and do not resemble metadata, an academic abstract, or a compliance notice;
 - every brief-layer conclusion is supported nearby or explicitly labeled as inference;
 - JavaScript syntax and zero runtime exceptions;
 - 320, 375, 768, 1024, and 1440px layouts;
