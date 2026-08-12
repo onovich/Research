@@ -109,6 +109,17 @@ Reject or relabel an analysis when:
 - an opportunity ranking is mostly researcher preference;
 - a causal explanation has only evidence that two facts coexist.
 
+### Sampling and collection boundary
+
+Prefer public aggregates and site inventories before collecting item-level pages. When the full population is not available, use a transparent public excerpt or a defensible stratified sample and record:
+
+- the selection rule, time window, and page order;
+- the raw row count, deduplicated count, and missing-field count;
+- category overlap, weighting, and any non-random ordering;
+- which calculations describe only the excerpt rather than the platform.
+
+Never call a convenience excerpt representative unless the sampling design supports that claim. For public-web collection, identify the research user agent when feasible, run single-threaded with a conservative delay, cache responses, and stop on `403`, `429`, CAPTCHA, or challenge pages. Do not log in, guess private pagination, or bypass access controls. If source terms restrict republication, publish aggregates and direct links while keeping row-level extracts local.
+
 ### Finding-led writing
 
 Use [Our World in Data's Data Insights structure](https://ourworldindata.org/launching-data-insights) as a tone benchmark, not as text to imitate:
