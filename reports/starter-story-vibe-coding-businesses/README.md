@@ -1,6 +1,6 @@
 # Online projects that make money
 
-**Subtitle:** A site inventory, a 133-project public excerpt, and eight audited cases separate displayed revenue from profit evidence and build complexity.
+**Subtitle:** All 40 public data pages, 349 deduplicated projects, and eight audited cases separate displayed revenue from profit evidence and build complexity.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/starter-story-vibe-coding-businesses/index.html) · [中文 HTML](../../site/starter-story-vibe-coding-businesses/index.zh-CN.html)
 
@@ -13,34 +13,59 @@
 
 - **Background:** Starter Story collects businesses that already report revenue. It is useful for observing monetized patterns, but it is not a registry of all attempts.
 - **Purpose:** Separate three questions that are often mixed together: what the platform displays, what its public records say about revenue and profit, and what can actually be delivered as online software.
-- **Main sources:** Starter Story's live sitemap and homepage, ten relevant public data pages, direct founder interviews, current official product sites, and the recalculated [`analysis.csv`](analysis.csv) worksheet.
+- **Main sources:** Starter Story's live sitemap and homepage, all 40 sitemap-listed public data pages, direct founder interviews, current official product sites, the recalculated [`analysis.csv`](analysis.csv), and the 40-page aggregate [`category-summary.csv`](category-summary.csv).
 
 ## One-page answer
 
 ### The platform is large; the public evidence is still selected
 
-The live sitemap contained **19,123 URLs**, including **3,264 story URLs** and **40 data-category pages**. The homepage described the database as **2,997+ revenue-generating projects**. The first set is a URL inventory and the second is a platform claim; neither is a denominator for attempted startups.
+The live sitemap contained **19,122 URLs**, including **3,264 story URLs**, **477 business URLs**, and **40 data-category pages**. The homepage described the database as **2,997+ revenue-generating projects**. The first set is a URL inventory and the second is a platform claim; neither is a denominator for attempted startups.
 
-### The expanded public excerpt is much larger than the original case set
+### The public excerpt now covers every sitemap-listed data page
 
-Ten question-relevant data pages exposed **169 public row occurrences**. Deduplication by domain or record URL left **133 projects**; **120** had a parseable displayed monthly-revenue value.
+All 40 public data pages exposed **677 public row occurrences**. Thirty-nine pages contributed parseable records; one page exposed none in its logged-out view. Deduplication by domain or record URL left **349 projects**; **292** had a parseable displayed monthly-revenue value.
 
-Among those 120 revenue-known records:
+Among those 292 revenue-known records:
 
-- the 25th percentile was **$11K/month**;
-- the median was **$38.5K/month**;
-- the 75th percentile was **$123.25K/month**;
-- **94 / 120 (78.3%)** displayed at least $10K/month;
-- **66 / 120 (55.0%)** displayed at least $30K/month;
-- **36 / 120 (30.0%)** displayed at least $100K/month.
+- the 25th percentile was **$9K/month**;
+- the median was **$30K/month**;
+- the 75th percentile was **$113.5K/month**;
+- **217 / 292 (74.3%)** displayed at least $10K/month;
+- **151 / 292 (51.7%)** displayed at least $30K/month;
+- **86 / 292 (29.5%)** displayed at least $100K/month;
+- **13 / 292 (4.5%)** displayed at least $1M/month.
 
 These are distributions inside a logged-out, winner-only public excerpt. They describe what is displayed, not what a new project should expect to earn.
 
 ### Category labels are discovery tags, not clean business-model bins
 
-Cross-category duplication accounted for **36 / 169 row occurrences (21.3%)**. **24 / 133 unique projects (18.0%)** appeared in more than one selected category. Formula Bot appeared under five labels; the “solo developer” excerpt also included a physical beverage-container company.
+Cross-category duplication accounted for **328 / 677 row occurrences (48.4%)**. **128 / 349 unique projects (36.7%)** appeared on more than one data page. A project appeared on **1.94 pages on average**; the median was one, the 75th percentile was two, and the maximum was twelve. Formula Bot and Starter Story itself each appeared under twelve labels; the “solo developer” page still included a physical beverage-container company.
 
 The category system is therefore useful for finding cases, but unsafe for adding counts, estimating market share, or treating a category median as a pure business-model median.
+
+### More pages changed the estimate, not just the sample size
+
+Reprocessing the original ten question-relevant pages with the same parser produced **148 unique projects**, **127 revenue-known records**, and a **$40K/month** median. Expanding to all 40 pages increased the unique excerpt by **135.8%** and revenue-known records by **129.9%**, while lowering the displayed median by **25%**, to $30K/month. The duplicate-row rate rose from **21.3% to 48.4%**.
+
+This sensitivity check is the clearest reason not to present the original ten-page subset as a platform-wide result.
+
+### Starter Story's Solopreneur Score is not a revenue forecast
+
+The public excerpt contained a Solopreneur Score for **348 / 349 projects (99.7%)**. Among the **291 projects** with both a score and revenue, the Pearson correlation between the score and log monthly revenue was **−0.189**. That is a weak negative association inside a selected winner set, not evidence that lower scores cause higher revenue.
+
+Score bands were also non-monotonic: the displayed revenue medians were **$85K** below 60, **$35K** from 60–69.9, **$10.5K** from 70–79.9, and **$26K** at 80 or above. The score may describe solo-operability; this excerpt does not support using it to predict revenue.
+
+### Page memberships can form transparent delivery proxies—not verified categories
+
+To ask a narrower online-build question without hand-classifying individual companies, the analysis formed three disclosed unions of page memberships. These groups still overlap and inherit the platform's editorial labels.
+
+| Page-membership proxy | Pages in union | Unique projects | Revenue-known | Displayed P25 / median / P75 | Median solo score |
+|---|---:|---:|---:|---:|---:|
+| Software delivery | 13 | 159 | 135 | $8.8K / $24.8K / $92.5K | 70.8 |
+| Low-complexity delivery | 7 | 90 | 73 | $6K / $19.4K / $50K | 72.7 |
+| Coordination or labor-heavy online delivery | 2 | 47 | 47 | $22K / $50K / $200K | 60.0 |
+
+The low-complexity proxy still contains **15 / 73 revenue-known projects at or above $100K/month**, so “simple to build” is not the same as “small revenue.” At the same time, its median is below the coordination/labor proxy, whose work may be harder to automate. Seven projects belong to both the software-delivery and coordination/labor unions. These are descriptive winner excerpts, not success rates, profit comparisons, or mutually exclusive model bins.
 
 ### Revenue is much more visible than profit
 
@@ -56,30 +81,32 @@ The same cases show that code is not the whole business. Distribution, retention
 
 | Layer | Numerator / denominator | Result | What it supports | What it does not support |
 |---|---:|---:|---|---|
-| Sitemap inventory | 3,264 story URLs / 19,123 total URLs | 17.1% | The site contains thousands of story pages | A count of profitable or current businesses |
-| Ten category cards | 2,652 summed memberships | $20K–$200K displayed medians | The scale and range of selected successful collections | A unique project count; the cards overlap |
-| Public category excerpt | 169 rows − 36 duplicates | 133 unique projects | A larger observable cross-section of public records | A random or representative platform sample |
-| Revenue coverage | 120 / 133 | 90.2% | Most public excerpt records expose a monthly-revenue field | Audited, current, or net revenue |
-| Revenue distribution | 120 revenue-known records | $11K / $38.5K / $123.25K P25 / median / P75 | The displayed winner distribution is wide and right-skewed | Expected income for a new project |
-| Cross-category overlap | 24 / 133 unique projects | 18.0% | Labels frequently describe the same business | Mutually exclusive model comparisons |
+| Sitemap inventory | 3,264 story URLs / 19,122 total URLs | 17.1% | The site contains thousands of story pages | A count of profitable or current businesses |
+| Public data-page coverage | 40 / 40 sitemap-listed pages | 100% of this page family | Every public collection page was checked | Coverage of all Starter Story projects |
+| Public category excerpt | 677 rows − 328 duplicates | 349 unique projects | A substantially larger observable cross-section | A random or representative platform sample |
+| Revenue coverage | 292 / 349 | 83.7% | Most public excerpt projects expose a monthly-revenue field | Audited, current, or net revenue |
+| Revenue distribution | 292 revenue-known projects | $9K / $30K / $113.5K P25 / median / P75 | The displayed winner distribution is wide and right-skewed | Expected income for a new project |
+| Cross-category overlap | 128 / 349 unique projects | 36.7% | Labels frequently describe the same business | Mutually exclusive model comparisons |
+| Solopreneur Score pairing | 291 projects with score and revenue | r = −0.189 against log revenue | The score has little linear relationship with displayed revenue here | Causal effect or revenue prediction |
 | Audited case profit coverage | 5 / 8 any evidence; 3 / 8 margins | 62.5%; 37.5% | Profit evidence is sparse even in selected cases | A platform-wide profit rate |
 
 All inputs, formulas, and scope notes are in [`analysis.csv`](analysis.csv).
 
 ## 1. Method and evidence boundary
 
-The analysis uses four layers:
+The analysis uses five layers:
 
 1. **Site inventory:** the public sitemap supplies URL counts, including story and data-page families.
-2. **Platform aggregates:** the homepage supplies the platform's project claim and ten relevant category-card counts and medians.
-3. **Public excerpt:** the default logged-out records on ten selected data pages supply item-level displayed revenue for a broader descriptive sample.
-4. **Case audit:** eight online-software interviews and two counterexamples supply cost, margin, churn, labor, and distribution context.
+2. **Platform aggregates:** the homepage supplies the platform's project claim and the counts and medians of 26 data-page cards visible there.
+3. **Public data-page census:** the sitemap identifies all 40 public `/data/` pages; 39 contribute logged-out record cards and one contributes none.
+4. **Deduplicated excerpt, score, and proxy analysis:** domains or record URLs collapse 677 page appearances into 349 projects; revenue, page membership, Solopreneur Score, and three disclosed page-label unions are analyzed only where present.
+5. **Case audit:** eight online-software interviews and two counterexamples supply cost, margin, churn, labor, and distribution context.
 
-The ten selected public data pages were [Micro SaaS](https://www.starterstory.com/data/micro-saas-ideas), [No-code](https://www.starterstory.com/data/no-code-ideas), [Simple apps](https://www.starterstory.com/data/apps-so-simple), [Solo developers](https://www.starterstory.com/data/solo-developer-ideas), [GPT wrappers](https://www.starterstory.com/data/gpt-wrapper-ideas), [Weekend projects](https://www.starterstory.com/data/weekend-projects), [APIs](https://www.starterstory.com/data/1m-apis), [Plugins](https://www.starterstory.com/data/plugins), [Marketplaces](https://www.starterstory.com/data/marketplaces), and [Productized services](https://www.starterstory.com/data/productized-services).
+All 40 page-level aggregates are in [`category-summary.csv`](category-summary.csv). This is a census of a public page family, not a census of businesses: each page is curated, pages overlap, and their logged-out record cards are default-ordered.
 
 ### Collection boundary
 
-The public excerpt was collected with **11 GET requests**: one homepage and ten category pages. Requests were single-threaded with a four-second interval, an identifying research user agent, no login, no pagination guessing, and no bypass of access controls. No 403, 429, or challenge response occurred.
+The expanded collection used **42 GET requests**: one compressed sitemap, one homepage, and 40 data pages. Requests were single-threaded with a six-second interval and an identifying research user agent. There was no login, pagination guessing, retry loop, or bypass of access controls. No 403, 429, or challenge response occurred. After the live pass, all parser corrections and statistics were replayed from the local cache without additional requests.
 
 Starter Story's [robots file](https://www.starterstory.com/robots.txt) allows the public site except `/admin`. Its [terms](https://www.starterstory.com/terms) require a link back when data are used and restrict republication. This report therefore publishes aggregate calculations and direct links only; the row-level extraction remains local and is not part of the public repository.
 
@@ -94,24 +121,29 @@ Starter Story's [robots file](https://www.starterstory.com/robots.txt) allows th
 
 ## 2. What the public category data show
 
-The ten homepage cards contain **2,652 category memberships** in total, but the excerpt proves that memberships overlap. Their displayed medians span **$20K to $200K per month**, a tenfold range.
+The homepage exposed count and median cards for **26 of the 40** sitemap-listed data pages. Those 26 cards sum to **6,666 memberships**, not unique projects, and their displayed medians range from **$10K to $800K per month**. The high end includes editorial collections such as “Big Acquisitions”; the range is not a model ranking.
 
-| Public collection | Displayed projects | Displayed median | Public rows | Revenue rows | Excerpt median |
-|---|---:|---:|---:|---:|---:|
-| Micro SaaS | 670 | $40K | 23 | 18 | $12.17K |
-| No-code SaaS and apps | 314 | $30K | 20 | 18 | $36K |
-| Simple apps | 241 | $20K | 8 | 7 | $51.3K |
-| Solo developers | 237 | $40K | 23 | 21 | $77K |
-| GPT wrappers | 148 | $30K | 24 | 19 | $16K |
-| Weekend projects | 135 | $30K | 8 | 7 | $15K |
-| APIs | 54 | $80K | 7 | 7 | $24.8K |
-| Plugins | 19 | $30K | 8 | 8 | $26.5K |
-| Marketplaces | 285 | $200K | 24 | 24 | $108.5K |
-| Productized services | 549 | $40K | 24 | 24 | $48.5K |
+The table below focuses on collections relevant to online software or delivery structure. The full 40-page worksheet remains available in [`category-summary.csv`](category-summary.csv).
 
-The card median and excerpt median are different measures. The card uses the platform's full curated collection; the excerpt uses only default public rows. Large gaps, such as $80K versus $24.8K for APIs, show why the excerpt should not be mistaken for a category census.
+| Public collection | Displayed projects | Displayed median | Public rows | Revenue rows | Excerpt median | Median solo score |
+|---|---:|---:|---:|---:|---:|---:|
+| Micro SaaS | 670 | $40K | 24 | 18 | $12.17K | 75 |
+| No-code | 314 | $30K | 24 | 18 | $36K | 72 |
+| Simple apps | 241 | $20K | 11 | 10 | $35.65K | 75 |
+| Solo developers | 237 | $40K | 24 | 22 | $88.5K | 80 |
+| GPT wrappers | 148 | $30K | 24 | 19 | $16K | 77 |
+| Weekend projects | 135 | $30K | 11 | 8 | $15.5K | 80 |
+| APIs | 54 | $80K | 11 | 10 | $37.4K | 68 |
+| Chrome extensions | 3 | $20K | 3 | 3 | $20K | 78 |
+| Plugins | 19 | $30K | 11 | 10 | $29.5K | 76 |
+| Consumer iOS apps | 79 | $40K | 11 | 10 | $21K | 78 |
+| Freemium and open source | 157 | $30K | 24 | 22 | $25.5K | 69 |
+| Automation | not shown | not shown | 24 | 21 | $83K | 71 |
+| One-page websites | not shown | not shown | 24 | 23 | $14K | 71 |
+| Marketplaces | 285 | $200K | 24 | 24 | $108.5K | 59 |
+| Productized services | 549 | $40K | 24 | 24 | $48.5K | 68 |
 
-The broad pattern survives the caveat: the displayed marketplace records are larger than the displayed software collections, while APIs and plugins use much smaller denominators. That says more about the shape of Starter Story's successful-case library than about which model is easier or more likely to work.
+The displayed median and excerpt median use different denominators. The first comes from a platform card for its full curated collection; the second comes only from logged-out record cards. The “solo developer” excerpt median is high partly because the label contains non-software and non-solo-shaped businesses. The “automation” excerpt also mixes compact tools with large organizations. The numbers describe tagged case collections, not mutually exclusive industries.
 
 ## 3. Revenue is not profit
 
@@ -158,7 +190,9 @@ The data support a narrow technical conclusion: AI-assisted tools can reduce the
 | Failed-project denominator | A library of revenue-generating projects cannot estimate the probability that an attempt reaches the displayed scale |
 | Random sampling | Default public rows are curated and ordered by the platform; their percentiles are descriptive only |
 | Current audited profit | Founder interviews use different dates and definitions; only 3 of 8 audited cases disclose a margin |
-| Mutually exclusive categories | 18.0% of unique excerpt projects appear in multiple selected categories, and some labels include visibly different business types |
+| Mutually exclusive categories | 36.7% of unique excerpt projects appear on multiple data pages; 328 of 677 row occurrences are duplicate project appearances |
+| Stable category ranking | Expanding from ten selected pages to all 40 lowered the displayed median from $40K to $30K and more than doubled the unique excerpt |
+| Revenue-predictive solo score | The score/log-revenue correlation is only −0.189 in this selected excerpt, and score-band medians are non-monotonic |
 | Founder labor and support | Revenue rarely includes unpaid founder time, exception handling, maintenance, or customer support |
 | Causal effect of AI coding | Cases show coexistence between AI use and shipped products, not the effect of AI on revenue or quality |
 | Distribution transferability | An audience, marketplace position, search ranking, affiliate launch, or ad model may be specific to one case |
@@ -168,9 +202,9 @@ The data support a narrow technical conclusion: AI-assisted tools can reduce the
 
 | Source | Type | Observation used | Confidence and limit |
 |---|---|---|---|
-| [Starter Story sitemap](https://www.starterstory.com/sitemap) | First-party site inventory | 19,123 URLs, 3,264 story URLs, 40 data pages | High for the cutoff snapshot; URL counts are not business or profit counts |
+| [Starter Story sitemap](https://www.starterstory.com/sitemap) | First-party site inventory | 19,122 URLs, 3,264 story URLs, 477 business URLs, 40 data pages | High for the cutoff snapshot; URL counts are not business or profit counts |
 | [Starter Story homepage](https://www.starterstory.com/) | First-party live display | 2,997+ project claim, category counts, and medians | Medium; platform-defined, overlapping, self-reported winner library |
-| [Ten public data pages](https://www.starterstory.com/data/micro-saas-ideas) | First-party public excerpt | 169 row occurrences, 133 unique records, 120 revenue fields | Medium for displayed rows; default-ordered, non-random, selected winners |
+| [All 40 public data pages](category-summary.csv) | First-party public excerpt; source URLs in CSV | 677 row occurrences, 349 unique projects, 292 revenue fields | Medium for displayed records; complete page-family coverage but default-ordered, non-random, selected winners |
 | [Starter Story terms](https://www.starterstory.com/terms) and [robots](https://www.starterstory.com/robots.txt) | First-party access boundary | Linkback and republication constraints; public crawl rules | High for the cutoff; terms can change |
 | [Eight case interviews](https://www.starterstory.com/stories/how-i-built-it-23k-month-micro-saas) | Founder interviews | Revenue, profit, margin, costs, churn, distribution, and build details | Medium; self-reported, different dates, not audited |
 | [Official product sites](https://datafetcher.com/) | First-party product pages | Selected products still had a public offer at the cutoff | High for availability; no independent financial verification |
@@ -179,6 +213,6 @@ Additional current product checks: [Profit AI](https://tryprofit.ai/), [Formula 
 
 ## Final judgment
 
-The expanded evidence changes the strength, not the direction, of the conclusion. Starter Story is large enough to show that many online business shapes have reported revenue. Its public excerpt contains 133 unique projects and a $38.5K displayed monthly-revenue median among 120 revenue-known records, but that number belongs to a curated winner set.
+The expanded evidence changes both the sample size and the reported center. Starter Story is large enough to show that many online business shapes have reported revenue. Its 40-page public excerpt contains 349 unique projects and a $30K displayed monthly-revenue median among 292 revenue-known records. The median is 25% below the comparable ten-page subset, demonstrating that a handpicked category subset can materially change the answer.
 
-Profit remains the limiting field. In the eight audited online-software cases, five provide any profit evidence and only three disclose a margin. The best-supported fully online shape in this report is therefore not the category with the largest displayed median; it is the case with the most complete evidence: Data Fetcher, a narrow platform workflow tool with revenue, paid accounts, named costs, and a stated margin. That is an existence result, not a recommendation or success-rate estimate.
+Profit remains the limiting field. In the eight audited online-software cases, five provide any profit evidence and only three disclose a margin. Data Fetcher remains the most complete fully online case because it combines revenue, paid accounts, named costs, and a stated margin. The larger excerpt strengthens the existence claim for many online business shapes; it still cannot rank their success odds, current profit, or suitability for a particular founder.
