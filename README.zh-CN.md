@@ -14,8 +14,8 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
   总报告：解释商品盈利结构、平台差异、独立游戏的渠道经济性，以及为何现有证据不能推出普遍盈利结论。
 - [独立游戏众筹适配](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
   游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、反复出现的适配信号与平台证据差异。
-- [赚钱的线上项目](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
-  全部 40 个公开数据页得到 349 个去重项目和经过敏感性检验的收入分布，再以 8 个深审案例区分收入、利润证据与线上交付结构。
+- [Starter Story 线上项目研究](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
+  40 个公开数据页包含 349 个去重项目，页面月收入中位数为 3 万美元；8 个案例核查补充分类页面缺失的利润与经营证据。
 - [传统内容平台](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)
   知乎 2025 年收入同比下降 23.6%，经营费用相当于毛利润的 130.8%。报告用数据检验豆瓣、知乎和简书的替代与周边产品假设，不预设答案。
 

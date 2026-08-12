@@ -1,27 +1,27 @@
-# Online projects that make money
+# Starter Story online business study
 
-**Subtitle:** All 40 public data pages, 349 deduplicated projects, and eight audited cases separate displayed revenue from profit evidence and build complexity.
+**Subtitle:** Across 40 public data pages, 349 deduplicated projects had a displayed monthly-revenue median of $30K; selected success cases, sparse profit data, and a missing denominator for failed attempts prevent these figures from estimating startup success rates.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/starter-story-vibe-coding-businesses/index.html) · [中文 HTML](../../site/starter-story-vibe-coding-businesses/index.zh-CN.html)
 
 > Research cutoff: 2026-08-12 (China Standard Time)<br>
 > Geography: global, English-language businesses visible on Starter Story<br>
 > Question: which visible business patterns report meaningful revenue, and which delivery structures are compatible with a fully online, AI-assisted development workflow?<br>
-> Excluded from the technical-fit audit: inventory-led commerce, local delivery, regulated products, and businesses whose revenue mainly scales with human labor.
+> Excluded from the technical-fit case review: inventory-led commerce, local delivery, regulated products, and businesses whose revenue mainly scales with human labor.
 
 ## Research context
 
-- **Background:** Starter Story collects businesses that already report revenue. It is useful for observing monetized patterns, but it is not a registry of all attempts.
-- **Purpose:** Separate three questions that are often mixed together: what the platform displays, what its public records say about revenue and profit, and what can actually be delivered as online software.
-- **Main sources:** Starter Story's live sitemap and homepage, all 40 sitemap-listed public data pages, direct founder interviews, current official product sites, the recalculated [`analysis.csv`](analysis.csv), and the 40-page aggregate [`category-summary.csv`](category-summary.csv).
+- **Background:** Starter Story is a case library centered on businesses that report revenue. It can show which business forms and revenue records are publicly displayed, but it does not represent all startup attempts.
+- **Purpose:** This report examines three questions: what revenue distribution appears in the public pages; how much profit evidence is available; and which business structures can be delivered entirely online and are technically compatible with AI-assisted development.
+- **Main sources:** Starter Story's live sitemap and homepage, all 40 sitemap-listed public data pages, eight founder interviews, current product sites, the recalculated [`analysis.csv`](analysis.csv), and the 40-page aggregate [`category-summary.csv`](category-summary.csv).
 
-## One-page answer
+## Key findings
 
 ### The platform is large; the public evidence is still selected
 
 The live sitemap contained **19,122 URLs**, including **3,264 story URLs**, **477 business URLs**, and **40 data-category pages**. The homepage described the database as **2,997+ revenue-generating projects**. The first set is a URL inventory and the second is a platform claim; neither is a denominator for attempted startups.
 
-### The public excerpt now covers every sitemap-listed data page
+### The public data-page family contains 349 deduplicated projects
 
 All 40 public data pages exposed **677 public row occurrences**. Thirty-nine pages contributed parseable records; one page exposed none in its logged-out view. Deduplication by domain or record URL left **349 projects**; **292** had a parseable displayed monthly-revenue value.
 
@@ -43,11 +43,11 @@ Cross-category duplication accounted for **328 / 677 row occurrences (48.4%)**. 
 
 The category system is therefore useful for finding cases, but unsafe for adding counts, estimating market share, or treating a category median as a pure business-model median.
 
-### More pages changed the estimate, not just the sample size
+### The estimates are sensitive to page selection
 
-Reprocessing the original ten question-relevant pages with the same parser produced **148 unique projects**, **127 revenue-known records**, and a **$40K/month** median. Expanding to all 40 pages increased the unique excerpt by **135.8%** and revenue-known records by **129.9%**, while lowering the displayed median by **25%**, to $30K/month. The duplicate-row rate rose from **21.3% to 48.4%**.
+To test whether page selection changes the result, the report uses two comparable scopes: a ten-page thematic subset directly related to online software, and all 40 sitemap-listed public data pages. Under the same parsing and deduplication rules, the ten-page subset contains **148 unique projects**, **127 revenue-known records**, and a **$40K/month** median; the 40-page family contains 349 unique projects, 292 revenue-known records, and a $30K/month median.
 
-This sensitivity check is the clearest reason not to present the original ten-page subset as a platform-wide result.
+Relative to the ten-page subset, the 40-page family contains **135.8%** more unique projects and **129.9%** more revenue-known records, while its displayed median is **25%** lower and its duplicate-row rate rises from **21.3% to 48.4%**. This sensitivity test shows that page selection materially affects the center of the distribution; a thematic subset should not be presented as the complete public page family.
 
 ### Starter Story's Solopreneur Score is not a revenue forecast
 
@@ -65,17 +65,17 @@ To ask a narrower online-build question without hand-classifying individual comp
 | Low-complexity delivery | 7 | 90 | 73 | $6K / $19.4K / $50K | 72.7 |
 | Coordination or labor-heavy online delivery | 2 | 47 | 47 | $22K / $50K / $200K | 60.0 |
 
-The low-complexity proxy still contains **15 / 73 revenue-known projects at or above $100K/month**, so “simple to build” is not the same as “small revenue.” At the same time, its median is below the coordination/labor proxy, whose work may be harder to automate. Seven projects belong to both the software-delivery and coordination/labor unions. These are descriptive winner excerpts, not success rates, profit comparisons, or mutually exclusive model bins.
+The low-complexity proxy contains **15 / 73 revenue-known projects at or above $100K/month**, showing that lower implementation complexity and high displayed revenue can coexist. Its median remains below the coordination or labor-heavy proxy, which usually includes more work that is difficult to automate. Seven projects belong to both the software-delivery and coordination/labor unions, so these results describe selected successful projects rather than success rates, profit comparisons, or mutually exclusive models.
 
 ### Revenue is much more visible than profit
 
-The eight audited online-software cases have a **$23K reported monthly-revenue median**. Five provide some profit evidence, but only three disclose a margin. The broad excerpt can describe displayed revenue; it cannot repair the missing profit denominator.
+The eight reviewed online-software cases have a **$23K reported monthly-revenue median**. Five provide some profit evidence, but only three disclose a margin. The 40-page public sample can describe displayed revenue; it cannot supply the missing profit data.
 
-### Fully online delivery exists; “vibe coding” covers only the build layer
+### Online software can be fully delivered; AI assistance covers only implementation
 
-The audited cases establish that platform workflow tools, one-job generators, mobile utilities, AI wrappers, APIs, and plugins can be delivered as online software. Standard UI, database, payment, and API work is compatible with AI-assisted development.
+The case evidence shows that platform workflow tools, one-job generators, mobile utilities, applications built on model APIs, API products, and plugins can be delivered as online software. Standard interface, database, payment, and external API work is compatible with AI-assisted development and may reduce some first-version implementation effort.
 
-The same cases show that code is not the whole business. Distribution, retention, model cost, platform fees, parsing accuracy, security, and support often determine whether reported revenue becomes durable profit. Marketplaces and productized services can be online while still depending on two-sided liquidity or human delivery.
+Technical implementation is only one part of the operating model. Distribution, retention, model cost, platform fees, parsing accuracy, security, and support affect whether displayed revenue becomes durable profit. Marketplaces and productized services can also operate online while remaining dependent on two-sided liquidity or human delivery.
 
 ## Data summary: read the denominator first
 
@@ -83,7 +83,7 @@ The same cases show that code is not the whole business. Distribution, retention
 |---|---:|---:|---|---|
 | Sitemap inventory | 3,264 story URLs / 19,122 total URLs | 17.1% | The site contains thousands of story pages | A count of profitable or current businesses |
 | Public data-page coverage | 40 / 40 sitemap-listed pages | 100% of this page family | Every public collection page was checked | Coverage of all Starter Story projects |
-| Public category excerpt | 677 rows − 328 duplicates | 349 unique projects | A substantially larger observable cross-section | A random or representative platform sample |
+| Public category excerpt | 677 rows − 328 duplicates | 349 unique projects | The observable cross-section of the public data-page family | A random or representative platform sample |
 | Revenue coverage | 292 / 349 | 83.7% | Most public excerpt projects expose a monthly-revenue field | Audited, current, or net revenue |
 | Revenue distribution | 292 revenue-known projects | $9K / $30K / $113.5K P25 / median / P75 | The displayed winner distribution is wide and right-skewed | Expected income for a new project |
 | Cross-category overlap | 128 / 349 unique projects | 36.7% | Labels frequently describe the same business | Mutually exclusive model comparisons |
@@ -100,13 +100,13 @@ The analysis uses five layers:
 2. **Platform aggregates:** the homepage supplies the platform's project claim and the counts and medians of 26 data-page cards visible there.
 3. **Public data-page census:** the sitemap identifies all 40 public `/data/` pages; 39 contribute logged-out record cards and one contributes none.
 4. **Deduplicated excerpt, score, and proxy analysis:** domains or record URLs collapse 677 page appearances into 349 projects; revenue, page membership, Solopreneur Score, and three disclosed page-label unions are analyzed only where present.
-5. **Case audit:** eight online-software interviews and two counterexamples supply cost, margin, churn, labor, and distribution context.
+5. **Case review:** eight online-software interviews and two counterexamples supply cost, margin, churn, labor, and distribution context.
 
 All 40 page-level aggregates are in [`category-summary.csv`](category-summary.csv). This is a census of a public page family, not a census of businesses: each page is curated, pages overlap, and their logged-out record cards are default-ordered.
 
 ### Collection boundary
 
-The expanded collection used **42 GET requests**: one compressed sitemap, one homepage, and 40 data pages. Requests were single-threaded with a six-second interval and an identifying research user agent. There was no login, pagination guessing, retry loop, or bypass of access controls. No 403, 429, or challenge response occurred. After the live pass, all parser corrections and statistics were replayed from the local cache without additional requests.
+The public-page collection used **42 GET requests**: one compressed sitemap, one homepage, and 40 data pages. Requests were single-threaded with a six-second interval and an identifying research user agent. There was no login, pagination guessing, retry loop, or bypass of access controls. No 403, 429, or challenge response occurred. Parsing and statistics were recalculated from the local cache without additional requests.
 
 Starter Story's [robots file](https://www.starterstory.com/robots.txt) allows the public site except `/admin`. Its [terms](https://www.starterstory.com/terms) require a link back when data are used and restrict republication. This report therefore publishes aggregate calculations and direct links only; the row-level extraction remains local and is not part of the public repository.
 
@@ -168,7 +168,7 @@ The displayed median and excerpt median use different denominators. The first co
 
 Two counterexamples keep the interpretation bounded. [DealA](https://www.starterstory.com/stories/deala) reported more than $250K invested for roughly $2K monthly profit and negative ROI. [Antropy](https://www.starterstory.com/stories/antropy) reported a record monthly profit above £30K, but with a five-person agency team. Both are online; neither shows that a small codebase produces a low-labor asset.
 
-## 4. Which structures fit fully online, AI-assisted delivery
+## 4. Business structures compatible with fully online, AI-assisted delivery
 
 | Business structure | Observed evidence | Build layer | Dominant evidence gap outside the build |
 |---|---|---|---|
@@ -183,15 +183,15 @@ Two counterexamples keep the interpretation bounded. [DealA](https://www.starter
 
 The data support a narrow technical conclusion: AI-assisted tools can reduce the effort needed to produce a first version of several online software shapes. They do not show that AI improves demand, retention, reliability, or profit.
 
-## 5. What the evidence does not establish
+## 5. Evidence boundaries
 
 | Missing evidence | Why it changes the reading |
 |---|---|
 | Failed-project denominator | A library of revenue-generating projects cannot estimate the probability that an attempt reaches the displayed scale |
 | Random sampling | Default public rows are curated and ordered by the platform; their percentiles are descriptive only |
-| Current audited profit | Founder interviews use different dates and definitions; only 3 of 8 audited cases disclose a margin |
+| Current verifiable profit | Founder interviews use different dates and definitions; only 3 of 8 reviewed cases disclose a margin |
 | Mutually exclusive categories | 36.7% of unique excerpt projects appear on multiple data pages; 328 of 677 row occurrences are duplicate project appearances |
-| Stable category ranking | Expanding from ten selected pages to all 40 lowered the displayed median from $40K to $30K and more than doubled the unique excerpt |
+| Stable category ranking | The ten-page thematic subset and 40-page family have medians of $40K and $30K respectively, showing that page selection changes the result |
 | Revenue-predictive solo score | The score/log-revenue correlation is only −0.189 in this selected excerpt, and score-band medians are non-monotonic |
 | Founder labor and support | Revenue rarely includes unpaid founder time, exception handling, maintenance, or customer support |
 | Causal effect of AI coding | Cases show coexistence between AI use and shipped products, not the effect of AI on revenue or quality |
@@ -211,8 +211,8 @@ The data support a narrow technical conclusion: AI-assisted tools can reduce the
 
 Additional current product checks: [Profit AI](https://tryprofit.ai/), [Formula Bot](https://www.formulabot.com/), [SiteGPT](https://sitegpt.ai/), [Bank Statement Converter](https://bankstatementconverter.com/), [Supergrow](https://www.supergrow.ai/), and [ChartDetector](https://chartdetectorai.com/).
 
-## Final judgment
+## Conclusion
 
-The expanded evidence changes both the sample size and the reported center. Starter Story is large enough to show that many online business shapes have reported revenue. Its 40-page public excerpt contains 349 unique projects and a $30K displayed monthly-revenue median among 292 revenue-known records. The median is 25% below the comparable ten-page subset, demonstrating that a handpicked category subset can materially change the answer.
+Starter Story's public pages show that several online business forms have reported substantial revenue. The 40 data pages contain 349 deduplicated projects; among the 292 with a revenue field, the displayed monthly-revenue median is $30K. As a robustness test, the ten-page thematic subset has a $40K median; the full-page-family median is 25% lower, showing that page selection materially affects the result.
 
-Profit remains the limiting field. In the eight audited online-software cases, five provide any profit evidence and only three disclose a margin. Data Fetcher remains the most complete fully online case because it combines revenue, paid accounts, named costs, and a stated margin. The larger excerpt strengthens the existence claim for many online business shapes; it still cannot rank their success odds, current profit, or suitability for a particular founder.
+Profit is the main evidence gap. Of the eight reviewed online-software cases, five provide some profit evidence and only three disclose a margin; Data Fetcher offers the most complete evidence because it combines revenue, paid accounts, named costs, and a stated margin. The available data support the descriptive conclusion that multiple online business forms have generated revenue, but they do not support comparisons of success probability, current net profit, or suitability for a particular operator.

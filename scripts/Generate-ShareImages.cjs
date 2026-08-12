@@ -94,17 +94,17 @@ const cards = [
     mark: 'VC',
     index: 'RESEARCH / 03',
     eyebrow: 'ONLINE BUSINESS PATTERNS · 2026',
-    title: 'Online projects\nthat make money',
-    note: 'Profit evidence · Pure online · AI-assisted build'
+    title: 'Starter Story\nonline business study',
+    note: 'Revenue distribution · Profit evidence · Online delivery'
   },
   {
     file: 'starter-story-vibe-coding-zh-CN.png',
     lang: 'zh-CN',
-    mark: '赚',
+    mark: '数',
     index: '专题 / 03',
     eyebrow: '线上商业模式 · 2026',
-    title: '赚钱的\n线上项目',
-    note: '利润证据 · 纯线上 · AI 辅助开发'
+    title: 'Starter Story\n线上项目研究',
+    note: '收入分布 · 利润证据 · 线上交付结构'
   },
   {
     file: 'old-web-new-wedges-en.png',

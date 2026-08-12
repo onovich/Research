@@ -29,6 +29,7 @@ Research requirements
 Required outputs
 - A reviewable Markdown research source containing a short opening context block, scope, method, findings, evidence, limitations, implications or unresolved questions where relevant, and direct sources.
 - The opening context block must state, in plain language, the research background, the specific answer sought, and the main source groups.
+- Write every report or revised edition as a standalone current publication for a first-time reader. Do not assume access to a prior version, conversation, sample, parser, or editorial history.
 - index.html as the English `x-default` report with its own canonical URL.
 - index.zh-CN.html as the Simplified-Chinese equivalent.
 - A top language switch on both pages.
@@ -47,6 +48,8 @@ HTML quality contract
 - Support 320–1440px layouts, keyboard use, reduced motion, dim mode, print, and deep links.
 - Keep citations near the claims they support and preserve research caveats in both languages.
 - Write findings in a plain data-insight cadence: result first; number, baseline, period, and denominator next; bounded interpretation after that; material limitation last. Use this as a structural tone benchmark only and do not copy another publication's wording.
+- Use a measured institutional report register. Prefer neutral analytical verbs, finding-led headings, and precise labels such as displayed, self-reported, recalculated, estimated, audited, and verified. Use “case review” rather than “audit” unless a formal audit occurred.
+- Remove release-note and backward-reference language such as “previous version,” “original sample,” “expanded,” “now covers,” and “corrected parser,” together with equivalent Chinese phrases. When two scopes matter, define both in the current edition and present the comparison as a sensitivity, robustness, or coverage test.
 - Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
 - Treat the intended audience as a reader, not as the presumed builder or operator of a project. Never add validation plans, project briefs, implementation roadmaps, action scorecards, recommended build sequences, or generic next steps to the research report.
 - If advice is explicitly requested, produce it as a separate companion artifact. Label inference and value judgments, and state the evidence gaps that could change it.
@@ -56,6 +59,7 @@ HTML quality contract
 Validation and handoff
 - Run the repository's validation script when present.
 - Check both locale pages for parity, local asset paths, duplicate IDs, broken anchors, console errors, responsive overflow, and interactive outputs.
+- Check that a first-time reader can understand every conclusion and comparison without another edition, and scan both locales for conversational, promotional, self-referential, or release-note language.
 - Build the Pages artifact from an explicit reader-facing allowlist and verify repository docs, notebooks, skills, scripts, templates, hidden files, and local configuration are absent.
 - Scan tracked content, the generated artifact, and reachable history when sanitizing an existing public repository for credentials, emails, account identifiers, local paths, private URLs, and operational files.
 - Review the exact diff and include only task-scoped files.

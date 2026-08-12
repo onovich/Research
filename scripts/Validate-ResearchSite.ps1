@@ -103,6 +103,7 @@ $requiredFiles = @(
   ".agents/skills/research-to-html/evals/trigger-cases.json",
   ".agents/skills/research-to-html/references/master-prompt.md",
   ".agents/skills/research-to-html/references/research-protocol.md",
+  ".agents/skills/research-to-html/references/industry-report-writing.md",
   ".agents/skills/research-to-html/references/html-contract.md",
   ".agents/skills/research-to-github-pages/SKILL.md",
   ".agents/skills/research-to-github-pages/agents/openai.yaml",

@@ -57,6 +57,10 @@ If the repository has no separated public source tree, colocating the Markdown a
 5. Give the judgment before supporting detail in every section.
 6. Keep the research cutoff and limitations visible.
 
+Every locale page must be a standalone current edition. Do not use the hero, headings, section intros, captions, callouts, or metadata to narrate an earlier version, expanded collection, corrected parser, or what the reader supposedly saw before. If two sample scopes are analytically relevant, define both on the page and label the comparison as a sensitivity, robustness, or coverage test.
+
+Use an institutional report register in visible prose and metadata. Prefer finding-led headings and neutral evidence verbs. Avoid conversational questions whose answers are already known, promotional claims, rhetorical devices, release-note language, and “audit” unless a formal audit occurred.
+
 Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
 
 For data-bearing reports, include at least one data-insight block with:
@@ -107,6 +111,8 @@ Check at minimum:
 - unique titles and descriptions, absolute canonical and reciprocal `hreflang`, social metadata, valid JSON-LD, and sitemap parity;
 - matching key figures, dates, sources, and interactive thresholds;
 - matching numerators, denominators, formulas, units, comparison periods, and derived results;
+- first-read independence: no conclusion or comparison depends on a prior version, conversation, or undocumented sample;
+- institutional register: no casual, promotional, adversarial, or release-note language in either locale;
 - every brief-layer conclusion is supported nearby or explicitly labeled as inference;
 - JavaScript syntax and zero runtime exceptions;
 - 320, 375, 768, 1024, and 1440px layouts;

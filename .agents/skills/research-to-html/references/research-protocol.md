@@ -132,6 +132,17 @@ Use [Our World in Data's Data Insights structure](https://ourworldindata.org/lau
 
 Keep paragraphs to one idea and usually two to four sentences. Prefer plain verbs and concrete nouns. Remove slogans, metaphors, moral judgments, and generic advice from evidence sections. Do not copy a benchmark publication's sentences, examples, or distinctive phrasing.
 
+### Standalone edition and institutional register
+
+Read [industry-report-writing.md](industry-report-writing.md) before drafting or revising reader-facing prose.
+
+- Write every edition for a first-time reader. The title, subtitle, context, method, findings, and limits must be internally complete.
+- Do not refer to an earlier report, sample, parser, request, conversation, or editorial process unless change over time is the research question.
+- Convert narrow-versus-broad sample comparisons into a current sensitivity, robustness, or coverage test that defines both scopes.
+- Put revision history in Git, a changelog, or an update note outside the analytical narrative.
+- Use neutral institutional language. Replace promotional or casual claims with a measured observation, denominator, bounded interpretation, and limit.
+- Do not call a case review, founder interview, or page check an audit unless it meets a formal audit standard.
+
 ### Reader and recommendation boundary
 
 - Treat the audience role as reading context, not proof that the reader intends to build, buy, launch, or operate anything.
@@ -144,7 +155,7 @@ Keep paragraphs to one idea and usually two to four sentences. Prefer plain verb
 
 Use a Markdown structure that can stand alone:
 
-1. title and subtitle;
+1. concise topic title and an evidence-bounded central finding as subtitle;
 2. a short research-context block: background, specific answer sought, and main source groups;
 3. cutoff, scope, operational definitions, and method;
 4. one-page conclusion;
@@ -158,6 +169,8 @@ Use a Markdown structure that can stand alone:
 Recommendations or action plans are separate companion artifacts only when the user explicitly requests them. They must remain outside the research report and are never required to make it feel complete.
 
 Place citations near figures and claims. Mark self-reported facts and researcher inference. Do not enter visual design until the research source is reviewed.
+
+Before approving the source, search both locales for backward references and release-note language. A direct visitor must not need a previous edition to understand any comparison.
 
 ## 6. Privacy and reuse
 
