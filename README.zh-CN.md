@@ -11,9 +11,9 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
 ## 研究报告
 
 - [众筹商品与独立游戏](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html) · [English](https://research.onovich.com/crowdfunding-and-indie-games-research/)
-  总报告：解释商品盈利结构、平台差异、独立游戏的渠道经济性，以及为何现有证据不能推出普遍盈利结论。
+  比较商品盈利结构、平台差异、独立游戏的渠道经济性，以及众筹仍可能提供资金或宣发价值的条件。
 - [独立游戏众筹适配](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
-  游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、反复出现的适配信号与平台证据差异。
+  对照七类受众与玩法模式、当下平台截面、已发售项目、案例共享特征与失败风险。
 - [Starter Story 线上项目研究](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
   从 349 个公开项目中，看哪些线上生意收入更高，哪些产品更适合小团队借助 AI 完成。
 - [传统内容平台](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)

@@ -33,7 +33,7 @@ The narrower opportunity question is whether one job—object curation, private-
 
 ## Let the data speak first
 
-| Metric | Public input | Recalculated result | What it shows | What it does not show |
+| Metric | Public figures | Calculated result | What it shows | What it does not show |
 |---|---:|---:|---|---|
 | Zhihu total revenue | RMB 3.5989B in 2024; RMB 2.7490B in 2025 | **-23.6%** | The business contracted | It does not identify product, competition, or macro causes |
 | Paid-membership revenue | RMB 1.7620B → 1.5389B | **-12.7%**; **56.0%** of 2025 revenue | Membership remains the largest revenue line, but declined | It does not reveal satisfaction or renewal rate |
@@ -41,11 +41,10 @@ The narrower opportunity question is whether one job—object curation, private-
 | Operating expenses | RMB 2.1550B; gross profit RMB 1.6477B | Operating expense / gross profit **130.8%** | Operating load exceeded gross profit | The filing does not allocate all expense to moderation or community work |
 | GAAP result | Net loss RMB 195.2M | Net margin **-7.1%** | Zhihu remained GAAP-loss-making in 2025 | Adjusted non-GAAP net income was RMB 37.9M; the measures are not interchangeable |
 | App Store cumulative ratings | Douban 1.59M; Zhihu 1.74M; Jianshu 87K | Douban / Jianshu **18.3×**; Zhihu / Jianshu **20.0×** | A current, observable relative-footprint signal | Ratings are cumulative, not MAU, revenue, or retention |
-| Audited operating-data coverage | Current public audited disclosure for Zhihu only | **1 / 3** platforms | Zhihu supports financial recalculation | Douban and Jianshu cannot be ranked on the same basis |
 
-All inputs, formulas, and scope notes are in [`analysis.csv`](analysis.csv).
+The supporting figures and calculation formulas are published in [`analysis.csv`](analysis.csv).
 
-## What value remains
+## Content stock, identity, and distribution remain the durable assets
 
 ### Douban: cultural memory and personal identity
 
@@ -69,7 +68,7 @@ Jianshu’s current iOS listing emphasizes long-form and serialized writing, per
 
 The weak evidence boundary matters: app-store availability and product features are observable, but current active users, creator earnings, retention, and platform profitability are unknown.
 
-## Why no clear one-for-one replacement has appeared
+## Content stock, operating load, and fragmented use raise replacement cost
 
 Public data do not directly measure the reason, so the following are evidence-backed mechanisms, not proven causal explanations.
 
@@ -92,7 +91,7 @@ Current sources show that people can publish and interact across multiple servic
 - which unbundled tool users would pay for, and at what price;
 - actual moderation, support, and compliance cost for a new public community in mainland China.
 
-## Opportunity hypotheses: add denominators before ranking
+## Adjacent opportunities are narrower than replacing an entire platform
 
 The platform data cannot support “strong / medium / weak” startup rankings. A defensible map states the observed basis and the decisive missing evidence for each hypothesis.
 
@@ -102,20 +101,20 @@ The platform data cannot support “strong / medium / weak” startup rankings. 
 | Private-community operations | A private space avoids part of the public-feed cold start and has a named administrator role | Admin pain, switching cost, and budget relative to existing group tools |
 | Creator-owned publishing | Jianshu's current publishing and membership features show that the publishing job still exists | Willingness to pay separately for ownership, export, and distribution |
 | Personal library / curation | Douban demonstrates long-lived recording, collecting, and object organization | Import permission, stand-alone utility, retention, and payment demand |
-| Moderation / reputation tooling | Zhihu's expense structure and regulations show recurring platform operations | Filings do not isolate moderation spend; buyer identity, budget, and workflow cost are unknown |
+| Moderation / reputation tooling | Zhihu's expense structure and regulations show ongoing platform operations | Filings do not isolate moderation spend; buyer identity, budget, and workflow cost are unknown |
 | Generic public UGC clone | No direct evidence shows users moving wholesale to a single successor | Supply, demand, governance, retention, and revenue denominators are all unknown |
 
-### Most narrowly supported opportunity profile
+### Vertical object networks preserve a core incumbent value
 
-Among the hypotheses, a vertical object-and-work graph has the clearest continuity with the incumbents' observed value: named objects, structured comparisons, trusted contributors, and recurring work. Possible domains include specialist software, components, venues, grants, competitions, courses, research methods, or production vendors. Public evidence does not establish the required corpus size, contributor count, retention, price, or whether private collaboration is sufficient to support a business.
+This hypothesis follows directly from an observed incumbent value: named objects, structured comparisons, trusted contributors, and work that users repeat. Possible domains include specialist software, components, venues, grants, competitions, courses, research methods, or production vendors. Public evidence does not establish the required corpus size, contributor count, retention, price, or whether private collaboration is sufficient to support a business.
 
-## What vibe coding changes—and what it does not
+## AI lowers software production cost, not migration or governance cost
 
 AI-assisted development can compress:
 
 - CRUD, authentication, profiles, search interfaces, payments, notifications, and moderation queues;
 - import/export, admin tools, data normalization, and analytics prototypes;
-- fast experiments for one vertical and one cohort.
+- bounded vertical prototypes and small-group workflows.
 
 It does not create:
 
@@ -125,7 +124,7 @@ It does not create:
 - production security, privacy, moderation judgment, and legal compliance;
 - a reason for users to abandon years of history elsewhere.
 
-## Evidence boundary and unknowns
+## What remains unknown
 
 - Douban does not publish current audited audience or financial figures in the reviewed sources.
 - Jianshu’s current scale, retention, creator earnings, and profitability remain unknown.
@@ -134,7 +133,7 @@ It does not create:
 - The opportunity table is a set of hypotheses, not startup success probabilities or a ranking derived from comparable samples.
 - Demand, willingness to pay, retention, contributor acquisition, moderation labor, and support cost have not been measured for any proposed replacement wedge.
 - The reviewed sources do not establish whether a stand-alone private tool can overcome the distribution advantage of public incumbents.
-- Regulatory requirements vary by service design, audience, content, and deployment. Obtain qualified advice before launching a public UGC or AI-content service.
+- Regulatory requirements vary by service design, audience, content, and deployment. Specific applicability requires qualified legal assessment and remains outside this report.
 
 ## Sources
 

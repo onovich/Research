@@ -4,8 +4,6 @@
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/crowdfunding-and-indie-games-research/index.html) · [中文 HTML](../../site/crowdfunding-and-indie-games-research/index.zh-CN.html)
 
-> Page role: pillar report. It evaluates crowdfunding economics across product categories, then places independent games inside that wider market framework. The [indie-game companion report](../indie-game-crowdfunding-genres-and-gameplay/README.md) goes deeper on game genres and gameplay structures.
->
 > Research cutoff: 2026-08-10 (China Standard Time)<br>
 > Scope: reward crowdfunding and product-launch preorders; equity, lending, and donation crowdfunding are excluded.<br>
 > Definition: a public campaign page normally establishes pledged volume, not net profit. Funding, fulfillment, and commercial profit are treated separately.
@@ -13,28 +11,24 @@
 ## Research context
 
 - **Background:** Crowdfunding leaderboards make gross pledges easy to see, while the costs that determine profit and delivery are usually private. Independent-game coverage also mixes current platform activity with a small set of famous winners.
-- **Purpose:** Identify which product structures have the strongest public evidence of viable crowdfunding economics, and determine what current evidence says about crowdfunding's funding and promotional value for independent games.
+- **Purpose:** Identify which product structures have credible public evidence of viable crowdfunding economics, and determine what current evidence says about crowdfunding's funding and promotional value for independent games.
 - **Main sources:** Kickstarter platform statistics and rules, Gamefound and BackerKit documentation, current Modian and Taobao launch pages, direct campaign records, fulfillment guidance, and Steamworks documentation.
 
 ## One-page conclusion
 
-1. **The strongest product pattern is an existing audience + visible differentiation + enough order value and contribution margin + light fulfillment or a mature supply chain.** Creator/IP publishing and collectibles, tabletop/TTRPG/cards, small fan goods, and high-ticket design tools from experienced teams show this structure most clearly in the selected evidence.
-2. **Independent games still appear in successful crowdfunding, but the evidence does not support crowdfunding as a universal launch path.** It can convert existing interest into funding, core users, and a marketing event; it rarely creates an audience from nothing.
+1. **The selected evidence most clearly supports an existing audience + visible differentiation + enough order value and contribution margin + light fulfillment or a mature supply chain.** Creator/IP publishing and collectibles, tabletop/TTRPG/cards, small fan goods, and high-ticket design tools from experienced teams illustrate this structure.
+2. **Independent games still appear in successful crowdfunding, but the evidence does not support crowdfunding as a universal launch path.** It can convert existing interest into funding, core users, and a marketing event; the reviewed evidence does not show that it creates an audience from nothing.
 3. **High pledges are not proof of profit or delivery.** Manufacturing, acquisition, refund, tax, freight, support, warranty, and labor are usually missing from public campaign totals.
 
-Game genres, mechanics, released cases, failure patterns, and platform differences are maintained only in the [indie-game companion report](../indie-game-crowdfunding-genres-and-gameplay/README.md), so this pillar report can stay focused on channel economics.
+The separate [game-specific study](../indie-game-crowdfunding-genres-and-gameplay/README.md) compares genres, mechanics, released cases, failure patterns, and platform differences in greater detail.
 
-## 1. Questions and method
+## 1. Scope and evidence limits
 
-This study asks:
-
-- Which product structures can plausibly make money on major Chinese and international crowdfunding platforms?
-- Does crowdfunding still offer a funding or marketing advantage to independent video games?
-- Which evidence gaps prevent public campaign data from establishing project-level profit, delivery, or incremental promotion?
+The report compares product structures on major Chinese and international reward-crowdfunding platforms, then examines whether current public evidence supports a funding or promotional advantage for independent games. Funding, delivery, profit, and incremental promotion are kept as separate outcomes.
 
 Primary evidence includes platform statistics, fee and eligibility documentation, direct campaign pages, fulfillment guidance, and Steamworks documentation. Platform marketing claims are treated as self-reported. Live rankings are cutoff snapshots rather than annual market-share estimates.
 
-### Main limits
+### What public totals leave unknown
 
 - Platforms do not publish a project-level net-profit database.
 - Public pledges omit many campaign and fulfillment costs.
@@ -80,7 +74,7 @@ A practical article published by Kickstarter and written by Jellop reports plann
 
 Kickstarter reported 6,646 tabletop projects launched in 2024, with 5,314 successful campaigns—about an 80% success rate—and roughly $220 million pledged to successful tabletop projects. This shows channel fit, not automatic profit. [Official 2024 Games data](https://updates.kickstarter.com/kickstarter-biggest-platform-for-games/)
 
-Large hardware campaigns reinforce the experience effect:
+Three large hardware campaigns illustrate how experience appears in the selected cases:
 
 - [EufyMake E1](https://updates.kickstarter.com/eufymakes-breaks-the-all-time-funding-record/) raised about $46.76 million from 17,822 backers; public figures still do not establish net profit.
 - [Peak Design](https://updates.kickstarter.com/peak-design-raises-13m-with-their-biggest-kickstarter-ever/) raised about $13 million from more than 23,000 backers in its 14th campaign.
@@ -123,21 +117,21 @@ Current platform evidence establishes that video-game crowdfunding remains activ
 | Marketing | Create launch, closing, and update events around an existing audience | Organic discovery for a project with no audience |
 | Independence | Avoid or reduce equity and publishing-right dilution | Freedom from public commitments, support, and update pressure |
 
-Across the selected cases, credible demos, reachable audiences, and bounded milestones recur more often than cold-start discovery. This is an observed pattern rather than a rule for every team. The companion report owns the detailed [genre and gameplay patterns, released cases, failure modes, and platform differences](../indie-game-crowdfunding-genres-and-gameplay/README.md).
+Across the selected cases, credible demos, reachable audiences, and bounded milestones appear together. The evidence does not measure how often cold-start discovery succeeds. The separate [game-specific study](../indie-game-crowdfunding-genres-and-gameplay/README.md) compares genre and gameplay patterns, released cases, failure modes, and platform differences.
 
 ## 6. Evidence gaps that still matter
 
 | Missing evidence | Why it matters | What the public record currently supports |
 |---|---|---|
 | Project-level net profit | Gross pledges can coexist with thin or negative margins | Fees and some fulfillment rules are public; complete cost stacks are not |
-| Comparable failed-project denominator | Winner lists cannot estimate category success probability | Kickstarter publishes some platform totals, but not a complete comparable cohort by product structure |
+| Comparable failed-project denominator | Winner lists cannot estimate category success probability | Kickstarter publishes some platform totals, but not a complete comparable group divided by product structure |
 | Incremental promotional effect | Visibility after a campaign may come from an audience that already existed | Campaign and Steam events show co-occurrence, not causal lift |
-| Full-cohort delivery state | Funding and shipment are separate outcomes | Delivery can be verified for selected cases, not for every campaign in the live lists |
+| Delivery state across all projects | Funding and shipment are separate outcomes | Delivery can be verified for selected cases, not for every campaign in the live lists |
 | Transferability to first-time teams | Famous creators and established IP lower trust costs | The selected evidence describes mechanisms, not the expected outcome for a new entrant |
 
 ## Final answer
 
-The strongest observed crowdfunding pattern combines a known audience, visible difference, enough order value and contribution margin, and controllable delivery. Independent games can benefit when crowdfunding converts evidence that already exists—a credible demo, specific audience, clear hook, and deliverable scope—into funding and a public marketing event. Public data do not show the net profit of individual projects or the promotional lift caused by crowdfunding, so these findings describe fit patterns rather than prescribe a launch sequence.
+The reviewed evidence supports an economic structure that combines a known audience, visible difference, enough order value and contribution margin, and controllable delivery. In the selected independent-game cases, crowdfunding converts evidence that already exists—a credible demo, specific audience, clear hook, and deliverable scope—into funding and a public marketing event. Public data do not show the net profit of individual projects or the promotional lift caused by crowdfunding, so these findings describe the selected cases rather than a universal outcome.
 
 ## Core sources
 

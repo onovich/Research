@@ -11,9 +11,9 @@ It covers exploratory questions, industry or platform overviews, pattern and mec
 ## Reports
 
 - [Crowdfunding products and indie games](https://research.onovich.com/crowdfunding-and-indie-games-research/) · [中文](https://research.onovich.com/crowdfunding-and-indie-games-research/index.zh-CN.html)
-  The pillar report: product profit structures, platform differences, indie-game channel economics, and the evidence gaps that prevent a universal profitability claim.
+  Compares product profit structures, platform differences, indie-game channel economics, and where crowdfunding still shows funding or promotional value.
 - [Indie game crowdfunding fit](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
-  The game-specific deep dive: current platform samples, seven audience/gameplay patterns, released cases, failure modes, recurring fit signals, and differences between platform evidence.
+  Compares seven audience and gameplay patterns, current platform snapshots, released campaigns, shared case properties, and failure risks.
 - [Starter Story online business study](https://research.onovich.com/starter-story-vibe-coding-businesses/) · [中文](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html)
   A study of 349 public projects: which online businesses report higher revenue, and which product types are more practical for small teams using AI.
 - [Traditional content platforms](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/) · [中文](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html)
