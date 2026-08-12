@@ -15,7 +15,7 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
 - [独立游戏众筹适配](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
   对照七类受众与玩法模式、当下平台截面、已发售项目、案例共享特征与失败风险。
 - [Starter Story 线上项目研究](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
-  从 349 个公开项目中，看哪些线上生意收入更高，哪些产品更适合小团队借助 AI 完成。
+  结合 349 个项目的收入研究和平台级产品形态统计，看哪些线上生意收入更高、经营负担有何不同。
 - [传统内容平台](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)
   知乎 2025 年收入同比下降 23.6%，经营费用相当于毛利润的 130.8%。报告用数据检验豆瓣、知乎和简书的替代与周边产品假设，不预设答案。
 

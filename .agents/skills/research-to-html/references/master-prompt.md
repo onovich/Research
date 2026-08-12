@@ -27,6 +27,7 @@ Research requirements
 10. Do not rank incompatible or overlapping samples. Label researcher judgment as inference and expose the rule used.
 11. Label each metric as population/frame, main observational sample, disclosure-only subgroup, or purposive illustrative cases. Never calculate prevalence, coverage, success rates, population medians, or `x / y` claims from purposively selected cases.
 12. If missing disclosure would inflate a subgroup rate, prefer a conservative lower bound over the main sample: keep unknowns in the denominator and write “at least.” Otherwise describe the subgroup separately in plain language.
+13. Label every taxonomy as exhaustive and mutually exclusive, overlapping multi-label, or illustrative. Do not present case-led patterns as the complete set of types in the main sample.
 
 Required outputs
 - A reviewable Markdown research source containing a short opening context block, scope, method, findings, evidence, limitations, implications or unresolved questions where relevant, and direct sources.
@@ -55,6 +56,7 @@ HTML quality contract
 - Use a plain professional register for an informed general reader. Prefer familiar words and natural sentences in titles, summaries, and headings; reserve technical language for the method and evidence layers. Use precise evidence labels such as displayed, self-reported, recalculated, estimated, audited, and verified. Use “case review” rather than “audit” unless a formal audit occurred.
 - Remove release-note and backward-reference language such as “previous version,” “original sample,” “expanded,” “now covers,” and “corrected parser,” together with equivalent Chinese phrases. When two scopes matter, define both in the current edition and present the comparison as a sensitivity, robustness, or coverage test.
 - Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
+- Use a pie or donut only for mutually exclusive categories that share one denominator and cover the intended whole. Use bars for overlapping labels, state the denominator and overlap nearby, and define unfamiliar category names with concrete evidence-backed examples.
 - Treat the intended audience as a reader, not as the presumed builder or operator of a project. Never add validation plans, project briefs, implementation roadmaps, action scorecards, recommended build sequences, or generic next steps to the research report.
 - If advice is explicitly requested, produce it as a separate companion artifact. Label inference and value judgments, and state the evidence gaps that could change it.
 - Add a unique title and description, absolute HTTPS canonical, reciprocal absolute hreflang for en / zh-CN / x-default, index/follow directive, Open Graph, Twitter Card, and valid JSON-LD to every indexable page.
@@ -64,6 +66,7 @@ Validation and handoff
 - Run the repository's validation script when present.
 - Check both locale pages for parity, local asset paths, duplicate IDs, broken anchors, console errors, responsive overflow, and interactive outputs.
 - Check that a first-time reader can understand every conclusion and comparison without another edition, and scan both locales for conversational, promotional, self-referential, or release-note language.
+- Cross-check every number in a heading, summary, caption, and callout against the actual rows or items it describes in both locales.
 - Build the Pages artifact from an explicit reader-facing allowlist and verify repository docs, notebooks, skills, scripts, templates, hidden files, and local configuration are absent.
 - Scan tracked content, the generated artifact, and reachable history when sanitizing an existing public repository for credentials, emails, account identifiers, local paths, private URLs, and operational files.
 - Review the exact diff and include only task-scoped files.

@@ -100,6 +100,16 @@ Before calculating or publishing a metric, label its evidence as one of four rol
 
 Do not move a denominator between roles. A purposive case set may explain mechanisms, ranges, and counterexamples; it must not produce a prevalence, coverage, success rate, population median, or `x / y` claim. If a filtered disclosure subgroup would inflate an apparent rate, calculate a conservative lower bound over the main sample by keeping unknown observations in the denominator and writing “at least.” If that transformation is not valid, describe the subgroup in plain language and keep its result separate from the main sample.
 
+### Taxonomy-role gate
+
+Before naming or counting types, label the taxonomy as one of three roles:
+
+1. exhaustive and mutually exclusive classification;
+2. overlapping multi-label grouping;
+3. illustrative patterns derived from selected cases.
+
+Only the first role can support a conventional share-of-whole chart. Multi-label counts may be divided by a common population to show label prevalence, but the resulting shares overlap and do not add to 100%. Illustrative patterns explain product forms and operating mechanisms; they are not a classification of the main sample. State the role plainly in the report and give unfamiliar labels a short definition plus evidence-backed examples.
+
 Minimum evidence for a data-bearing report:
 
 - three question-relevant raw measures;
@@ -114,6 +124,7 @@ Reject or relabel an analysis when:
 
 - a curated winner database is presented as a success probability;
 - overlapping category counts are added together;
+- an illustrative taxonomy is described as the complete set of types in the main sample;
 - a median is shown without its sample definition and denominator;
 - a current run rate is compared with a historical average without naming the mismatch;
 - a percentage omits its numerator or denominator;
@@ -121,6 +132,8 @@ Reject or relabel an analysis when:
 - a purposive case count is formatted as `x / y`, a percentage, “coverage,” or another prevalence-like statistic;
 - an opportunity ranking is mostly researcher preference;
 - a causal explanation has only evidence that two facts coexist.
+
+Use a pie or donut only when categories are mutually exclusive, share one denominator, and cover the intended whole. Prefer bars for overlapping labels, and show the shared denominator and overlap note beside the graphic.
 
 ### Sampling and collection boundary
 

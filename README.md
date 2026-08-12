@@ -15,7 +15,7 @@ It covers exploratory questions, industry or platform overviews, pattern and mec
 - [Indie game crowdfunding fit](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
   Compares seven audience and gameplay patterns, current platform snapshots, released campaigns, shared case properties, and failure risks.
 - [Starter Story online business study](https://research.onovich.com/starter-story-vibe-coding-businesses/) · [中文](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html)
-  A study of 349 public projects: which online businesses report higher revenue, and which product types are more practical for small teams using AI.
+  Combines a 349-project revenue study with platform-wide product-form statistics to show which online businesses report higher revenue and how their operating burdens differ.
 - [Traditional content platforms](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/) · [中文](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html)
   Zhihu's 2025 revenue fell 23.6% while operating expenses equaled 130.8% of gross profit. The report tests—not assumes—replacement and adjacent-product hypotheses for Douban, Zhihu, and Jianshu.
 

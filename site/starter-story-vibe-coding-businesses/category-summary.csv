@@ -1,11 +1,11 @@
-business_form,projects_in_platform_category,reported_monthly_revenue_median_usd,source_url
-Simple apps,241,20000,https://www.starterstory.com/data/apps-so-simple
-No-code SaaS and apps,314,30000,https://www.starterstory.com/data/no-code-ideas
-GPT wrappers,148,30000,https://www.starterstory.com/data/gpt-wrapper-ideas
-Plugins,19,30000,https://www.starterstory.com/data/plugins
-Micro-SaaS,670,40000,https://www.starterstory.com/data/micro-saas-ideas
-Solo developers,237,40000,https://www.starterstory.com/data/solo-developer-ideas
-Consumer iOS apps,79,40000,https://www.starterstory.com/data/consumer-ios-apps
-Productized services,549,40000,https://www.starterstory.com/data/productized-services
-APIs,54,80000,https://www.starterstory.com/data/1m-apis
-Marketplaces,285,200000,https://www.starterstory.com/data/marketplaces
+business_form,projects_in_platform_category,share_of_2997_displayed_projects_percent,reported_monthly_revenue_median_usd,source_url
+Micro-SaaS,670,22.4,40000,https://www.starterstory.com/data/micro-saas-ideas
+Productized services,549,18.3,40000,https://www.starterstory.com/data/productized-services
+Digital products,455,15.2,20000,https://www.starterstory.com/data/digital-product-ideas
+Marketplaces,286,9.5,200000,https://www.starterstory.com/data/marketplaces
+Niche blogs,254,8.5,10000,https://www.starterstory.com/data/niche-blog-ideas
+Simple apps,241,8.0,20000,https://www.starterstory.com/data/apps-so-simple
+GPT wrappers,149,5.0,30000,https://www.starterstory.com/data/gpt-wrapper-ideas
+Consumer iOS apps,79,2.6,40000,https://www.starterstory.com/data/consumer-ios-apps
+APIs,54,1.8,80000,https://www.starterstory.com/data/1m-apis
+Plugins,19,0.6,30000,https://www.starterstory.com/data/plugins

@@ -77,6 +77,8 @@ For data-bearing reports, include at least one data-insight block with:
 
 Do not use decorative charts. Do not encode meaning only in color. A ranking must expose its comparable inputs and rule; otherwise present it as a hypothesis or experiment backlog.
 
+Use pie and donut charts only for mutually exclusive categories with one shared denominator that cover the intended whole. For overlapping platform labels, use bars and state the denominator and overlap nearby. If a report publishes a list of types, identify whether it is exhaustive, overlapping, or illustrative; define unfamiliar labels and add evidence-backed examples where needed.
+
 ## Interaction boundary
 
 Allowed when useful:
@@ -116,6 +118,8 @@ Check at minimum:
 - matching key figures, dates, sources, and interactive thresholds;
 - matching numerators, denominators, formulas, units, comparison periods, and derived results;
 - matching sample roles: no disclosure subgroup or purposive case set is visually presented as the main sample;
+- matching taxonomy roles: no illustrative case pattern is presented as an exhaustive classification, and no overlapping labels are drawn as parts of one pie;
+- matching written counts: numbers in headings, summaries, captions, and callouts equal the actual rows or items beneath them in both locales;
 - no prevalence-like rates, medians, or coverage claims are calculated from deliberately selected cases;
 - no research-production diagnostics appear as commercial findings or headline evidence;
 - first-read independence: no conclusion or comparison depends on a prior version, conversation, or undocumented sample;
