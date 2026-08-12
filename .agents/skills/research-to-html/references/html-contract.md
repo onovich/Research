@@ -61,6 +61,8 @@ Every locale page must be a standalone current edition. Do not use the hero, hea
 
 Use a plain professional register in visible prose and metadata. Prefer familiar words, finding-led headings, and neutral evidence verbs. Do not confuse professional tone with bureaucratic compression. Avoid empty promotion, rhetorical devices, release-note language, and “audit” unless a formal audit occurred.
 
+In findings, analysis, comparisons, and callouts, make every heading state a reader-facing result rather than the research workflow. Proxy definitions, parsing steps, page-selection tests, calculations, and caveats belong in the supporting copy or the explicit method and limitations layers. If one of those conditions materially changes the result, put the measured change in the heading instead of naming the technique.
+
 Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
 
 For data-bearing reports, include at least one data-insight block with:
@@ -113,6 +115,7 @@ Check at minimum:
 - matching numerators, denominators, formulas, units, comparison periods, and derived results;
 - first-read independence: no conclusion or comparison depends on a prior version, conversation, or undocumented sample;
 - general-reader register: title, subtitle, lead, and headings sound natural when read aloud and do not resemble metadata, an academic abstract, or a compliance notice;
+- heading-only outline: analytical headings and callout titles, read without body text, communicate the report's main subject-matter findings rather than the research process;
 - every brief-layer conclusion is supported nearby or explicitly labeled as inference;
 - JavaScript syntax and zero runtime exceptions;
 - 320, 375, 768, 1024, and 1440px layouts;

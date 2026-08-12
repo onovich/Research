@@ -73,6 +73,18 @@ Avoid:
 - process narration, self-congratulation, and commentary on how much more work the current edition contains;
 - “audit” for founder interviews, page reviews, or researcher checks that are not formal audits.
 
+## Executive-heading test
+
+Read the report's analytical headings and callout titles without their body text. They should form a coherent summary of what the market, users, businesses, technology, or economics actually show.
+
+- State the measured result, relationship, contrast, or implication. Use a stable number in the heading when it makes the finding clearer.
+- Do not use an analytical headline to announce what the researcher did or what a technique permits. Phrases such as “the proxy supports comparison,” “the estimate is sensitive to page selection,” “public inputs allow recalculation,” and “the groups still overlap” belong in the supporting explanation.
+- If selection or overlap materially changes the result, headline the observable consequence: for example, “Including the full category set lowers the median from A to B” or “More than one-third of records appear in multiple categories.”
+- Keep proxy definitions, parser behavior, page selection, formula construction, and defensive caveats in methods, notes, or limitations. Method and limitations sections may use method-oriented headings because that is their stated purpose.
+- Reject headings that sound like a progress update, an apology, a complaint about the data, or a note to another researcher.
+
+The final heading-only outline should give a first-time reader the commercial or subject-matter story before they inspect the methodology.
+
 ## Evidence paragraph template
 
 ```text

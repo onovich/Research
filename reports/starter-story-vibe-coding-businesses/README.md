@@ -17,11 +17,11 @@
 
 ## Key findings
 
-### The platform is large; the public evidence is still selected
+### Starter Story spans thousands of stories, but its public data still centers on success cases
 
 The live sitemap contained **19,122 URLs**, including **3,264 story URLs**, **477 business URLs**, and **40 data-category pages**. The homepage described the database as **2,997+ revenue-generating projects**. The first set is a URL inventory and the second is a platform claim; neither is a denominator for attempted startups.
 
-### The public data-page family contains 349 deduplicated projects
+### Forty public category pages contain 349 distinct projects
 
 All 40 public data pages exposed **677 public row occurrences**. Thirty-nine pages contributed parseable records; one page exposed none in its logged-out view. Deduplication by domain or record URL left **349 projects**; **292** had a parseable displayed monthly-revenue value.
 
@@ -37,13 +37,13 @@ Among those 292 revenue-known records:
 
 These are distributions inside a logged-out, winner-only public excerpt. They describe what is displayed, not what a new project should expect to earn.
 
-### Category labels are discovery tags, not clean business-model bins
+### 36.7% of projects appear in more than one category
 
 Cross-category duplication accounted for **328 / 677 row occurrences (48.4%)**. **128 / 349 unique projects (36.7%)** appeared on more than one data page. A project appeared on **1.94 pages on average**; the median was one, the 75th percentile was two, and the maximum was twelve. Formula Bot and Starter Story itself each appeared under twelve labels; the “solo developer” page still included a physical beverage-container company.
 
 The category system is therefore useful for finding cases, but unsafe for adding counts, estimating market share, or treating a category median as a pure business-model median.
 
-### The estimates are sensitive to page selection
+### Expanding to all 40 public categories lowers the monthly-revenue median from $40K to $30K
 
 To test whether page selection changes the result, the report uses two comparable scopes: a ten-page thematic subset directly related to online software, and all 40 sitemap-listed public data pages. Under the same parsing and deduplication rules, the ten-page subset contains **148 unique projects**, **127 revenue-known records**, and a **$40K/month** median; the 40-page family contains 349 unique projects, 292 revenue-known records, and a $30K/month median.
 
@@ -55,7 +55,7 @@ The public excerpt contained a Solopreneur Score for **348 / 349 projects (99.7%
 
 Score bands were also non-monotonic: the displayed revenue medians were **$85K** below 60, **$35K** from 60–69.9, **$10.5K** from 70–79.9, and **$26K** at 80 or above. The score may describe solo-operability; this excerpt does not support using it to predict revenue.
 
-### Page memberships can form transparent delivery proxies—not verified categories
+### Simpler builds can reach high revenue, but their median is lower
 
 To ask a narrower online-build question without hand-classifying individual companies, the analysis formed three disclosed unions of page memberships. These groups still overlap and inherit the platform's editorial labels.
 
@@ -67,17 +67,17 @@ To ask a narrower online-build question without hand-classifying individual comp
 
 The low-complexity proxy contains **15 / 73 revenue-known projects at or above $100K/month**, showing that lower implementation complexity and high displayed revenue can coexist. Its median remains below the coordination or labor-heavy proxy, which usually includes more work that is difficult to automate. Seven projects belong to both the software-delivery and coordination/labor unions, so these results describe selected successful projects rather than success rates, profit comparisons, or mutually exclusive models.
 
-### Revenue is much more visible than profit
+### Only three of eight reviewed cases disclose a profit margin
 
 The eight reviewed online-software cases have a **$23K reported monthly-revenue median**. Five provide some profit evidence, but only three disclose a margin. The 40-page public sample can describe displayed revenue; it cannot supply the missing profit data.
 
-### Online software can be fully delivered; AI assistance covers only implementation
+### Online software can be delivered end to end, but AI mainly lowers the build barrier
 
 The case evidence shows that platform workflow tools, one-job generators, mobile utilities, applications built on model APIs, API products, and plugins can be delivered as online software. Standard interface, database, payment, and external API work is compatible with AI-assisted development and may reduce some first-version implementation effort.
 
 Technical implementation is only one part of the operating model. Distribution, retention, model cost, platform fees, parsing accuracy, security, and support affect whether displayed revenue becomes durable profit. Marketplaces and productized services can also operate online while remaining dependent on two-sided liquidity or human delivery.
 
-## Data summary: read the denominator first
+## What these data actually represent
 
 | Layer | Numerator / denominator | Result | What it supports | What it does not support |
 |---|---:|---:|---|---|
@@ -119,7 +119,7 @@ Starter Story's [robots file](https://www.starterstory.com/robots.txt) allows th
 | Fully online | Product delivery, acquisition, payment, and support can occur remotely without inventory or on-site fulfillment. |
 | AI-assisted build scope | A first version mainly uses standard UI, database, payment, and API work that AI coding tools can accelerate. It is a technical description, not a business score. |
 
-## 2. What the public category data show
+## 2. Popular categories differ sharply in revenue, but often contain the same projects
 
 The homepage exposed count and median cards for **26 of the 40** sitemap-listed data pages. Those 26 cards sum to **6,666 memberships**, not unique projects, and their displayed medians range from **$10K to $800K per month**. The high end includes editorial collections such as “Big Acquisitions”; the range is not a model ranking.
 
@@ -158,7 +158,7 @@ The displayed median and excerpt median use different denominators. The first co
 | [Erly](https://www.starterstory.com/stories/this-insanely-simple-app-makes-50k-month) | $50K/mo and 200K+ downloads stated | No profit figure used | Narrow mobile outcome, subscriptions, UGC, influencers |
 | [SiteGPT](https://www.starterstory.com/stories/sitegpt) | About $15K MRR | No profit figure; model costs uncertain | 2–3 week MVP, launch audience, nearly 50% first-month churn |
 
-### Recalculations supported by public inputs
+### Two cost-disclosing software businesses differ by nearly 60 margin points
 
 | Case | Calculation | Result | Bounded reading |
 |---|---|---:|---|
@@ -168,7 +168,7 @@ The displayed median and excerpt median use different denominators. The first co
 
 Two counterexamples keep the interpretation bounded. [DealA](https://www.starterstory.com/stories/deala) reported more than $250K invested for roughly $2K monthly profit and negative ROI. [Antropy](https://www.starterstory.com/stories/antropy) reported a record monthly profit above £30K, but with a five-person agency team. Both are online; neither shows that a small codebase produces a low-labor asset.
 
-## 4. Business structures compatible with fully online, AI-assisted delivery
+## 4. Eight business structures can be delivered online, but their operating burdens differ
 
 | Business structure | Observed evidence | Build layer | Dominant evidence gap outside the build |
 |---|---|---|---|

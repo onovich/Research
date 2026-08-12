@@ -130,6 +130,8 @@ Use [Our World in Data's Data Insights structure](https://ourworldindata.org/lau
 4. third sentence explains the narrow implication;
 5. final sentence states the limit when it could change the reading.
 
+In findings and analysis, the heading must name the subject-matter result rather than the analytical operation. Do not headline proxy construction, parsing, page selection, recalculation, or a caveat in isolation. When a methodological condition changes the result, state the measured consequence in the heading and explain the condition below it. Read all analytical headings alone as an executive outline before publication.
+
 Keep paragraphs to one idea and usually two to four sentences. Prefer plain verbs and concrete nouns. Remove slogans, metaphors, moral judgments, and generic advice from evidence sections. Do not copy a benchmark publication's sentences, examples, or distinctive phrasing.
 
 ### Standalone edition and institutional register
