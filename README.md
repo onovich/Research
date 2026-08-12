@@ -14,8 +14,10 @@ It covers exploratory questions, industry or platform overviews, pattern and mec
   The pillar report: product profit structures, platform fit, the indie-game channel decision, and a 90-day validation plan.
 - [Indie game crowdfunding fit](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/) · [中文](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
   The game-specific deep dive: current platform samples, seven audience/gameplay patterns, released cases, failure modes, platform routes, and the ten-point fit card.
+- [Online projects that make money](https://research.onovich.com/starter-story-vibe-coding-businesses/) · [中文](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html)
+  A profit-aware analysis of Starter Story cases, with a ranked shortlist of fully online business patterns for AI-assisted solo development.
 
-These pages share an evidence base but not detailed sections. The first supports the overall crowdfunding and channel decision; the second is the single detailed home for game genre and gameplay fit.
+The first two reports form one crowdfunding topic cluster without duplicating their detailed sections. The third is a separate study of online business and AI-assisted product patterns.
 
 ## Use it with AI
 

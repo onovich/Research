@@ -87,6 +87,24 @@ const cards = [
     eyebrow: '有证据的 AI 调研工作流',
     title: '把行业调研变成双语网页报告',
     note: '可复核证据 · 低阅读压力 · 隐私安全发布'
+  },
+  {
+    file: 'starter-story-vibe-coding-en.png',
+    lang: 'en',
+    mark: 'VC',
+    index: 'RESEARCH / 03',
+    eyebrow: 'ONLINE BUSINESS PATTERNS · 2026',
+    title: 'Online projects\nthat make money',
+    note: 'Profit evidence · Pure online · AI-assisted build'
+  },
+  {
+    file: 'starter-story-vibe-coding-zh-CN.png',
+    lang: 'zh-CN',
+    mark: '赚',
+    index: '专题 / 03',
+    eyebrow: '线上商业模式 · 2026',
+    title: '赚钱的\n线上项目',
+    note: '利润证据 · 纯线上 · AI 辅助开发'
   }
 ];
 

@@ -428,7 +428,7 @@
 
     .hero-ledger {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: minmax(5rem, auto) minmax(0, 1fr);
       max-width: 38rem;
       margin-top: 2.5rem;
       padding: 1rem 1.25rem;
@@ -460,12 +460,14 @@
     }
 
     .ledger-row dd {
+      min-width: 0;
       padding-left: 2rem;
       color: var(--ink);
       font-family: var(--font-data);
       font-weight: 800;
       text-align: right;
-      white-space: nowrap;
+      overflow-wrap: anywhere;
+      white-space: normal;
     }
 
     .ledger-row.unknown dd {

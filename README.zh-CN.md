@@ -14,8 +14,10 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
   总报告：解释商品盈利结构、平台适配、独立游戏的渠道判断，以及 90 天验证方案。
 - [独立游戏众筹适配](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
   游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、平台路径和十分制适配卡。
+- [赚钱的线上项目](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
+  区分 Starter Story 案例中的收入与利润证据，并给出适合纯线上、AI 辅助独立开发的项目模式排序。
 
-两份页面共用证据底座，但不再重复详细章节：第一份负责整体众筹与渠道决策，第二份是游戏类型与玩法适配的唯一完整入口。
+前两份报告组成一个众筹专题簇，详细章节不再互相重复；第三份是独立的线上商业与 AI 辅助产品模式调查。
 
 ## 用 AI 创建报告
 

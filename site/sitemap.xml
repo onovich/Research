@@ -3,14 +3,14 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://research.onovich.com/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://research.onovich.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://research.onovich.com/index.zh-CN.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://research.onovich.com/"/>
   </url>
   <url>
     <loc>https://research.onovich.com/index.zh-CN.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-08-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://research.onovich.com/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://research.onovich.com/index.zh-CN.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://research.onovich.com/"/>
@@ -56,6 +56,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/"/>
+  </url>
+  <url>
+    <loc>https://research.onovich.com/starter-story-vibe-coding-businesses/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://research.onovich.com/starter-story-vibe-coding-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://research.onovich.com/starter-story-vibe-coding-businesses/"/>
+  </url>
+  <url>
+    <loc>https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://research.onovich.com/starter-story-vibe-coding-businesses/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://research.onovich.com/starter-story-vibe-coding-businesses/"/>
   </url>
   <url>
     <loc>https://research.onovich.com/tools/research-to-html/</loc>
