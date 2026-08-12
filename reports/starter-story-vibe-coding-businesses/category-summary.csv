@@ -1,41 +1,11 @@
-category,category_url,platform_displayed_count,platform_displayed_median_usd_month,public_rows,revenue_rows,revenue_coverage_percent,solopreneur_score_rows,median_solopreneur_score,public_excerpt_p25_usd_month,public_excerpt_median_usd_month,public_excerpt_p75_usd_month
-1m Apis,https://www.starterstory.com/data/1m-apis,54,80000,11,10,90.9,11,68,11375,37400,57925
-1m Chrome Extensions,https://www.starterstory.com/data/1m-chrome-extensions,3,20000,3,3,100,3,78,11500,20000,368500
-1m Shovels,https://www.starterstory.com/data/1m-shovels,194,100000,11,10,90.9,11,65,81250,100000,215750
-App Ideas For Solopreneurs,https://www.starterstory.com/data/app-ideas-for-solopreneurs,82,10000,11,10,90.9,11,70,4250,21500,61250
-Apps So Simple,https://www.starterstory.com/data/apps-so-simple,241,20000,11,10,90.9,11,75,10625,35650,120750
-Automation,https://www.starterstory.com/data/automation-ideas,,,24,21,87.5,24,71,20000,83000,220000
-Beginner Ios App,https://www.starterstory.com/data/beginner-ios-app-ideas,,,0,0,0,0,,,,
-Big Acquisitions,https://www.starterstory.com/data/big-acquisitions,172,800000,7,6,85.7,7,77,103000,354500,522750
-Bubble,https://www.starterstory.com/data/bubble-ideas,35,20000,24,15,62.5,24,72,2750,25000,145000
-Businesses With Follow Up Case Studies,https://www.starterstory.com/data/businesses-with-follow-up-case-studies,,,11,11,100,11,77,17500,50000,133500
-Consumer Ios Apps,https://www.starterstory.com/data/consumer-ios-apps,79,40000,11,10,90.9,10,78,10250,21000,29000
-David Vs Goliath,https://www.starterstory.com/data/david-vs-goliath,179,200000,24,24,100,24,62,19500,55500,131250
-Digital Product,https://www.starterstory.com/data/digital-product-ideas,455,20000,24,17,70.8,24,78,11300,100000,200000
-Freemium And Open Source,https://www.starterstory.com/data/freemium-and-open-source-ideas,157,30000,24,22,91.7,24,69,11950,25500,77250
-Games Making Over 10k Month,https://www.starterstory.com/data/games-making-over-10k-month,,,11,10,90.9,10,70,63650,204000,437500
-Gpt Wrapper,https://www.starterstory.com/data/gpt-wrapper-ideas,148,30000,24,19,79.2,24,77,8000,16000,182500
-Health Wealth And Self Improvement,https://www.starterstory.com/data/health-wealth-and-self-improvement,,,11,9,81.8,0,,58000,83000,150000
-Ios App,https://www.starterstory.com/data/ios-app-ideas,79,40000,11,10,90.9,11,70,10250,25000,192250
-Launched With Website Builder,https://www.starterstory.com/data/launched-with-website-builder,,,24,23,95.8,24,69,10000,30000,102500
-M2m By Makers For Makers,https://www.starterstory.com/data/m2m-by-makers-for-makers,,,24,21,87.5,24,75,29200,125000,756000
-Marketplaces,https://www.starterstory.com/data/marketplaces,285,200000,24,24,100,24,59,22500,108500,312750
-Micro Saas,https://www.starterstory.com/data/micro-saas-ideas,670,40000,24,18,75,24,75,5162,12165,48975
-Million Dollar Ai Apps,https://www.starterstory.com/data/million-dollar-ai-apps,27,100000,11,3,27.3,11,78,264000,500000,666500
-Million Dollar Solopreneurs,https://www.starterstory.com/data/million-dollar-solopreneurs,,,11,11,100,11,77,130000,200000,586500
-Niche Blog,https://www.starterstory.com/data/niche-blog-ideas,254,10000,24,20,83.3,24,78,7350,35000,106250
-Niche Sites,https://www.starterstory.com/data/niche-sites,246,20000,24,24,100,24,77,5000,30000,102500
-No Audience Required,https://www.starterstory.com/data/no-audience-required,223,40000,11,9,81.8,11,82,40000,40000,533000
-No Code,https://www.starterstory.com/data/no-code-ideas,314,30000,24,18,75,24,72,15250,36000,102250
-One Page Websites,https://www.starterstory.com/data/one-page-websites,,,24,23,95.8,24,71,1750,14000,20000
-Plugins,https://www.starterstory.com/data/plugins,19,30000,11,10,90.9,11,76,20300,29500,46750
-Problems,https://www.starterstory.com/data/problems,969,100000,24,23,95.8,24,68,9165,83000,241500
-Productized Services,https://www.starterstory.com/data/productized-services,549,40000,24,24,100,24,68,23750,48500,143500
-Revenue Generating Agencies,https://www.starterstory.com/data/revenue-generating-agencies,,,11,11,100,11,77,81500,110000,225000
-Side Project Ideas You Can Build With Your 9 5,https://www.starterstory.com/data/side-project-ideas-you-can-build-with-your-9-5,,,11,11,100,11,81,4750,11000,90000
-Solo Developer,https://www.starterstory.com/data/solo-developer-ideas,237,40000,24,22,91.7,24,80,27150,88500,198250
-Solo Devs Earning 10k 20k Month,https://www.starterstory.com/data/solo-devs-earning-10k-20k-month,,,11,10,90.9,10,65,69000,212500,524750
-Solopreneur,https://www.starterstory.com/data/solopreneur-ideas,,,24,24,100,24,80,5300,30000,169000
-Travel And Digital Nomad,https://www.starterstory.com/data/travel-and-digital-nomad-ideas,,,24,23,95.8,24,67,6250,35000,128500
-Weekend Projects,https://www.starterstory.com/data/weekend-projects,135,30000,11,8,72.7,11,80,10400,15500,39750
-Weird But Profitable,https://www.starterstory.com/data/weird-but-profitable-ideas,860,70000,24,21,87.5,24,68,29200,100000,233000
+business_form,projects_in_platform_category,reported_monthly_revenue_median_usd,source_url
+Simple apps,241,20000,https://www.starterstory.com/data/apps-so-simple
+No-code SaaS and apps,314,30000,https://www.starterstory.com/data/no-code-ideas
+GPT wrappers,148,30000,https://www.starterstory.com/data/gpt-wrapper-ideas
+Plugins,19,30000,https://www.starterstory.com/data/plugins
+Micro-SaaS,670,40000,https://www.starterstory.com/data/micro-saas-ideas
+Solo developers,237,40000,https://www.starterstory.com/data/solo-developer-ideas
+Consumer iOS apps,79,40000,https://www.starterstory.com/data/consumer-ios-apps
+Productized services,549,40000,https://www.starterstory.com/data/productized-services
+APIs,54,80000,https://www.starterstory.com/data/1m-apis
+Marketplaces,285,200000,https://www.starterstory.com/data/marketplaces

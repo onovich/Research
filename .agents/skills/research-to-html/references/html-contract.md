@@ -63,6 +63,8 @@ Use a plain professional register in visible prose and metadata. Prefer familiar
 
 In findings, analysis, comparisons, and callouts, make every heading state a reader-facing result rather than the research workflow. Proxy definitions, parsing steps, page-selection tests, calculations, and caveats belong in the supporting copy or the explicit method and limitations layers. If one of those conditions materially changes the result, put the measured change in the heading instead of naming the technique.
 
+Use the main sample consistently across the hero, evidence strip, charts, tables, and conclusions. A purposively selected case set may appear in a case section, but it must not be rendered as an `x / y` rate, percentage, coverage measure, or population statistic. Prefer named case contributions and explicitly state that they are illustrative. Keep URL, request, page, parser, cache, row, and field-coverage diagnostics out of reader-facing modules unless those mechanics are themselves the research subject.
+
 Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
 
 For data-bearing reports, include at least one data-insight block with:
@@ -113,6 +115,9 @@ Check at minimum:
 - unique titles and descriptions, absolute canonical and reciprocal `hreflang`, social metadata, valid JSON-LD, and sitemap parity;
 - matching key figures, dates, sources, and interactive thresholds;
 - matching numerators, denominators, formulas, units, comparison periods, and derived results;
+- matching sample roles: no disclosure subgroup or purposive case set is visually presented as the main sample;
+- no prevalence-like rates, medians, or coverage claims are calculated from deliberately selected cases;
+- no research-production diagnostics appear as commercial findings or headline evidence;
 - first-read independence: no conclusion or comparison depends on a prior version, conversation, or undocumented sample;
 - general-reader register: title, subtitle, lead, and headings sound natural when read aloud and do not resemble metadata, an academic abstract, or a compliance notice;
 - heading-only outline: analytical headings and callout titles, read without body text, communicate the report's main subject-matter findings rather than the research process;

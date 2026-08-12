@@ -89,6 +89,17 @@ Before writing prose, create a metric worksheet with:
 | Caveat | Missing costs, overlapping categories, survivorship, mixed definitions, or other limit |
 | Direct source | The page containing the input value |
 
+### Sample-role gate
+
+Before calculating or publishing a metric, label its evidence as one of four roles:
+
+1. population or complete frame;
+2. main observational sample;
+3. disclosure-only or otherwise filtered subgroup;
+4. purposively selected illustrative cases.
+
+Do not move a denominator between roles. A purposive case set may explain mechanisms, ranges, and counterexamples; it must not produce a prevalence, coverage, success rate, population median, or `x / y` claim. If a filtered disclosure subgroup would inflate an apparent rate, calculate a conservative lower bound over the main sample by keeping unknown observations in the denominator and writing “at least.” If that transformation is not valid, describe the subgroup in plain language and keep its result separate from the main sample.
+
 Minimum evidence for a data-bearing report:
 
 - three question-relevant raw measures;
@@ -106,6 +117,8 @@ Reject or relabel an analysis when:
 - a median is shown without its sample definition and denominator;
 - a current run rate is compared with a historical average without naming the mismatch;
 - a percentage omits its numerator or denominator;
+- a result presented as applying to the main sample was calculated only from a disclosure subgroup or purposively selected cases;
+- a purposive case count is formatted as `x / y`, a percentage, “coverage,” or another prevalence-like statistic;
 - an opportunity ranking is mostly researcher preference;
 - a causal explanation has only evidence that two facts coexist.
 
@@ -119,6 +132,8 @@ Prefer public aggregates and site inventories before collecting item-level pages
 - which calculations describe only the excerpt rather than the platform.
 
 Never call a convenience excerpt representative unless the sampling design supports that claim. For public-web collection, identify the research user agent when feasible, run single-threaded with a conservative delay, cache responses, and stop on `403`, `429`, CAPTCHA, or challenge pages. Do not log in, guess private pagination, or bypass access controls. If source terms restrict republication, publish aggregates and direct links while keeping row-level extracts local.
+
+Collection diagnostics belong in the evidence notebook, not the reader-facing business narrative. Keep URL inventories, request counts, pages fetched, row occurrences, parser status, cache status, and field-coverage ratios out of the hero, findings, evidence strips, and public source section unless the mechanics are the research subject or materially change the interpretation. Translate necessary scope into reader terms such as projects, businesses, respondents, transactions, or users.
 
 ### Finding-led writing
 

@@ -55,6 +55,12 @@ The subtitle is orientation, not a miniature abstract or limitation section. Giv
 - Do not stack a result, sample description, three caveats, and a methodological disclaimer into one sentence.
 - Read the title, subtitle, and lead aloud. If they sound like metadata, an academic abstract, or a compliance notice, rewrite them.
 
+## Keep production diagnostics out of the commercial story
+
+Lead with the units the reader came to understand: projects, companies, people, revenue, profit, customers, transactions, or outcomes. URL inventories, request counts, pages parsed, row occurrences, field availability, cache status, and parser behavior are research-production diagnostics. Keep them in an internal notebook unless they are the subject of the study or are essential to prevent a false interpretation.
+
+If a report has a large main sample and a small purposive case set, use the main sample for distribution or prevalence findings and the cases for mechanisms only. Never present `5 / 8 cases`, `three of eight`, a percentage, or a case-set median as if it describes the main sample. Name individual cases and the evidence they contribute instead.
+
 ## Analytical register
 
 Use a plain professional register:

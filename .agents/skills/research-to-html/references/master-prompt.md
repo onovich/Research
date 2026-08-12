@@ -25,6 +25,8 @@ Research requirements
 8. When the question involves scale, change, frequency, profitability, prevalence, rankings, or comparisons, build a metric worksheet before synthesis. Record raw values, units, periods, numerator, denominator, formula, result, scope, caveat, and direct source.
 9. For a data-bearing report, include at least three question-relevant raw measures, three reproducible derived measures, one counterexample, one data-completeness statement, and one useful comparison table or chart. If comparable data does not exist, narrow the conclusion instead of filling the report with general principles.
 10. Do not rank incompatible or overlapping samples. Label researcher judgment as inference and expose the rule used.
+11. Label each metric as population/frame, main observational sample, disclosure-only subgroup, or purposive illustrative cases. Never calculate prevalence, coverage, success rates, population medians, or `x / y` claims from purposively selected cases.
+12. If missing disclosure would inflate a subgroup rate, prefer a conservative lower bound over the main sample: keep unknowns in the denominator and write “at least.” Otherwise describe the subgroup separately in plain language.
 
 Required outputs
 - A reviewable Markdown research source containing a short opening context block, scope, method, findings, evidence, limitations, implications or unresolved questions where relevant, and direct sources.
@@ -49,6 +51,7 @@ HTML quality contract
 - Keep citations near the claims they support and preserve research caveats in both languages.
 - Write findings in a plain data-insight cadence: result first; number, baseline, period, and denominator next; bounded interpretation after that; material limitation last. Use this as a structural tone benchmark only and do not copy another publication's wording.
 - Make analytical headings and callout titles work as an executive outline: each must state a reader-facing market, business, behavioral, economic, or technical finding. Do not headline proxy construction, parsing, page selection, recalculation, or defensive caveats; state the measured consequence and move method details below it or into the method and limitations layers.
+- Foreground reader-relevant subject measures. Keep URL counts, request counts, pages parsed, row occurrences, parser or cache status, and field-coverage ratios in the internal evidence notebook unless collection mechanics are the research subject or indispensable to interpreting a result.
 - Use a plain professional register for an informed general reader. Prefer familiar words and natural sentences in titles, summaries, and headings; reserve technical language for the method and evidence layers. Use precise evidence labels such as displayed, self-reported, recalculated, estimated, audited, and verified. Use “case review” rather than “audit” unless a formal audit occurred.
 - Remove release-note and backward-reference language such as “previous version,” “original sample,” “expanded,” “now covers,” and “corrected parser,” together with equivalent Chinese phrases. When two scopes matter, define both in the current edition and present the comparison as a sensitivity, robustness, or coverage test.
 - Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
