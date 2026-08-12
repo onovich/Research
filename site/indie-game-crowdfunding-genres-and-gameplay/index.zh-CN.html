@@ -111,7 +111,7 @@
     </div>
   </header>
 
-  <noscript><div class="noscript">JavaScript 已关闭。完整报告仍可阅读，但筛选、自测与阅读偏好不可用。</div></noscript>
+  <noscript><div class="noscript">JavaScript 已关闭。完整报告仍可阅读，但筛选与阅读偏好不可用。</div></noscript>
 
   <div class="layout" id="top">
     <aside class="side-nav" id="side-nav" aria-label="报告目录">
@@ -124,8 +124,8 @@
           <li><a href="#patterns"><span>03</span>七类模式</a></li>
           <li><a href="#cases"><span>04</span>已发行案例</a></li>
           <li><a href="#risks"><span>05</span>高风险适配</a></li>
-          <li><a href="#decision"><span>06</span>十分制自测</a></li>
-          <li><a href="#route"><span>07</span>平台路径</a></li>
+          <li><a href="#signals"><span>06</span>适配信号</a></li>
+          <li><a href="#platform-differences"><span>07</span>平台证据</a></li>
           <li><a href="#sources"><span>08</span>来源</a></li>
         </ol>
       </nav>
@@ -139,7 +139,13 @@
           <p class="eyebrow">配套深挖 · 独立游戏 · 2026</p>
           <h1 id="page-title">独立游戏众筹适配</h1>
           <p class="report-subtitle">品类只是线索，受众、可玩证明与可控范围才决定适配度。</p>
-          <p class="hero-lead">这是<a href="../crowdfunding-and-indie-games-research/index.zh-CN.html">众筹总决策报告</a>的配套深挖，也是当前平台样本、类型与玩法、已发售案例、失败模式、平台路径和 10 分适配卡的唯一完整入口。</p>
+          <p class="hero-lead">这是<a href="../crowdfunding-and-indie-games-research/index.zh-CN.html">众筹经济性总报告</a>的配套深挖，也是当前平台样本、类型与玩法、已发售案例、失败模式、反复出现的适配信号和平台差异的完整入口。</p>
+
+          <dl class="report-context" aria-label="调研说明">
+            <div><dt>背景</dt><dd>电子游戏众筹仍然可见，但品类判断经常混合平台挑选的赢家、状态不同的实时列表和著名历史案例；中国项目还常混合预售、版本权益与周边。</dd></div>
+            <div><dt>要回答的问题</dt><dd>渠道是否仍活跃，哪些游戏与商品特征反复出现在筹成或已交付案例中，以及国际平台与摩点有何差异。</dd></div>
+            <div><dt>主要数据源</dt><dd>Kickstarter 年度与季度统计、BackerKit 当前集合、摩点排行、直接项目页，以及 Steam 发行记录。</dd></div>
+          </dl>
 
           <dl class="hero-ledger" aria-label="众筹适配的证据链">
             <div class="ledger-row">
@@ -158,18 +164,18 @@
 
           <div class="hero-actions">
             <a class="button-link" href="#overview">先看答案</a>
-            <a class="button-link secondary" href="#decision">为我的游戏打分</a>
+            <a class="button-link secondary" href="#platform-differences">比较平台证据</a>
           </div>
           <p class="reading-state" id="reading-state"
-             data-brief-message="简读模式：保留决策、七类模式与行动，收起大部分样本细节。"
-             data-full-message="全文模式：显示截面、案例细节、证据标签与来源。">简读模式：保留决策、七类模式与行动，收起大部分样本细节。</p>
+             data-brief-message="简读模式：保留主要发现、七类模式、适配信号与平台证据，收起大部分样本细节。"
+             data-full-message="全文模式：显示截面、案例细节、证据标签与来源。">简读模式：保留主要发现、七类模式、适配信号与平台证据，收起大部分样本细节。</p>
         </header>
 
         <section class="section" id="overview" aria-labelledby="overview-title">
           <div class="section-head">
             <span class="section-number">01</span>
             <div>
-              <h2 id="overview-title">三个判断说清答案</h2>
+              <h2 id="overview-title">三个发现说清答案</h2>
               <p class="section-intro">品类可以提示项目是否容易展示受众、手感与范围，但不能替代这些证据。</p>
             </div>
           </div>
@@ -469,121 +475,49 @@
           </div>
         </section>
 
-        <section class="section" id="decision" aria-labelledby="decision-title">
+        <section class="section" id="signals" aria-labelledby="signals-title">
           <div class="section-head">
             <span class="section-number">06</span>
             <div>
-              <h2 id="decision-title">这款游戏现在适合众筹吗？</h2>
-              <p class="section-intro">六项证据、总计十分。给今天已经存在的证据打分，不要给筹款后才准备实现的计划打分。</p>
+              <h2 id="signals-title">可观察到的适配信号与限制</h2>
+              <p class="section-intro">这些信号反复出现在所选记录中，但不构成打分、阈值或成功概率模型。</p>
             </div>
           </div>
 
-          <form class="decision-tool" id="decision-tool">
-            <div class="decision-row">
-              <label for="score-audience">受众记忆</label>
-              <select id="score-audience" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · 没有可触达受众</option>
-                <option value="1">1 · 有关注或愿望单，但无转化证据</option>
-                <option value="2">2 · 已有作品、自有名单、稳定社群或可复现增长</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-position">五秒可理解</label>
-              <select id="score-position" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · 通用品类或功能清单</option>
-                <option value="1">1 · 品类清楚，差异较弱</option>
-                <option value="2">2 · 受众、参照与差异能用一句话说明</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-product">可玩证明</label>
-              <select id="score-product" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · 只有概念</option>
-                <option value="1">1 · 视频或粗糙原型</option>
-                <option value="2">2 · 公开代表性试玩，并观察到真实玩家</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-budget">有边界里程碑</label>
-              <select id="score-budget" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · 目标无法实质改变交付</option>
-                <option value="1">1 · 有里程碑，但范围或预算较软</option>
-                <option value="2">2 · 明确里程碑加费用、税、延迟与支持缓冲</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-reward">回报交付</label>
-              <select id="score-reward" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · SKU 多或权利 / 生产不确定</option>
-                <option value="1">1 · 数字优先，或只有一项可控实体商品</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-operation">活动所有权</label>
-              <select id="score-operation" data-score>
-                <option value="" selected>选择当前状态</option>
-                <option value="0">0 · 没有负责人或沟通节奏</option>
-                <option value="1">1 · 负责人、支持计划与更新节奏明确</option>
-              </select>
-            </div>
-            <div class="decision-result" aria-live="polite">
-              <output class="score" id="decision-score">—/10</output>
-              <div>
-                <h3 id="decision-heading">完成全部六项后给出判断</h3>
-                <p id="decision-copy">你的选择不会被保存。</p>
-              </div>
-            </div>
-          </form>
-
-          <div class="definition-table">
-            <div class="definition-row">
-              <dt>8–10 分</dt>
-              <dd>进入预热转化与预算验证。</dd>
-            </div>
-            <div class="definition-row">
-              <dt>6–7 分</dt>
-              <dd>公布上线日期前，修复最弱的证据。</dd>
-            </div>
-            <div class="definition-row">
-              <dt>0–5 分</dt>
-              <dd>先用 Steam 页面、试玩、测试、创作者与节庆建立证据。</dd>
-            </div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="可观察到的众筹适配信号与限制">
+            <table>
+              <thead><tr><th scope="col">信号</th><th scope="col">所选筹成或已交付案例中的观察</th><th scope="col">反证或限制</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">受众记忆</th><td>续作、知名创作者、已有系列与经典系谱反复出现在国际案例中</td><td>记录没有同等可见的冷启动项目配对样本</td></tr>
+                <tr><th scope="row">五秒可理解</th><td>治愈狐狸咖啡馆 RPG、互动音乐平台、和平 RPG、压力地牢都能压缩为清楚承诺</td><td>低于目标的项目同样可能有清楚标签，因此易懂并不充分</td></tr>
+                <tr><th scope="row">可玩证明</th><td>Undertale 提供试玩；已发行的动作与系统型案例能让核心互动被观察</td><td>公开项目记录并不一致披露试玩质量或玩家行为数据</td></tr>
+                <tr><th scope="row">边界可见</th><td>Hollow Knight 与硬件限定复古案例都展示了相对窄、可演示的核心</td><td>小额项目不能当通用预算模板，大范围项目也可能筹到钱</td></tr>
+                <tr><th scope="row">商品可控</th><td>摩点成功榜可见标题主要围绕已有作品的版本、周边、本地化权益与预售</td><td>毛销售额不披露权利、生产、运输、补发或客服利润</td></tr>
+                <tr><th scope="row">活动运营</th><td>所选项目的更新历史能显示沟通与履约工作</td><td>实时排行没有可比运营工时或支持成本</td></tr>
+              </tbody>
+            </table>
           </div>
-          <p class="fine-print">这是一项决策辅助工具，不是平台成功概率模型。</p>
         </section>
 
-        <section class="section" id="route" aria-labelledby="route-title">
+        <section class="section" id="platform-differences" aria-labelledby="platform-differences-title">
           <div class="section-head">
             <span class="section-number">07</span>
             <div>
-              <h2 id="route-title">证据成立后，再选择路径</h2>
-              <p class="section-intro">国际与中国项目可以使用同一款游戏，但销售的里程碑或商品可能完全不同。</p>
+              <h2 id="platform-differences-title">不同平台的证据差异</h2>
+              <p class="section-intro">各渠道暴露的证据不同；没有一个渠道提供完整的项目利润或发现度模型。</p>
             </div>
           </div>
 
-          <div class="answer-stack">
-            <article class="answer">
-              <h3>国际：资助一个可玩里程碑</h3>
-              <p>先展示试玩与可触达受众。再用 Kickstarter 或 BackerKit 把证明转化为资金、核心支持者与传播事件，并把注意力导回 Steam。</p>
-            </article>
-            <article class="answer">
-              <h3>中国 / 摩点：先定义商品</h3>
-              <p>区分新游戏、预售、本地化权益、特别版和已有 IP 收藏品。它们的成本、权利、履约与受众逻辑不同。</p>
-            </article>
-          </div>
-
-          <div class="flow" aria-label="证据优先的国际众筹顺序">
-            <div class="flow-step"><span>01</span><p>一句话定位</p></div>
-            <div class="flow-step"><span>02</span><p>代表性可玩试玩</p></div>
-            <div class="flow-step"><span>03</span><p>Steam 页面 + 可触达受众</p></div>
-            <div class="flow-step"><span>04</span><p>转化与预算测试</p></div>
-            <div class="flow-step"><span>05</span><p>有边界的活动里程碑</p></div>
-            <div class="flow-step"><span>06</span><p>导回 Steam 并完成交付</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="平台证据比较">
+            <table>
+              <thead><tr><th scope="col">渠道</th><th scope="col">可观察模式</th><th scope="col">证据强度</th><th scope="col">主要未知</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Kickstarter</th><td>平台年度统计、点名项目与 Steam 活动共同显示电子游戏众筹仍活跃</td><td>本次审阅中最完整的当前第一方活跃度证据</td><td>品类分母、项目利润、自然发现与增量宣发因果</td></tr>
+                <tr><th scope="row">BackerKit</th><td>当前集合混合进行中与已履约项目；续作、治愈、复古和表演型钩子出现在达到目标的项目中</td><td>有反例的截止日截面</td><td>平台总体成功率、利润与按交付调整后的比较</td></tr>
+                <tr><th scope="row">摩点</th><td>当前与成功排行中，已有游戏或 IP 通过版本、权益、周边和预售变现的标题很突出</td><td>对截止日可见商品结构较强</td><td>完整标题分类、交付、权利成本与净利润</td></tr>
+                <tr><th scope="row">Steam</th><td>官方文档定义即将推出、试玩、愿望单与新品节，商店页可验证发行</td><td>对平台机制和发行状态较强</td><td>众筹是否导致发现或商业表现</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="detail-layer">

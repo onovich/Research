@@ -90,7 +90,7 @@
           <li><a href="#overview" aria-current="true"><span>01</span>Conclusion</a></li>
           <li><a href="#evidence"><span>02</span>Evidence</a></li>
           <li><a href="#analysis"><span>03</span>Analysis</a></li>
-          <li><a href="#actions"><span>04</span>Actions</a></li>
+          <li><a href="#gaps"><span>04</span>Evidence gaps</a></li>
           <li><a href="#sources"><span>05</span>Sources</a></li>
         </ol>
       </nav>
@@ -104,7 +104,22 @@
           <p class="eyebrow">Research field notes · [year]</p>
           <h1 id="page-title">[Short report title]</h1>
           <p class="report-subtitle">[State the evidence-bounded central finding in one sentence.]</p>
-          <p class="hero-lead">[In one or two sentences, explain the decision this research supports, its scope, and who it serves.]</p>
+          <p class="hero-lead">[In one or two sentences, explain the background and why this question is being investigated.]</p>
+
+          <dl class="report-context" aria-label="Research context">
+            <div>
+              <dt>Background</dt>
+              <dd>[The situation or information gap behind this research.]</dd>
+            </div>
+            <div>
+              <dt>Answer sought</dt>
+              <dd>[The specific question, comparison, or claim the report must resolve.]</dd>
+            </div>
+            <div>
+              <dt>Main data sources</dt>
+              <dd>[The main datasets, official records, disclosures, or primary-source groups.]</dd>
+            </div>
+          </dl>
 
           <dl class="hero-ledger" aria-label="[Key relationship]">
             <div class="ledger-row">
@@ -116,18 +131,18 @@
               <dd>[Cost / risk / prerequisite]</dd>
             </div>
             <div class="ledger-row unknown">
-              <dt>[Decision]</dt>
-              <dd>[The distinction that must not be blurred]</dd>
+              <dt>[Answer boundary]</dt>
+              <dd>[The distinction or unknown that must not be blurred]</dd>
             </div>
           </dl>
 
           <div class="hero-actions">
             <a class="button-link" href="#overview">Read the conclusion</a>
-            <a class="button-link secondary" href="#actions">Go to actions</a>
+            <a class="button-link secondary" href="#gaps">Review evidence gaps</a>
           </div>
           <p class="reading-state" id="reading-state"
-             data-brief-message="Brief mode: decisions and actions stay visible while supporting evidence is condensed."
-             data-full-message="Full mode: supporting evidence, case details, and sources are visible.">Brief mode: decisions and actions stay visible while supporting evidence is condensed.</p>
+             data-brief-message="Brief mode: findings and limits stay visible while supporting evidence is condensed."
+             data-full-message="Full mode: supporting evidence, case details, and sources are visible.">Brief mode: findings and limits stay visible while supporting evidence is condensed.</p>
         </header>
 
         <section class="section" id="overview" aria-labelledby="overview-title">
@@ -141,15 +156,15 @@
 
           <div class="answer-stack">
             <article class="answer">
-              <h3>[Decision question one]</h3>
+              <h3>[Research question one]</h3>
               <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
             <article class="answer">
-              <h3>[Decision question two]</h3>
+              <h3>[Research question two]</h3>
               <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
             <article class="answer">
-              <h3>[Decision question three]</h3>
+              <h3>[Research question three]</h3>
               <p><strong>[Direct answer.]</strong> [Conditions and boundary.]</p>
             </article>
           </div>
@@ -159,8 +174,8 @@
           <div class="section-head">
             <span class="section-number">02</span>
             <div>
-              <h2 id="evidence-title">Decision-changing evidence</h2>
-              <p class="section-intro">Keep only the numbers, rules, and cases that materially change the decision.</p>
+              <h2 id="evidence-title">Conclusion-changing evidence</h2>
+              <p class="section-intro">Keep only the numbers, rules, and cases that materially change the answer.</p>
             </div>
           </div>
 
@@ -231,45 +246,39 @@
             </div>
             <div class="definition-row">
               <dt>Unknown</dt>
-              <dd>[A decision-relevant variable that public material cannot confirm.]</dd>
+              <dd>[An important variable that public material cannot confirm.]</dd>
             </div>
           </dl>
 
           <div class="callout warning">
             <span class="callout-title">Most likely misread</span>
-            <p>[Name the metric error, survivor bias, or causal leap most likely to produce a bad decision.]</p>
+            <p>[Name the metric error, survivor bias, or causal leap most likely to produce a misleading conclusion.]</p>
           </div>
         </section>
 
-        <section class="section" id="actions" aria-labelledby="actions-title">
+        <section class="section" id="gaps" aria-labelledby="gaps-title">
           <div class="section-head">
             <span class="section-number">04</span>
             <div>
-              <h2 id="actions-title">Recommended actions</h2>
-              <p class="section-intro">Turn the conclusion into testable, time-bounded steps with explicit stop conditions.</p>
+              <h2 id="gaps-title">Evidence gaps</h2>
+              <p class="section-intro">State what remains unknown, why it matters to the answer, and what the report therefore does not claim.</p>
             </div>
           </div>
 
-          <div class="timeline">
-            <article class="timeline-item">
-              <time>[Phase one]</time>
-              <h3>[What to validate first]</h3>
-              <ul>
-                <li>[Action]</li>
-                <li>[Metric]</li>
-                <li>[Stop condition]</li>
-              </ul>
-            </article>
-            <article class="timeline-item">
-              <time>[Phase two]</time>
-              <h3>[What to validate next]</h3>
-              <ul>
-                <li>[Action]</li>
-                <li>[Metric]</li>
-                <li>[Stop condition]</li>
-              </ul>
-            </article>
-          </div>
+          <dl class="definition-table">
+            <div class="definition-row">
+              <dt>Missing measure</dt>
+              <dd>[The important quantity or comparison that is not publicly available.]</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Why it matters</dt>
+              <dd>[How this missing evidence could change the interpretation.]</dd>
+            </div>
+            <div class="definition-row">
+              <dt>Reporting boundary</dt>
+              <dd>[The claim that cannot be made from the current evidence.]</dd>
+            </div>
+          </dl>
         </section>
 
         <section class="section detail-layer" id="sources" aria-labelledby="sources-title">
@@ -277,7 +286,7 @@
             <span class="section-number">05</span>
             <div>
               <h2 id="sources-title">Sources and research limits</h2>
-              <p class="section-intro">Lead with primary sources that directly support the core decisions.</p>
+              <p class="section-intro">Lead with primary sources that directly support the core findings.</p>
             </div>
           </div>
 

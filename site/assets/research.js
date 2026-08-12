@@ -259,40 +259,6 @@
         });
       });
 
-      var scoreSelects = Array.from(document.querySelectorAll('[data-score]'));
-      var decisionScore = document.getElementById('decision-score');
-      var decisionHeading = document.getElementById('decision-heading');
-      var decisionCopy = document.getElementById('decision-copy');
-
-      function updateDecision() {
-        if (!scoreSelects.length || !decisionScore || !decisionHeading || !decisionCopy) return;
-        var answered = scoreSelects.filter(function (select) { return select.value !== ''; });
-        var score = answered.reduce(function (total, select) {
-          return total + Number(select.value);
-        }, 0);
-        if (answered.length < scoreSelects.length) {
-          decisionScore.textContent = score + '/10';
-          decisionHeading.textContent = locale.t('decision.remaining', { count: scoreSelects.length - answered.length });
-          decisionCopy.textContent = locale.t('decision.partial');
-          return;
-        }
-        decisionScore.textContent = score + '/10';
-        if (score >= 8) {
-          decisionHeading.textContent = locale.t('decision.readyTitle');
-          decisionCopy.textContent = locale.t('decision.readyCopy');
-        } else if (score >= 6) {
-          decisionHeading.textContent = locale.t('decision.repairTitle');
-          decisionCopy.textContent = locale.t('decision.repairCopy');
-        } else {
-          decisionHeading.textContent = locale.t('decision.stopTitle');
-          decisionCopy.textContent = locale.t('decision.stopCopy');
-        }
-      }
-
-      scoreSelects.forEach(function (select) {
-        select.addEventListener('change', updateDecision);
-      });
-
       var savedReading = safeGet('research-reading-mode');
       var savedFont = safeGet('research-font-mode');
       var savedTheme = safeGet('research-theme');
@@ -305,7 +271,6 @@
       setFontMode(savedFont === 'large' ? 'large' : 'standard', false);
       setTheme(savedTheme || (prefersDim ? 'dim' : 'light'), false);
       updateCalculator();
-      updateDecision();
       updateProgress();
       if (deepLinkTarget) {
         requestAnimationFrame(function () {

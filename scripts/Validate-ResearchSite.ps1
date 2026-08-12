@@ -382,8 +382,8 @@ foreach ($pair in $localePairs) {
   if (@(Compare-Object $enLinks $zhLinks).Count -gt 0) { Add-ValidationError "$($pair.En) and $($pair.Zh): external content-link sets differ" }
 }
 
-# Report ownership guard: the pillar owns economics and channel validation;
-# the companion exclusively owns game taxonomy, filters, cases, and the fit card.
+# Report ownership guard: the pillar owns economics and high-level channel evidence;
+# the companion exclusively owns game taxonomy, evidence filters, cases, and observed fit signals.
 $pillarRelativePaths = @(
   "crowdfunding-and-indie-games-research/index.html",
   "crowdfunding-and-indie-games-research/index.zh-CN.html"
@@ -398,6 +398,34 @@ $businessRelativePaths = @(
   "douban-zhihu-jianshu-replacement-opportunities/index.html",
   "douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html"
 )
+$reportMarkdownRelativePaths = @(
+  "reports/crowdfunding-and-indie-games-research/README.md",
+  "reports/crowdfunding-and-indie-games-research/README.zh-CN.md",
+  "reports/indie-game-crowdfunding-genres-and-gameplay/README.md",
+  "reports/indie-game-crowdfunding-genres-and-gameplay/README.zh-CN.md",
+  "reports/starter-story-vibe-coding-businesses/README.md",
+  "reports/starter-story-vibe-coding-businesses/README.zh-CN.md",
+  "reports/douban-zhihu-jianshu-replacement-opportunities/README.md",
+  "reports/douban-zhihu-jianshu-replacement-opportunities/README.zh-CN.md",
+  "templates/research-report/README.md",
+  "templates/research-report/README.zh-CN.md"
+)
+
+foreach ($relative in $reportMarkdownRelativePaths) {
+  $markdown = Read-TextFile (Join-Path $repoRoot $relative)
+  if ($markdown -notmatch '(?m)^##\s+(?:Research context|\u8C03\u7814\u8BF4\u660E)\s*$') {
+    Add-ValidationError "${relative}: research source must open with a research-context section"
+  }
+  if ($markdown -notmatch '(?m)^-\s+\*\*(?:Background|\u80CC\u666F)[:\uFF1A]?\*\*' -or
+      $markdown -notmatch '(?m)^-\s+\*\*(?:Purpose|Question|Answer sought|\u76EE\u7684|\u8981\u56DE\u7B54\u7684\u95EE\u9898)[:\uFF1A]?\*\*' -or
+      $markdown -notmatch '(?m)^-\s+\*\*(?:Main sources|Main data sources|\u4E3B\u8981\u6765\u6E90|\u4E3B\u8981\u6570\u636E\u6765\u6E90)[:\uFF1A]?\*\*') {
+    Add-ValidationError "${relative}: research context must state background, answer sought, and main source groups"
+  }
+  if ($markdown -match '(?im)^##\s+(?:Recommended actions|Action plan|Validation plan|Project brief|Implementation roadmap|Next steps|\u884C\u52A8(?:\u5EFA\u8BAE|\u8BA1\u5212)|\u9A8C\u8BC1\u8BA1\u5212|\u9879\u76EE\u7B80\u62A5|\u5B9E\u65BD\u8DEF\u7EBF|\u4E0B\u4E00\u6B65)\s*$') {
+    Add-ValidationError "${relative}: prescriptive planning sections belong outside the research report"
+  }
+}
+
 foreach ($relative in @($pillarRelativePaths + $companionRelativePaths + $businessRelativePaths)) {
   $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
   if (([regex]::Matches($html, '(?i)class="[^"]*\breport-subtitle\b[^"]*"')).Count -ne 1) {
@@ -406,15 +434,27 @@ foreach ($relative in @($pillarRelativePaths + $companionRelativePaths + $busine
   if ($html -notmatch '"alternativeHeadline"\s*:') {
     Add-ValidationError "${relative}: report Article JSON-LD must include alternativeHeadline"
   }
+  $contextMatches = [regex]::Matches($html, '(?is)<dl\b[^>]*class="[^"]*\breport-context\b[^"]*"[^>]*>(.*?)</dl>')
+  if ($contextMatches.Count -ne 1) {
+    Add-ValidationError "${relative}: report pages must have exactly one research-context block"
+  } else {
+    $context = $contextMatches[0].Groups[1].Value
+    if (([regex]::Matches($context, '(?i)<dt\b')).Count -ne 3 -or ([regex]::Matches($context, '(?i)<dd\b')).Count -ne 3) {
+      Add-ValidationError "${relative}: research-context block must contain background, answer sought, and main sources"
+    }
+  }
+  if ($html -match '(?i)(?:id|href)="\#?(?:actions|validation-plan|decision-tool)"|class="[^"]*\b(?:scorecard|validation-plan|action-plan)\b[^"]*"|\bdata-score(?:=|\s|>)') {
+    Add-ValidationError "${relative}: prescriptive planning modules belong outside the research report"
+  }
 }
 foreach ($relative in $pillarRelativePaths) {
   $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
-  if ($html -match 'data-game-filter|id="decision-tool"') { Add-ValidationError "${relative}: pillar must not duplicate the companion game filter or scorecard" }
+  if ($html -match 'data-game-filter') { Add-ValidationError "${relative}: pillar must not duplicate the companion evidence filter" }
   if ($html -notmatch 'indie-game-crowdfunding-genres-and-gameplay') { Add-ValidationError "${relative}: pillar must link to the companion game report" }
 }
 foreach ($relative in $companionRelativePaths) {
   $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
-  if ($html -notmatch 'data-game-filter' -or $html -notmatch 'id="decision-tool"') { Add-ValidationError "${relative}: companion must retain the game filter and fit card" }
+  if ($html -notmatch 'data-game-filter') { Add-ValidationError "${relative}: companion must retain the evidence filter" }
   if ($html -notmatch 'crowdfunding-and-indie-games-research') { Add-ValidationError "${relative}: companion must link back to the pillar report" }
 }
 

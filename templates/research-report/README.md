@@ -2,11 +2,16 @@
 
 **Subtitle:** [State the evidence-bounded central finding in one sentence.]
 
-**English** · [简体中文 template](README.zh-CN.md)
+**English** · [简体中文](README.zh-CN.md)
 
-> Research cutoff: [YYYY-MM-DD]<br>
-> Scope: [geography, field, subjects, and exclusions]<br>
-> Definitions: [operational meaning of success, profit, mainstream, growth, or other ambiguous terms]
+## Research context
+
+- **Background:** [Why this question is being investigated.]
+- **Answer sought:** [The specific question, comparison, or claim this report must resolve.]
+- **Main data sources:** [Name the main datasets, official records, first-party disclosures, or primary-source groups.]
+- **Research cutoff:** [YYYY-MM-DD]
+- **Scope:** [Geography, field, subjects, and exclusions.]
+- **Definitions:** [Operational meaning of success, profit, mainstream, growth, or other ambiguous terms.]
 
 ## One-page conclusion
 
@@ -16,7 +21,7 @@
 
 ## 1. Questions and method
 
-### Decision questions
+### Research questions
 
 - [Question one]
 - [Question two]
@@ -33,64 +38,50 @@
 | [Concept A] | [Definition] | [Yes / partly / no] |
 | [Concept B] | [Definition] | [Yes / partly / no] |
 
-## 3. Market, platform, or competitor comparison
+## 3. Data and comparisons
 
-| Subject | Observation | Meaning | Caveat |
+| Subject | Observation | Bounded interpretation | Caveat |
 |---|---|---|---|
 | [Subject A] | [Fact] | [Interpretation] | [Limit] |
 | [Subject B] | [Fact] | [Interpretation] | [Limit] |
 
-## 4. Opportunities, patterns, or mechanisms
+## 4. Patterns or mechanisms
 
-### [Opportunity A]
+### [Pattern A]
 
-[Why it holds, required conditions, and main risk.]
+[What the evidence shows, the conditions under which it holds, and the main limitation.]
 
-### [Opportunity B]
+### [Pattern B]
 
-[Why it holds, required conditions, and main risk.]
+[What the evidence shows, the conditions under which it holds, and the main limitation.]
 
 ## 5. Risks and counterexamples
 
 - [Failure or delay]
 - [Survivor bias]
 - [Metric most likely to be misread]
-- [Decision-relevant unknown]
+- [Important unknown]
 
-## 6. Decision criteria
+## 6. Evidence gaps
 
-| Signal | Continue | Gather evidence | Stop |
-|---|---|---|---|
-| [Signal A] | [Criterion] | [Criterion] | [Criterion] |
-| [Signal B] | [Criterion] | [Criterion] | [Criterion] |
+| Unknown | Why it matters to the answer | Reporting boundary |
+|---|---|---|
+| [Unknown A] | [Effect on interpretation] | [What cannot be claimed] |
+| [Unknown B] | [Effect on interpretation] | [What cannot be claimed] |
 
-## 7. Action plan
-
-### [Phase one]
-
-- [Action]
-- [Metric]
-- [Stop condition]
-
-### [Phase two]
-
-- [Action]
-- [Metric]
-- [Stop condition]
-
-## 8. Final answers
+## 7. Final answers
 
 ### [Core question one]
 
-[Direct answer.]
+[Direct answer, decisive evidence, boundary, and remaining unknown.]
 
 ### [Core question two]
 
-[Direct answer.]
+[Direct answer, decisive evidence, boundary, and remaining unknown.]
 
 ## Direct sources
 
 - [Source title](https://example.com/source)
 - [Source title](https://example.com/source-2)
 
-> Research limits: [freshness, sample, geography, self-reported data, and variables that cannot be confirmed publicly.]
+> Research limits: [Freshness, sample, geography, self-reported data, and variables that cannot be confirmed publicly.]

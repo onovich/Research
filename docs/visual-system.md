@@ -2,7 +2,7 @@
 
 **English** · [简体中文](visual-system.zh-CN.md)
 
-Version 1.4.0 · A low-reading-pressure, evidence-first visual system for long decision reports.
+Version 1.4.0 · A low-reading-pressure, evidence-first visual system for long research reports.
 
 ## Design position
 
@@ -12,7 +12,7 @@ It follows four rules:
 
 1. give the judgment before inviting deeper evidence;
 2. use structure rather than decoration to express hierarchy;
-3. add interaction only when it helps understanding or a decision;
+3. add interaction only when it helps understanding or evidence inspection;
 4. optimize for sustained reading, not first-screen impact.
 
 The signature device is a ledger that places public indicators, necessary deductions or constraints, and the result that cannot be observed directly on one path.
@@ -65,9 +65,9 @@ The spacing rhythm is based on 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Major sec
 ## Component language
 
 - **Thesis hero:** a concise topic title, then one evidence-bounded central finding in `.report-subtitle`; scope and audience remain in `.hero-lead`.
-- **Ledger:** observable indicator → cost or constraint → decision result.
-- **Answer stack:** decision question paired with a direct answer.
-- **Evidence strip:** two to four numbers that change the decision.
+- **Ledger:** observable indicator → cost or constraint → bounded result.
+- **Answer stack:** research question paired with a direct answer.
+- **Evidence strip:** two to four numbers that materially change the conclusion.
 - **Callout:** method, warning, risk, or stop condition, always labelled in text.
 - **Prompt box:** one short, copyable AI instruction; label it, keep it selectable, and never use it for long prose.
 - **Definition table:** exact concept or criterion mappings.
@@ -75,9 +75,9 @@ The spacing rhythm is based on 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Major sec
 - **Data table:** exact comparison with caption, scopes, and local mobile scroll.
 - **Details:** supporting cases or method, never a caveat that reverses the conclusion.
 - **Flow/timeline:** only for real sequence or phases.
-- **Calculator/scorecard:** an explicit model with units, thresholds, defaults, and limits.
+- **Evidence calculator:** an explicit transformation of disclosed inputs with units, formulas, defaults, and limits; it never turns researcher preference into a recommendation.
 
-Avoid uniform card grids. Judgment, evidence, caveat, and action should look structurally different.
+Avoid uniform card grids. Finding, evidence, caveat, and material unknown should look structurally different.
 
 ## Interaction and localization
 

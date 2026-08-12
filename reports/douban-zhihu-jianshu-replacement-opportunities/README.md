@@ -3,9 +3,15 @@
 **Subtitle:** Can independent developers replace Douban, Zhihu, or Jianshu? Operating data, content stock, and app-store signals test the claim.
 
 - **Research cutoff:** 2026-08-12, Asia/Shanghai
-- **Audience:** independent developers and small teams
+- **Audience:** readers assessing platform replacement, durable value, and adjacent business opportunities
 - **Geography:** mainland China and the Chinese-language internet
-- **Decision question:** Can an independent developer replace Douban, Zhihu, or Jianshu today, and is there a viable entrepreneurial opportunity around their weaknesses?
+- **Research question:** Can an independent developer replace Douban, Zhihu, or Jianshu today, and does public evidence establish a viable entrepreneurial opportunity around their weaknesses?
+
+## Research context
+
+- **Background:** Douban, Zhihu, and Jianshu are mature products with unevenly visible audience and financial data. Their interfaces are easy to imitate; their content stock, identity, distribution, and governance systems are not.
+- **Purpose:** Identify the durable value these platforms still provide, assess whether a one-for-one replacement is supported by evidence, explain the observed barriers, and separate plausible opportunity hypotheses from demonstrated opportunities.
+- **Main sources:** Zhihu's SEC filings and annual results, current Douban and Jianshu product and legal pages, China App Store listings, CNNIC market reports, and primary research on governance, multi-homing, and two-sided cold starts.
 
 ## Scope and evidence rules
 
@@ -23,7 +29,7 @@ The available data **do not show that a solo developer can replace any of the th
 2. **Operating expenses exceeded gross profit.** Zhihu's 2025 operating expenses equaled 78.4% of revenue and 130.8% of gross profit. This establishes the scale of expense, not how much came from community governance.
 3. **Observable consumer footprints differ sharply.** The China App Store shows roughly 1.59 million, 1.74 million, and 87,000 cumulative ratings for Douban, Zhihu, and Jianshu. Ratings are not MAU, but Jianshu's visible rating count is only about 1/18 to 1/20 of the other two.
 
-The testable startup question is therefore not “can we rebuild the platform?” It is whether one job—object curation, private-community operations, creator-owned publishing, or moderation tooling—can be sold to a named customer group. The current evidence does not identify a proven winner.
+The narrower opportunity question is whether one job—object curation, private-community operations, creator-owned publishing, or moderation tooling—has measurable demand from a named customer group. The current evidence identifies hypotheses, not a proven winner.
 
 ## Let the data speak first
 
@@ -69,11 +75,11 @@ Public data do not directly measure the reason, so the following are evidence-ba
 
 ### 953.9 million content items turn migration into a data problem
 
-Zhihu's reported content, creator, and 1,000-plus vertical counts show that the replacement target is more than a publishing interface. Douban also combines object catalogs, ratings, collections, and groups. **Inference:** a new product needs a lawful seed corpus and must coordinate contributors, readers, and object data. Public sources do not disclose the cost of migrating that state.
+Zhihu's reported content, creator, and 1,000-plus vertical counts show that the replacement target is more than a publishing interface. Douban also combines object catalogs, ratings, collections, and groups. **Inference:** any replacement depends on a lawful seed corpus plus coordinated contributors, readers, and object data. Public sources do not disclose the cost of migrating that state.
 
 ### Operating expenses above gross profit show that public communities are not light operations
 
-Zhihu's 2025 sales and marketing expense equaled 45.6% of revenue, R&D 19.1%, and total operating expense 78.4%. These lines include many activities and cannot all be labeled governance cost. **Inference:** an open-content product must measure acquisition, moderation, support, and engineering cost—not only build time.
+Zhihu's 2025 sales and marketing expense equaled 45.6% of revenue, R&D 19.1%, and total operating expense 78.4%. These lines include many activities and cannot all be labeled governance cost. **Inference:** the relevant cost base for an open-content product includes acquisition, moderation, support, and engineering—not only build time.
 
 ### Observable use has not moved to one successor
 
@@ -88,30 +94,20 @@ Current sources show that people can publish and interact across multiple servic
 
 ## Opportunity hypotheses: add denominators before ranking
 
-The platform data cannot support “strong / medium / weak” startup rankings. A more defensible map states the first falsifiable metric for each hypothesis.
+The platform data cannot support “strong / medium / weak” startup rankings. A defensible map states the observed basis and the decisive missing evidence for each hypothesis.
 
-| Hypothesis to test | Observed basis | Decisive unknown | First quantitative test |
-| --- | --- | --- | --- |
-| Vertical object + expert network | Incumbents show that objects, evaluations, and identity can form durable stock | No willingness-to-pay or return data for a specific niche | 100 objects, 10 contributors; at least 5 users complete a comparison task twice in four weeks |
-| Private-community operations | Avoids a public-feed cold start and has a named administrator role | Admin pain and willingness to replace existing group tools are unknown | Interview 12 admins; at least 3 pay or commit budget for the same feature |
-| Creator-owned publishing | Jianshu's current publishing and membership features show the job still exists | Willingness to pay separately for ownership, export, and distribution is unknown | 10 writers import real work; at least 3 publish in two consecutive weeks and agree to pay |
-| Personal library / curation | Douban demonstrates long-lived recording, collecting, and object organization | Import permission, single-player utility, and payment demand are unknown | Without social features, at least 8 of 20 users return in week two |
-| Moderation / reputation tooling | Zhihu's expense structure and regulations show recurring platform operations | Filings do not isolate moderation spend, and buyer budget is unknown | Measure weekly moderation minutes with 5 communities and secure 1 paid pilot |
-| Generic public UGC clone | No direct evidence of users moving wholesale | Supply, demand, governance, and revenue denominators are all unknown | Prove one repeated job that works without a public feed before building one |
+| Opportunity hypothesis | Observed basis | Decisive missing evidence |
+| --- | --- | --- |
+| Vertical object + expert network | Incumbents show that objects, evaluations, and identity can form durable stock | Willingness to pay, return behavior, and contributor acquisition for a specific niche |
+| Private-community operations | A private space avoids part of the public-feed cold start and has a named administrator role | Admin pain, switching cost, and budget relative to existing group tools |
+| Creator-owned publishing | Jianshu's current publishing and membership features show that the publishing job still exists | Willingness to pay separately for ownership, export, and distribution |
+| Personal library / curation | Douban demonstrates long-lived recording, collecting, and object organization | Import permission, stand-alone utility, retention, and payment demand |
+| Moderation / reputation tooling | Zhihu's expense structure and regulations show recurring platform operations | Filings do not isolate moderation spend; buyer identity, budget, and workflow cost are unknown |
+| Generic public UGC clone | No direct evidence shows users moving wholesale to a single successor | Supply, demand, governance, retention, and revenue denominators are all unknown |
 
-### One reasonable first test: a vertical object-and-work graph
+### Most narrowly supported opportunity profile
 
-Choose a niche where people repeatedly evaluate named objects and produce valuable structured work: specialist software, components, venues, grants, competitions, courses, research methods, or production vendors.
-
-Start with:
-
-- 200–1,000 manually verified objects;
-- 30–50 credible contributors;
-- one recurring workflow such as compare, shortlist, review, submit, procure, or report;
-- private or invite-only discussion;
-- export and ownership from day one.
-
-Charge for the workflow, trusted data, team collaboration, or membership. The public discussion layer should be earned after the single-player and small-group utility works.
+Among the hypotheses, a vertical object-and-work graph has the clearest continuity with the incumbents' observed value: named objects, structured comparisons, trusted contributors, and recurring work. Possible domains include specialist software, components, venues, grants, competitions, courses, research methods, or production vendors. Public evidence does not establish the required corpus size, contributor count, retention, price, or whether private collaboration is sufficient to support a business.
 
 ## What vibe coding changes—and what it does not
 
@@ -129,41 +125,6 @@ It does not create:
 - production security, privacy, moderation judgment, and legal compliance;
 - a reason for users to abandon years of history elsewhere.
 
-## Six-week validation plan
-
-### Week 1: choose the object and recurring job
-
-Interview 12 people in one niche. Collect the exact objects they compare and the files, links, or spreadsheets they use. Stop if there is no repeated decision or coordination job.
-
-### Week 2: seed the corpus manually
-
-Create 100 verified object records and a transparent data policy. Do not scrape protected platform data. Test whether five users return without a social feed.
-
-### Week 3: recruit credible supply
-
-Invite 10 domain contributors and ask each for one structured review, checklist, or comparison. Learn what attribution, ownership, and moderation rules they require.
-
-### Week 4: sell the workflow
-
-Offer a paid private workspace, export, alert, shortlist, or report. Continue only if at least three users or one organization pays or commits budget.
-
-### Week 5: build the smallest product
-
-One object model, one workflow, one permission model, one export path, and one audit log. Keep public posting closed.
-
-### Week 6: measure return behavior
-
-Track second-week return, successful jobs, useful contributions, moderation minutes, and support cost. Open sharing only if it improves acquisition without degrading quality.
-
-## What not to build
-
-- a public general-purpose feed with no pre-existing community;
-- a Douban data mirror or unauthorized imported review corpus;
-- an ad-funded community that needs millions of page views before revenue;
-- an AI-generated content farm that makes quality and governance worse;
-- open discussion in a sensitive domain before moderation and escalation are designed;
-- a “creator platform” that offers publishing but no ownership, distribution, or paid outcome.
-
 ## Evidence boundary and unknowns
 
 - Douban does not publish current audited audience or financial figures in the reviewed sources.
@@ -171,6 +132,8 @@ Track second-week return, successful jobs, useful contributions, moderation minu
 - Zhihu’s operating and content figures are company filings; they do not measure content quality or user satisfaction.
 - CNNIC and large-platform figures establish the size and fragmentation of Chinese internet usage, not the market share of these three products.
 - The opportunity table is a set of hypotheses, not startup success probabilities or a ranking derived from comparable samples.
+- Demand, willingness to pay, retention, contributor acquisition, moderation labor, and support cost have not been measured for any proposed replacement wedge.
+- The reviewed sources do not establish whether a stand-alone private tool can overcome the distribution advantage of public incumbents.
 - Regulatory requirements vary by service design, audience, content, and deployment. Obtain qualified advice before launching a public UGC or AI-content service.
 
 ## Sources

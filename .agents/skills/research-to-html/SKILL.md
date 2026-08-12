@@ -22,9 +22,9 @@ Read these references before acting:
 3. Browse current primary sources for unstable facts. Record direct URLs, source type, observed date, geography, caveat, and confidence.
 4. Separate observation, inference, and unknowns. Test survivor bias, self-reported platform claims, stale examples, and metrics that do not establish the claimed business result.
 5. Build the metric worksheet before synthesis when the question involves scale, change, frequency, profitability, prevalence, rankings, or comparisons. Preserve raw values, denominator, period, unit, formula, result, source, and caveat. Calculate shares, changes, ratios, ranges, or unit economics only when the inputs are comparable.
-6. Write the Markdown evidence source before designing the report. Keep claims, figures, formulas, limitations, and citations independently reviewable.
-7. Compose separate English and Simplified-Chinese HTML pages from the same approved findings. Preserve numerical, causal, and uncertainty parity. Give each locale a self-canonical absolute URL and reciprocal absolute `hreflang` links.
-8. Add only interactions that reduce understanding cost: reading depth, contents, theme, larger text, focused filtering, calculators, scorecards, timelines, and print support.
+6. Write the Markdown evidence source before designing the report. Open with a short research-context block that states the background, the specific answer sought, and the main source groups. Keep claims, figures, formulas, limitations, and citations independently reviewable.
+7. Compose separate English and Simplified-Chinese HTML pages from the same approved findings. Repeat the short research-context block near the top of each page, before the conclusion. Preserve numerical, causal, and uncertainty parity. Give each locale a self-canonical absolute URL and reciprocal absolute `hreflang` links.
+8. Add only interactions that reduce understanding cost: reading depth, contents, theme, larger text, focused filtering, evidence calculators, historical timelines, and print support. Calculators may transform disclosed inputs but must not turn researcher judgment into a recommendation. A timeline belongs only when chronology is part of the evidence; it must not become a default action plan.
 9. Update the repository catalog and concise bilingual project documentation when the report is publishable.
 10. Run the repository validation gate, privacy scan, SEO metadata checks, JavaScript syntax checks, responsive and keyboard checks, both locales, print, deep links, and no-script fallback. Inspect the exact public artifact, not only the source tree.
 11. Review the exact diff and publish only the intended files. Never force-push or stage unrelated workspace content.
@@ -37,6 +37,8 @@ Read these references before acting:
 - For data-bearing questions, include at least three question-relevant raw measures, three reproducible derived measures, one counterexample, and one explicit data-completeness statement. If the source base cannot support this, say so and narrow the conclusion instead of filling the gap with general principles.
 - Show numerator and denominator for percentages, name the comparison period, preserve units, and expose formulas in the report or evidence notebook.
 - Prefer a finding-led paragraph: result first, number and comparison second, bounded interpretation third, limitation last. Avoid slogans, moral framing, metaphors, and generic business advice in evidence sections.
+- Treat the reader as a reader, not as the presumed operator of a project. Never put a validation plan, project brief, implementation roadmap, action scorecard, recommended build sequence, or generic next steps inside the research report.
+- When recommendations are explicitly requested, deliver them as a separate companion artifact, not as part of the report. Identify the evidence and value judgments behind them, and never present researcher preference as a measured result.
 - Do not silently weaken caveats in the brief layer or in translation.
 - Do not introduce unsupported numbers during HTML composition.
 - Cite direct supporting pages, not search-result pages.

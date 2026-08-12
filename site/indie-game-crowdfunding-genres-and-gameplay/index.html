@@ -111,7 +111,7 @@
     </div>
   </header>
 
-  <noscript><div class="noscript">JavaScript is off. The full report remains readable, but filters, the scorecard, and reading preferences are unavailable.</div></noscript>
+  <noscript><div class="noscript">JavaScript is off. The full report remains readable, but filters and reading preferences are unavailable.</div></noscript>
 
   <div class="layout" id="top">
     <aside class="side-nav" id="side-nav" aria-label="Report contents">
@@ -124,8 +124,8 @@
           <li><a href="#patterns"><span>03</span>Seven patterns</a></li>
           <li><a href="#cases"><span>04</span>Released cases</a></li>
           <li><a href="#risks"><span>05</span>High-risk fit</a></li>
-          <li><a href="#decision"><span>06</span>10-point card</a></li>
-          <li><a href="#route"><span>07</span>Platform route</a></li>
+          <li><a href="#signals"><span>06</span>Fit signals</a></li>
+          <li><a href="#platform-differences"><span>07</span>Platform evidence</a></li>
           <li><a href="#sources"><span>08</span>Sources</a></li>
         </ol>
       </nav>
@@ -139,7 +139,13 @@
           <p class="eyebrow">Companion deep dive · Indie games · 2026</p>
           <h1 id="page-title">Indie game crowdfunding fit</h1>
           <p class="report-subtitle">Genre helps, but audience, playable proof, and bounded scope decide the fit.</p>
-          <p class="hero-lead">A focused companion to the <a href="../crowdfunding-and-indie-games-research/" data-file-href="../crowdfunding-and-indie-games-research/index.html">broader crowdfunding decision report</a>. This is the single detailed home for current platform samples, genre and gameplay patterns, released cases, failure modes, platform routes, and the 10-point fit card.</p>
+          <p class="hero-lead">A focused companion to the <a href="../crowdfunding-and-indie-games-research/" data-file-href="../crowdfunding-and-indie-games-research/index.html">broader crowdfunding economics report</a>. This is the detailed home for current platform samples, genre and gameplay patterns, released cases, failure modes, recurring fit signals, and platform differences.</p>
+
+          <dl class="report-context" aria-label="Research context">
+            <div><dt>Background</dt><dd>Video-game crowdfunding remains visible, but genre claims often mix platform-selected winners, mixed-status live lists, and famous historical cases. Chinese campaigns also use a different offer mix.</dd></div>
+            <div><dt>Question</dt><dd>Is the channel still active, which game and offer properties recur in funded or delivered cases, and how do international platforms differ from Modian?</dd></div>
+            <div><dt>Main sources</dt><dd>Kickstarter annual and quarterly statistics, BackerKit's current collection, Modian rankings, direct campaign pages, and Steam release records.</dd></div>
+          </dl>
 
           <dl class="hero-ledger" aria-label="The evidence chain for crowdfunding fit">
             <div class="ledger-row">
@@ -158,18 +164,18 @@
 
           <div class="hero-actions">
             <a class="button-link" href="#overview">Read the answer</a>
-            <a class="button-link secondary" href="#decision">Score my game</a>
+            <a class="button-link secondary" href="#platform-differences">Compare platform evidence</a>
           </div>
           <p class="reading-state" id="reading-state"
-             data-brief-message="Brief mode: the decision, patterns, and actions stay visible while sample detail is condensed."
-             data-full-message="Full mode: snapshots, case detail, evidence labels, and sources are visible.">Brief mode: the decision, patterns, and actions stay visible while sample detail is condensed.</p>
+             data-brief-message="Brief mode: the main findings, patterns, fit signals, and platform evidence stay visible while sample detail is condensed."
+             data-full-message="Full mode: snapshots, case detail, evidence labels, and sources are visible.">Brief mode: the main findings, patterns, fit signals, and platform evidence stay visible while sample detail is condensed.</p>
         </header>
 
         <section class="section" id="overview" aria-labelledby="overview-title">
           <div class="section-head">
             <span class="section-number">01</span>
             <div>
-              <h2 id="overview-title">The answer in three decisions</h2>
+              <h2 id="overview-title">The answer in three findings</h2>
               <p class="section-intro">Genre is a useful proxy for how easily a project can show audience, feel, and scope. It is not a substitute for those proofs.</p>
             </div>
           </div>
@@ -469,121 +475,49 @@
           </div>
         </section>
 
-        <section class="section" id="decision" aria-labelledby="decision-title">
+        <section class="section" id="signals" aria-labelledby="signals-title">
           <div class="section-head">
             <span class="section-number">06</span>
             <div>
-              <h2 id="decision-title">Does this game fit crowdfunding now?</h2>
-              <p class="section-intro">Six evidence checks, ten points. Score what exists today, not what the team plans to create after funding.</p>
+              <h2 id="signals-title">Observed fit signals and their limits</h2>
+              <p class="section-intro">These signals recur in the selected records. They are not a score, threshold, or success-probability model.</p>
             </div>
           </div>
 
-          <form class="decision-tool" id="decision-tool">
-            <div class="decision-row">
-              <label for="score-audience">Audience memory</label>
-              <select id="score-audience" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · No reachable audience</option>
-                <option value="1">1 · Followers or wishlists without conversion evidence</option>
-                <option value="2">2 · Prior title, owned list, stable community, or repeatable growth</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-position">Five-second comprehension</label>
-              <select id="score-position" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · Generic genre or feature list</option>
-                <option value="1">1 · Clear genre, weak difference</option>
-                <option value="2">2 · Audience, reference, and difference fit one sentence</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-product">Playable proof</label>
-              <select id="score-product" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · Concept only</option>
-                <option value="1">1 · Video or rough prototype</option>
-                <option value="2">2 · Public representative demo with observed players</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-budget">Bounded milestone</label>
-              <select id="score-budget" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · Goal cannot materially change delivery</option>
-                <option value="1">1 · Milestone exists, but scope or budget is soft</option>
-                <option value="2">2 · Defined milestone plus fees, tax, delay, and support buffer</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-reward">Reward delivery</label>
-              <select id="score-reward" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · Many SKUs or uncertain rights/production</option>
-                <option value="1">1 · Digital-first or one controlled physical offer</option>
-              </select>
-            </div>
-            <div class="decision-row">
-              <label for="score-operation">Campaign ownership</label>
-              <select id="score-operation" data-score>
-                <option value="" selected>Select the current state</option>
-                <option value="0">0 · No owner or communication cadence</option>
-                <option value="1">1 · Named owner, support plan, and update cadence</option>
-              </select>
-            </div>
-            <div class="decision-result" aria-live="polite">
-              <output class="score" id="decision-score">—/10</output>
-              <div>
-                <h3 id="decision-heading">Complete all six choices for a decision</h3>
-                <p id="decision-copy">Your selections are not saved.</p>
-              </div>
-            </div>
-          </form>
-
-          <div class="definition-table">
-            <div class="definition-row">
-              <dt>8–10 points</dt>
-              <dd>Proceed to pre-launch conversion and budget validation.</dd>
-            </div>
-            <div class="definition-row">
-              <dt>6–7 points</dt>
-              <dd>Repair the weakest evidence before announcing a launch date.</dd>
-            </div>
-            <div class="definition-row">
-              <dt>0–5 points</dt>
-              <dd>Use a Steam page, demo, playtests, creators, and festivals to build proof first.</dd>
-            </div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Observed crowdfunding fit signals and their limits">
+            <table>
+              <thead><tr><th scope="col">Signal</th><th scope="col">Observed in selected funded or delivered cases</th><th scope="col">Counterevidence or limit</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Audience memory</th><td>Sequels, known creators, existing series, and classic lineages recur in the international examples</td><td>The records do not provide a matched comparison with equally visible cold-start projects</td></tr>
+                <tr><th scope="row">Five-second comprehension</th><td>Cozy fox café RPG, interactive musical platforming, pacifist RPG, and stress dungeon crawler compress into legible promises</td><td>Clear labels also appear among under-goal projects, so comprehensibility is not sufficient</td></tr>
+                <tr><th scope="row">Playable proof</th><td>Undertale had a demo; released action and systems-led cases made their core interaction observable</td><td>Public campaign records do not consistently expose demo quality or player-behavior data</td></tr>
+                <tr><th scope="row">Bounded scope</th><td>Hollow Knight and hardware-constrained retro examples show comparatively narrow, demonstrable cores</td><td>A small campaign total is not a reusable production budget, and large scopes can still attract pledges</td></tr>
+                <tr><th scope="row">Controlled offer</th><td>Modian's visible successful titles are dominated by editions, merchandise, localization benefits, and preorders around existing works</td><td>Gross sales do not reveal rights, manufacturing, freight, replacement, or support margin</td></tr>
+                <tr><th scope="row">Campaign operations</th><td>Update histories make communication and fulfillment work visible in selected campaigns</td><td>Live rankings do not provide comparable operating labor or support-cost data</td></tr>
+              </tbody>
+            </table>
           </div>
-          <p class="fine-print">This card is a decision aid, not a platform success-probability model.</p>
         </section>
 
-        <section class="section" id="route" aria-labelledby="route-title">
+        <section class="section" id="platform-differences" aria-labelledby="platform-differences-title">
           <div class="section-head">
             <span class="section-number">07</span>
             <div>
-              <h2 id="route-title">Choose the route after the evidence</h2>
-              <p class="section-intro">International and Chinese campaigns can use the same game, but they may be selling a different milestone or offer.</p>
+              <h2 id="platform-differences-title">How the platform evidence differs</h2>
+              <p class="section-intro">The channels expose different kinds of evidence; none supplies a complete project-profit or discovery model.</p>
             </div>
           </div>
 
-          <div class="answer-stack">
-            <article class="answer">
-              <h3>International: finance one playable milestone</h3>
-              <p>Lead with the demo and reachable audience. Use Kickstarter or BackerKit to convert that proof into funding, backers, and a marketing event, then route attention back to Steam.</p>
-            </article>
-            <article class="answer">
-              <h3>China / Modian: define the offer first</h3>
-              <p>Separate a new-game campaign from a preorder, localization benefit, special edition, or existing-IP collectible. Their cost, rights, fulfillment, and audience logic are different.</p>
-            </article>
-          </div>
-
-          <div class="flow" aria-label="Evidence-first international crowdfunding sequence">
-            <div class="flow-step"><span>01</span><p>One-sentence position</p></div>
-            <div class="flow-step"><span>02</span><p>Representative playable demo</p></div>
-            <div class="flow-step"><span>03</span><p>Steam page + reachable audience</p></div>
-            <div class="flow-step"><span>04</span><p>Conversion and budget test</p></div>
-            <div class="flow-step"><span>05</span><p>Bounded campaign milestone</p></div>
-            <div class="flow-step"><span>06</span><p>Route back to Steam and delivery</p></div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Platform evidence comparison">
+            <table>
+              <thead><tr><th scope="col">Channel</th><th scope="col">Observable pattern</th><th scope="col">Evidence strength</th><th scope="col">Main unknown</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Kickstarter</th><td>Platform-wide annual statistics plus named campaigns and a Steam festival show continuing video-game activity</td><td>Strongest current first-party activity evidence in this review</td><td>Genre denominator, project profit, organic discovery, and causal promotional lift</td></tr>
+                <tr><th scope="row">BackerKit</th><td>The current collection mixes active and fulfilled projects; sequel, cozy, retro, and performance hooks appear among at-or-above-goal entries</td><td>Useful cutoff snapshot with visible counterexamples</td><td>Platform-wide success rate, profit, and delivery-adjusted comparison</td></tr>
+                <tr><th scope="row">Modian</th><td>Current and successful rankings prominently contain existing games or IP monetized through editions, benefits, merchandise, or preorders</td><td>Strong for visible offer mix at the cutoff</td><td>Full title classification, delivery, rights cost, and net margin</td></tr>
+                <tr><th scope="row">Steam</th><td>Official documentation defines Coming Soon pages, demos, wishlists, and Next Fest, while store pages verify release</td><td>Strong for platform mechanics and release state</td><td>Whether crowdfunding caused discovery or commercial performance</td></tr>
+              </tbody>
+            </table>
           </div>
 
           <div class="detail-layer">

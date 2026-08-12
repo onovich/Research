@@ -156,13 +156,13 @@ async function run() {
         themeLabel: document.querySelector('#theme-button').getAttribute('aria-label'),
         cost: document.querySelector('#cost-total').textContent,
         filterCount: document.querySelectorAll('[data-game-filter]').length,
-        hasScorecard: Boolean(document.querySelector('#decision-tool')),
+        hasPrescriptiveModule: Boolean(document.querySelector('#decision-tool, #actions, [data-score], .scorecard, .validation-plan, .action-plan')),
         hasCompanionLink: Boolean(document.querySelector('a[href*="indie-game-crowdfunding-genres-and-gameplay"]'))
       }));
       assert(state.reading === 'full', `${locale}: pillar reading control failed`);
       assert(state.theme === 'dim' && expected.theme.test(state.themeLabel), `${locale}: pillar theme control is not localized: ${JSON.stringify(state)}`);
       assert(state.cost === '96%', `${locale}: pillar cost calculator failed: ${JSON.stringify(state)}`);
-      assert(state.filterCount === 0 && state.hasScorecard === false, `${locale}: pillar must not duplicate the companion filter or scorecard: ${JSON.stringify(state)}`);
+      assert(state.filterCount === 0 && state.hasPrescriptiveModule === false, `${locale}: pillar must not contain a prescriptive planning module: ${JSON.stringify(state)}`);
       assert(state.hasCompanionLink, `${locale}: pillar is missing the companion-report link`);
       assert(session.errors.length === 0, `${locale}: ${session.errors.join(' | ')}`);
       console.log(`pillar tools: ${locale} ${JSON.stringify(state)}`);
@@ -177,29 +177,24 @@ async function run() {
       await session.page.click('[data-reading-mode="full"]');
       await session.page.click('#theme-button');
       await session.page.click('[data-game-filter="action"]');
-      for (const select of await session.page.locator('[data-score]').all()) {
-        const values = await select.locator('option').evaluateAll(options => options.map(option => option.value).filter(Boolean));
-        await select.selectOption(values[values.length - 1]);
-      }
       const state = await session.page.evaluate(() => ({
         reading: document.documentElement.dataset.reading,
         theme: document.documentElement.dataset.theme,
         themeLabel: document.querySelector('#theme-button').getAttribute('aria-label'),
         filter: document.querySelector('#game-filter-status').textContent,
-        score: document.querySelector('#decision-score').textContent,
-        heading: document.querySelector('#decision-heading').textContent
+        hasPrescriptiveModule: Boolean(document.querySelector('#decision-tool, #actions, [data-score], .scorecard, .validation-plan, .action-plan'))
       }));
       assert(state.reading === 'full', `${locale}: focused-report reading control failed`);
       assert(state.theme === 'dim' && expected.theme.test(state.themeLabel), `${locale}: focused-report theme control failed: ${JSON.stringify(state)}`);
       assert(expected.filter.test(state.filter), `${locale}: focused-report filter output is not localized: ${state.filter}`);
-      assert(state.score === '10/10' && expected.heading.test(state.heading), `${locale}: focused-report scorecard failed: ${JSON.stringify(state)}`);
+      assert(state.hasPrescriptiveModule === false, `${locale}: focused report must not contain a prescriptive planning module: ${JSON.stringify(state)}`);
       assert(session.errors.length === 0, `${locale}: ${session.errors.join(' | ')}`);
       console.log(`focused tools: ${locale} ${JSON.stringify(state)}`);
       await session.context.close();
     }
 
-    await testFocusedReportTools('en-US', 'indie-game-crowdfunding-genres-and-gameplay/index.html', { filter: /^Showing /, heading: /Ready/, theme: /light mode/ });
-    await testFocusedReportTools('zh-CN', 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', { filter: /筛选后显示/, heading: /可以进入/, theme: /日间模式/ });
+    await testFocusedReportTools('en-US', 'indie-game-crowdfunding-genres-and-gameplay/index.html', { filter: /^Showing /, theme: /light mode/ });
+    await testFocusedReportTools('zh-CN', 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', { filter: /筛选后显示/, theme: /日间模式/ });
 
     const persisted = await open({ locale: 'en-US', width: 768, relativePath: 'index.html' });
     await persisted.page.click('[data-language-option="zh-CN"]');

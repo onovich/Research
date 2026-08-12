@@ -4,12 +4,18 @@
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.html) · [中文 HTML](../../site/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html)
 
-> Page role: companion deep dive and the canonical home for game-specific detail. It extends the [crowdfunding economics pillar report](../crowdfunding-and-indie-games-research/README.md) with current market snapshots, a genre/gameplay taxonomy, released cases, failure modes, platform routes, and the 10-point fit card. The pillar intentionally does not repeat those sections.
+> Page role: companion deep dive and the canonical home for game-specific detail. It extends the [crowdfunding economics pillar report](../crowdfunding-and-indie-games-research/README.md) with current market snapshots, a genre/gameplay taxonomy, released cases, failure modes, and platform differences. The pillar intentionally does not repeat those sections.
 >
 > Research cutoff: 2026-08-10 (China Standard Time)<br>
 > Geography: international reward crowdfunding, primarily Kickstarter and BackerKit, plus China’s Modian<br>
-> Decision: whether a small independent game team should use crowdfunding, and which product properties improve the fit<br>
+> Research question: whether video-game crowdfunding remains active, which game and offer properties recur in funded or delivered cases, and how international platforms differ from Modian<br>
 > Excluded: tabletop games, equity or NFT funding, publisher deals, and claims about private project profit
+
+## Research context
+
+- **Background:** Video-game crowdfunding remains visible, but genre claims often combine platform-selected winners, mixed-status live lists, and famous historical cases. Chinese game-category campaigns also use a different mix of preorders, editions, and merchandise.
+- **Purpose:** Determine whether the channel is still active, identify recurring genre, gameplay, audience, proof, and offer properties, and state what those observations do—and do not—establish.
+- **Main sources:** Kickstarter annual and quarterly platform statistics, BackerKit's current video-game collection, Modian's current and successful rankings, direct campaign pages, and Steam release records.
 
 ## One-page answer
 
@@ -67,7 +73,7 @@ Live lists are descriptive snapshots. They do not provide the failed-project den
 | [Backed by Backers Steam festival](https://updates.kickstarter.com/backed-by-backers-a-steam-festival-powered-by-kickstarter/) | A 2026 Steam event featured more than 400 previously or currently crowdfunded games. | That crowdfunding caused Steam visibility or that every participating campaign delivered. |
 
 **Observation:** the channel is active.<br>
-**Inference:** it remains useful for the right game and team.<br>
+**Inference:** active platform statistics and selected delivered cases show that the channel still functions for some game and offer structures.<br>
 **Unknown:** public evidence does not establish the probability that a cold-start project will be funded, delivered, or profitable.
 
 ## 3. Two live market snapshots
@@ -142,41 +148,27 @@ Concept art and feature lists can explain ambition but not control feel, pacing,
 
 Simultaneous console ports, multiplayer, voice acting, many languages, physical rewards, and stretch-goal content multiply dependencies. The campaign total is a financing event; Kickstarter itself defines the platform as all-or-nothing reward crowdfunding rather than a store and says a pledge is not a guaranteed product. [How Kickstarter works](https://help.kickstarter.com/hc/en-us/articles/115004996453-What-is-Kickstarter)
 
-## 6. A ten-point type-fit card
+## 6. Observed fit signals and their limits
 
-Score the current evidence, not the team’s intention.
+| Signal | Observed in selected funded or delivered cases | Counterevidence or limit |
+|---|---|---|
+| Audience memory | Sequels, known creators, existing series, and classic lineages recur in the international examples | The reports do not provide a matched comparison with equally visible cold-start projects |
+| Five-second comprehension | “Cozy fox café RPG,” interactive musical platforming, pacifist RPG, and stress dungeon crawler compress into a legible promise | Clear labels also appear among under-goal projects, so comprehensibility is not sufficient |
+| Playable proof | Undertale had a demo; released action and systems-led cases made their core interaction observable | Public campaign records do not consistently expose demo quality or player-behavior data |
+| Bounded scope | Hollow Knight and hardware-constrained retro examples show comparatively narrow, demonstrable cores | A small campaign total is not a reusable production budget, and large scopes can still attract pledges |
+| Controlled offer | Modian's visible successful titles are dominated by editions, merchandise, localization benefits, and preorders around existing works | Gross sales do not reveal rights, manufacturing, freight, replacement, or support margin |
+| Campaign operations | Update histories make communication and fulfillment work visible in selected campaigns | Live rankings do not provide comparable operating labor or support-cost data |
 
-| Signal | 0 | 1 | 2 |
+These signals describe recurring evidence in the selected records. They are not a score, threshold, or success-probability model.
+
+## 7. How the platform evidence differs
+
+| Channel | Observable pattern | Evidence strength | Main unknown |
 |---|---|---|---|
-| Audience memory | No reachable audience | Followers or wishlists without conversion evidence | Prior title, owned list, stable community, or repeatable paid/organic growth |
-| Five-second comprehension | Generic genre or feature list | Clear genre, weak difference | Audience, reference, and difference are repeatable in one sentence |
-| Playable proof | Concept only | Video or rough prototype | Public representative demo with observed player behavior |
-| Bounded milestone | Goal does not change delivery | A milestone exists but budget/scope is soft | Goal funds a defined milestone with fees, tax, delay, and support buffer |
-| Reward delivery | Many SKUs or uncertain rights/production | Digital-first or one controlled physical offer | — |
-| Campaign ownership | No owner or cadence | Named owner, support plan, and update cadence | — |
-
-- **8–10:** proceed to pre-launch conversion and budget validation.
-- **6–7:** repair the weakest evidence before announcing a launch date.
-- **0–5:** use a Steam page, demo, playtests, creators, and festivals to build proof first.
-
-This card is a decision aid, not a platform success-probability model.
-
-## 7. Platform-specific route
-
-### International campaign
-
-1. Publish a credible Steam Coming Soon page when the game is ready for public discussion; Steam frames it as a way to build an audience and wishlists. [Coming Soon documentation](https://partner.steamgames.com/doc/store/coming_soon?language=english)
-2. Release a small, polished demo that proves the central mechanic. Steam explicitly describes a demo as a playable portion that shows core mechanics and links players back to the full game. [Demo documentation](https://partner.steamgames.com/doc/store/application/demos?language=english)
-3. Test whether an owned or reachable audience converts before choosing a goal.
-4. Use Kickstarter or BackerKit to finance one bounded milestone and route attention back to Steam.
-5. Time Steam Next Fest deliberately: each title can participate only once, and participation requires a public store page and playable demo. [Next Fest documentation](https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest?l=english)
-
-### China / Modian campaign
-
-1. Decide whether the product is a new game, a preorder, a localization benefit, or an existing-IP collectible; do not mix these economics.
-2. For a new game, prove a culturally or narratively specific niche with a playable build and existing community.
-3. For an existing work, cost the edition, rights, SKU count, shipping, replacements, and support before treating the visible gross as revenue.
-4. Use Modian’s live and successful rankings as comparable discovery, not as profit or delivery benchmarks.
+| Kickstarter | Platform-wide annual statistics plus named campaigns and a Steam festival show continuing video-game activity | Strongest current first-party activity evidence in this review | Genre denominator, project profit, organic discovery, and causal promotional lift |
+| BackerKit | The current collection mixes active and fulfilled projects; sequel, cozy, retro, and performance hooks appear among at-or-above-goal entries | Useful cutoff snapshot with visible counterexamples | Platform-wide success rate, profit, and delivery-adjusted comparison |
+| Modian | Current and successful rankings prominently contain existing games or IP monetized through editions, benefits, merchandise, or preorders | Strong for visible offer mix at the cutoff | Full title classification, delivery, rights cost, and net margin |
+| Steam | Official documentation defines Coming Soon pages, demos, wishlists, and Next Fest, while store pages verify release | Strong for platform mechanics and release state | Whether crowdfunding caused discovery or commercial performance |
 
 ## 8. Evidence ledger
 
@@ -189,9 +181,9 @@ This card is a decision aid, not a platform success-probability model.
 | Direct campaign pages | First-party campaign records | Pledges, backers, proposition, and updates | High for public campaign state; does not disclose full economics |
 | Steam store and Steamworks | First-party release records and documentation | Release verification, demo/store/wishlist/event mechanics | High for Steam state and rules; does not prove crowdfunding causality |
 
-## Final decision
+## Final findings
 
-An indie game is a stronger crowdfunding candidate when at least four things are already true: a reachable audience exists, the premise is repeatable in five seconds, a demo proves the core feel, and the goal buys a bounded milestone. Genre helps only when it makes those proofs easier.
+Across the selected funded or delivered cases, four properties recur: a reachable audience, a premise that compresses quickly, playable evidence of the core feel, and a bounded milestone or offer. Genre matters mainly because some genres make those properties easier to observe; the evidence does not justify a universal threshold for a specific project.
 
 For international campaigns, the recurring winners are often sequels or lineage-led classics, instantly demonstrable action games, retro RPGs, cozy simulations, identity-led narratives, and one-sentence systems. On Modian, a different model is prominent: an existing game or IP is converted through merchandise, a special edition, localization, or a preorder. A cold-start MMO or sprawling online world remains the clearest high-risk mismatch even when it can attract pledges.
 

@@ -27,14 +27,15 @@ Research requirements
 10. Do not rank incompatible or overlapping samples. Label researcher judgment as inference and expose the rule used.
 
 Required outputs
-- A reviewable Markdown research source containing scope, method, findings, evidence, limitations, implications or decision criteria where relevant, next questions or actions, and direct sources.
+- A reviewable Markdown research source containing a short opening context block, scope, method, findings, evidence, limitations, implications or unresolved questions where relevant, and direct sources.
+- The opening context block must state, in plain language, the research background, the specific answer sought, and the main source groups.
 - index.html as the English `x-default` report with its own canonical URL.
 - index.zh-CN.html as the Simplified-Chinese equivalent.
 - A top language switch on both pages.
 - Crawlable manual locale links on both pages; do not auto-redirect indexable URLs from browser or system language.
 - Persist an explicit locale choice when local storage is available without changing crawler-visible URL stability.
 - Shared CSS and shared behavior; do not duplicate the visual system into each report.
-- A brief layer containing the answer, key evidence, main caveat, and next action or open question; a full layer containing methods, comparison detail, cases, and sources.
+- A brief layer containing the answer, key evidence, main caveat, and material unknowns; a full layer containing methods, comparison detail, cases, and sources.
 - Update the repository catalog and concise English/Chinese project documentation when applicable.
 - A reader-facing method/transparency path, correction path, useful noindex 404 page, favicon, social share image, and XML sitemap when publishing a standalone site.
 
@@ -47,6 +48,8 @@ HTML quality contract
 - Keep citations near the claims they support and preserve research caveats in both languages.
 - Write findings in a plain data-insight cadence: result first; number, baseline, period, and denominator next; bounded interpretation after that; material limitation last. Use this as a structural tone benchmark only and do not copy another publication's wording.
 - Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
+- Treat the intended audience as a reader, not as the presumed builder or operator of a project. Never add validation plans, project briefs, implementation roadmaps, action scorecards, recommended build sequences, or generic next steps to the research report.
+- If advice is explicitly requested, produce it as a separate companion artifact. Label inference and value judgments, and state the evidence gaps that could change it.
 - Add a unique title and description, absolute HTTPS canonical, reciprocal absolute hreflang for en / zh-CN / x-default, index/follow directive, Open Graph, Twitter Card, and valid JSON-LD to every indexable page.
 - Use an organization-level public byline unless a personal author identity is intentionally required.
 

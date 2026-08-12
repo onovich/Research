@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[证据边界清晰的报告描述]">
+  <meta name="description" content="[有清楚证据边界的报告描述]">
   <!-- 发布保护：完成复核前，请替换全部 example.invalid URL 并保留 noindex。 -->
   <meta name="robots" content="noindex,nofollow">
   <meta name="author" content="Research">
@@ -17,7 +17,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Research">
   <meta property="og:title" content="[简洁的报告标题]">
-  <meta property="og:description" content="[证据边界清晰的报告描述]">
+  <meta property="og:description" content="[有清楚证据边界的报告描述]">
   <meta property="og:url" content="https://example.invalid/report/index.zh-CN.html">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:locale:alternate" content="en_US">
@@ -27,15 +27,15 @@
   <meta property="og:image:alt" content="[简洁的报告标题]">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="[简洁的报告标题]">
-  <meta name="twitter:description" content="[证据边界清晰的报告描述]">
+  <meta name="twitter:description" content="[有清楚证据边界的报告描述]">
   <meta name="twitter:image" content="https://example.invalid/assets/og/report-zh-CN.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "[简洁的报告标题]",
-    "alternativeHeadline": "[有证据边界的中心判断]",
-    "description": "[证据边界清晰的报告描述]",
+    "alternativeHeadline": "[有证据边界的中心发现]",
+    "description": "[有清楚证据边界的报告描述]",
     "url": "https://example.invalid/report/index.zh-CN.html",
     "mainEntityOfPage": "https://example.invalid/report/index.zh-CN.html",
     "image": "https://example.invalid/assets/og/report-zh-CN.png",
@@ -74,7 +74,7 @@
           <button class="tool-button font-button" type="button" data-font-mode="standard" aria-pressed="true">标准字</button>
           <button class="tool-button font-button" type="button" data-font-mode="large" aria-pressed="false">大字</button>
         </div>
-        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到夜读模式" title="切换夜读模式">☾</button>
+        <button class="icon-button" id="theme-button" type="button" aria-pressed="false" aria-label="切换到夜读模式" title="切换到夜读模式">◐</button>
       </div>
     </div>
   </header>
@@ -90,7 +90,7 @@
           <li><a href="#overview" aria-current="true"><span>01</span>先看结论</a></li>
           <li><a href="#evidence"><span>02</span>关键证据</a></li>
           <li><a href="#analysis"><span>03</span>分析与限制</a></li>
-          <li><a href="#actions"><span>04</span>行动建议</a></li>
+          <li><a href="#gaps"><span>04</span>证据缺口</a></li>
           <li><a href="#sources"><span>05</span>来源</a></li>
         </ol>
       </nav>
@@ -103,29 +103,46 @@
         <header class="hero" aria-labelledby="page-title">
           <p class="eyebrow">Research field notes · [year]</p>
           <h1 id="page-title">[简洁的报告标题]</h1>
-          <p class="report-subtitle">[用一句话写出有证据边界的中心判断。]</p>
-          <p class="hero-lead">[用 1–2 句话说明调研回答什么问题、范围是什么、适用于谁。]</p>
+          <p class="report-subtitle">[用一句话写出有证据边界的中心发现。]</p>
+          <p class="hero-lead">[用一两句话说明调研背景，以及为什么要调查这个问题。]</p>
 
-          <dl class="hero-ledger" aria-label="[关键关系]">
+          <dl class="report-context" aria-label="调研说明">
+            <div>
+              <dt>背景</dt>
+              <dd>[这项调研背后的现实情况或信息缺口。]</dd>
+            </div>
+            <div>
+              <dt>要回答的问题</dt>
+              <dd>[本报告必须回答的具体问题、比较或待检验主张。]</dd>
+            </div>
+            <div>
+              <dt>主要数据来源</dt>
+              <dd>[主要数据集、官方记录、平台披露或一手来源组。]</dd>
+            </div>
+          </dl>
+
+          <dl class="hero-ledger" aria-label="关键关系">
             <div class="ledger-row">
-              <dt>[观察层]</dt>
+              <dt>[观察]</dt>
               <dd>[可直接确认的事实]</dd>
             </div>
             <div class="ledger-row">
-              <dt>[约束层]</dt>
-              <dd>[成本 / 风险 / 前提]</dd>
+              <dt>[限制]</dt>
+              <dd>[口径、样本或适用边界]</dd>
             </div>
             <div class="ledger-row unknown">
-              <dt>[决策层]</dt>
-              <dd>[最终不能被混淆的判断]</dd>
+              <dt>[答案边界]</dt>
+              <dd>[不能混淆的区别或仍未知的部分]</dd>
             </div>
           </dl>
 
           <div class="hero-actions">
             <a class="button-link" href="#overview">先看结论</a>
-            <a class="button-link secondary" href="#actions">直接看行动</a>
+            <a class="button-link secondary" href="#gaps">查看证据缺口</a>
           </div>
-          <p class="reading-state" id="reading-state">当前为速读模式：保留判断与行动，隐藏补充证据。</p>
+          <p class="reading-state" id="reading-state"
+             data-brief-message="速读模式：保留主要发现与限制，收起补充证据。"
+             data-full-message="完整模式：显示补充证据、案例详情与来源。">速读模式：保留主要发现与限制，收起补充证据。</p>
         </header>
 
         <section class="section" id="overview" aria-labelledby="overview-title">
@@ -133,22 +150,22 @@
             <span class="section-number">01</span>
             <div>
               <h2 id="overview-title">先看结论</h2>
-              <p class="section-intro">[用一个段落概括最重要的判断和成立条件。]</p>
+              <p class="section-intro">[用一个段落概括最重要的发现及成立条件。]</p>
             </div>
           </div>
 
           <div class="answer-stack">
             <article class="answer">
-              <h3>[核心问题一]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[调研问题一]</h3>
+              <p><strong>[直接回答。]</strong> [补充适用条件与证据边界。]</p>
             </article>
             <article class="answer">
-              <h3>[核心问题二]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[调研问题二]</h3>
+              <p><strong>[直接回答。]</strong> [补充适用条件与证据边界。]</p>
             </article>
             <article class="answer">
-              <h3>[核心问题三]</h3>
-              <p><strong>[直接回答。]</strong> [补充适用条件。]</p>
+              <h3>[调研问题三]</h3>
+              <p><strong>[直接回答。]</strong> [补充适用条件与证据边界。]</p>
             </article>
           </div>
         </section>
@@ -157,8 +174,8 @@
           <div class="section-head">
             <span class="section-number">02</span>
             <div>
-              <h2 id="evidence-title">关键证据</h2>
-              <p class="section-intro">只保留真正改变判断的数字、规则和案例。</p>
+              <h2 id="evidence-title">会改变结论的证据</h2>
+              <p class="section-intro">只保留真正会改变答案的数字、规则和案例。</p>
             </div>
           </div>
 
@@ -178,7 +195,7 @@
           </div>
 
           <div class="detail-layer">
-            <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 ↔</p>
+            <p class="scroll-hint" aria-hidden="true">表格可左右滑动查看全部内容 →</p>
             <div class="table-wrap" tabindex="0" role="region" aria-label="[对照表名称]">
               <table>
                 <caption>[表格的范围、截点和用途]</caption>
@@ -186,7 +203,7 @@
                   <tr>
                     <th scope="col">对象</th>
                     <th scope="col">观察</th>
-                    <th scope="col">含义</th>
+                    <th scope="col">有边界的解释</th>
                     <th scope="col">限制</th>
                   </tr>
                 </thead>
@@ -229,53 +246,47 @@
             </div>
             <div class="definition-row">
               <dt>未知</dt>
-              <dd>[公开资料无法确认的关键变量。]</dd>
+              <dd>[公开资料无法确认的重要变量。]</dd>
             </div>
           </dl>
 
           <div class="callout warning">
-            <span class="callout-title">最容易误判的地方</span>
-            <p>[写出一个会导致错误决策的口径、幸存者偏差或因果误读。]</p>
+            <span class="callout-title">最容易误读的地方</span>
+            <p>[写出最可能导致误导性结论的口径错误、幸存者偏差或因果跳跃。]</p>
           </div>
         </section>
 
-        <section class="section" id="actions" aria-labelledby="actions-title">
+        <section class="section" id="gaps" aria-labelledby="gaps-title">
           <div class="section-head">
             <span class="section-number">04</span>
             <div>
-              <h2 id="actions-title">行动建议</h2>
-              <p class="section-intro">把结论转成可验证、可停止、带时间边界的下一步。</p>
+              <h2 id="gaps-title">证据缺口</h2>
+              <p class="section-intro">说明仍然未知什么、为什么会影响答案，以及报告因此不声称什么。</p>
             </div>
           </div>
 
-          <div class="timeline">
-            <article class="timeline-item">
-              <time>[阶段一]</time>
-              <h3>[先验证什么]</h3>
-              <ul>
-                <li>[行动]</li>
-                <li>[指标]</li>
-                <li>[停止条件]</li>
-              </ul>
-            </article>
-            <article class="timeline-item">
-              <time>[阶段二]</time>
-              <h3>[再验证什么]</h3>
-              <ul>
-                <li>[行动]</li>
-                <li>[指标]</li>
-                <li>[停止条件]</li>
-              </ul>
-            </article>
-          </div>
+          <dl class="definition-table">
+            <div class="definition-row">
+              <dt>缺少的测量</dt>
+              <dd>[公开资料中不存在的重要数字或比较。]</dd>
+            </div>
+            <div class="definition-row">
+              <dt>为什么重要</dt>
+              <dd>[这项缺口可能如何改变当前解释。]</dd>
+            </div>
+            <div class="definition-row">
+              <dt>报告边界</dt>
+              <dd>[基于现有证据不能作出的主张。]</dd>
+            </div>
+          </dl>
         </section>
 
         <section class="section detail-layer" id="sources" aria-labelledby="sources-title">
           <div class="section-head">
             <span class="section-number">05</span>
             <div>
-              <h2 id="sources-title">来源与研究限制</h2>
-              <p class="section-intro">优先列直接支持核心判断的一手来源。</p>
+              <h2 id="sources-title">来源与调研限制</h2>
+              <p class="section-intro">优先列出直接支持核心发现的一手来源。</p>
             </div>
           </div>
 
@@ -285,7 +296,7 @@
           </ul>
 
           <div class="callout warning">
-            <span class="callout-title">研究限制</span>
+            <span class="callout-title">调研限制</span>
             <p>[样本、时效、地区、平台自报或无法确认的变量。]</p>
           </div>
         </section>

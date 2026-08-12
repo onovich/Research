@@ -7,7 +7,13 @@
 > Research cutoff: 2026-08-12 (China Standard Time)
 > Geography: global, English-language online businesses visible on Starter Story
 > Question: which currently visible business patterns report meaningful revenue, and which can be delivered fully online with an AI-assisted, “vibe coding” development workflow?
-> Excluded from the recommended shortlist: inventory-led commerce, local services, regulated products, marketplaces that require two-sided liquidity, and agencies whose revenue primarily depends on human delivery.
+> Outside the analytical subset: inventory-led commerce, local services, regulated products, marketplaces that require two-sided liquidity, and agencies whose revenue primarily depends on human delivery.
+
+## Research context
+
+- **Background:** Starter Story curates businesses that already report revenue, so its category pages are useful for finding monetized patterns but are affected by self-reporting, overlapping categories, and survivor selection.
+- **Purpose:** Identify which visible online-business types report revenue or profit evidence, and which observed delivery structures are technically compatible with a fully online, AI-assisted build workflow—without estimating startup success rates.
+- **Main sources:** Starter Story's live database and category pages, direct founder interviews, current official product sites, and the report's recalculated `analysis.csv` dataset.
 
 ## One-page answer
 
@@ -27,7 +33,7 @@
 
 Starter Story's marketplace collection has a median five times the Micro-SaaS median. But it omits failed projects, cold-start cost, and profit coverage. That comparison cannot establish which model is easier or more likely to succeed.
 
-**Narrowest supported inference:** an AI-assisted solo builder can test a focused workflow tool inside an existing platform first. Data Fetcher provides the sample's most complete combination of revenue, customer count, costs, and margin. One case supports a test; it does not supply a success rate.
+**Narrowest supported inference:** focused workflow tools inside established platforms are technically compatible with AI-assisted development and can generate subscription revenue. Data Fetcher provides the sample's most complete combination of revenue, customer count, costs, and margin. One case establishes existence; it does not supply a success rate or a recommendation.
 
 ## Data summary: read the denominator before the conclusion
 
@@ -128,64 +134,24 @@ Starter Story does not measure “vibe-coding fit,” so the project types canno
 | SEO content or affiliate site | DealA reported more than $250K invested, roughly $2K monthly profit, and negative overall ROI | A site can launch and earn revenue while search-distribution economics remain unattractive | Proprietary data, ranking stability, maintenance cost, and payback period |
 | Productized service | Antropy reported a record monthly profit above £30K with a five-person delivery team | A fully online service can be profitable; the evidence does not make it a solo software asset | Labor per revenue unit, utilization, customer concentration, and automatable share |
 
-**Inference:** Within this case set, the most complete evidence belongs to a narrow workflow tool inside an established platform: it includes revenue, paid accounts, margin, and cost inputs. That makes it a defensible first paid experiment, but one case cannot estimate the probability of success.
+**Inference:** Within this case set, the most complete evidence belongs to a narrow workflow tool inside an established platform: it includes revenue, paid accounts, margin, and cost inputs. That makes it the best-documented observed profile in the sample, but one case cannot estimate the probability of success.
 
 ### AI-assisted development changes one measured variable
 
 Profit AI shows that a non-programmer can use AI tools to ship chargeable software; the same case reports a retention problem. The narrower conclusion supported by the evidence is that AI lowers the barrier to a first build, not that it improves acquisition, retention, or unit economics.
 
-## 5. The recommended project brief
+## 5. What the evidence does not establish
 
-Start from a workflow, not a fashionable technology:
+| Missing evidence | Why it changes the interpretation |
+|---|---|
+| Failed-project denominator | The database selects businesses that already generate revenue, so it cannot estimate the probability that a new project reaches the displayed scale |
+| Current, audited profitability | Founder interviews use different dates and profit definitions; only 3 of 8 selected cases disclose a margin |
+| Founder labor and support burden | A technically small product can still require high-touch sales, support, data repair, or content work |
+| Causal effect of AI-assisted coding | Profit AI shows that AI tools can help ship software, but it does not isolate their effect on revenue, retention, or profit |
+| Distribution transferability | Existing audiences, marketplaces, paid acquisition, SEO positions, and affiliate launches differ across cases and may not transfer to a new entrant |
+| Long-term retention | Several interviews provide point-in-time MRR; only limited churn or cohort evidence is public |
 
-> For **[one professional role]** using **[one established platform or spreadsheet]**, automatically **[one repeated job]** so they improve **[one measurable outcome]**. Charge for repeated usage or saved labor.
-
-Good candidate examples:
-
-- import supplier or campaign data into a platform and schedule refreshes;
-- reconcile two exported CSVs and flag only the exceptions;
-- turn a weekly spreadsheet into a client-ready report and email it;
-- normalize one non-sensitive document format into a standard schema;
-- monitor one API or catalog and alert a professional when a meaningful condition changes;
-- generate one constrained business artifact—then validate it against explicit rules rather than open-ended taste.
-
-Avoid as a first project:
-
-- a generic “chat with anything” or general AI writer;
-- a two-sided marketplace;
-- medical, legal, lending, trading, identity, or sensitive-financial automation without qualified review;
-- a product whose only acquisition plan is “SEO later”;
-- a mobile app that requires large ad spend before retention and payback can be measured;
-- an API whose value depends on perfect uptime before the first customer.
-
-## 6. A four-week validation path
-
-### Week 1: prove the repeated pain
-
-- Interview 10 people in one role who already use the target platform or spreadsheet.
-- Collect five real, redacted inputs and outputs.
-- Require at least three people to describe the same repeated job and quantify its frequency or cost.
-- Stop if the problem is occasional, regulated beyond your competence, or solved natively at negligible cost.
-
-### Week 2: sell the manual outcome
-
-- Deliver the result manually or with a private script.
-- Ask for a paid pilot or signed letter of intent before building a dashboard.
-- Continue only if at least two users pay, commit budget, or introduce the actual budget owner.
-
-### Week 3: build the smallest end-to-end product
-
-- One login, one input path, one successful output, one payment path, and basic logs.
-- Use AI coding tools for scaffolding, but write explicit acceptance tests from the real examples.
-- Do not add teams, mobile apps, broad AI chat, or a second integration.
-
-### Week 4: test retention and support cost
-
-- Measure activation, successful job completion, repeat use, support minutes, and gross margin.
-- Stop or redesign if users do not repeat the job, output exceptions need constant founder repair, or one customer can consume the margin.
-- Add a second integration only after the first workflow retains paying users.
-
-## 7. Evidence ledger
+## 6. Evidence ledger
 
 | Source | Type | Observation used | Confidence and limit |
 |---|---|---|---|
@@ -207,6 +173,6 @@ Additional current product checks: [Profit AI](https://tryprofit.ai/), [Formula 
 
 Three numbers set the strength of the conclusion: the selected cases have a $23K reported monthly-revenue median; 5 / 8 contain any profit evidence; only 3 / 8 disclose a margin. Starter Story therefore establishes that these patterns exist. It does not estimate new-project success rates or let category medians rank startup difficulty.
 
-Data Fetcher is the most complete platform-workflow case in the sample: $23K monthly revenue, 600 paid accounts, an 85% reported margin, and known costs equal to about 15.2% of revenue. **Conditional inference:** if running one paid experiment now, test a narrow workflow tool inside an established platform. Continue only after observing real payment, repeat use, and measurable acquisition and operating cost; without them, the inference fails.
+Data Fetcher is the most complete platform-workflow case in the sample: $23K monthly revenue, 600 paid accounts, an 85% reported margin, and known costs equal to about 15.2% of revenue. It therefore provides the best-documented observed profile for a fully online, AI-compatible software business in this selected set—not a recommendation, a representative outcome, or a success estimate.
 
 > Research limit: all business figures are public founder statements or Starter Story displays at different dates. The report cannot verify net income, taxes, founder labor, current churn, or the probability that a new entrant will reproduce any case.

@@ -11,7 +11,7 @@ Record before browsing:
 - the research cutoff and likely shelf life;
 - explicit inclusions and exclusions.
 
-Rewrite a broad topic into three to seven answerable questions. Each question must end in evidence, a bounded interpretation, an unresolved unknown, or an action.
+Rewrite a broad topic into three to seven answerable questions. Each question must end in evidence, a bounded interpretation, or an unresolved unknown. An action is not a default research output.
 
 For commercial outcomes, distinguish:
 
@@ -121,20 +121,30 @@ Use [Our World in Data's Data Insights structure](https://ourworldindata.org/lau
 
 Keep paragraphs to one idea and usually two to four sentences. Prefer plain verbs and concrete nouns. Remove slogans, metaphors, moral judgments, and generic advice from evidence sections. Do not copy a benchmark publication's sentences, examples, or distinctive phrasing.
 
+### Reader and recommendation boundary
+
+- Treat the audience role as reading context, not proof that the reader intends to build, buy, launch, or operate anything.
+- Do not turn an explanatory or comparative question into a project recommendation.
+- Do not include validation plans, week-by-week roadmaps, project briefs, implementation sequences, action scorecards, or “what to build” lists in the research report.
+- If the request explicitly asks for advice, keep the evidence findings complete without it and create a separate companion artifact. State which parts are inference or preference and name the missing evidence that could change them.
+- Replace unsupported guidance with measurable unknowns, evidence gaps, competing explanations, or conditions under which the conclusion would change.
+
 ## 5. Write the evidence source
 
 Use a Markdown structure that can stand alone:
 
-1. title, cutoff, scope, and definitions;
-2. one-page conclusion;
-3. method and research limits;
-4. metric worksheet, model, mechanism, or calculation;
-5. market, platform, or competitor comparison;
-6. patterns, mechanisms, or bounded opportunity hypotheses; rank only when comparable evidence and an explicit rule justify it;
-7. risks, failures, and counterexamples;
-8. implications, decision criteria, or unresolved questions as the topic requires;
-9. executable next steps;
+1. title and subtitle;
+2. a short research-context block: background, specific answer sought, and main source groups;
+3. cutoff, scope, operational definitions, and method;
+4. one-page conclusion;
+5. metric worksheet, model, mechanism, or calculation;
+6. market, platform, or competitor comparison;
+7. patterns, mechanisms, or bounded opportunity hypotheses; rank only when comparable evidence and an explicit rule justify it;
+8. risks, failures, counterexamples, and evidence gaps;
+9. implications or unresolved questions when the topic requires them;
 10. direct sources.
+
+Recommendations or action plans are separate companion artifacts only when the user explicitly requests them. They must remain outside the research report and are never required to make it feel complete.
 
 Place citations near figures and claims. Mark self-reported facts and researcher inference. Do not enter visual design until the research source is reviewed.
 

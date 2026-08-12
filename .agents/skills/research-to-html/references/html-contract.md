@@ -51,10 +51,11 @@ If the repository has no separated public source tree, colocating the Markdown a
 ## Information hierarchy
 
 1. Open with a concise topic title followed by a specific central finding as the subtitle.
-2. Keep the brief layer sufficient for understanding or a decision: conclusion, decisive evidence, main caveat, and next action or open question.
-3. Put detailed tables, cases, method, and full sources in the full layer.
-4. Give the judgment before supporting detail in every section.
-5. Keep the research cutoff and limitations visible.
+2. Before the conclusion, show a compact research-context block with three plainly labeled items: background, the specific answer sought, and the main source groups.
+3. Keep the brief layer sufficient for understanding: conclusion, decisive evidence, main caveat, and material unknowns.
+4. Put detailed tables, cases, method, and full sources in the full layer.
+5. Give the judgment before supporting detail in every section.
+6. Keep the research cutoff and limitations visible.
 
 Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
 
@@ -76,10 +77,12 @@ Allowed when useful:
 - contents and reading position;
 - focused data filters;
 - scenario or cost calculators;
-- decision scorecards;
+- evidence filters or calculators whose inputs and formulas come from the research;
 - ordered flows, timelines, and print mode.
 
-Do not use motion to carry essential meaning. Respect reduced-motion preferences. Never hide a caveat that could reverse the decision.
+Do not use motion to carry essential meaning. Respect reduced-motion preferences. Never hide a caveat that could reverse the conclusion.
+
+Do not add project roadmaps, validation timelines, “what to build” modules, action scorecards, or generic next steps to a research report. A report must not presume that its reader will execute a project. If the user explicitly requests advice, publish it as a separate companion artifact outside the report and label evidence, inference, and value judgment.
 
 ## Accessibility and resilience
 
