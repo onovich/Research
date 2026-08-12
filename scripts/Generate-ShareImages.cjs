@@ -109,20 +109,20 @@ const cards = [
   {
     file: 'old-web-new-wedges-en.png',
     lang: 'en',
-    mark: 'OW',
+    mark: 'TP',
     index: 'RESEARCH / 04',
-    eyebrow: 'PLATFORM OPPORTUNITY MAP · 2026',
-    title: 'Old web,\nnew wedges',
-    note: 'Remaining value · Durable moats · Indie opportunities'
+    eyebrow: 'PLATFORM EVIDENCE · 2026',
+    title: 'Traditional\ncontent platforms',
+    note: 'Operating data · Content stock · Testable hypotheses'
   },
   {
     file: 'old-web-new-wedges-zh-CN.png',
     lang: 'zh-CN',
-    mark: '旧',
+    mark: '台',
     index: '专题 / 04',
-    eyebrow: '平台机会地图 · 2026',
-    title: '旧平台，\n新切口',
-    note: '剩余价值 · 持久护城河 · 独立开发机会'
+    eyebrow: '平台证据 · 2026',
+    title: '传统内容平台',
+    note: '经营数据 · 内容存量 · 可检验假设'
   }
 ];
 

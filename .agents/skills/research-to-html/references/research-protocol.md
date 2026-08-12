@@ -1,17 +1,17 @@
 # Research protocol
 
-## 1. Frame the decision
+## 1. Frame the question or decision
 
 Record before browsing:
 
-- the decision to be made;
+- the question to answer, claim to test, comparison to make, or decision to support;
 - the reader's role, expressed without personal identity;
 - geography, language, category, and time boundary;
 - operational definitions for ambiguous outcomes;
 - the research cutoff and likely shelf life;
 - explicit inclusions and exclusions.
 
-Rewrite a broad topic into three to seven answerable questions. Each question must end in evidence, a bounded judgment, or an action.
+Rewrite a broad topic into three to seven answerable questions. Each question must end in evidence, a bounded interpretation, an unresolved unknown, or an action.
 
 For commercial outcomes, distinguish:
 
@@ -31,7 +31,7 @@ Use this source order:
 5. high-quality reporting and secondary synthesis;
 6. community discussion and search snippets only as leads.
 
-For every decision-changing claim, capture:
+For every conclusion-changing claim, capture:
 
 | Field | Requirement |
 |---|---|
@@ -72,6 +72,55 @@ Test every major conclusion for:
 
 Do not average conflicting evidence by default. Resolve definitions and scope first, then explain the selected interpretation.
 
+### Quantitative analysis gate
+
+Use this gate when the question asks what is profitable, how large, how common, what changed, which category performs better, or whether a market or platform can support a conclusion.
+
+Before writing prose, create a metric worksheet with:
+
+| Field | Requirement |
+|---|---|
+| Raw value | Preserve the source value without silent conversion |
+| Unit and period | Currency, users, items, percent, month, quarter, year, or snapshot date |
+| Numerator and denominator | Required for every rate, share, or coverage claim |
+| Formula | A reproducible expression for every derived measure |
+| Result | Sensible precision; do not imply accuracy the source lacks |
+| Scope | Population, curated sample, selected cases, geography, and time window |
+| Caveat | Missing costs, overlapping categories, survivorship, mixed definitions, or other limit |
+| Direct source | The page containing the input value |
+
+Minimum evidence for a data-bearing report:
+
+- three question-relevant raw measures;
+- three derived measures such as a rate, share, change, ratio, range, or unit-economics calculation;
+- one counterexample or negative case;
+- one explicit data-completeness statement;
+- one table or compact chart that makes a real comparison easier to inspect.
+
+These are quality gates, not quotas for padding. If comparable inputs do not exist, publish the missingness and narrow the conclusion. Never manufacture a score to simulate precision.
+
+Reject or relabel an analysis when:
+
+- a curated winner database is presented as a success probability;
+- overlapping category counts are added together;
+- a median is shown without its sample definition and denominator;
+- a current run rate is compared with a historical average without naming the mismatch;
+- a percentage omits its numerator or denominator;
+- an opportunity ranking is mostly researcher preference;
+- a causal explanation has only evidence that two facts coexist.
+
+### Finding-led writing
+
+Use [Our World in Data's Data Insights structure](https://ourworldindata.org/launching-data-insights) as a tone benchmark, not as text to imitate:
+
+1. heading states the finding in plain language;
+2. first sentence answers the question;
+3. second sentence gives the number, baseline, period, and denominator;
+4. third sentence explains the narrow implication;
+5. final sentence states the limit when it could change the reading.
+
+Keep paragraphs to one idea and usually two to four sentences. Prefer plain verbs and concrete nouns. Remove slogans, metaphors, moral judgments, and generic advice from evidence sections. Do not copy a benchmark publication's sentences, examples, or distinctive phrasing.
+
 ## 5. Write the evidence source
 
 Use a Markdown structure that can stand alone:
@@ -79,11 +128,11 @@ Use a Markdown structure that can stand alone:
 1. title, cutoff, scope, and definitions;
 2. one-page conclusion;
 3. method and research limits;
-4. model, mechanism, or calculation;
+4. metric worksheet, model, mechanism, or calculation;
 5. market, platform, or competitor comparison;
-6. ranked opportunities or patterns;
+6. patterns, mechanisms, or bounded opportunity hypotheses; rank only when comparable evidence and an explicit rule justify it;
 7. risks, failures, and counterexamples;
-8. decision criteria;
+8. implications, decision criteria, or unresolved questions as the topic requires;
 9. executable next steps;
 10. direct sources.
 

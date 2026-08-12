@@ -51,12 +51,22 @@ If the repository has no separated public source tree, colocating the Markdown a
 ## Information hierarchy
 
 1. Open with a concise topic title followed by a specific central finding as the subtitle.
-2. Keep the brief layer sufficient for a decision: conclusion, decisive evidence, main caveat, and next action.
+2. Keep the brief layer sufficient for understanding or a decision: conclusion, decisive evidence, main caveat, and next action or open question.
 3. Put detailed tables, cases, method, and full sources in the full layer.
 4. Give the judgment before supporting detail in every section.
 5. Keep the research cutoff and limitations visible.
 
-Use ledgers for relationships, answer stacks for decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists for justified priority, tables for exact comparison, and timelines only for real sequence.
+Use ledgers for relationships, answer stacks for research or decision questions, evidence strips for two to four decisive numbers, callouts for caveats, definition rows for mappings, ranked lists only for justified priority, tables for exact comparison, and timelines only for real sequence.
+
+For data-bearing reports, include at least one data-insight block with:
+
+- a headline that states the finding rather than the topic;
+- the raw values, unit, period, and comparison baseline;
+- a compact bar, table, or other accessible comparison when it materially reduces reading effort;
+- the derived result and formula or a link to its evidence worksheet;
+- a nearby caveat that prevents overgeneralization.
+
+Do not use decorative charts. Do not encode meaning only in color. A ranking must expose its comparable inputs and rule; otherwise present it as a hypothesis or experiment backlog.
 
 ## Interaction boundary
 
@@ -92,7 +102,9 @@ Check at minimum:
 - an English/Chinese counterpart for every published HTML page;
 - correct top language links and `lang` values;
 - unique titles and descriptions, absolute canonical and reciprocal `hreflang`, social metadata, valid JSON-LD, and sitemap parity;
-- matching decision figures, dates, sources, and interactive thresholds;
+- matching key figures, dates, sources, and interactive thresholds;
+- matching numerators, denominators, formulas, units, comparison periods, and derived results;
+- every brief-layer conclusion is supported nearby or explicitly labeled as inference;
 - JavaScript syntax and zero runtime exceptions;
 - 320, 375, 768, 1024, and 1440px layouts;
 - keyboard navigation, deep links, dim mode, print, and no-script behavior;

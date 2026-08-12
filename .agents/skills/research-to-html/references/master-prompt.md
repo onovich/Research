@@ -3,10 +3,10 @@
 Use this prompt as an execution brief. Replace bracketed values only. Do not add personal names, local machine paths, account identifiers, private repositories, tokens, customer data, or domain assumptions that are not required by the research question.
 
 ```text
-Use $research-to-html to investigate the following decision and publish a bilingual static report.
+Use $research-to-html to investigate the following question and publish a bilingual static report.
 
-Decision to support
-- Decision question: [what must be decided]
+Question to investigate
+- Research question or decision: [what must be understood, compared, tested, or decided]
 - Intended reader role: [role, not a named individual]
 - Geographic scope: [regions]
 - Time boundary and research cutoff: [date or rule]
@@ -17,21 +17,24 @@ Decision to support
 Research requirements
 1. Prefer current primary sources: regulators, official statistics, filings, platform rules/help, product documentation, direct project pages, and first-party postmortems.
 2. Browse and re-verify any fact that may have changed, including prices, fees, laws, policies, rankings, availability, leadership, product status, and platform rules.
-3. For every decision-changing claim, record the direct URL, source type, observed date, geography, caveat, and confidence.
+3. For every conclusion-changing claim, record the direct URL, source type, observed date, geography, caveat, and confidence.
 4. Separate direct observation, interpretation, and unknowns.
 5. Look for failed, delayed, discontinued, or contradictory cases. Do not use only visible winners.
 6. Do not treat revenue-like metrics as profit or funding success as delivery.
-7. If evidence is unavailable, say what could not be verified and how that limits the decision.
+7. If evidence is unavailable, say what could not be verified and how that limits the answer or decision.
+8. When the question involves scale, change, frequency, profitability, prevalence, rankings, or comparisons, build a metric worksheet before synthesis. Record raw values, units, periods, numerator, denominator, formula, result, scope, caveat, and direct source.
+9. For a data-bearing report, include at least three question-relevant raw measures, three reproducible derived measures, one counterexample, one data-completeness statement, and one useful comparison table or chart. If comparable data does not exist, narrow the conclusion instead of filling the report with general principles.
+10. Do not rank incompatible or overlapping samples. Label researcher judgment as inference and expose the rule used.
 
 Required outputs
-- A reviewable Markdown research source containing scope, method, findings, evidence, limitations, decision criteria, actions, and direct sources.
+- A reviewable Markdown research source containing scope, method, findings, evidence, limitations, implications or decision criteria where relevant, next questions or actions, and direct sources.
 - index.html as the English `x-default` report with its own canonical URL.
 - index.zh-CN.html as the Simplified-Chinese equivalent.
 - A top language switch on both pages.
 - Crawlable manual locale links on both pages; do not auto-redirect indexable URLs from browser or system language.
 - Persist an explicit locale choice when local storage is available without changing crawler-visible URL stability.
 - Shared CSS and shared behavior; do not duplicate the visual system into each report.
-- A brief layer containing the decision, key evidence, main caveat, and action; a full layer containing methods, comparison detail, cases, and sources.
+- A brief layer containing the answer, key evidence, main caveat, and next action or open question; a full layer containing methods, comparison detail, cases, and sources.
 - Update the repository catalog and concise English/Chinese project documentation when applicable.
 - A reader-facing method/transparency path, correction path, useful noindex 404 page, favicon, social share image, and XML sitemap when publishing a standalone site.
 
@@ -42,6 +45,8 @@ HTML quality contract
 - Use interactions only when they lower comprehension cost.
 - Support 320–1440px layouts, keyboard use, reduced motion, dim mode, print, and deep links.
 - Keep citations near the claims they support and preserve research caveats in both languages.
+- Write findings in a plain data-insight cadence: result first; number, baseline, period, and denominator next; bounded interpretation after that; material limitation last. Use this as a structural tone benchmark only and do not copy another publication's wording.
+- Expose formulas and comparison inputs in the report or its evidence notebook. Use charts only when they make a real comparison easier to read.
 - Add a unique title and description, absolute HTTPS canonical, reciprocal absolute hreflang for en / zh-CN / x-default, index/follow directive, Open Graph, Twitter Card, and valid JSON-LD to every indexable page.
 - Use an organization-level public byline unless a personal author identity is intentionally required.
 

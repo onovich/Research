@@ -15,9 +15,9 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
 - [独立游戏众筹适配](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html) · [English](https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/)
   游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、平台路径和十分制适配卡。
 - [赚钱的线上项目](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
-  区分 Starter Story 案例中的收入与利润证据，并给出适合纯线上、AI 辅助独立开发的项目模式排序。
-- [旧平台，新切口](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)
-  解释豆瓣、知乎和简书为何仍有价值、广义替代为何失败，以及哪些垂直社群机会适合独立开发者。
+  8 个入选案例的月收入中位数为 2.3 万美元；5 个有某种利润证据，只有 3 个披露利润率。报告把这些观察值与 AI 辅助开发假设分开呈现。
+- [传统内容平台](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)
+  知乎 2025 年收入同比下降 23.6%，经营费用相当于毛利润的 130.8%。报告用数据检验豆瓣、知乎和简书的替代与周边产品假设，不预设答案。
 
 前两份报告组成一个众筹专题簇，详细章节不再互相重复；其余报告是线上商业与平台机会的独立调查。
 

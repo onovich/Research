@@ -1,11 +1,11 @@
 ---
 name: research-to-html
-description: Research a decision question, build a traceable evidence notebook, and publish a low-reading-pressure bilingual English/Simplified-Chinese HTML report. Use when Codex must turn current web research, market or industry analysis, product/platform comparisons, technical ecosystem research, or business-model investigation into a reviewable Markdown source plus an interactive static report.
+description: Research a question or decision, build a traceable evidence notebook, and publish a low-reading-pressure bilingual English/Simplified-Chinese HTML report. Use when Codex must turn current web research, market or industry analysis, product/platform comparisons, technical ecosystem research, or business-model investigation into a reviewable Markdown source plus an interactive static report.
 ---
 
 # Research to HTML
 
-Produce a decision artifact, not a source dump. Keep evidence, reasoning, uncertainty, and presentation auditable from research through publication.
+Produce an evidence-led research artifact, not a source dump. It may explain a topic, compare mechanisms, test a claim, or support a decision. Keep evidence, reasoning, uncertainty, and presentation auditable from research through publication.
 
 ## Load the contract
 
@@ -17,20 +17,26 @@ Read these references before acting:
 
 ## Workflow
 
-1. Define the decision, audience role, scope, geography, operational terms, research cutoff, and exclusions. Ask only when an unresolved choice would materially change the result.
+1. Define the research question or decision, audience role, scope, geography, operational terms, research cutoff, and exclusions. Ask only when an unresolved choice would materially change the result.
 2. Inspect the target repository before creating files. Reuse its shared CSS, locale router, reading shell, report template, and validation script when present.
 3. Browse current primary sources for unstable facts. Record direct URLs, source type, observed date, geography, caveat, and confidence.
 4. Separate observation, inference, and unknowns. Test survivor bias, self-reported platform claims, stale examples, and metrics that do not establish the claimed business result.
-5. Write the Markdown evidence source before designing the report. Keep claims, figures, limitations, and citations independently reviewable.
-6. Compose separate English and Simplified-Chinese HTML pages from the same approved findings. Preserve numerical, causal, and uncertainty parity. Give each locale a self-canonical absolute URL and reciprocal absolute `hreflang` links.
-7. Add only interactions that reduce understanding cost: reading depth, contents, theme, larger text, focused filtering, calculators, scorecards, timelines, and print support.
-8. Update the repository catalog and concise bilingual project documentation when the report is publishable.
-9. Run the repository validation gate, privacy scan, SEO metadata checks, JavaScript syntax checks, responsive and keyboard checks, both locales, print, deep links, and no-script fallback. Inspect the exact public artifact, not only the source tree.
-10. Review the exact diff and publish only the intended files. Never force-push or stage unrelated workspace content.
+5. Build the metric worksheet before synthesis when the question involves scale, change, frequency, profitability, prevalence, rankings, or comparisons. Preserve raw values, denominator, period, unit, formula, result, source, and caveat. Calculate shares, changes, ratios, ranges, or unit economics only when the inputs are comparable.
+6. Write the Markdown evidence source before designing the report. Keep claims, figures, formulas, limitations, and citations independently reviewable.
+7. Compose separate English and Simplified-Chinese HTML pages from the same approved findings. Preserve numerical, causal, and uncertainty parity. Give each locale a self-canonical absolute URL and reciprocal absolute `hreflang` links.
+8. Add only interactions that reduce understanding cost: reading depth, contents, theme, larger text, focused filtering, calculators, scorecards, timelines, and print support.
+9. Update the repository catalog and concise bilingual project documentation when the report is publishable.
+10. Run the repository validation gate, privacy scan, SEO metadata checks, JavaScript syntax checks, responsive and keyboard checks, both locales, print, deep links, and no-script fallback. Inspect the exact public artifact, not only the source tree.
+11. Review the exact diff and publish only the intended files. Never force-push or stage unrelated workspace content.
 
 ## Non-negotiable rules
 
 - Do not infer profit from revenue, pledges, GMV, downloads, traffic, or funding success.
+- Do not rank opportunities from incompatible denominators, overlapping collections, winner-only samples, or mixed periods. Show the mismatch or replace the ranking with a bounded hypothesis.
+- Every executive conclusion must point to a numeric observation, a directly cited qualitative observation, or an explicit `Inference` label. Do not leave naked top-line claims.
+- For data-bearing questions, include at least three question-relevant raw measures, three reproducible derived measures, one counterexample, and one explicit data-completeness statement. If the source base cannot support this, say so and narrow the conclusion instead of filling the gap with general principles.
+- Show numerator and denominator for percentages, name the comparison period, preserve units, and expose formulas in the report or evidence notebook.
+- Prefer a finding-led paragraph: result first, number and comparison second, bounded interpretation third, limitation last. Avoid slogans, moral framing, metaphors, and generic business advice in evidence sections.
 - Do not silently weaken caveats in the brief layer or in translation.
 - Do not introduce unsupported numbers during HTML composition.
 - Cite direct supporting pages, not search-result pages.

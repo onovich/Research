@@ -1,6 +1,6 @@
 # Online projects that make money
 
-**Subtitle:** A Starter Story sample shows the best vibe-coding candidates are narrow workflow tools with an existing distribution wedge—not generic AI wrappers.
+**Subtitle:** Eight online-software cases have a $23K reported monthly-revenue median, but only five provide any profit evidence. Revenue scale and solo-build fit are different questions.
 
 **English** · [简体中文](README.zh-CN.md) · [English HTML](../../site/starter-story-vibe-coding-businesses/index.html) · [中文 HTML](../../site/starter-story-vibe-coding-businesses/index.zh-CN.html)
 
@@ -11,17 +11,36 @@
 
 ## One-page answer
 
-**The strongest intersection of reported earnings, fully online delivery, and AI-assisted buildability is a boring, narrow workflow tool—not a generic AI app.** The recurring pattern is:
+**What the sample shows**
 
-1. a task already performed in a spreadsheet, inbox, or established software platform;
-2. a single measurable outcome such as importing, converting, reporting, scheduling, or generating;
-3. a distribution wedge that exists before the product, such as a marketplace, search query, consultant workflow, or reachable professional niche;
-4. recurring use or a high-value repeated job;
-5. an MVP made from standard web/mobile components and APIs, with low regulatory and data risk.
+- Reported monthly revenue ranges from $12.5K to $50K. The median is $23K.
+- Five of eight cases provide some profit evidence.
+- Only three disclose a margin. The other cases cannot be compared on profit.
 
-The best starting archetype is **a vertical B2B micro-SaaS that replaces one recurring spreadsheet or copy-paste workflow inside a platform people already pay for**. Platform add-ons, non-sensitive converters, and small automation APIs are the next-best patterns.
+**What the figures add**
 
-Simple mobile utilities can also work, but the cases that make money rely heavily on onboarding, paid acquisition, pricing, and attribution. Generic GPT wrappers are easy to ship but crowded and weakly defended. Marketplaces, SEO affiliate sites, and agencies may produce revenue, but their hardest constraint is not code and they are poor matches for a code-leveraged solo product.
+- Data Fetcher's known hosting and software costs equal 15.2% of MRR, close to the founder's stated 85% margin.
+- ChartDetector reported $43.7K of April revenue and about $11.5K of profit—a recalculated margin of 26.3%.
+- Higher revenue therefore did not imply a higher margin in these examples.
+
+**What the figures do not prove**
+
+Starter Story's marketplace collection has a median five times the Micro-SaaS median. But it omits failed projects, cold-start cost, and profit coverage. That comparison cannot establish which model is easier or more likely to succeed.
+
+**Narrowest supported inference:** an AI-assisted solo builder can test a focused workflow tool inside an existing platform first. Data Fetcher provides the sample's most complete combination of revenue, customer count, costs, and margin. One case supports a test; it does not supply a success rate.
+
+## Data summary: read the denominator before the conclusion
+
+| Metric | Raw values | Recalculated result | What it supports | What it does not support |
+|---|---|---:|---|---|
+| Selected cases' reported monthly revenue | 12.5, 15, 19, 23, 23, 30, 43.7, and 50 USD thousands | $23K median; 4× max/min | The revenue scale of these eight cases | Typical revenue for all new products |
+| Any profit evidence | 5 / 8 | 62.5% | Most selected cases at least claim profit or disclose it | Consistent, audited, or durable profit definitions |
+| Disclosed profit margin | 3 / 8 | 37.5% | Directly comparable margin evidence is sparse | The other five cases are necessarily unprofitable |
+| Marketplace / Micro-SaaS page median | $200K / $40K per month | 5.0× | Marketplace winners are larger in the curated library | Better solo fit or higher success odds |
+| API / Micro-SaaS collection size | 54 / 670 | 8.1% | The API median comes from a much smaller set | Mutually exclusive or equally stable samples |
+| Plugin / Micro-SaaS collection size | 19 / 670 | 2.8% | The plugin median has a small denominator | The population median for plugins |
+
+All inputs and formulas are in [`analysis.csv`](analysis.csv). Collections overlap, interviews come from different dates, and every case passed a success-story filter. The figures compare evidence strength; they do not estimate startup success rates.
 
 ## 1. Definitions and method
 
@@ -32,7 +51,7 @@ Simple mobile utilities can also work, but the cases that make money rely heavil
 | Reported revenue | Revenue or MRR stated by the founder or displayed by Starter Story. It is not independently audited. |
 | Profit-evidenced | The public case explicitly states profit, margin, or a cost-and-profit figure. Revenue alone does not qualify. |
 | Fully online | Product delivery, acquisition, payment, and support can all occur remotely without inventory or on-site work. |
-| Vibe-coding fit | A researcher assessment that a useful MVP is mostly standard UI, database, payments, and API work that can be accelerated by AI coding tools. It does not mean the business can be run without engineering judgment. |
+| AI-assisted build scope | A first version made mainly of standard UI, database, payments, and API work that AI coding tools can accelerate. This describes implementation scope, not a business-success score. |
 
 ### Evidence design
 
@@ -78,31 +97,42 @@ The category table is useful for discovering patterns, not for forecasting a new
 
 All amounts are founder-reported or displayed by Starter Story for different interview dates. They are directional case evidence, not audited current financial statements.
 
+### What the public inputs let us recalculate
+
+| Case | Public inputs | Calculation | Result | Bounded reading |
+|---|---|---|---:|---|
+| Data Fetcher | $23,000 MRR; $3,500 known hosting and tool cost | 3,500 / 23,000 | 15.2% known cost share | Broadly consistent with the stated 85% margin; labor, tax, and undisclosed expenses remain excluded |
+| Data Fetcher | $23,000 MRR; stated 85% margin | 23,000 × 85% | about $19,550/month | An implication under the founder's definition, not audited profit |
+| Supergrow | at least $19,000 monthly revenue; stated 60–70% margin | 19,000 × 60–70% | about $11,400–$13,300/month | Uses the revenue lower bound and the founder's margin definition |
+| ChartDetector | $43,700 April revenue; $11,500 profit | 11,500 / 43,700 | 26.3% | Close to the stated 25%; acquisition and platform costs consumed roughly three quarters of revenue |
+| Bank Statement Converter | $126,218 trailing-12-month revenue; $12,500 current MRR | 126,218 / 12; 12,500 / 10,518 − 1 | $10,518 TTM monthly average; current run rate 18.8% higher | Supports a faster current run rate, not a profit-margin estimate |
+
+This table is closer to what the public data can answer than “which category is most profitable.” Known cost shares range from roughly 15% to 74% even among fully online software. The sample and definitions are too inconsistent to calculate a population margin.
+
 ### Two counterexamples change the interpretation
 
 - [DealA](https://www.starterstory.com/stories/deala) was fully online and technically buildable, yet the founder reported spending more than $250K for about $2K monthly profit and negative ROI. SEO and deal data—not website code—were the bottleneck.
 - [Antropy](https://www.starterstory.com/stories/antropy) reported a record monthly profit above £30K, but the agency used a five-person delivery team. It is an online business, not a software asset that one vibe coder can operate alone.
 
-## 4. Best candidates for a fully online, AI-assisted build
+## 4. Which project hypotheses the data support
 
-The fit ratings below are research inferences, not Starter Story labels. They judge whether a small MVP can be built with standard components, whether the product avoids high-risk data or infrastructure, and whether there is a plausible distribution wedge.
+Starter Story does not measure “vibe-coding fit,” so the project types cannot be ranked precisely. The table separates what was observed, the narrowest inference the observation supports, and the missing variable that could overturn it.
 
-| Rank | Project pattern | Fit | Why it fits | Non-code bottleneck | Example evidence |
-|---:|---|---|---|---|---|
-| 1 | Spreadsheet-to-workflow vertical micro-SaaS | Strong | Known fields and calculations become forms, imports, scheduled jobs, dashboards, and billing | Deep understanding of one job; retention after the spreadsheet is removed | Profit AI pattern; Data Fetcher economics |
-| 2 | Add-on for an established platform | Strong | The platform supplies identity, data model, users, and sometimes a marketplace | Platform review, API limits, native-feature risk | Data Fetcher; Formula Bot add-ons |
-| 3 | One-job generator or non-sensitive converter | Strong | Clear input→output, narrow acceptance test, search-friendly landing page | Output quality, cheap acquisition, repeat use | Formula Bot pattern |
-| 4 | Automation API for other builders | Medium–strong | Small UI surface and recurring machine-to-machine value | Reliability, abuse, support, usage-based unit economics | Data Fetcher integrations; Bannerbear pattern |
-| 5 | Outcome-driven mobile utility | Medium | One-screen value and subscription payments can be prototyped quickly | App review, attribution, ad capital, creative production, native edge cases | ChartDetector; Erly |
-| 6 | AI support or content wrapper | Medium | Standard retrieval, prompt, account, and billing components | Crowding, model cost, churn, weak differentiation | SiteGPT |
-| 7 | Sensitive document converter | Medium–low | The interface is simple, but the core can be tested incrementally | Accuracy, privacy, security, document variance, support | Bank Statement Converter |
-| 8 | SEO affiliate or niche content site | Low | Website production is easy | Search competition, proprietary data, content maintenance, monetization | DealA counterexample |
-| 9 | Marketplace | Low | Basic listing and transaction flows are buildable | Two-sided liquidity, trust, dispute handling, supply quality | High Starter Story category median does not solve cold start |
-| 10 | Agency or productized service | Low as a coded product | Online acquisition and workflow tools are possible | Revenue still scales with people and delivery capacity | Antropy |
+| Project hypothesis | Observed data | Inference allowed by the data | Still needed before concluding |
+|---|---|---|---|
+| Platform workflow tool | Data Fetcher reported $23K monthly revenue, 600 paid accounts, and an 85% margin; identifiable costs equal about 15.2% of revenue | A fully online tool inside an established platform can produce subscription revenue and high reported profit | Marketplace conversion, customer concentration, and API or native-feature risk |
+| One-job generator | Formula Bot reported $23K monthly revenue but no margin | A clear input→output job can be monetized; the data do not establish high profit | Repeat usage, inference cost, organic conversion, and paid-acquisition payback |
+| Outcome-driven mobile utility | ChartDetector disclosed profit equal to about 26.3% of monthly revenue; Erly reported $50K monthly revenue without profit | Mobile utilities can reach meaningful revenue, while distribution cost can materially change the net result | Channel retention, post-store-fee gross margin, payback period, and refund rate |
+| AI support wrapper | SiteGPT reported $15K MRR, roughly 50% first-month churn, and no profit figure | An AI product can monetize quickly; these data do not establish durable revenue | Cohort churn, model and support cost, and 12-month net revenue retention |
+| Two-sided marketplace | The median among Starter Story's successful marketplace cases is $200K/month, five times the micro-SaaS median | The included successful marketplaces are larger; the data do not show that marketplaces are easier to build | Failed-project denominator, transaction rate, two-sided CAC, disputes, and governance cost |
+| SEO content or affiliate site | DealA reported more than $250K invested, roughly $2K monthly profit, and negative overall ROI | A site can launch and earn revenue while search-distribution economics remain unattractive | Proprietary data, ranking stability, maintenance cost, and payback period |
+| Productized service | Antropy reported a record monthly profit above £30K with a five-person delivery team | A fully online service can be profitable; the evidence does not make it a solo software asset | Labor per revenue unit, utilization, customer concentration, and automatable share |
 
-### What “vibe coding” can and cannot do
+**Inference:** Within this case set, the most complete evidence belongs to a narrow workflow tool inside an established platform: it includes revenue, paid accounts, margin, and cost inputs. That makes it a defensible first paid experiment, but one case cannot estimate the probability of success.
 
-AI coding tools can compress scaffolding, CRUD, integrations, UI polish, tests, and deployment. They do not supply customer access, domain truth, secure data handling, pricing, acquisition economics, retention, or production incident judgment. Profit AI is direct evidence that a non-programmer can build meaningful software with AI tools; its churn is equally direct evidence that shipping code is not the end of the job.
+### AI-assisted development changes one measured variable
+
+Profit AI shows that a non-programmer can use AI tools to ship chargeable software; the same case reports a retention problem. The narrower conclusion supported by the evidence is that AI lowers the barrier to a first build, not that it improves acquisition, retention, or unit economics.
 
 ## 5. The recommended project brief
 
@@ -175,8 +205,8 @@ Additional current product checks: [Profit AI](https://tryprofit.ai/), [Formula 
 
 ## Final judgment
 
-Starter Story has promotional value as a pattern library, not as an odds calculator. Its strongest lesson for a solo, fully online, AI-assisted project is not “build what has the highest displayed median.” It is **find a proven, repeated job; make the first version narrow; inherit context or distribution from an existing workflow; and measure margin and repeat use before adding features.**
+Three numbers set the strength of the conclusion: the selected cases have a $23K reported monthly-revenue median; 5 / 8 contain any profit evidence; only 3 / 8 disclose a margin. Starter Story therefore establishes that these patterns exist. It does not estimate new-project success rates or let category medians rank startup difficulty.
 
-If choosing one route now, choose a platform-adjacent vertical micro-SaaS that replaces a recurring spreadsheet or import/reporting task. Validate it as a paid manual service first, then vibe-code only the repeated core. The code can be fast; access to the right problem and users remains the scarce asset.
+Data Fetcher is the most complete platform-workflow case in the sample: $23K monthly revenue, 600 paid accounts, an 85% reported margin, and known costs equal to about 15.2% of revenue. **Conditional inference:** if running one paid experiment now, test a narrow workflow tool inside an established platform. Continue only after observing real payment, repeat use, and measurable acquisition and operating cost; without them, the inference fails.
 
 > Research limit: all business figures are public founder statements or Starter Story displays at different dates. The report cannot verify net income, taxes, founder labor, current churn, or the probability that a new entrant will reproduce any case.
