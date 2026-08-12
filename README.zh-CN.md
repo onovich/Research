@@ -16,8 +16,10 @@ Research 帮助独立创作者和小团队基于当下证据调查问题。它�
   游戏专项深挖：对照当下平台样本、七类受众与玩法模式、已发售案例、失败模式、平台路径和十分制适配卡。
 - [赚钱的线上项目](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html) · [English](https://research.onovich.com/starter-story-vibe-coding-businesses/)
   区分 Starter Story 案例中的收入与利润证据，并给出适合纯线上、AI 辅助独立开发的项目模式排序。
+- [旧平台，新切口](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html) · [English](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/)
+  解释豆瓣、知乎和简书为何仍有价值、广义替代为何失败，以及哪些垂直社群机会适合独立开发者。
 
-前两份报告组成一个众筹专题簇，详细章节不再互相重复；第三份是独立的线上商业与 AI 辅助产品模式调查。
+前两份报告组成一个众筹专题簇，详细章节不再互相重复；其余报告是线上商业与平台机会的独立调查。
 
 ## 用 AI 创建报告
 

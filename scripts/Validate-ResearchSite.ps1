@@ -63,6 +63,8 @@ $requiredFiles = @(
   "site/assets/og/research-to-html-zh-CN.png",
   "site/assets/og/starter-story-vibe-coding-en.png",
   "site/assets/og/starter-story-vibe-coding-zh-CN.png",
+  "site/assets/og/old-web-new-wedges-en.png",
+  "site/assets/og/old-web-new-wedges-zh-CN.png",
   "reports/crowdfunding-and-indie-games-research/README.md",
   "reports/crowdfunding-and-indie-games-research/README.zh-CN.md",
   "site/crowdfunding-and-indie-games-research/index.html",
@@ -75,6 +77,10 @@ $requiredFiles = @(
   "reports/starter-story-vibe-coding-businesses/README.zh-CN.md",
   "site/starter-story-vibe-coding-businesses/index.html",
   "site/starter-story-vibe-coding-businesses/index.zh-CN.html",
+  "reports/douban-zhihu-jianshu-replacement-opportunities/README.md",
+  "reports/douban-zhihu-jianshu-replacement-opportunities/README.zh-CN.md",
+  "site/douban-zhihu-jianshu-replacement-opportunities/index.html",
+  "site/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html",
   "site/tools/research-to-html/index.html",
   "site/tools/research-to-html/index.zh-CN.html",
   "docs/research-to-html-workflow.md",
@@ -354,6 +360,7 @@ $localePairs = @(
   @{ En = "crowdfunding-and-indie-games-research/index.html"; Zh = "crowdfunding-and-indie-games-research/index.zh-CN.html" },
   @{ En = "indie-game-crowdfunding-genres-and-gameplay/index.html"; Zh = "indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html" },
   @{ En = "starter-story-vibe-coding-businesses/index.html"; Zh = "starter-story-vibe-coding-businesses/index.zh-CN.html" },
+  @{ En = "douban-zhihu-jianshu-replacement-opportunities/index.html"; Zh = "douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html" },
   @{ En = "tools/research-to-html/index.html"; Zh = "tools/research-to-html/index.zh-CN.html" }
 )
 
@@ -387,7 +394,9 @@ $companionRelativePaths = @(
 )
 $businessRelativePaths = @(
   "starter-story-vibe-coding-businesses/index.html",
-  "starter-story-vibe-coding-businesses/index.zh-CN.html"
+  "starter-story-vibe-coding-businesses/index.zh-CN.html",
+  "douban-zhihu-jianshu-replacement-opportunities/index.html",
+  "douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html"
 )
 foreach ($relative in @($pillarRelativePaths + $companionRelativePaths + $businessRelativePaths)) {
   $html = Read-TextFile (Join-Path $publicSourceRoot $relative)
@@ -458,7 +467,7 @@ if (Test-Path -LiteralPath $bingVerificationPath -PathType Leaf) {
   }
 }
 
-foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/indie-game-crowdfunding-fit-en.png", "assets/og/indie-game-crowdfunding-fit-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png", "assets/og/starter-story-vibe-coding-en.png", "assets/og/starter-story-vibe-coding-zh-CN.png")) {
+foreach ($relative in @("assets/og/research-library-en.png", "assets/og/research-library-zh-CN.png", "assets/og/crowdfunding-indie-games-en.png", "assets/og/crowdfunding-indie-games-zh-CN.png", "assets/og/indie-game-crowdfunding-fit-en.png", "assets/og/indie-game-crowdfunding-fit-zh-CN.png", "assets/og/research-to-html-en.png", "assets/og/research-to-html-zh-CN.png", "assets/og/starter-story-vibe-coding-en.png", "assets/og/starter-story-vibe-coding-zh-CN.png", "assets/og/old-web-new-wedges-en.png", "assets/og/old-web-new-wedges-zh-CN.png")) {
   $path = Join-Path $publicSourceRoot $relative
   if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { continue }
   $bytes = [System.IO.File]::ReadAllBytes($path)

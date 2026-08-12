@@ -105,6 +105,24 @@ const cards = [
     eyebrow: '线上商业模式 · 2026',
     title: '赚钱的\n线上项目',
     note: '利润证据 · 纯线上 · AI 辅助开发'
+  },
+  {
+    file: 'old-web-new-wedges-en.png',
+    lang: 'en',
+    mark: 'OW',
+    index: 'RESEARCH / 04',
+    eyebrow: 'PLATFORM OPPORTUNITY MAP · 2026',
+    title: 'Old web,\nnew wedges',
+    note: 'Remaining value · Durable moats · Indie opportunities'
+  },
+  {
+    file: 'old-web-new-wedges-zh-CN.png',
+    lang: 'zh-CN',
+    mark: '旧',
+    index: '专题 / 04',
+    eyebrow: '平台机会地图 · 2026',
+    title: '旧平台，\n新切口',
+    note: '剩余价值 · 持久护城河 · 独立开发机会'
   }
 ];
 

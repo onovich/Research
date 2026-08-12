@@ -16,8 +16,10 @@ It covers exploratory questions, industry or platform overviews, pattern and mec
   The game-specific deep dive: current platform samples, seven audience/gameplay patterns, released cases, failure modes, platform routes, and the ten-point fit card.
 - [Online projects that make money](https://research.onovich.com/starter-story-vibe-coding-businesses/) · [中文](https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html)
   A profit-aware analysis of Starter Story cases, with a ranked shortlist of fully online business patterns for AI-assisted solo development.
+- [Old web, new wedges](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/) · [中文](https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html)
+  Why Douban, Zhihu, and Jianshu remain useful, why broad replacements fail, and which vertical community opportunities fit an independent developer.
 
-The first two reports form one crowdfunding topic cluster without duplicating their detailed sections. The third is a separate study of online business and AI-assisted product patterns.
+The first two reports form one crowdfunding topic cluster without duplicating their detailed sections. The other reports are standalone studies of online business and platform opportunities.
 
 ## Use it with AI
 

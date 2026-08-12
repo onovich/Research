@@ -85,7 +85,10 @@ async function run() {
       { locale: 'en-US', width: 1440, height: 1000, relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.html', screenshot: 'game-fit-en-1440.png' },
       { locale: 'en-US', width: 375, relativePath: 'starter-story-vibe-coding-businesses/index.html', screenshot: 'starter-story-en-375.png' },
       { locale: 'zh-CN', width: 375, relativePath: 'starter-story-vibe-coding-businesses/index.zh-CN.html', screenshot: 'starter-story-zh-375.png' },
-      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'starter-story-vibe-coding-businesses/index.html', screenshot: 'starter-story-en-1440.png' }
+      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'starter-story-vibe-coding-businesses/index.html', screenshot: 'starter-story-en-1440.png' },
+      { locale: 'en-US', width: 375, relativePath: 'douban-zhihu-jianshu-replacement-opportunities/index.html', screenshot: 'old-web-en-375.png' },
+      { locale: 'zh-CN', width: 375, relativePath: 'douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html', screenshot: 'old-web-zh-375.png' },
+      { locale: 'en-US', width: 1440, height: 1000, relativePath: 'douban-zhihu-jianshu-replacement-opportunities/index.html', screenshot: 'old-web-en-1440.png' }
     ];
     for (const test of visualCases) {
       const session = await open(test);
@@ -116,6 +119,8 @@ async function run() {
       { relativePath: 'indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html', canonical: 'https://research.onovich.com/indie-game-crowdfunding-genres-and-gameplay/index.zh-CN.html' },
       { relativePath: 'starter-story-vibe-coding-businesses/index.html', canonical: 'https://research.onovich.com/starter-story-vibe-coding-businesses/' },
       { relativePath: 'starter-story-vibe-coding-businesses/index.zh-CN.html', canonical: 'https://research.onovich.com/starter-story-vibe-coding-businesses/index.zh-CN.html' },
+      { relativePath: 'douban-zhihu-jianshu-replacement-opportunities/index.html', canonical: 'https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/' },
+      { relativePath: 'douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html', canonical: 'https://research.onovich.com/douban-zhihu-jianshu-replacement-opportunities/index.zh-CN.html' },
       { relativePath: 'tools/research-to-html/index.html', canonical: 'https://research.onovich.com/tools/research-to-html/' },
       { relativePath: 'tools/research-to-html/index.zh-CN.html', canonical: 'https://research.onovich.com/tools/research-to-html/index.zh-CN.html' }
     ];
