@@ -480,10 +480,10 @@ if (Test-Path -LiteralPath $sitemapPath -PathType Leaf) {
 $robotsPath = Join-Path $publicSourceRoot "robots.txt"
 if (Test-Path -LiteralPath $robotsPath -PathType Leaf) {
   $robots = Read-TextFile $robotsPath
-  if ($robots -notmatch '(?im)^User-agent:\s*\*$' -or $robots -notmatch '(?im)^Allow:\s*/$') {
+  if ($robots -notmatch '(?im)^User-agent:\s*\*\r?$' -or $robots -notmatch '(?im)^Allow:\s*/\r?$') {
     Add-ValidationError "robots.txt must allow public crawling"
   }
-  if ($robots -notmatch '(?im)^Sitemap:\s*https://research\.onovich\.com/sitemap\.xml$') {
+  if ($robots -notmatch '(?im)^Sitemap:\s*https://research\.onovich\.com/sitemap\.xml\r?$') {
     Add-ValidationError "robots.txt must declare the canonical research sitemap"
   }
 }
